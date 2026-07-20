@@ -142,13 +142,28 @@ CMakeFiles/GoldenCalendar2083_Core.dir/src/TimeEngine.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/GoldenCalendar2083_Core.dir/src/TimeEngine.cpp.s"
 	/data/data/com.termux/files/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_2083_Core_CPP/src/TimeEngine.cpp -o CMakeFiles/GoldenCalendar2083_Core.dir/src/TimeEngine.cpp.s
 
+CMakeFiles/GoldenCalendar2083_Core.dir/src/ArchiveEngine.cpp.o: CMakeFiles/GoldenCalendar2083_Core.dir/flags.make
+CMakeFiles/GoldenCalendar2083_Core.dir/src/ArchiveEngine.cpp.o: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_2083_Core_CPP/src/ArchiveEngine.cpp
+CMakeFiles/GoldenCalendar2083_Core.dir/src/ArchiveEngine.cpp.o: CMakeFiles/GoldenCalendar2083_Core.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_2083_Core_CPP/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/GoldenCalendar2083_Core.dir/src/ArchiveEngine.cpp.o"
+	/data/data/com.termux/files/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GoldenCalendar2083_Core.dir/src/ArchiveEngine.cpp.o -MF CMakeFiles/GoldenCalendar2083_Core.dir/src/ArchiveEngine.cpp.o.d -o CMakeFiles/GoldenCalendar2083_Core.dir/src/ArchiveEngine.cpp.o -c /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_2083_Core_CPP/src/ArchiveEngine.cpp
+
+CMakeFiles/GoldenCalendar2083_Core.dir/src/ArchiveEngine.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/GoldenCalendar2083_Core.dir/src/ArchiveEngine.cpp.i"
+	/data/data/com.termux/files/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_2083_Core_CPP/src/ArchiveEngine.cpp > CMakeFiles/GoldenCalendar2083_Core.dir/src/ArchiveEngine.cpp.i
+
+CMakeFiles/GoldenCalendar2083_Core.dir/src/ArchiveEngine.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/GoldenCalendar2083_Core.dir/src/ArchiveEngine.cpp.s"
+	/data/data/com.termux/files/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_2083_Core_CPP/src/ArchiveEngine.cpp -o CMakeFiles/GoldenCalendar2083_Core.dir/src/ArchiveEngine.cpp.s
+
 # Object files for target GoldenCalendar2083_Core
 GoldenCalendar2083_Core_OBJECTS = \
 "CMakeFiles/GoldenCalendar2083_Core.dir/src/SolarEngine.cpp.o" \
 "CMakeFiles/GoldenCalendar2083_Core.dir/src/LunarEngine.cpp.o" \
 "CMakeFiles/GoldenCalendar2083_Core.dir/src/ChronologyEngine.cpp.o" \
 "CMakeFiles/GoldenCalendar2083_Core.dir/src/WeekEngine.cpp.o" \
-"CMakeFiles/GoldenCalendar2083_Core.dir/src/TimeEngine.cpp.o"
+"CMakeFiles/GoldenCalendar2083_Core.dir/src/TimeEngine.cpp.o" \
+"CMakeFiles/GoldenCalendar2083_Core.dir/src/ArchiveEngine.cpp.o"
 
 # External object files for target GoldenCalendar2083_Core
 GoldenCalendar2083_Core_EXTERNAL_OBJECTS =
@@ -158,9 +173,10 @@ libGoldenCalendar2083_Core.a: CMakeFiles/GoldenCalendar2083_Core.dir/src/LunarEn
 libGoldenCalendar2083_Core.a: CMakeFiles/GoldenCalendar2083_Core.dir/src/ChronologyEngine.cpp.o
 libGoldenCalendar2083_Core.a: CMakeFiles/GoldenCalendar2083_Core.dir/src/WeekEngine.cpp.o
 libGoldenCalendar2083_Core.a: CMakeFiles/GoldenCalendar2083_Core.dir/src/TimeEngine.cpp.o
+libGoldenCalendar2083_Core.a: CMakeFiles/GoldenCalendar2083_Core.dir/src/ArchiveEngine.cpp.o
 libGoldenCalendar2083_Core.a: CMakeFiles/GoldenCalendar2083_Core.dir/build.make
 libGoldenCalendar2083_Core.a: CMakeFiles/GoldenCalendar2083_Core.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_2083_Core_CPP/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX static library libGoldenCalendar2083_Core.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_2083_Core_CPP/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX static library libGoldenCalendar2083_Core.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/GoldenCalendar2083_Core.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/GoldenCalendar2083_Core.dir/link.txt --verbose=$(VERBOSE)
 

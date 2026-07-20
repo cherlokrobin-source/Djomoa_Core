@@ -312,6 +312,19 @@ LongTimeEngineTest/fast:
 .PHONY : LongTimeEngineTest/fast
 
 #=============================================================================
+# Target rules for targets named ArchiveEngineTest
+
+# Build rule for target.
+ArchiveEngineTest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ArchiveEngineTest
+.PHONY : ArchiveEngineTest
+
+# fast build rule for target.
+ArchiveEngineTest/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArchiveEngineTest.dir/build.make CMakeFiles/ArchiveEngineTest.dir/build
+.PHONY : ArchiveEngineTest/fast
+
+#=============================================================================
 # Target rules for targets named GoldenCalendarCLI
 
 # Build rule for target.
@@ -347,6 +360,30 @@ examples/GoldenCalendarCLI.s: examples/GoldenCalendarCLI.cpp.s
 examples/GoldenCalendarCLI.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GoldenCalendarCLI.dir/build.make CMakeFiles/GoldenCalendarCLI.dir/examples/GoldenCalendarCLI.cpp.s
 .PHONY : examples/GoldenCalendarCLI.cpp.s
+
+src/ArchiveEngine.o: src/ArchiveEngine.cpp.o
+.PHONY : src/ArchiveEngine.o
+
+# target to build an object file
+src/ArchiveEngine.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GoldenCalendar2083_Core.dir/build.make CMakeFiles/GoldenCalendar2083_Core.dir/src/ArchiveEngine.cpp.o
+.PHONY : src/ArchiveEngine.cpp.o
+
+src/ArchiveEngine.i: src/ArchiveEngine.cpp.i
+.PHONY : src/ArchiveEngine.i
+
+# target to preprocess a source file
+src/ArchiveEngine.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GoldenCalendar2083_Core.dir/build.make CMakeFiles/GoldenCalendar2083_Core.dir/src/ArchiveEngine.cpp.i
+.PHONY : src/ArchiveEngine.cpp.i
+
+src/ArchiveEngine.s: src/ArchiveEngine.cpp.s
+.PHONY : src/ArchiveEngine.s
+
+# target to generate assembly for a file
+src/ArchiveEngine.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GoldenCalendar2083_Core.dir/build.make CMakeFiles/GoldenCalendar2083_Core.dir/src/ArchiveEngine.cpp.s
+.PHONY : src/ArchiveEngine.cpp.s
 
 src/ChronologyEngine.o: src/ChronologyEngine.cpp.o
 .PHONY : src/ChronologyEngine.o
@@ -641,6 +678,30 @@ tests/LunarCycleDateCompareTest.s: tests/LunarCycleDateCompareTest.cpp.s
 tests/LunarCycleDateCompareTest.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LunarCycleDateCompareTest.dir/build.make CMakeFiles/LunarCycleDateCompareTest.dir/tests/LunarCycleDateCompareTest.cpp.s
 .PHONY : tests/LunarCycleDateCompareTest.cpp.s
+
+tests/archive_engine_test.o: tests/archive_engine_test.cpp.o
+.PHONY : tests/archive_engine_test.o
+
+# target to build an object file
+tests/archive_engine_test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArchiveEngineTest.dir/build.make CMakeFiles/ArchiveEngineTest.dir/tests/archive_engine_test.cpp.o
+.PHONY : tests/archive_engine_test.cpp.o
+
+tests/archive_engine_test.i: tests/archive_engine_test.cpp.i
+.PHONY : tests/archive_engine_test.i
+
+# target to preprocess a source file
+tests/archive_engine_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArchiveEngineTest.dir/build.make CMakeFiles/ArchiveEngineTest.dir/tests/archive_engine_test.cpp.i
+.PHONY : tests/archive_engine_test.cpp.i
+
+tests/archive_engine_test.s: tests/archive_engine_test.cpp.s
+.PHONY : tests/archive_engine_test.s
+
+# target to generate assembly for a file
+tests/archive_engine_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArchiveEngineTest.dir/build.make CMakeFiles/ArchiveEngineTest.dir/tests/archive_engine_test.cpp.s
+.PHONY : tests/archive_engine_test.cpp.s
 
 tests/chronology_main_test.o: tests/chronology_main_test.cpp.o
 .PHONY : tests/chronology_main_test.o
@@ -962,6 +1023,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... ArchiveEngineTest"
 	@echo "... ChronologyMainTest"
 	@echo "... Cycle33Test"
 	@echo "... CycleComparisonTest"
@@ -981,6 +1043,9 @@ help:
 	@echo "... examples/GoldenCalendarCLI.o"
 	@echo "... examples/GoldenCalendarCLI.i"
 	@echo "... examples/GoldenCalendarCLI.s"
+	@echo "... src/ArchiveEngine.o"
+	@echo "... src/ArchiveEngine.i"
+	@echo "... src/ArchiveEngine.s"
 	@echo "... src/ChronologyEngine.o"
 	@echo "... src/ChronologyEngine.i"
 	@echo "... src/ChronologyEngine.s"
@@ -1002,6 +1067,9 @@ help:
 	@echo "... tests/LunarCycleDateCompareTest.o"
 	@echo "... tests/LunarCycleDateCompareTest.i"
 	@echo "... tests/LunarCycleDateCompareTest.s"
+	@echo "... tests/archive_engine_test.o"
+	@echo "... tests/archive_engine_test.i"
+	@echo "... tests/archive_engine_test.s"
 	@echo "... tests/chronology_main_test.o"
 	@echo "... tests/chronology_main_test.i"
 	@echo "... tests/chronology_main_test.s"

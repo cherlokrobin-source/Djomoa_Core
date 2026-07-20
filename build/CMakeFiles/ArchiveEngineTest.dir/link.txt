@@ -1,0 +1,1 @@
+/data/data/com.termux/files/usr/bin/c++ -O2 -g -DNDEBUG -Xlinker --dependency-file=CMakeFiles/ArchiveEngineTest.dir/link.d CMakeFiles/ArchiveEngineTest.dir/tests/archive_engine_test.cpp.o -o ArchiveEngineTest  libGoldenCalendar2083_Core.a

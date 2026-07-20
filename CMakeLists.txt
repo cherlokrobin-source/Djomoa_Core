@@ -11,7 +11,9 @@ include_directories(include)
 
 
 
-# Main Engine
+# ==============================
+# Main Core Library
+# ==============================
 
 add_library(GoldenCalendar2083_Core
 
@@ -20,12 +22,16 @@ add_library(GoldenCalendar2083_Core
     src/ChronologyEngine.cpp
     src/WeekEngine.cpp
     src/TimeEngine.cpp
+    src/ArchiveEngine.cpp
 
 )
 
 
 
-# Lunar 33 Year Cycle Test
+# ==============================
+# Tests
+# ==============================
+
 
 add_executable(
     Cycle33Test
@@ -37,9 +43,6 @@ add_executable(
 )
 
 
-
-# Multi 33 Cycle Test
-
 add_executable(
     MultiCycleTest
 
@@ -49,9 +52,6 @@ add_executable(
     src/ChronologyEngine.cpp
 )
 
-
-
-# Year 2083 Test
 
 add_executable(
     Year2083Test
@@ -63,9 +63,6 @@ add_executable(
 )
 
 
-
-# Cycle Comparison
-
 add_executable(
     CycleComparisonTest
 
@@ -75,9 +72,6 @@ add_executable(
     src/ChronologyEngine.cpp
 )
 
-
-
-# Engine Cycle Compare
 
 add_executable(
     EngineCycleCompare
@@ -90,8 +84,6 @@ add_executable(
 
 
 
-# Chronology Main Test
-
 add_executable(
     ChronologyMainTest
 
@@ -103,8 +95,6 @@ add_executable(
 
 
 
-# Day ID Test
-
 add_executable(
     DayIdTest
 
@@ -113,8 +103,6 @@ add_executable(
 )
 
 
-
-# Long Cycle Test
 
 add_executable(
     LongCycleTest
@@ -127,8 +115,6 @@ add_executable(
 
 
 
-# Reference 2083 Years + 3 Months + 3 Days
-
 add_executable(
     Reference2083Test
 
@@ -137,6 +123,9 @@ add_executable(
     src/LunarEngine.cpp
     src/ChronologyEngine.cpp
 )
+
+
+
 add_executable(
     CycleReferenceCompare
 
@@ -145,6 +134,9 @@ add_executable(
     src/LunarEngine.cpp
     src/ChronologyEngine.cpp
 )
+
+
+
 add_executable(
     LunarAlignmentTest
 
@@ -153,6 +145,9 @@ add_executable(
     src/LunarEngine.cpp
     src/ChronologyEngine.cpp
 )
+
+
+
 add_executable(
     LunarCycleDateCompareTest
 
@@ -161,6 +156,9 @@ add_executable(
     src/LunarEngine.cpp
     src/ChronologyEngine.cpp
 )
+
+
+
 add_executable(
     TimeEngineTest
 
@@ -170,19 +168,70 @@ add_executable(
     src/SolarEngine.cpp
     src/LunarEngine.cpp
 )
-add_executable(LongTimeEngineTest
+
+
+
+add_executable(
+    LongTimeEngineTest
+
     src/LongTimeEngine.cpp
     src/ChronologyEngine.cpp
     src/SolarEngine.cpp
     src/LunarEngine.cpp
     src/WeekEngine.cpp
     tests/long_time_engine_test.cpp
-)
-add_executable(GoldenCalendarCLI
-    examples/GoldenCalendarCLI.cpp
+
 )
 
-target_link_libraries(GoldenCalendarCLI
-    GoldenCalendar2083_Core
+
+
+# ==============================
+# Archive Engine Test
+# ==============================
+
+add_executable(
+    ArchiveEngineTest
+
+    tests/archive_engine_test.cpp
+
 )
-target_include_directories(LongTimeEngineTest PRIVATE include)
+
+
+target_link_libraries(
+    ArchiveEngineTest
+
+    GoldenCalendar2083_Core
+
+)
+
+
+target_include_directories(
+    ArchiveEngineTest PRIVATE include
+)
+
+
+
+# ==============================
+# CLI Application
+# ==============================
+
+add_executable(
+    GoldenCalendarCLI
+
+    examples/GoldenCalendarCLI.cpp
+
+)
+
+
+target_link_libraries(
+    GoldenCalendarCLI
+
+    GoldenCalendar2083_Core
+
+)
+
+
+
+target_include_directories(
+    LongTimeEngineTest PRIVATE include
+)

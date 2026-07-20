@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_2083_Core_CPP/src/ArchiveEngine.cpp" "CMakeFiles/GoldenCalendar2083_Core.dir/src/ArchiveEngine.cpp.o" "gcc" "CMakeFiles/GoldenCalendar2083_Core.dir/src/ArchiveEngine.cpp.o.d"
   "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_2083_Core_CPP/src/ChronologyEngine.cpp" "CMakeFiles/GoldenCalendar2083_Core.dir/src/ChronologyEngine.cpp.o" "gcc" "CMakeFiles/GoldenCalendar2083_Core.dir/src/ChronologyEngine.cpp.o.d"
   "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_2083_Core_CPP/src/LunarEngine.cpp" "CMakeFiles/GoldenCalendar2083_Core.dir/src/LunarEngine.cpp.o" "gcc" "CMakeFiles/GoldenCalendar2083_Core.dir/src/LunarEngine.cpp.o.d"
   "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_2083_Core_CPP/src/SolarEngine.cpp" "CMakeFiles/GoldenCalendar2083_Core.dir/src/SolarEngine.cpp.o" "gcc" "CMakeFiles/GoldenCalendar2083_Core.dir/src/SolarEngine.cpp.o.d"

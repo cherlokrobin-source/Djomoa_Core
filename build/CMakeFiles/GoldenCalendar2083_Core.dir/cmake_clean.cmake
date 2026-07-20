@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/GoldenCalendar2083_Core.dir/src/ArchiveEngine.cpp.o"
+  "CMakeFiles/GoldenCalendar2083_Core.dir/src/ArchiveEngine.cpp.o.d"
   "CMakeFiles/GoldenCalendar2083_Core.dir/src/ChronologyEngine.cpp.o"
   "CMakeFiles/GoldenCalendar2083_Core.dir/src/ChronologyEngine.cpp.o.d"
   "CMakeFiles/GoldenCalendar2083_Core.dir/src/LunarEngine.cpp.o"
