@@ -1,1 +1,0 @@
-/data/data/com.termux/files/usr/bin/c++ -O2 -g -DNDEBUG -Xlinker --dependency-file=CMakeFiles/DayIdTest.dir/link.d CMakeFiles/DayIdTest.dir/tests/dayid_test.cpp.o CMakeFiles/DayIdTest.dir/src/SolarEngine.cpp.o -o DayIdTest

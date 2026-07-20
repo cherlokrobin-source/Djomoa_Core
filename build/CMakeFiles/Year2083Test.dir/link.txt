@@ -1,1 +1,0 @@
-/data/data/com.termux/files/usr/bin/c++ -O2 -g -DNDEBUG -Xlinker --dependency-file=CMakeFiles/Year2083Test.dir/link.d CMakeFiles/Year2083Test.dir/tests/year_2083_test.cpp.o CMakeFiles/Year2083Test.dir/src/SolarEngine.cpp.o CMakeFiles/Year2083Test.dir/src/LunarEngine.cpp.o CMakeFiles/Year2083Test.dir/src/ChronologyEngine.cpp.o -o Year2083Test

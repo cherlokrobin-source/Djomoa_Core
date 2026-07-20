@@ -1,1 +1,0 @@
-/data/data/com.termux/files/usr/bin/c++ -O2 -g -DNDEBUG -Xlinker --dependency-file=CMakeFiles/Cycle33Test.dir/link.d CMakeFiles/Cycle33Test.dir/tests/cycle_33_test.cpp.o CMakeFiles/Cycle33Test.dir/src/SolarEngine.cpp.o CMakeFiles/Cycle33Test.dir/src/LunarEngine.cpp.o CMakeFiles/Cycle33Test.dir/src/ChronologyEngine.cpp.o -o Cycle33Test
