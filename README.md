@@ -27,3 +27,19 @@ The Golden Calendar Engine provides a programmable framework for:
 ## 50,000 Year Chronology Range
 
 The engine is designed to calculate a timeline covering:
+---
+
+# Author
+
+## Developed by Nemimeche Benaissa
+
+**Golden Calendar 2083 Core Engine**
+
+### The Digital Astrolabe of Time
+
+A computational exploration of solar and lunar chronology through modern technology.
+
+---
+
+© Nemimeche Benaissa  
+Golden Calendar Project
