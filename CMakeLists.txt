@@ -178,5 +178,11 @@ add_executable(LongTimeEngineTest
     src/WeekEngine.cpp
     tests/long_time_engine_test.cpp
 )
+add_executable(GoldenCalendarCLI
+    examples/GoldenCalendarCLI.cpp
+)
 
+target_link_libraries(GoldenCalendarCLI
+    GoldenCalendar2083_Core
+)
 target_include_directories(LongTimeEngineTest PRIVATE include)
