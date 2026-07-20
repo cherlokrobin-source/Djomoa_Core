@@ -78,6 +78,7 @@ all: CMakeFiles/LunarAlignmentTest.dir/all
 all: CMakeFiles/LunarCycleDateCompareTest.dir/all
 all: CMakeFiles/TimeEngineTest.dir/all
 all: CMakeFiles/LongTimeEngineTest.dir/all
+all: CMakeFiles/GoldenCalendarCLI.dir/all
 .PHONY : all
 
 # The main recursive "codegen" target.
@@ -96,6 +97,7 @@ codegen: CMakeFiles/LunarAlignmentTest.dir/codegen
 codegen: CMakeFiles/LunarCycleDateCompareTest.dir/codegen
 codegen: CMakeFiles/TimeEngineTest.dir/codegen
 codegen: CMakeFiles/LongTimeEngineTest.dir/codegen
+codegen: CMakeFiles/GoldenCalendarCLI.dir/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
@@ -118,6 +120,7 @@ clean: CMakeFiles/LunarAlignmentTest.dir/clean
 clean: CMakeFiles/LunarCycleDateCompareTest.dir/clean
 clean: CMakeFiles/TimeEngineTest.dir/clean
 clean: CMakeFiles/LongTimeEngineTest.dir/clean
+clean: CMakeFiles/GoldenCalendarCLI.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -191,7 +194,7 @@ CMakeFiles/Cycle33Test.dir/clean:
 CMakeFiles/MultiCycleTest.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MultiCycleTest.dir/build.make CMakeFiles/MultiCycleTest.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MultiCycleTest.dir/build.make CMakeFiles/MultiCycleTest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_2083_Core_CPP/build/CMakeFiles --progress-num=57,58,59,60,61 "Built target MultiCycleTest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_2083_Core_CPP/build/CMakeFiles --progress-num=59,60,61,62,63 "Built target MultiCycleTest"
 .PHONY : CMakeFiles/MultiCycleTest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -208,7 +211,7 @@ MultiCycleTest: CMakeFiles/MultiCycleTest.dir/rule
 # codegen rule for target.
 CMakeFiles/MultiCycleTest.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MultiCycleTest.dir/build.make CMakeFiles/MultiCycleTest.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_2083_Core_CPP/build/CMakeFiles --progress-num=57,58,59,60,61 "Finished codegen for target MultiCycleTest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_2083_Core_CPP/build/CMakeFiles --progress-num=59,60,61,62,63 "Finished codegen for target MultiCycleTest"
 .PHONY : CMakeFiles/MultiCycleTest.dir/codegen
 
 # clean rule for target.
@@ -223,7 +226,7 @@ CMakeFiles/MultiCycleTest.dir/clean:
 CMakeFiles/Year2083Test.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Year2083Test.dir/build.make CMakeFiles/Year2083Test.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Year2083Test.dir/build.make CMakeFiles/Year2083Test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_2083_Core_CPP/build/CMakeFiles --progress-num=73,74,75,76,77 "Built target Year2083Test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_2083_Core_CPP/build/CMakeFiles --progress-num=75,76,77,78,79 "Built target Year2083Test"
 .PHONY : CMakeFiles/Year2083Test.dir/all
 
 # Build rule for subdir invocation for target.
@@ -240,7 +243,7 @@ Year2083Test: CMakeFiles/Year2083Test.dir/rule
 # codegen rule for target.
 CMakeFiles/Year2083Test.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Year2083Test.dir/build.make CMakeFiles/Year2083Test.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_2083_Core_CPP/build/CMakeFiles --progress-num=73,74,75,76,77 "Finished codegen for target Year2083Test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_2083_Core_CPP/build/CMakeFiles --progress-num=75,76,77,78,79 "Finished codegen for target Year2083Test"
 .PHONY : CMakeFiles/Year2083Test.dir/codegen
 
 # clean rule for target.
@@ -383,7 +386,7 @@ CMakeFiles/DayIdTest.dir/clean:
 CMakeFiles/LongCycleTest.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LongCycleTest.dir/build.make CMakeFiles/LongCycleTest.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LongCycleTest.dir/build.make CMakeFiles/LongCycleTest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_2083_Core_CPP/build/CMakeFiles --progress-num=35,36,37,38,39 "Built target LongCycleTest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_2083_Core_CPP/build/CMakeFiles --progress-num=37,38,39,40,41 "Built target LongCycleTest"
 .PHONY : CMakeFiles/LongCycleTest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -400,7 +403,7 @@ LongCycleTest: CMakeFiles/LongCycleTest.dir/rule
 # codegen rule for target.
 CMakeFiles/LongCycleTest.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LongCycleTest.dir/build.make CMakeFiles/LongCycleTest.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_2083_Core_CPP/build/CMakeFiles --progress-num=35,36,37,38,39 "Finished codegen for target LongCycleTest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_2083_Core_CPP/build/CMakeFiles --progress-num=37,38,39,40,41 "Finished codegen for target LongCycleTest"
 .PHONY : CMakeFiles/LongCycleTest.dir/codegen
 
 # clean rule for target.
@@ -415,7 +418,7 @@ CMakeFiles/LongCycleTest.dir/clean:
 CMakeFiles/Reference2083Test.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Reference2083Test.dir/build.make CMakeFiles/Reference2083Test.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Reference2083Test.dir/build.make CMakeFiles/Reference2083Test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_2083_Core_CPP/build/CMakeFiles --progress-num=62,63,64,65,66 "Built target Reference2083Test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_2083_Core_CPP/build/CMakeFiles --progress-num=64,65,66,67,68 "Built target Reference2083Test"
 .PHONY : CMakeFiles/Reference2083Test.dir/all
 
 # Build rule for subdir invocation for target.
@@ -432,7 +435,7 @@ Reference2083Test: CMakeFiles/Reference2083Test.dir/rule
 # codegen rule for target.
 CMakeFiles/Reference2083Test.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Reference2083Test.dir/build.make CMakeFiles/Reference2083Test.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_2083_Core_CPP/build/CMakeFiles --progress-num=62,63,64,65,66 "Finished codegen for target Reference2083Test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_2083_Core_CPP/build/CMakeFiles --progress-num=64,65,66,67,68 "Finished codegen for target Reference2083Test"
 .PHONY : CMakeFiles/Reference2083Test.dir/codegen
 
 # clean rule for target.
@@ -479,7 +482,7 @@ CMakeFiles/CycleReferenceCompare.dir/clean:
 CMakeFiles/LunarAlignmentTest.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LunarAlignmentTest.dir/build.make CMakeFiles/LunarAlignmentTest.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LunarAlignmentTest.dir/build.make CMakeFiles/LunarAlignmentTest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_2083_Core_CPP/build/CMakeFiles --progress-num=47,48,49,50,51 "Built target LunarAlignmentTest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_2083_Core_CPP/build/CMakeFiles --progress-num=49,50,51,52,53 "Built target LunarAlignmentTest"
 .PHONY : CMakeFiles/LunarAlignmentTest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -496,7 +499,7 @@ LunarAlignmentTest: CMakeFiles/LunarAlignmentTest.dir/rule
 # codegen rule for target.
 CMakeFiles/LunarAlignmentTest.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LunarAlignmentTest.dir/build.make CMakeFiles/LunarAlignmentTest.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_2083_Core_CPP/build/CMakeFiles --progress-num=47,48,49,50,51 "Finished codegen for target LunarAlignmentTest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_2083_Core_CPP/build/CMakeFiles --progress-num=49,50,51,52,53 "Finished codegen for target LunarAlignmentTest"
 .PHONY : CMakeFiles/LunarAlignmentTest.dir/codegen
 
 # clean rule for target.
@@ -511,7 +514,7 @@ CMakeFiles/LunarAlignmentTest.dir/clean:
 CMakeFiles/LunarCycleDateCompareTest.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LunarCycleDateCompareTest.dir/build.make CMakeFiles/LunarCycleDateCompareTest.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LunarCycleDateCompareTest.dir/build.make CMakeFiles/LunarCycleDateCompareTest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_2083_Core_CPP/build/CMakeFiles --progress-num=52,53,54,55,56 "Built target LunarCycleDateCompareTest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_2083_Core_CPP/build/CMakeFiles --progress-num=54,55,56,57,58 "Built target LunarCycleDateCompareTest"
 .PHONY : CMakeFiles/LunarCycleDateCompareTest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -528,7 +531,7 @@ LunarCycleDateCompareTest: CMakeFiles/LunarCycleDateCompareTest.dir/rule
 # codegen rule for target.
 CMakeFiles/LunarCycleDateCompareTest.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LunarCycleDateCompareTest.dir/build.make CMakeFiles/LunarCycleDateCompareTest.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_2083_Core_CPP/build/CMakeFiles --progress-num=52,53,54,55,56 "Finished codegen for target LunarCycleDateCompareTest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_2083_Core_CPP/build/CMakeFiles --progress-num=54,55,56,57,58 "Finished codegen for target LunarCycleDateCompareTest"
 .PHONY : CMakeFiles/LunarCycleDateCompareTest.dir/codegen
 
 # clean rule for target.
@@ -543,7 +546,7 @@ CMakeFiles/LunarCycleDateCompareTest.dir/clean:
 CMakeFiles/TimeEngineTest.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TimeEngineTest.dir/build.make CMakeFiles/TimeEngineTest.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TimeEngineTest.dir/build.make CMakeFiles/TimeEngineTest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_2083_Core_CPP/build/CMakeFiles --progress-num=67,68,69,70,71,72 "Built target TimeEngineTest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_2083_Core_CPP/build/CMakeFiles --progress-num=69,70,71,72,73,74 "Built target TimeEngineTest"
 .PHONY : CMakeFiles/TimeEngineTest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -560,7 +563,7 @@ TimeEngineTest: CMakeFiles/TimeEngineTest.dir/rule
 # codegen rule for target.
 CMakeFiles/TimeEngineTest.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TimeEngineTest.dir/build.make CMakeFiles/TimeEngineTest.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_2083_Core_CPP/build/CMakeFiles --progress-num=67,68,69,70,71,72 "Finished codegen for target TimeEngineTest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_2083_Core_CPP/build/CMakeFiles --progress-num=69,70,71,72,73,74 "Finished codegen for target TimeEngineTest"
 .PHONY : CMakeFiles/TimeEngineTest.dir/codegen
 
 # clean rule for target.
@@ -575,7 +578,7 @@ CMakeFiles/TimeEngineTest.dir/clean:
 CMakeFiles/LongTimeEngineTest.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LongTimeEngineTest.dir/build.make CMakeFiles/LongTimeEngineTest.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LongTimeEngineTest.dir/build.make CMakeFiles/LongTimeEngineTest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_2083_Core_CPP/build/CMakeFiles --progress-num=40,41,42,43,44,45,46 "Built target LongTimeEngineTest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_2083_Core_CPP/build/CMakeFiles --progress-num=42,43,44,45,46,47,48 "Built target LongTimeEngineTest"
 .PHONY : CMakeFiles/LongTimeEngineTest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -592,13 +595,45 @@ LongTimeEngineTest: CMakeFiles/LongTimeEngineTest.dir/rule
 # codegen rule for target.
 CMakeFiles/LongTimeEngineTest.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LongTimeEngineTest.dir/build.make CMakeFiles/LongTimeEngineTest.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_2083_Core_CPP/build/CMakeFiles --progress-num=40,41,42,43,44,45,46 "Finished codegen for target LongTimeEngineTest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_2083_Core_CPP/build/CMakeFiles --progress-num=42,43,44,45,46,47,48 "Finished codegen for target LongTimeEngineTest"
 .PHONY : CMakeFiles/LongTimeEngineTest.dir/codegen
 
 # clean rule for target.
 CMakeFiles/LongTimeEngineTest.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LongTimeEngineTest.dir/build.make CMakeFiles/LongTimeEngineTest.dir/clean
 .PHONY : CMakeFiles/LongTimeEngineTest.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/GoldenCalendarCLI.dir
+
+# All Build rule for target.
+CMakeFiles/GoldenCalendarCLI.dir/all: CMakeFiles/GoldenCalendar2083_Core.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GoldenCalendarCLI.dir/build.make CMakeFiles/GoldenCalendarCLI.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GoldenCalendarCLI.dir/build.make CMakeFiles/GoldenCalendarCLI.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_2083_Core_CPP/build/CMakeFiles --progress-num=35,36 "Built target GoldenCalendarCLI"
+.PHONY : CMakeFiles/GoldenCalendarCLI.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/GoldenCalendarCLI.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_2083_Core_CPP/build/CMakeFiles 8
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/GoldenCalendarCLI.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_2083_Core_CPP/build/CMakeFiles 0
+.PHONY : CMakeFiles/GoldenCalendarCLI.dir/rule
+
+# Convenience name for target.
+GoldenCalendarCLI: CMakeFiles/GoldenCalendarCLI.dir/rule
+.PHONY : GoldenCalendarCLI
+
+# codegen rule for target.
+CMakeFiles/GoldenCalendarCLI.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GoldenCalendarCLI.dir/build.make CMakeFiles/GoldenCalendarCLI.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_2083_Core_CPP/build/CMakeFiles --progress-num=35,36 "Finished codegen for target GoldenCalendarCLI"
+.PHONY : CMakeFiles/GoldenCalendarCLI.dir/codegen
+
+# clean rule for target.
+CMakeFiles/GoldenCalendarCLI.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GoldenCalendarCLI.dir/build.make CMakeFiles/GoldenCalendarCLI.dir/clean
+.PHONY : CMakeFiles/GoldenCalendarCLI.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

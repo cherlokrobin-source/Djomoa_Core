@@ -76,4 +76,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/LunarCycleDateCompareTest.dir/DependInfo.cmake"
   "CMakeFiles/TimeEngineTest.dir/DependInfo.cmake"
   "CMakeFiles/LongTimeEngineTest.dir/DependInfo.cmake"
+  "CMakeFiles/GoldenCalendarCLI.dir/DependInfo.cmake"
   )

@@ -1,0 +1,1 @@
+/data/data/com.termux/files/usr/bin/c++ -O2 -g -DNDEBUG -Xlinker --dependency-file=CMakeFiles/GoldenCalendarCLI.dir/link.d CMakeFiles/GoldenCalendarCLI.dir/examples/GoldenCalendarCLI.cpp.o -o GoldenCalendarCLI  libGoldenCalendar2083_Core.a

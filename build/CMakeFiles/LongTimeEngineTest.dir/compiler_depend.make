@@ -78,7 +78,6 @@ CMakeFiles/LongTimeEngineTest.dir/src/ChronologyEngine.cpp.o: /data/data/com.ter
   /data/data/com.termux/files/usr/include/c++/v1/__algorithm/generate.h \
   /data/data/com.termux/files/usr/include/c++/v1/__algorithm/generate_n.h \
   /data/data/com.termux/files/usr/include/c++/v1/__algorithm/half_positive.h \
-  /data/data/com.termux/files/usr/include/c++/v1/__algorithm/in_out_result.h \
   /data/data/com.termux/files/usr/include/c++/v1/__algorithm/includes.h \
   /data/data/com.termux/files/usr/include/c++/v1/__algorithm/inplace_merge.h \
   /data/data/com.termux/files/usr/include/c++/v1/__algorithm/is_heap.h \
@@ -90,7 +89,6 @@ CMakeFiles/LongTimeEngineTest.dir/src/ChronologyEngine.cpp.o: /data/data/com.ter
   /data/data/com.termux/files/usr/include/c++/v1/__algorithm/iter_swap.h \
   /data/data/com.termux/files/usr/include/c++/v1/__algorithm/iterator_operations.h \
   /data/data/com.termux/files/usr/include/c++/v1/__algorithm/lexicographical_compare.h \
-  /data/data/com.termux/files/usr/include/c++/v1/__algorithm/lexicographical_compare_three_way.h \
   /data/data/com.termux/files/usr/include/c++/v1/__algorithm/lower_bound.h \
   /data/data/com.termux/files/usr/include/c++/v1/__algorithm/make_heap.h \
   /data/data/com.termux/files/usr/include/c++/v1/__algorithm/make_projected.h \
@@ -117,8 +115,6 @@ CMakeFiles/LongTimeEngineTest.dir/src/ChronologyEngine.cpp.o: /data/data/com.ter
   /data/data/com.termux/files/usr/include/c++/v1/__algorithm/pstl.h \
   /data/data/com.termux/files/usr/include/c++/v1/__algorithm/push_heap.h \
   /data/data/com.termux/files/usr/include/c++/v1/__algorithm/radix_sort.h \
-  /data/data/com.termux/files/usr/include/c++/v1/__algorithm/ranges_copy.h \
-  /data/data/com.termux/files/usr/include/c++/v1/__algorithm/ranges_copy_n.h \
   /data/data/com.termux/files/usr/include/c++/v1/__algorithm/ranges_iterator_concept.h \
   /data/data/com.termux/files/usr/include/c++/v1/__algorithm/remove.h \
   /data/data/com.termux/files/usr/include/c++/v1/__algorithm/remove_copy.h \
@@ -147,7 +143,6 @@ CMakeFiles/LongTimeEngineTest.dir/src/ChronologyEngine.cpp.o: /data/data/com.ter
   /data/data/com.termux/files/usr/include/c++/v1/__algorithm/stable_partition.h \
   /data/data/com.termux/files/usr/include/c++/v1/__algorithm/stable_sort.h \
   /data/data/com.termux/files/usr/include/c++/v1/__algorithm/swap_ranges.h \
-  /data/data/com.termux/files/usr/include/c++/v1/__algorithm/three_way_comp_ref_type.h \
   /data/data/com.termux/files/usr/include/c++/v1/__algorithm/transform.h \
   /data/data/com.termux/files/usr/include/c++/v1/__algorithm/unique.h \
   /data/data/com.termux/files/usr/include/c++/v1/__algorithm/unique_copy.h \
@@ -179,7 +174,6 @@ CMakeFiles/LongTimeEngineTest.dir/src/ChronologyEngine.cpp.o: /data/data/com.ter
   /data/data/com.termux/files/usr/include/c++/v1/__bit/invert_if.h \
   /data/data/com.termux/files/usr/include/c++/v1/__bit/popcount.h \
   /data/data/com.termux/files/usr/include/c++/v1/__bit/rotate.h \
-  /data/data/com.termux/files/usr/include/c++/v1/__bit_reference \
   /data/data/com.termux/files/usr/include/c++/v1/__chrono/convert_to_timespec.h \
   /data/data/com.termux/files/usr/include/c++/v1/__chrono/duration.h \
   /data/data/com.termux/files/usr/include/c++/v1/__chrono/high_resolution_clock.h \
@@ -213,7 +207,6 @@ CMakeFiles/LongTimeEngineTest.dir/src/ChronologyEngine.cpp.o: /data/data/com.ter
   /data/data/com.termux/files/usr/include/c++/v1/__concepts/semiregular.h \
   /data/data/com.termux/files/usr/include/c++/v1/__concepts/swappable.h \
   /data/data/com.termux/files/usr/include/c++/v1/__concepts/totally_ordered.h \
-  /data/data/com.termux/files/usr/include/c++/v1/__condition_variable/condition_variable.h \
   /data/data/com.termux/files/usr/include/c++/v1/__config \
   /data/data/com.termux/files/usr/include/c++/v1/__config_site \
   /data/data/com.termux/files/usr/include/c++/v1/__configuration/abi.h \
@@ -236,34 +229,18 @@ CMakeFiles/LongTimeEngineTest.dir/src/ChronologyEngine.cpp.o: /data/data/com.ter
   /data/data/com.termux/files/usr/include/c++/v1/__exception/terminate.h \
   /data/data/com.termux/files/usr/include/c++/v1/__format/enable_insertable.h \
   /data/data/com.termux/files/usr/include/c++/v1/__functional/binary_function.h \
-  /data/data/com.termux/files/usr/include/c++/v1/__functional/binary_negate.h \
-  /data/data/com.termux/files/usr/include/c++/v1/__functional/bind.h \
-  /data/data/com.termux/files/usr/include/c++/v1/__functional/binder1st.h \
-  /data/data/com.termux/files/usr/include/c++/v1/__functional/binder2nd.h \
-  /data/data/com.termux/files/usr/include/c++/v1/__functional/boyer_moore_searcher.h \
-  /data/data/com.termux/files/usr/include/c++/v1/__functional/default_searcher.h \
-  /data/data/com.termux/files/usr/include/c++/v1/__functional/function.h \
   /data/data/com.termux/files/usr/include/c++/v1/__functional/hash.h \
   /data/data/com.termux/files/usr/include/c++/v1/__functional/identity.h \
   /data/data/com.termux/files/usr/include/c++/v1/__functional/invoke.h \
-  /data/data/com.termux/files/usr/include/c++/v1/__functional/is_transparent.h \
-  /data/data/com.termux/files/usr/include/c++/v1/__functional/mem_fn.h \
-  /data/data/com.termux/files/usr/include/c++/v1/__functional/mem_fun_ref.h \
-  /data/data/com.termux/files/usr/include/c++/v1/__functional/not_fn.h \
   /data/data/com.termux/files/usr/include/c++/v1/__functional/operations.h \
-  /data/data/com.termux/files/usr/include/c++/v1/__functional/perfect_forward.h \
-  /data/data/com.termux/files/usr/include/c++/v1/__functional/pointer_to_binary_function.h \
-  /data/data/com.termux/files/usr/include/c++/v1/__functional/pointer_to_unary_function.h \
   /data/data/com.termux/files/usr/include/c++/v1/__functional/ranges_operations.h \
   /data/data/com.termux/files/usr/include/c++/v1/__functional/reference_wrapper.h \
   /data/data/com.termux/files/usr/include/c++/v1/__functional/unary_function.h \
-  /data/data/com.termux/files/usr/include/c++/v1/__functional/unary_negate.h \
   /data/data/com.termux/files/usr/include/c++/v1/__functional/weak_result_type.h \
   /data/data/com.termux/files/usr/include/c++/v1/__fwd/array.h \
   /data/data/com.termux/files/usr/include/c++/v1/__fwd/bit_reference.h \
   /data/data/com.termux/files/usr/include/c++/v1/__fwd/byte.h \
   /data/data/com.termux/files/usr/include/c++/v1/__fwd/complex.h \
-  /data/data/com.termux/files/usr/include/c++/v1/__fwd/deque.h \
   /data/data/com.termux/files/usr/include/c++/v1/__fwd/fstream.h \
   /data/data/com.termux/files/usr/include/c++/v1/__fwd/functional.h \
   /data/data/com.termux/files/usr/include/c++/v1/__fwd/ios.h \
@@ -272,17 +249,13 @@ CMakeFiles/LongTimeEngineTest.dir/src/ChronologyEngine.cpp.o: /data/data/com.ter
   /data/data/com.termux/files/usr/include/c++/v1/__fwd/memory_resource.h \
   /data/data/com.termux/files/usr/include/c++/v1/__fwd/ostream.h \
   /data/data/com.termux/files/usr/include/c++/v1/__fwd/pair.h \
-  /data/data/com.termux/files/usr/include/c++/v1/__fwd/queue.h \
   /data/data/com.termux/files/usr/include/c++/v1/__fwd/sstream.h \
-  /data/data/com.termux/files/usr/include/c++/v1/__fwd/stack.h \
   /data/data/com.termux/files/usr/include/c++/v1/__fwd/streambuf.h \
   /data/data/com.termux/files/usr/include/c++/v1/__fwd/string.h \
   /data/data/com.termux/files/usr/include/c++/v1/__fwd/string_view.h \
   /data/data/com.termux/files/usr/include/c++/v1/__fwd/subrange.h \
   /data/data/com.termux/files/usr/include/c++/v1/__fwd/tuple.h \
   /data/data/com.termux/files/usr/include/c++/v1/__fwd/variant.h \
-  /data/data/com.termux/files/usr/include/c++/v1/__fwd/vector.h \
-  /data/data/com.termux/files/usr/include/c++/v1/__hash_table \
   /data/data/com.termux/files/usr/include/c++/v1/__ios/fpos.h \
   /data/data/com.termux/files/usr/include/c++/v1/__iterator/access.h \
   /data/data/com.termux/files/usr/include/c++/v1/__iterator/advance.h \
@@ -294,7 +267,6 @@ CMakeFiles/LongTimeEngineTest.dir/src/ChronologyEngine.cpp.o: /data/data/com.ter
   /data/data/com.termux/files/usr/include/c++/v1/__iterator/default_sentinel.h \
   /data/data/com.termux/files/usr/include/c++/v1/__iterator/distance.h \
   /data/data/com.termux/files/usr/include/c++/v1/__iterator/empty.h \
-  /data/data/com.termux/files/usr/include/c++/v1/__iterator/erase_if_container.h \
   /data/data/com.termux/files/usr/include/c++/v1/__iterator/front_insert_iterator.h \
   /data/data/com.termux/files/usr/include/c++/v1/__iterator/incrementable_traits.h \
   /data/data/com.termux/files/usr/include/c++/v1/__iterator/insert_iterator.h \
@@ -310,20 +282,12 @@ CMakeFiles/LongTimeEngineTest.dir/src/ChronologyEngine.cpp.o: /data/data/com.ter
   /data/data/com.termux/files/usr/include/c++/v1/__iterator/ostream_iterator.h \
   /data/data/com.termux/files/usr/include/c++/v1/__iterator/ostreambuf_iterator.h \
   /data/data/com.termux/files/usr/include/c++/v1/__iterator/prev.h \
-  /data/data/com.termux/files/usr/include/c++/v1/__iterator/ranges_iterator_traits.h \
   /data/data/com.termux/files/usr/include/c++/v1/__iterator/readable_traits.h \
   /data/data/com.termux/files/usr/include/c++/v1/__iterator/reverse_access.h \
   /data/data/com.termux/files/usr/include/c++/v1/__iterator/reverse_iterator.h \
   /data/data/com.termux/files/usr/include/c++/v1/__iterator/segmented_iterator.h \
   /data/data/com.termux/files/usr/include/c++/v1/__iterator/size.h \
-  /data/data/com.termux/files/usr/include/c++/v1/__iterator/static_bounded_iter.h \
-  /data/data/com.termux/files/usr/include/c++/v1/__iterator/unreachable_sentinel.h \
   /data/data/com.termux/files/usr/include/c++/v1/__iterator/wrap_iter.h \
-  /data/data/com.termux/files/usr/include/c++/v1/__locale \
-  /data/data/com.termux/files/usr/include/c++/v1/__locale_dir/locale_base_api.h \
-  /data/data/com.termux/files/usr/include/c++/v1/__locale_dir/locale_base_api/android.h \
-  /data/data/com.termux/files/usr/include/c++/v1/__locale_dir/locale_base_api/bsd_locale_fallbacks.h \
-  /data/data/com.termux/files/usr/include/c++/v1/__locale_dir/pad_and_output.h \
   /data/data/com.termux/files/usr/include/c++/v1/__math/abs.h \
   /data/data/com.termux/files/usr/include/c++/v1/__math/copysign.h \
   /data/data/com.termux/files/usr/include/c++/v1/__math/error_functions.h \
@@ -366,7 +330,6 @@ CMakeFiles/LongTimeEngineTest.dir/src/ChronologyEngine.cpp.o: /data/data/com.ter
   /data/data/com.termux/files/usr/include/c++/v1/__memory/shared_count.h \
   /data/data/com.termux/files/usr/include/c++/v1/__memory/shared_ptr.h \
   /data/data/com.termux/files/usr/include/c++/v1/__memory/swap_allocator.h \
-  /data/data/com.termux/files/usr/include/c++/v1/__memory/temp_value.h \
   /data/data/com.termux/files/usr/include/c++/v1/__memory/temporary_buffer.h \
   /data/data/com.termux/files/usr/include/c++/v1/__memory/uninitialized_algorithms.h \
   /data/data/com.termux/files/usr/include/c++/v1/__memory/unique_ptr.h \
@@ -374,11 +337,6 @@ CMakeFiles/LongTimeEngineTest.dir/src/ChronologyEngine.cpp.o: /data/data/com.ter
   /data/data/com.termux/files/usr/include/c++/v1/__memory/uses_allocator.h \
   /data/data/com.termux/files/usr/include/c++/v1/__memory_resource/memory_resource.h \
   /data/data/com.termux/files/usr/include/c++/v1/__memory_resource/polymorphic_allocator.h \
-  /data/data/com.termux/files/usr/include/c++/v1/__mutex/lock_guard.h \
-  /data/data/com.termux/files/usr/include/c++/v1/__mutex/mutex.h \
-  /data/data/com.termux/files/usr/include/c++/v1/__mutex/once_flag.h \
-  /data/data/com.termux/files/usr/include/c++/v1/__mutex/tag_types.h \
-  /data/data/com.termux/files/usr/include/c++/v1/__mutex/unique_lock.h \
   /data/data/com.termux/files/usr/include/c++/v1/__new/align_val_t.h \
   /data/data/com.termux/files/usr/include/c++/v1/__new/allocate.h \
   /data/data/com.termux/files/usr/include/c++/v1/__new/exceptions.h \
@@ -388,10 +346,7 @@ CMakeFiles/LongTimeEngineTest.dir/src/ChronologyEngine.cpp.o: /data/data/com.ter
   /data/data/com.termux/files/usr/include/c++/v1/__new/new_handler.h \
   /data/data/com.termux/files/usr/include/c++/v1/__new/nothrow_t.h \
   /data/data/com.termux/files/usr/include/c++/v1/__new/placement_new_delete.h \
-  /data/data/com.termux/files/usr/include/c++/v1/__node_handle \
   /data/data/com.termux/files/usr/include/c++/v1/__numeric/partial_sum.h \
-  /data/data/com.termux/files/usr/include/c++/v1/__ostream/basic_ostream.h \
-  /data/data/com.termux/files/usr/include/c++/v1/__ostream/put_character_sequence.h \
   /data/data/com.termux/files/usr/include/c++/v1/__random/is_valid.h \
   /data/data/com.termux/files/usr/include/c++/v1/__random/log2.h \
   /data/data/com.termux/files/usr/include/c++/v1/__random/uniform_int_distribution.h \
@@ -408,18 +363,10 @@ CMakeFiles/LongTimeEngineTest.dir/src/ChronologyEngine.cpp.o: /data/data/com.ter
   /data/data/com.termux/files/usr/include/c++/v1/__ranges/size.h \
   /data/data/com.termux/files/usr/include/c++/v1/__ranges/subrange.h \
   /data/data/com.termux/files/usr/include/c++/v1/__ranges/view_interface.h \
-  /data/data/com.termux/files/usr/include/c++/v1/__split_buffer \
   /data/data/com.termux/files/usr/include/c++/v1/__std_mbstate_t.h \
   /data/data/com.termux/files/usr/include/c++/v1/__string/char_traits.h \
   /data/data/com.termux/files/usr/include/c++/v1/__string/constexpr_c_functions.h \
   /data/data/com.termux/files/usr/include/c++/v1/__string/extern_template_lists.h \
-  /data/data/com.termux/files/usr/include/c++/v1/__system_error/errc.h \
-  /data/data/com.termux/files/usr/include/c++/v1/__system_error/error_category.h \
-  /data/data/com.termux/files/usr/include/c++/v1/__system_error/error_code.h \
-  /data/data/com.termux/files/usr/include/c++/v1/__system_error/error_condition.h \
-  /data/data/com.termux/files/usr/include/c++/v1/__system_error/system_error.h \
-  /data/data/com.termux/files/usr/include/c++/v1/__system_error/throw_system_error.h \
-  /data/data/com.termux/files/usr/include/c++/v1/__thread/id.h \
   /data/data/com.termux/files/usr/include/c++/v1/__thread/poll_with_backoff.h \
   /data/data/com.termux/files/usr/include/c++/v1/__thread/support.h \
   /data/data/com.termux/files/usr/include/c++/v1/__thread/support/pthread.h \
@@ -440,12 +387,10 @@ CMakeFiles/LongTimeEngineTest.dir/src/ChronologyEngine.cpp.o: /data/data/com.ter
   /data/data/com.termux/files/usr/include/c++/v1/__type_traits/aligned_storage.h \
   /data/data/com.termux/files/usr/include/c++/v1/__type_traits/aligned_union.h \
   /data/data/com.termux/files/usr/include/c++/v1/__type_traits/alignment_of.h \
-  /data/data/com.termux/files/usr/include/c++/v1/__type_traits/can_extract_key.h \
   /data/data/com.termux/files/usr/include/c++/v1/__type_traits/common_reference.h \
   /data/data/com.termux/files/usr/include/c++/v1/__type_traits/common_type.h \
   /data/data/com.termux/files/usr/include/c++/v1/__type_traits/conditional.h \
   /data/data/com.termux/files/usr/include/c++/v1/__type_traits/conjunction.h \
-  /data/data/com.termux/files/usr/include/c++/v1/__type_traits/container_traits.h \
   /data/data/com.termux/files/usr/include/c++/v1/__type_traits/copy_cv.h \
   /data/data/com.termux/files/usr/include/c++/v1/__type_traits/copy_cvref.h \
   /data/data/com.termux/files/usr/include/c++/v1/__type_traits/datasizeof.h \
@@ -470,7 +415,6 @@ CMakeFiles/LongTimeEngineTest.dir/src/ChronologyEngine.cpp.o: /data/data/com.ter
   /data/data/com.termux/files/usr/include/c++/v1/__type_traits/is_base_of.h \
   /data/data/com.termux/files/usr/include/c++/v1/__type_traits/is_bounded_array.h \
   /data/data/com.termux/files/usr/include/c++/v1/__type_traits/is_callable.h \
-  /data/data/com.termux/files/usr/include/c++/v1/__type_traits/is_char_like_type.h \
   /data/data/com.termux/files/usr/include/c++/v1/__type_traits/is_class.h \
   /data/data/com.termux/files/usr/include/c++/v1/__type_traits/is_compound.h \
   /data/data/com.termux/files/usr/include/c++/v1/__type_traits/is_const.h \
@@ -534,7 +478,6 @@ CMakeFiles/LongTimeEngineTest.dir/src/ChronologyEngine.cpp.o: /data/data/com.ter
   /data/data/com.termux/files/usr/include/c++/v1/__type_traits/rank.h \
   /data/data/com.termux/files/usr/include/c++/v1/__type_traits/remove_all_extents.h \
   /data/data/com.termux/files/usr/include/c++/v1/__type_traits/remove_const.h \
-  /data/data/com.termux/files/usr/include/c++/v1/__type_traits/remove_const_ref.h \
   /data/data/com.termux/files/usr/include/c++/v1/__type_traits/remove_cv.h \
   /data/data/com.termux/files/usr/include/c++/v1/__type_traits/remove_cvref.h \
   /data/data/com.termux/files/usr/include/c++/v1/__type_traits/remove_extent.h \
@@ -542,7 +485,6 @@ CMakeFiles/LongTimeEngineTest.dir/src/ChronologyEngine.cpp.o: /data/data/com.ter
   /data/data/com.termux/files/usr/include/c++/v1/__type_traits/remove_reference.h \
   /data/data/com.termux/files/usr/include/c++/v1/__type_traits/remove_volatile.h \
   /data/data/com.termux/files/usr/include/c++/v1/__type_traits/result_of.h \
-  /data/data/com.termux/files/usr/include/c++/v1/__type_traits/strip_signature.h \
   /data/data/com.termux/files/usr/include/c++/v1/__type_traits/type_identity.h \
   /data/data/com.termux/files/usr/include/c++/v1/__type_traits/type_list.h \
   /data/data/com.termux/files/usr/include/c++/v1/__type_traits/underlying_type.h \
@@ -564,7 +506,6 @@ CMakeFiles/LongTimeEngineTest.dir/src/ChronologyEngine.cpp.o: /data/data/com.ter
   /data/data/com.termux/files/usr/include/c++/v1/__utility/is_pointer_in_range.h \
   /data/data/com.termux/files/usr/include/c++/v1/__utility/is_valid_range.h \
   /data/data/com.termux/files/usr/include/c++/v1/__utility/move.h \
-  /data/data/com.termux/files/usr/include/c++/v1/__utility/no_destroy.h \
   /data/data/com.termux/files/usr/include/c++/v1/__utility/pair.h \
   /data/data/com.termux/files/usr/include/c++/v1/__utility/piecewise_construct.h \
   /data/data/com.termux/files/usr/include/c++/v1/__utility/private_constructor_tag.h \
@@ -573,26 +514,15 @@ CMakeFiles/LongTimeEngineTest.dir/src/ChronologyEngine.cpp.o: /data/data/com.ter
   /data/data/com.termux/files/usr/include/c++/v1/__utility/swap.h \
   /data/data/com.termux/files/usr/include/c++/v1/__utility/unreachable.h \
   /data/data/com.termux/files/usr/include/c++/v1/__variant/monostate.h \
-  /data/data/com.termux/files/usr/include/c++/v1/__vector/comparison.h \
-  /data/data/com.termux/files/usr/include/c++/v1/__vector/container_traits.h \
-  /data/data/com.termux/files/usr/include/c++/v1/__vector/pmr.h \
-  /data/data/com.termux/files/usr/include/c++/v1/__vector/swap.h \
-  /data/data/com.termux/files/usr/include/c++/v1/__vector/vector.h \
-  /data/data/com.termux/files/usr/include/c++/v1/__vector/vector_bool.h \
   /data/data/com.termux/files/usr/include/c++/v1/__verbose_abort \
   /data/data/com.termux/files/usr/include/c++/v1/algorithm \
-  /data/data/com.termux/files/usr/include/c++/v1/array \
   /data/data/com.termux/files/usr/include/c++/v1/atomic \
   /data/data/com.termux/files/usr/include/c++/v1/bit \
-  /data/data/com.termux/files/usr/include/c++/v1/bitset \
   /data/data/com.termux/files/usr/include/c++/v1/cctype \
-  /data/data/com.termux/files/usr/include/c++/v1/cerrno \
   /data/data/com.termux/files/usr/include/c++/v1/climits \
-  /data/data/com.termux/files/usr/include/c++/v1/clocale \
   /data/data/com.termux/files/usr/include/c++/v1/cmath \
   /data/data/com.termux/files/usr/include/c++/v1/compare \
   /data/data/com.termux/files/usr/include/c++/v1/concepts \
-  /data/data/com.termux/files/usr/include/c++/v1/cstdarg \
   /data/data/com.termux/files/usr/include/c++/v1/cstddef \
   /data/data/com.termux/files/usr/include/c++/v1/cstdint \
   /data/data/com.termux/files/usr/include/c++/v1/cstdio \
@@ -602,46 +532,30 @@ CMakeFiles/LongTimeEngineTest.dir/src/ChronologyEngine.cpp.o: /data/data/com.ter
   /data/data/com.termux/files/usr/include/c++/v1/ctype.h \
   /data/data/com.termux/files/usr/include/c++/v1/cwchar \
   /data/data/com.termux/files/usr/include/c++/v1/cwctype \
-  /data/data/com.termux/files/usr/include/c++/v1/deque \
   /data/data/com.termux/files/usr/include/c++/v1/errno.h \
   /data/data/com.termux/files/usr/include/c++/v1/exception \
   /data/data/com.termux/files/usr/include/c++/v1/float.h \
-  /data/data/com.termux/files/usr/include/c++/v1/format \
-  /data/data/com.termux/files/usr/include/c++/v1/functional \
   /data/data/com.termux/files/usr/include/c++/v1/initializer_list \
-  /data/data/com.termux/files/usr/include/c++/v1/ios \
   /data/data/com.termux/files/usr/include/c++/v1/iosfwd \
-  /data/data/com.termux/files/usr/include/c++/v1/iostream \
-  /data/data/com.termux/files/usr/include/c++/v1/istream \
   /data/data/com.termux/files/usr/include/c++/v1/iterator \
   /data/data/com.termux/files/usr/include/c++/v1/limits \
-  /data/data/com.termux/files/usr/include/c++/v1/locale \
   /data/data/com.termux/files/usr/include/c++/v1/math.h \
   /data/data/com.termux/files/usr/include/c++/v1/memory \
-  /data/data/com.termux/files/usr/include/c++/v1/mutex \
   /data/data/com.termux/files/usr/include/c++/v1/new \
   /data/data/com.termux/files/usr/include/c++/v1/optional \
-  /data/data/com.termux/files/usr/include/c++/v1/ostream \
-  /data/data/com.termux/files/usr/include/c++/v1/print \
-  /data/data/com.termux/files/usr/include/c++/v1/queue \
   /data/data/com.termux/files/usr/include/c++/v1/ratio \
-  /data/data/com.termux/files/usr/include/c++/v1/stack \
   /data/data/com.termux/files/usr/include/c++/v1/stddef.h \
   /data/data/com.termux/files/usr/include/c++/v1/stdexcept \
   /data/data/com.termux/files/usr/include/c++/v1/stdio.h \
   /data/data/com.termux/files/usr/include/c++/v1/stdlib.h \
-  /data/data/com.termux/files/usr/include/c++/v1/streambuf \
   /data/data/com.termux/files/usr/include/c++/v1/string \
   /data/data/com.termux/files/usr/include/c++/v1/string.h \
   /data/data/com.termux/files/usr/include/c++/v1/string_view \
-  /data/data/com.termux/files/usr/include/c++/v1/system_error \
   /data/data/com.termux/files/usr/include/c++/v1/tuple \
   /data/data/com.termux/files/usr/include/c++/v1/type_traits \
   /data/data/com.termux/files/usr/include/c++/v1/typeinfo \
-  /data/data/com.termux/files/usr/include/c++/v1/unordered_map \
   /data/data/com.termux/files/usr/include/c++/v1/utility \
   /data/data/com.termux/files/usr/include/c++/v1/variant \
-  /data/data/com.termux/files/usr/include/c++/v1/vector \
   /data/data/com.termux/files/usr/include/c++/v1/version \
   /data/data/com.termux/files/usr/include/c++/v1/wchar.h \
   /data/data/com.termux/files/usr/include/c++/v1/wctype.h \
@@ -662,7 +576,6 @@ CMakeFiles/LongTimeEngineTest.dir/src/ChronologyEngine.cpp.o: /data/data/com.ter
   /data/data/com.termux/files/usr/include/linux/time_types.h \
   /data/data/com.termux/files/usr/include/linux/types.h \
   /data/data/com.termux/files/usr/include/linux/wait.h \
-  /data/data/com.termux/files/usr/include/locale.h \
   /data/data/com.termux/files/usr/include/malloc.h \
   /data/data/com.termux/files/usr/include/math.h \
   /data/data/com.termux/files/usr/include/pthread.h \
@@ -680,7 +593,6 @@ CMakeFiles/LongTimeEngineTest.dir/src/ChronologyEngine.cpp.o: /data/data/com.ter
   /data/data/com.termux/files/usr/include/sys/ucontext.h \
   /data/data/com.termux/files/usr/include/sys/user.h \
   /data/data/com.termux/files/usr/include/time.h \
-  /data/data/com.termux/files/usr/include/unistd.h \
   /data/data/com.termux/files/usr/include/wchar.h \
   /data/data/com.termux/files/usr/include/wctype.h \
   /data/data/com.termux/files/usr/include/xlocale.h \
@@ -3283,6 +3195,96 @@ CMakeFiles/LongTimeEngineTest.dir/src/SolarEngine.cpp.o:
 
 /data/data/com.termux/files/usr/lib/clang/21/lib/linux/libclang_rt.builtins-aarch64-android.a:
 
+/data/data/com.termux/files/usr/include/unistd.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/system_error:
+
+/data/data/com.termux/files/usr/include/c++/v1/stack:
+
+/data/data/com.termux/files/usr/include/c++/v1/queue:
+
+/data/data/com.termux/files/usr/include/c++/v1/print:
+
+/data/data/com.termux/files/usr/include/c++/v1/ostream:
+
+/data/data/com.termux/files/usr/include/c++/v1/istream:
+
+/data/data/com.termux/files/usr/include/c++/v1/iostream:
+
+/data/data/com.termux/files/usr/include/c++/v1/format:
+
+/data/data/com.termux/files/usr/include/c++/v1/cerrno:
+
+/data/data/com.termux/files/usr/include/c++/v1/bitset:
+
+/data/data/com.termux/files/usr/include/c++/v1/array:
+
+/data/data/com.termux/files/usr/include/c++/v1/__vector/vector.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__vector/swap.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__type_traits/remove_const_ref.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__type_traits/is_char_like_type.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__thread/id.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__system_error/throw_system_error.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__system_error/system_error.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__system_error/error_condition.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__split_buffer:
+
+/data/data/com.termux/files/usr/include/c++/v1/__ostream/put_character_sequence.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__node_handle:
+
+/data/data/com.termux/files/usr/include/c++/v1/__mutex/once_flag.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__mutex/mutex.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__locale_dir/pad_and_output.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__locale_dir/locale_base_api/android.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__iterator/unreachable_sentinel.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__iterator/static_bounded_iter.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__hash_table:
+
+/data/data/com.termux/files/usr/include/c++/v1/__fwd/stack.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__fwd/queue.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__functional/unary_negate.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__functional/pointer_to_unary_function.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__functional/pointer_to_binary_function.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__functional/perfect_forward.h:
+
+CMakeFiles/LongTimeEngineTest.dir/src/LunarEngine.cpp.o:
+
+/data/data/com.termux/files/usr/include/c++/v1/__functional/mem_fun_ref.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/deque:
+
+/data/data/com.termux/files/usr/include/c++/v1/__functional/is_transparent.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__system_error/errc.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__functional/default_searcher.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__functional/binder1st.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__algorithm/three_way_comp_ref_type.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__algorithm/in_out_result.h:
+
 /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_2083_Core_CPP/src/WeekEngine.cpp:
 
 /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_2083_Core_CPP/src/SolarEngine.cpp:
@@ -3303,6 +3305,12 @@ CMakeFiles/LongTimeEngineTest.dir/src/SolarEngine.cpp.o:
 
 /data/data/com.termux/files/usr/lib/clang/21/include/__stddef_max_align_t.h:
 
+/data/data/com.termux/files/usr/include/c++/v1/__vector/comparison.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__type_traits/strip_signature.h:
+
+/data/data/com.termux/files/usr/lib/clang/21/include/__stddef_header_macro.h:
+
 /data/data/com.termux/files/usr/lib/clang/21/include/__stdarg_header_macro.h:
 
 /data/data/com.termux/files/usr/include/xlocale.h:
@@ -3311,9 +3319,13 @@ CMakeFiles/LongTimeEngineTest.dir/src/SolarEngine.cpp.o:
 
 /data/data/com.termux/files/usr/include/wchar.h:
 
-/data/data/com.termux/files/usr/include/unistd.h:
-
 /data/data/com.termux/files/usr/include/time.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__utility/no_destroy.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__mutex/lock_guard.h:
+
+/data/data/com.termux/files/usr/include/sys/user.h:
 
 /data/data/com.termux/files/usr/include/sys/ucontext.h:
 
@@ -3349,6 +3361,10 @@ CMakeFiles/LongTimeEngineTest.dir/src/SolarEngine.cpp.o:
 
 /data/data/com.termux/files/usr/include/c++/v1/wctype.h:
 
+/data/data/com.termux/files/usr/include/c++/v1/locale:
+
+/data/data/com.termux/files/usr/include/c++/v1/version:
+
 /data/data/com.termux/files/usr/include/c++/v1/variant:
 
 /data/data/com.termux/files/usr/include/c++/v1/utility:
@@ -3357,35 +3373,19 @@ CMakeFiles/LongTimeEngineTest.dir/src/SolarEngine.cpp.o:
 
 /data/data/com.termux/files/usr/include/c++/v1/type_traits:
 
-/data/data/com.termux/files/usr/include/c++/v1/system_error:
-
-/data/data/com.termux/files/usr/include/c++/v1/stack:
-
 /data/data/com.termux/files/usr/include/c++/v1/ratio:
 
-/data/data/com.termux/files/usr/include/c++/v1/queue:
+/data/data/com.termux/files/usr/include/c++/v1/__vector/pmr.h:
 
-/data/data/com.termux/files/usr/include/c++/v1/print:
-
-/data/data/com.termux/files/usr/include/c++/v1/ostream:
+/data/data/com.termux/files/usr/include/c++/v1/memory:
 
 /data/data/com.termux/files/usr/include/c++/v1/math.h:
 
-/data/data/com.termux/files/usr/include/c++/v1/version:
-
-/data/data/com.termux/files/usr/include/c++/v1/locale:
-
 /data/data/com.termux/files/usr/include/c++/v1/limits:
-
-/data/data/com.termux/files/usr/include/c++/v1/istream:
-
-/data/data/com.termux/files/usr/include/c++/v1/iostream:
 
 /data/data/com.termux/files/usr/include/c++/v1/iosfwd:
 
 /data/data/com.termux/files/usr/include/c++/v1/initializer_list:
-
-/data/data/com.termux/files/usr/include/c++/v1/format:
 
 /data/data/com.termux/files/usr/include/c++/v1/float.h:
 
@@ -3397,31 +3397,21 @@ CMakeFiles/LongTimeEngineTest.dir/src/SolarEngine.cpp.o:
 
 /data/data/com.termux/files/usr/include/c++/v1/cstdlib:
 
+/data/data/com.termux/files/usr/include/c++/v1/__functional/boyer_moore_searcher.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/cstdint:
+
 /data/data/com.termux/files/usr/include/c++/v1/concepts:
 
 /data/data/com.termux/files/usr/include/c++/v1/climits:
-
-/data/data/com.termux/files/usr/include/c++/v1/cerrno:
-
-/data/data/com.termux/files/usr/include/c++/v1/bitset:
 
 /data/data/com.termux/files/usr/include/c++/v1/bit:
 
 /data/data/com.termux/files/usr/include/c++/v1/atomic:
 
-/data/data/com.termux/files/usr/include/c++/v1/array:
-
 /data/data/com.termux/files/usr/include/c++/v1/algorithm:
 
 /data/data/com.termux/files/usr/include/c++/v1/__verbose_abort:
-
-/data/data/com.termux/files/usr/include/c++/v1/__vector/vector.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__vector/swap.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/memory:
-
-/data/data/com.termux/files/usr/include/c++/v1/__vector/pmr.h:
 
 /data/data/com.termux/files/usr/include/sched.h:
 
@@ -3469,13 +3459,13 @@ CMakeFiles/LongTimeEngineTest.dir/tests/long_time_engine_test.cpp.o:
 
 /data/data/com.termux/files/usr/include/c++/v1/__type_traits/void_t.h:
 
+/data/data/com.termux/files/usr/include/c++/v1/__algorithm/lexicographical_compare_three_way.h:
+
+/data/data/com.termux/files/usr/include/pthread.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__type_traits/unwrap_ref.h:
+
 /data/data/com.termux/files/usr/include/c++/v1/__type_traits/type_identity.h:
-
-/data/data/com.termux/files/usr/lib/clang/21/include/__stddef_header_macro.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__vector/comparison.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__type_traits/strip_signature.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/optional:
 
@@ -3491,8 +3481,6 @@ CMakeFiles/LongTimeEngineTest.dir/tests/long_time_engine_test.cpp.o:
 
 /data/data/com.termux/files/usr/include/c++/v1/__type_traits/remove_cv.h:
 
-/data/data/com.termux/files/usr/include/c++/v1/__type_traits/remove_const_ref.h:
-
 /data/data/com.termux/files/usr/include/locale.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/ctime:
@@ -3507,7 +3495,15 @@ CMakeFiles/LongTimeEngineTest.dir/tests/long_time_engine_test.cpp.o:
 
 /data/data/com.termux/files/usr/include/c++/v1/__type_traits/maybe_const.h:
 
+/data/data/com.termux/files/usr/include/c++/v1/__locale:
+
+/data/data/com.termux/files/usr/include/c++/v1/__type_traits/lazy.h:
+
 /data/data/com.termux/files/usr/include/c++/v1/__type_traits/is_void.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__type_traits/container_traits.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__type_traits/is_valid_expansion.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__type_traits/is_unsigned_integer.h:
 
@@ -3539,6 +3535,10 @@ CMakeFiles/LongTimeEngineTest.dir/tests/long_time_engine_test.cpp.o:
 
 /data/data/com.termux/files/usr/include/c++/v1/__type_traits/is_reference.h:
 
+/data/data/com.termux/files/usr/include/c++/v1/__memory/temp_value.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__type_traits/is_primary_template.h:
+
 /data/data/com.termux/files/usr/include/c++/v1/__type_traits/is_pointer.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__type_traits/is_pod.h:
@@ -3549,15 +3549,23 @@ CMakeFiles/LongTimeEngineTest.dir/tests/long_time_engine_test.cpp.o:
 
 /data/data/com.termux/files/usr/include/c++/v1/__type_traits/is_literal_type.h:
 
+/data/data/com.termux/files/usr/include/c++/v1/__bit_reference:
+
+/data/data/com.termux/files/usr/include/c++/v1/__type_traits/is_integral.h:
+
 /data/data/com.termux/files/usr/include/c++/v1/__type_traits/is_implicitly_default_constructible.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__type_traits/is_function.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__type_traits/is_equality_comparable.h:
 
-/data/data/com.termux/files/usr/include/c++/v1/__type_traits/is_empty.h:
+/data/data/com.termux/files/usr/include/c++/v1/streambuf:
 
-/data/data/com.termux/files/usr/include/c++/v1/__type_traits/is_char_like_type.h:
+/data/data/com.termux/files/usr/include/c++/v1/__iterator/ranges_iterator_traits.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__type_traits/is_enum.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__type_traits/is_empty.h:
 
 /data/data/com.termux/files/usr/include/stdint.h:
 
@@ -3581,93 +3589,87 @@ CMakeFiles/LongTimeEngineTest.dir/tests/long_time_engine_test.cpp.o:
 
 /data/data/com.termux/files/usr/include/c++/v1/__type_traits/detected_or.h:
 
-/data/data/com.termux/files/usr/include/c++/v1/__utility/unreachable.h:
+/data/data/com.termux/files/usr/include/c++/v1/__algorithm/sort.h:
 
-/data/data/com.termux/files/usr/include/c++/v1/__type_traits/desugars_to.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__type_traits/dependent_type.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__type_traits/datasizeof.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__type_traits/copy_cvref.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__type_traits/copy_cv.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__type_traits/is_valid_expansion.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__type_traits/container_traits.h:
+/data/data/com.termux/files/usr/include/c++/v1/__type_traits/decay.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__type_traits/conditional.h:
 
-/data/data/com.termux/files/usr/include/c++/v1/__type_traits/alignment_of.h:
+/data/data/com.termux/files/usr/include/c++/v1/__assertion_handler:
 
-/data/data/com.termux/files/usr/include/c++/v1/__type_traits/aligned_union.h:
+/data/data/com.termux/files/usr/include/c++/v1/__algorithm/copy_backward.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__type_traits/common_reference.h:
+
+/data/data/com.termux/files/usr/include/aarch64-linux-android/asm/siginfo.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__type_traits/aligned_storage.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__type_traits/add_rvalue_reference.h:
 
-/data/data/com.termux/files/usr/include/c++/v1/__type_traits/add_pointer.h:
+/data/data/com.termux/files/usr/include/c++/v1/__condition_variable/condition_variable.h:
 
-/data/data/com.termux/files/usr/include/c++/v1/__type_traits/add_cv_quals.h:
+/data/data/com.termux/files/usr/include/c++/v1/__iterator/concepts.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__type_traits/add_lvalue_reference.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__tuple/tuple_types.h:
 
-/data/data/com.termux/files/usr/include/c++/v1/__tuple/tuple_like_no_subrange.h:
+/data/data/com.termux/files/usr/include/c++/v1/__mutex/tag_types.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__tuple/tuple_like_ext.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__tuple/tuple_indices.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__tuple/make_tuple_types.h:
 
-/data/data/com.termux/files/usr/include/c++/v1/__thread/support/pthread.h:
+/data/data/com.termux/files/usr/include/c++/v1/__algorithm/fill_n.h:
 
-/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_2083_Core_CPP/tests/long_time_engine_test.cpp:
+/data/data/com.termux/files/usr/include/c++/v1/__tuple/ignore.h:
 
-/data/data/com.termux/files/usr/include/c++/v1/__thread/poll_with_backoff.h:
+/data/data/com.termux/files/usr/include/c++/v1/__algorithm/ranges_copy.h:
 
-/data/data/com.termux/files/usr/include/c++/v1/__thread/id.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__system_error/throw_system_error.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__system_error/system_error.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__system_error/error_condition.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__string/char_traits.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__std_mbstate_t.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__split_buffer:
-
-/data/data/com.termux/files/usr/include/c++/v1/__ranges/view_interface.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__ranges/size.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__type_traits/common_type.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__ranges/from_range.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__ranges/enable_view.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__ranges/enable_borrowed_range.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/string.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__ranges/dangling.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__ranges/concepts.h:
+/data/data/com.termux/files/usr/include/c++/v1/__tuple/find_index.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__type_traits/is_trivially_copyable.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__type_traits/has_virtual_destructor.h:
 
-/data/data/com.termux/files/usr/include/c++/v1/__thread/support.h:
-
 /data/data/com.termux/files/usr/include/c++/v1/__random/log2.h:
 
+/data/data/com.termux/files/usr/include/c++/v1/__thread/support.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__algorithm/unwrap_range.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__iterator/front_insert_iterator.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__string/extern_template_lists.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__string/char_traits.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__ranges/view_interface.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__type_traits/common_type.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__ranges/from_range.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__algorithm/unique.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__ranges/empty.h:
+
+/data/data/com.termux/files/usr/lib/clang/21/include/__stddef_null.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__atomic/to_gcc_order.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__ranges/data.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__ranges/concepts.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__random/uniform_int_distribution.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__thread/support/pthread.h:
+
 /data/data/com.termux/files/usr/include/c++/v1/__random/is_valid.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__ostream/put_character_sequence.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__node_handle:
 
 /data/data/com.termux/files/usr/include/c++/v1/__new/nothrow_t.h:
 
@@ -3679,29 +3681,15 @@ CMakeFiles/LongTimeEngineTest.dir/tests/long_time_engine_test.cpp.o:
 
 /data/data/com.termux/files/usr/include/c++/v1/__type_traits/is_trivially_assignable.h:
 
-/data/data/com.termux/files/usr/include/c++/v1/__memory_resource/polymorphic_allocator.h:
-
 /data/data/com.termux/files/usr/include/c++/v1/__new/exceptions.h:
 
-/data/data/com.termux/files/usr/include/c++/v1/__memory/auto_ptr.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__concepts/equality_comparable.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__mutex/unique_lock.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__tuple/tuple_like_ext.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__mutex/tag_types.h:
+/data/data/com.termux/files/usr/include/c++/v1/__memory_resource/polymorphic_allocator.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__type_traits/is_polymorphic.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__algorithm/stable_sort.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__memory/temporary_buffer.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__type_traits/is_primary_template.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__memory/temp_value.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__type_traits/is_assignable.h:
 
@@ -3712,6 +3700,8 @@ CMakeFiles/LongTimeEngineTest.dir/tests/long_time_engine_test.cpp.o:
 /data/data/com.termux/files/usr/include/c++/v1/__memory/pointer_traits.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__memory/out_ptr.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__memory/inout_ptr.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__ostream/basic_ostream.h:
 
@@ -3738,6 +3728,8 @@ CMakeFiles/LongTimeEngineTest.dir/tests/long_time_engine_test.cpp.o:
 /data/data/com.termux/files/usr/include/c++/v1/__mbstate_t.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__math/trigonometric_functions.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__ranges/enable_borrowed_range.h:
 
 /data/data/com.termux/files/usr/include/sys/select.h:
 
@@ -3773,11 +3765,9 @@ CMakeFiles/LongTimeEngineTest.dir/tests/long_time_engine_test.cpp.o:
 
 /data/data/com.termux/files/usr/include/c++/v1/__math/abs.h:
 
-/data/data/com.termux/files/usr/include/c++/v1/__type_traits/lazy.h:
+/data/data/com.termux/files/usr/include/linux/compiler.h:
 
-/data/data/com.termux/files/usr/include/c++/v1/__locale:
-
-/data/data/com.termux/files/usr/include/c++/v1/__iterator/static_bounded_iter.h:
+/data/data/com.termux/files/usr/include/c++/v1/__iterator/size.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__iterator/reverse_iterator.h:
 
@@ -3785,37 +3775,23 @@ CMakeFiles/LongTimeEngineTest.dir/tests/long_time_engine_test.cpp.o:
 
 /data/data/com.termux/files/usr/include/c++/v1/__iterator/reverse_access.h:
 
+/data/data/com.termux/files/usr/include/c++/v1/__iterator/iterator_traits.h:
+
 /data/data/com.termux/files/usr/include/c++/v1/__iterator/iter_move.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__iterator/istreambuf_iterator.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__iterator/insert_iterator.h:
 
+/data/data/com.termux/files/usr/include/c++/v1/__type_traits/copy_cvref.h:
+
 /data/data/com.termux/files/usr/include/c++/v1/__iterator/incrementable_traits.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/streambuf:
-
-/data/data/com.termux/files/usr/include/c++/v1/__type_traits/is_enum.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__iterator/ranges_iterator_traits.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__string/extern_template_lists.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__algorithm/unwrap_range.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__iterator/front_insert_iterator.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__chrono/system_clock.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__algorithm/make_projected.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__algorithm/remove.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__iterator/erase_if_container.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__iterator/empty.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__iterator/distance.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__iterator/default_sentinel.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__configuration/language.h:
 
@@ -3823,13 +3799,17 @@ CMakeFiles/LongTimeEngineTest.dir/tests/long_time_engine_test.cpp.o:
 
 /data/data/com.termux/files/usr/include/c++/v1/__memory/align.h:
 
-/data/data/com.termux/files/usr/include/c++/v1/__algorithm/lexicographical_compare.h:
-
 /data/data/com.termux/files/usr/include/c++/v1/__math/copysign.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__algorithm/lexicographical_compare.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__iterator/back_insert_iterator.h:
 
-/data/data/com.termux/files/usr/include/c++/v1/__hash_table:
+/data/data/com.termux/files/usr/include/c++/v1/__bit/bit_cast.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__iterator/advance.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__type_traits/add_cv_quals.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__fwd/tuple.h:
 
@@ -3841,13 +3821,7 @@ CMakeFiles/LongTimeEngineTest.dir/tests/long_time_engine_test.cpp.o:
 
 /data/data/com.termux/files/usr/include/c++/v1/__fwd/streambuf.h:
 
-/data/data/com.termux/files/usr/include/c++/v1/__mutex/once_flag.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__fwd/stack.h:
-
 /data/data/com.termux/files/usr/include/c++/v1/__fwd/sstream.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__fwd/queue.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__chrono/high_resolution_clock.h:
 
@@ -3865,33 +3839,9 @@ CMakeFiles/LongTimeEngineTest.dir/tests/long_time_engine_test.cpp.o:
 
 /data/data/com.termux/files/usr/include/c++/v1/__fwd/ios.h:
 
-/data/data/com.termux/files/usr/include/malloc.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__concepts/relation.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__functional/function.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__locale_dir/locale_base_api.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__type_traits/add_lvalue_reference.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__condition_variable/condition_variable.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__iterator/concepts.h:
-
 /data/data/com.termux/files/usr/include/c++/v1/__algorithm/find_end.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__fwd/fstream.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__type_traits/is_nothrow_assignable.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__type_traits/is_callable.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__functional/hash.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__fwd/deque.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__iterator/unreachable_sentinel.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__fwd/complex.h:
 
@@ -3905,15 +3855,11 @@ CMakeFiles/LongTimeEngineTest.dir/tests/long_time_engine_test.cpp.o:
 
 /data/data/com.termux/files/usr/include/c++/v1/__functional/weak_result_type.h:
 
-/data/data/com.termux/files/usr/include/c++/v1/__functional/unary_negate.h:
-
 /data/data/com.termux/files/usr/include/c++/v1/__algorithm/copy.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__atomic/aliases.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__memory_resource/memory_resource.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__locale_dir/pad_and_output.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__functional/unary_function.h:
 
@@ -3921,49 +3867,19 @@ CMakeFiles/LongTimeEngineTest.dir/tests/long_time_engine_test.cpp.o:
 
 /data/data/com.termux/files/usr/include/c++/v1/__functional/ranges_operations.h:
 
-/data/data/com.termux/files/usr/include/c++/v1/__functional/pointer_to_unary_function.h:
+/data/data/com.termux/files/usr/include/c++/v1/__fwd/deque.h:
 
-/data/data/com.termux/files/usr/include/c++/v1/__functional/pointer_to_binary_function.h:
+/data/data/com.termux/files/usr/include/c++/v1/__type_traits/is_nothrow_assignable.h:
 
-/data/data/com.termux/files/usr/include/c++/v1/__memory/inout_ptr.h:
+/data/data/com.termux/files/usr/include/c++/v1/__type_traits/is_callable.h:
 
-/data/data/com.termux/files/usr/include/c++/v1/__concepts/class_or_enum.h:
+/data/data/com.termux/files/usr/include/c++/v1/__functional/hash.h:
 
-/data/data/com.termux/files/usr/include/c++/v1/__functional/not_fn.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/cstdint:
-
-/data/data/com.termux/files/usr/include/c++/v1/__functional/boyer_moore_searcher.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__type_traits/is_floating_point.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__compare/compare_three_way.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__functional/binder2nd.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__random/uniform_int_distribution.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__functional/binder1st.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__iterator/default_sentinel.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__functional/perfect_forward.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__algorithm/stable_partition.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__algorithm/is_sorted.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__functional/bind.h:
-
-/data/data/com.termux/files/usr/include/linux/compiler.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__iterator/size.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__ranges/access.h:
+/data/data/com.termux/files/usr/include/c++/v1/__functional/binary_function.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__functional/binary_negate.h:
 
-/data/data/com.termux/files/usr/include/c++/v1/__functional/binary_function.h:
+/data/data/com.termux/files/usr/include/c++/v1/__ranges/access.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__memory/shared_ptr.h:
 
@@ -3976,8 +3892,6 @@ CMakeFiles/LongTimeEngineTest.dir/tests/long_time_engine_test.cpp.o:
 /data/data/com.termux/files/usr/include/c++/v1/__exception/terminate.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__exception/nested_exception.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__locale_dir/locale_base_api/android.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__exception/exception.h:
 
@@ -3993,13 +3907,7 @@ CMakeFiles/LongTimeEngineTest.dir/tests/long_time_engine_test.cpp.o:
 
 /data/data/com.termux/files/usr/include/c++/v1/__configuration/platform.h:
 
-/data/data/com.termux/files/usr/include/c++/v1/deque:
-
-/data/data/com.termux/files/usr/include/c++/v1/__functional/is_transparent.h:
-
 /data/data/com.termux/files/usr/include/c++/v1/__config_site:
-
-/data/data/com.termux/files/usr/include/c++/v1/__iterator/iterator_traits.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__concepts/swappable.h:
 
@@ -4013,6 +3921,8 @@ CMakeFiles/LongTimeEngineTest.dir/tests/long_time_engine_test.cpp.o:
 
 /data/data/com.termux/files/usr/include/c++/v1/__concepts/same_as.h:
 
+/data/data/com.termux/files/usr/include/c++/v1/__ranges/size.h:
+
 /data/data/com.termux/files/usr/include/c++/v1/__concepts/movable.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__concepts/derived_from.h:
@@ -4023,11 +3933,7 @@ CMakeFiles/LongTimeEngineTest.dir/tests/long_time_engine_test.cpp.o:
 
 /data/data/com.termux/files/usr/include/c++/v1/__concepts/invocable.h:
 
-/data/data/com.termux/files/usr/include/c++/v1/__algorithm/equal_range.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__concepts/different_from.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__ios/fpos.h:
+/data/data/com.termux/files/usr/include/c++/v1/__type_traits/alignment_of.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__memory/addressof.h:
 
@@ -4039,17 +3945,17 @@ CMakeFiles/LongTimeEngineTest.dir/tests/long_time_engine_test.cpp.o:
 
 /data/data/com.termux/files/usr/include/c++/v1/__concepts/constructible.h:
 
+/data/data/com.termux/files/usr/include/c++/v1/__type_traits/aligned_union.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__type_traits/add_pointer.h:
+
 /data/data/com.termux/files/usr/include/c++/v1/__algorithm/min.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__algorithm/count.h:
 
-/data/data/com.termux/files/usr/include/c++/v1/__type_traits/decay.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__algorithm/sort.h:
+/data/data/com.termux/files/usr/include/c++/v1/__algorithm/partition_point.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__ranges/subrange.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__algorithm/partition_point.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__concepts/assignable.h:
 
@@ -4083,10 +3989,6 @@ CMakeFiles/LongTimeEngineTest.dir/tests/long_time_engine_test.cpp.o:
 
 /data/data/com.termux/files/usr/include/c++/v1/__algorithm/is_heap.h:
 
-/data/data/com.termux/files/usr/include/c++/v1/__ranges/empty.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__algorithm/unique.h:
-
 /data/data/com.termux/files/usr/include/c++/v1/stddef.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__type_traits/conjunction.h:
@@ -4095,15 +3997,37 @@ CMakeFiles/LongTimeEngineTest.dir/tests/long_time_engine_test.cpp.o:
 
 /data/data/com.termux/files/usr/include/c++/v1/__compare/compare_three_way_result.h:
 
-/data/data/com.termux/files/usr/include/c++/v1/__algorithm/any_of.h:
+/data/data/com.termux/files/usr/include/c++/v1/__functional/binder2nd.h:
 
-/data/data/com.termux/files/usr/include/c++/v1/__algorithm/make_heap.h:
+/data/data/com.termux/files/usr/include/c++/v1/__type_traits/is_floating_point.h:
 
-/data/data/com.termux/files/usr/include/bits/page_size.h:
+/data/data/com.termux/files/usr/include/c++/v1/__compare/compare_three_way.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__math/hypot.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__math/gamma.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__chrono/time_point.h:
+
+/data/data/com.termux/files/usr/include/bits/page_size.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/iterator:
+
+/data/data/com.termux/files/usr/include/aarch64-linux-android/asm/signal.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__memory/noexcept_move_assign_container.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__concepts/destructible.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__algorithm/any_of.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__algorithm/make_heap.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__mutex/unique_lock.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__concepts/equality_comparable.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__memory/auto_ptr.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__type_traits/promote.h:
 
@@ -4114,8 +4038,6 @@ CMakeFiles/LongTimeEngineTest.dir/tests/long_time_engine_test.cpp.o:
 /data/data/com.termux/files/usr/include/c++/v1/__cstddef/nullptr_t.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__chrono/steady_clock.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__mutex/mutex.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__algorithm/ranges_iterator_concept.h:
 
@@ -4138,12 +4060,6 @@ CMakeFiles/LongTimeEngineTest.dir/tests/long_time_engine_test.cpp.o:
 /data/data/com.termux/files/usr/include/bits/mbstate_t.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__algorithm/generate_n.h:
-
-/data/data/com.termux/files/usr/lib/clang/21/include/__stddef_null.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__ranges/data.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__atomic/to_gcc_order.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__atomic/support/c11.h:
 
@@ -4195,16 +4111,6 @@ CMakeFiles/LongTimeEngineTest.dir/tests/long_time_engine_test.cpp.o:
 
 /data/data/com.termux/files/usr/include/c++/v1/__fwd/subrange.h:
 
-CMakeFiles/LongTimeEngineTest.dir/src/LunarEngine.cpp.o:
-
-/data/data/com.termux/files/usr/include/c++/v1/__functional/mem_fun_ref.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__type_traits/common_reference.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__algorithm/copy_backward.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__assertion_handler:
-
 /data/data/com.termux/files/usr/include/c++/v1/__type_traits/is_volatile.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__algorithm/rotate_copy.h:
@@ -4251,15 +4157,19 @@ CMakeFiles/LongTimeEngineTest.dir/src/LunarEngine.cpp.o:
 
 /data/data/com.termux/files/usr/include/c++/v1/__algorithm/swap_ranges.h:
 
-/data/data/com.termux/files/usr/include/c++/v1/__memory/uninitialized_algorithms.h:
+/data/data/com.termux/files/usr/include/aarch64-linux-android/asm/sigcontext.h:
 
-/system/lib64/libdl.so:
+/data/data/com.termux/files/usr/include/c++/v1/__atomic/support.h:
 
-/data/data/com.termux/files/usr/include/c++/v1/__algorithm/unwrap_iter.h:
+/data/data/com.termux/files/usr/include/c++/v1/__functional/bind.h:
 
-/data/data/com.termux/files/usr/include/c++/v1/__type_traits/is_integral.h:
+/data/data/com.termux/files/usr/include/c++/v1/__algorithm/is_sorted.h:
 
-/data/data/com.termux/files/usr/include/c++/v1/__bit_reference:
+/data/data/com.termux/files/usr/include/c++/v1/__algorithm/stable_partition.h:
+
+/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_2083_Core_CPP/tests/long_time_engine_test.cpp:
+
+/data/data/com.termux/files/usr/include/c++/v1/__thread/poll_with_backoff.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__concepts/regular.h:
 
@@ -4289,6 +4199,8 @@ CMakeFiles/LongTimeEngineTest.dir/src/LunarEngine.cpp.o:
 
 /data/data/com.termux/files/usr/include/c++/v1/__algorithm/rotate.h:
 
+/data/data/com.termux/files/usr/include/c++/v1/__tuple/tuple_like_no_subrange.h:
+
 /data/data/com.termux/files/usr/include/c++/v1/stdlib.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__memory/unique_temporary_buffer.h:
@@ -4313,6 +4225,14 @@ CMakeFiles/LongTimeEngineTest.dir/src/LunarEngine.cpp.o:
 
 /data/data/com.termux/files/usr/include/c++/v1/__algorithm/remove_copy.h:
 
+/data/data/com.termux/files/usr/include/c++/v1/__iterator/erase_if_container.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__chrono/system_clock.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__algorithm/make_projected.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__algorithm/remove.h:
+
 /data/data/com.termux/files/usr/include/c++/v1/__chrono/duration.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__iterator/readable_traits.h:
@@ -4320,14 +4240,6 @@ CMakeFiles/LongTimeEngineTest.dir/src/LunarEngine.cpp.o:
 /data/data/com.termux/files/usr/include/c++/v1/__algorithm/move_backward.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__algorithm/shuffle.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/iterator:
-
-/data/data/com.termux/files/usr/include/aarch64-linux-android/asm/signal.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__concepts/destructible.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__memory/noexcept_move_assign_container.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__atomic/atomic.h:
 
@@ -4350,6 +4262,10 @@ CMakeFiles/LongTimeEngineTest.dir/src/LunarEngine.cpp.o:
 /data/data/com.termux/files/usr/include/bits/bionic_multibyte_result.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__algorithm/pop_heap.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__algorithm/nth_element.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__string/constexpr_c_functions.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__algorithm/fill.h:
 
@@ -4379,25 +4295,7 @@ CMakeFiles/LongTimeEngineTest.dir/src/LunarEngine.cpp.o:
 
 /data/data/com.termux/files/usr/include/c++/v1/__iterator/ostream_iterator.h:
 
-/data/data/com.termux/files/usr/include/c++/v1/__string/constexpr_c_functions.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__algorithm/nth_element.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__algorithm/three_way_comp_ref_type.h:
-
 /data/data/com.termux/files/usr/include/c++/v1/__algorithm/none_of.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__type_traits/is_bounded_array.h:
-
-/data/data/com.termux/files/usr/include/bits/posix_limits.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__algorithm/ranges_copy_n.h:
-
-/data/data/com.termux/files/usr/include/sys/user.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__utility/no_destroy.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__mutex/lock_guard.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__algorithm/partition_copy.h:
 
@@ -4413,6 +4311,12 @@ CMakeFiles/LongTimeEngineTest.dir/src/LunarEngine.cpp.o:
 
 /data/data/com.termux/files/usr/include/c++/v1/__algorithm/move.h:
 
+/data/data/com.termux/files/usr/include/c++/v1/__utility/unreachable.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__type_traits/desugars_to.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__type_traits/copy_cv.h:
+
 /data/data/com.termux/files/usr/include/c++/v1/new:
 
 /data/data/com.termux/files/usr/include/c++/v1/__algorithm/mismatch.h:
@@ -4427,15 +4331,13 @@ CMakeFiles/LongTimeEngineTest.dir/src/LunarEngine.cpp.o:
 
 /data/data/com.termux/files/usr/include/c++/v1/__algorithm/for_each_segment.h:
 
+/data/data/com.termux/files/usr/include/c++/v1/__type_traits/dependent_type.h:
+
 /data/data/com.termux/files/usr/include/c++/v1/__math/fma.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__configuration/abi.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__algorithm/min_element.h:
-
-/data/data/com.termux/files/usr/include/asm-generic/siginfo.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__functional/mem_fn.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__atomic/is_always_lock_free.h:
 
@@ -4487,15 +4389,19 @@ CMakeFiles/LongTimeEngineTest.dir/src/LunarEngine.cpp.o:
 
 /data/data/com.termux/files/usr/include/c++/v1/__algorithm/is_permutation.h:
 
-/data/data/com.termux/files/usr/include/c++/v1/__system_error/errc.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__functional/default_searcher.h:
-
 /data/data/com.termux/files/usr/include/c++/v1/__type_traits/is_fundamental.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__algorithm/replace_copy.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__algorithm/max.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__std_mbstate_t.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__memory/uninitialized_algorithms.h:
+
+/system/lib64/libdl.so:
+
+/data/data/com.termux/files/usr/include/c++/v1/__algorithm/unwrap_iter.h:
 
 /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_2083_Core_CPP/include/Chronology.h:
 
@@ -4505,35 +4411,23 @@ CMakeFiles/LongTimeEngineTest.dir/src/LunarEngine.cpp.o:
 
 /data/data/com.termux/files/usr/include/c++/v1/__algorithm/is_heap_until.h:
 
-/data/data/com.termux/files/usr/include/c++/v1/__algorithm/in_out_result.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__tuple/find_index.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__algorithm/ranges_copy.h:
-
 /data/data/com.termux/files/usr/include/c++/v1/__algorithm/for_each.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__iterator/advance.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__bit/bit_cast.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__type_traits/is_trivially_constructible.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__algorithm/find_first_of.h:
 
+/data/data/com.termux/files/usr/include/c++/v1/__ranges/enable_view.h:
+
 /data/data/com.termux/files/usr/include/c++/v1/__new/launder.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__iterator/move_sentinel.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__fwd/vector.h:
 
 /data/data/com.termux/files/usr/include/aarch64-linux-android/asm/types.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__algorithm/lower_bound.h:
 
-/data/data/com.termux/files/usr/include/c++/v1/__tuple/ignore.h:
+/data/data/com.termux/files/usr/include/c++/v1/__concepts/different_from.h:
 
-/data/data/com.termux/files/usr/include/c++/v1/__algorithm/fill_n.h:
+/data/data/com.termux/files/usr/include/c++/v1/__algorithm/equal_range.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__type_traits/is_same.h:
 
@@ -4550,6 +4444,12 @@ CMakeFiles/LongTimeEngineTest.dir/src/LunarEngine.cpp.o:
 /data/data/com.termux/files/usr/include/c++/v1/__algorithm/generate.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__memory/unique_ptr.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__algorithm/ranges_copy_n.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__type_traits/is_bounded_array.h:
+
+/data/data/com.termux/files/usr/include/bits/posix_limits.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__iterator/ostreambuf_iterator.h:
 
@@ -4579,18 +4479,6 @@ CMakeFiles/LongTimeEngineTest.dir/src/LunarEngine.cpp.o:
 
 /data/data/com.termux/files/usr/include/bits/timespec.h:
 
-/data/data/com.termux/files/usr/include/aarch64-linux-android/asm/sigcontext.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__atomic/support.h:
-
-/data/data/com.termux/files/usr/include/pthread.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__type_traits/unwrap_ref.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__algorithm/lexicographical_compare_three_way.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__math/hypot.h:
-
 /data/data/com.termux/files/usr/include/c++/v1/__type_traits/underlying_type.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__algorithm/set_union.h:
@@ -4605,10 +4493,6 @@ CMakeFiles/LongTimeEngineTest.dir/src/LunarEngine.cpp.o:
 
 /data/data/com.termux/files/usr/include/c++/v1/__algorithm/inplace_merge.h:
 
-/data/data/com.termux/files/usr/include/c++/v1/__type_traits/aligned_storage.h:
-
-/data/data/com.termux/files/usr/include/aarch64-linux-android/asm/siginfo.h:
-
 /data/data/com.termux/files/usr/include/android/ndk-version.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__algorithm/iter_swap.h:
@@ -4621,6 +4505,8 @@ CMakeFiles/LongTimeEngineTest.dir/src/LunarEngine.cpp.o:
 
 /data/data/com.termux/files/usr/include/asm-generic/int-ll64.h:
 
+/data/data/com.termux/files/usr/include/c++/v1/__type_traits/datasizeof.h:
+
 /data/data/com.termux/files/usr/include/c++/v1/__algorithm/for_each_n.h:
 
 /data/data/com.termux/files/usr/include/bits/pthread_types.h:
@@ -4631,6 +4517,14 @@ CMakeFiles/LongTimeEngineTest.dir/src/LunarEngine.cpp.o:
 
 /data/data/com.termux/files/usr/include/c++/v1/__algorithm/find_if.h:
 
+/data/data/com.termux/files/usr/include/c++/v1/__locale_dir/locale_base_api.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__functional/function.h:
+
+/data/data/com.termux/files/usr/include/malloc.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__concepts/relation.h:
+
 /data/data/com.termux/files/usr/include/bits/flock64.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__algorithm/find.h:
@@ -4639,9 +4533,17 @@ CMakeFiles/LongTimeEngineTest.dir/src/LunarEngine.cpp.o:
 
 /data/data/com.termux/files/usr/include/c++/v1/__algorithm/includes.h:
 
+/data/data/com.termux/files/usr/include/c++/v1/string.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__ranges/dangling.h:
+
 /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_2083_Core_CPP/src/ChronologyEngine.cpp:
 
 /data/data/com.termux/files/usr/include/bits/seek_constants.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__fwd/vector.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__iterator/move_sentinel.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__iterator/istream_iterator.h:
 
@@ -4649,9 +4551,17 @@ CMakeFiles/LongTimeEngineTest.dir/src/LunarEngine.cpp.o:
 
 /data/data/com.termux/files/usr/include/asm-generic/posix_types.h:
 
+/data/data/com.termux/files/usr/include/c++/v1/__functional/not_fn.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__concepts/class_or_enum.h:
+
 /data/data/com.termux/files/usr/include/c++/v1/compare:
 
 /data/data/com.termux/files/usr/include/bits/wctype.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__functional/mem_fn.h:
+
+/data/data/com.termux/files/usr/include/asm-generic/siginfo.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/clocale:
 
@@ -4668,6 +4578,8 @@ CMakeFiles/LongTimeEngineTest.dir/src/LunarEngine.cpp.o:
 /data/data/com.termux/files/usr/include/c++/v1/__algorithm/push_heap.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__algorithm/half_positive.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__ios/fpos.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__type_traits/make_const_lvalue_ref.h:
 

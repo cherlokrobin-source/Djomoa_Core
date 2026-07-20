@@ -311,6 +311,43 @@ LongTimeEngineTest/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LongTimeEngineTest.dir/build.make CMakeFiles/LongTimeEngineTest.dir/build
 .PHONY : LongTimeEngineTest/fast
 
+#=============================================================================
+# Target rules for targets named GoldenCalendarCLI
+
+# Build rule for target.
+GoldenCalendarCLI: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 GoldenCalendarCLI
+.PHONY : GoldenCalendarCLI
+
+# fast build rule for target.
+GoldenCalendarCLI/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GoldenCalendarCLI.dir/build.make CMakeFiles/GoldenCalendarCLI.dir/build
+.PHONY : GoldenCalendarCLI/fast
+
+examples/GoldenCalendarCLI.o: examples/GoldenCalendarCLI.cpp.o
+.PHONY : examples/GoldenCalendarCLI.o
+
+# target to build an object file
+examples/GoldenCalendarCLI.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GoldenCalendarCLI.dir/build.make CMakeFiles/GoldenCalendarCLI.dir/examples/GoldenCalendarCLI.cpp.o
+.PHONY : examples/GoldenCalendarCLI.cpp.o
+
+examples/GoldenCalendarCLI.i: examples/GoldenCalendarCLI.cpp.i
+.PHONY : examples/GoldenCalendarCLI.i
+
+# target to preprocess a source file
+examples/GoldenCalendarCLI.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GoldenCalendarCLI.dir/build.make CMakeFiles/GoldenCalendarCLI.dir/examples/GoldenCalendarCLI.cpp.i
+.PHONY : examples/GoldenCalendarCLI.cpp.i
+
+examples/GoldenCalendarCLI.s: examples/GoldenCalendarCLI.cpp.s
+.PHONY : examples/GoldenCalendarCLI.s
+
+# target to generate assembly for a file
+examples/GoldenCalendarCLI.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GoldenCalendarCLI.dir/build.make CMakeFiles/GoldenCalendarCLI.dir/examples/GoldenCalendarCLI.cpp.s
+.PHONY : examples/GoldenCalendarCLI.cpp.s
+
 src/ChronologyEngine.o: src/ChronologyEngine.cpp.o
 .PHONY : src/ChronologyEngine.o
 
@@ -932,6 +969,7 @@ help:
 	@echo "... DayIdTest"
 	@echo "... EngineCycleCompare"
 	@echo "... GoldenCalendar2083_Core"
+	@echo "... GoldenCalendarCLI"
 	@echo "... LongCycleTest"
 	@echo "... LongTimeEngineTest"
 	@echo "... LunarAlignmentTest"
@@ -940,6 +978,9 @@ help:
 	@echo "... Reference2083Test"
 	@echo "... TimeEngineTest"
 	@echo "... Year2083Test"
+	@echo "... examples/GoldenCalendarCLI.o"
+	@echo "... examples/GoldenCalendarCLI.i"
+	@echo "... examples/GoldenCalendarCLI.s"
 	@echo "... src/ChronologyEngine.o"
 	@echo "... src/ChronologyEngine.i"
 	@echo "... src/ChronologyEngine.s"
