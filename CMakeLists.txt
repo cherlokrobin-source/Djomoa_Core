@@ -23,6 +23,7 @@ add_library(GoldenCalendar2083_Core
     src/WeekEngine.cpp
     src/TimeEngine.cpp
     src/ArchiveEngine.cpp
+    src/ArchiveGenerator.cpp
 
 )
 
@@ -230,8 +231,18 @@ target_link_libraries(
 
 )
 
+add_executable(
+    ArchiveGeneratorTest
 
+    tests/archive_generator_test.cpp
+)
+
+target_link_libraries(
+    ArchiveGeneratorTest
+    GoldenCalendar2083_Core
+)
 
 target_include_directories(
-    LongTimeEngineTest PRIVATE include
+    ArchiveGeneratorTest PRIVATE
+    include
 )

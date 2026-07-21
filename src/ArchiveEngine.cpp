@@ -8,20 +8,68 @@ ArchiveEngine::ArchiveEngine()
 }
 
 
-
+// جلب يوم بواسطة Day ID
 Chronology ArchiveEngine::getDay(long long dayId)
 {
     return engine.getChronology(dayId);
 }
 
 
+// جلب تاريخ شمسي
+Chronology ArchiveEngine::getBySolar(
+    int year,
+    int month,
+    int day
+)
+{
+    return engine.getBySolar(
+        year,
+        month,
+        day
+    );
+}
 
+
+// جلب تاريخ قمري
+Chronology ArchiveEngine::getByLunar(
+    int year,
+    int month,
+    int day
+)
+{
+    return engine.getByLunar(
+        year,
+        month,
+        day
+    );
+}
+
+
+// الحصول على Day ID من تاريخ شمسي
+long long ArchiveEngine::getDayId(
+    int year,
+    int month,
+    int day
+)
+{
+    return engine.getDayId(
+        year,
+        month,
+        day
+    );
+}
+
+
+// طباعة بداية سنة
 void ArchiveEngine::printYear(int year)
 {
 
     Chronology result =
-        engine.getBySolar(year,1,1);
-
+        engine.getBySolar(
+            year,
+            1,
+            1
+        );
 
 
     std::cout

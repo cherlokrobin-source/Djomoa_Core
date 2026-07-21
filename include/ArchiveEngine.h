@@ -3,8 +3,10 @@
 
 #include "ChronologyEngine.h"
 
+
 class ArchiveEngine
 {
+
 private:
 
     ChronologyEngine engine;
@@ -15,12 +17,37 @@ public:
     ArchiveEngine();
 
 
-    // جلب يوم محدد بواسطة Day ID
-    Chronology getDay(long long dayId);
+    Chronology getDay(
+        long long dayId
+    );
 
 
-    // طباعة بداية سنة محددة
-    void printYear(int year);
+    Chronology getBySolar(
+        int year,
+        int month,
+        int day
+    );
+
+
+    Chronology getByLunar(
+        int year,
+        int month,
+        int day
+    );
+
+
+    long long getDayId(
+        int year,
+        int month,
+        int day
+    );
+
+
+    void printYear(
+        int year
+    );
+
 };
+
 
 #endif
