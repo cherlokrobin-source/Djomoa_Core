@@ -1,4 +1,7 @@
-data/
+.git_corrupt_backup/
+.git_backup_before_fix/
+node_modules/
+*.logdata/
 build/
 CMakeFiles/
 CMakeCache.txt
