@@ -267,3 +267,21 @@ add_executable(
 target_include_directories(
     TemporalCoordinateTest PRIVATE include
 )
+# ==============================
+# Global Temporal ID Test
+# ==============================
+
+add_executable(
+    GlobalTemporalIDTest
+    tests/global_temporal_id_test.cpp
+    src/GlobalTemporalID.cpp
+)
+
+target_include_directories(
+    GlobalTemporalIDTest PRIVATE include
+)
+
+add_test(
+    NAME GlobalTemporalIDTest
+    COMMAND GlobalTemporalIDTest
+)
