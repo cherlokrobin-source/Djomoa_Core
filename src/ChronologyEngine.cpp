@@ -83,7 +83,23 @@ GlobalTemporalID ChronologyEngine::generateGlobalID(long long day)
 
 
     // الحقبة الزمنية
-    id.era = "Golden Calendar Epoch";
+// Temporal Metadata
+
+id.yearIndex = result.solar.year;
+
+
+// دورة 33/34 سنة تقريبية
+id.cycleNumber =
+    (result.solar.year - 1) / 33 + 1;
+
+
+// اليوم داخل الدورة
+id.cycleDay =
+    day % 12053;
+
+
+// المؤشر التاريخي
+id.historicalIndex = day;
 
 
     return id;
