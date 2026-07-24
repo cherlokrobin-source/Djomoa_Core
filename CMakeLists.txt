@@ -285,3 +285,25 @@ add_test(
     NAME GlobalTemporalIDTest
     COMMAND GlobalTemporalIDTest
 )
+# ==============================
+# Global Temporal ID Integration Test
+# ==============================
+
+add_executable(
+    GlobalTemporalIDIntegrationTest
+    tests/global_temporal_id_integration_test.cpp
+    src/ChronologyEngine.cpp
+    src/GlobalTemporalID.cpp
+    src/SolarEngine.cpp
+    src/LunarEngine.cpp
+    src/WeekEngine.cpp
+)
+
+target_include_directories(
+    GlobalTemporalIDIntegrationTest PRIVATE include
+)
+
+add_test(
+    NAME GlobalTemporalIDIntegrationTest
+    COMMAND GlobalTemporalIDIntegrationTest
+)

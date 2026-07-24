@@ -54,6 +54,45 @@ Chronology ChronologyEngine::getChronology(long long day)
 
 
 
+// إنشاء الهوية الزمنية العالمية
+GlobalTemporalID ChronologyEngine::generateGlobalID(long long day)
+{
+    Chronology result = getChronology(day);
+
+    GlobalTemporalID id;
+
+
+    // المعرف الأساسي
+    id.dayId = result.dayId;
+
+
+    // الإحداثيات الشمسية
+    id.solarYear  = result.solar.year;
+    id.solarMonth = result.solar.month;
+    id.solarDay   = result.solar.day;
+
+
+    // الإحداثيات القمرية
+    id.lunarYear  = result.lunar.year;
+    id.lunarMonth = result.lunar.month;
+    id.lunarDay   = result.lunar.day;
+
+
+    // إحداثية الأسبوع
+    id.weekIndex = result.weekIndex;
+
+
+    // الحقبة الزمنية
+    id.era = "Golden Calendar Epoch";
+
+
+    return id;
+}
+
+
+
+
+
 // البحث بالتاريخ الشمسي
 Chronology ChronologyEngine::getBySolar(
     int year,
@@ -95,6 +134,7 @@ Chronology ChronologyEngine::getByLunar(
 
     return getChronology(id);
 }
+
 
 
 
