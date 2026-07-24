@@ -307,3 +307,25 @@ add_test(
     NAME GlobalTemporalIDIntegrationTest
     COMMAND GlobalTemporalIDIntegrationTest
 )
+# ==============================
+# Global Temporal Metadata Test
+# ==============================
+
+add_executable(
+    GlobalTemporalMetadataTest
+    tests/global_temporal_metadata_test.cpp
+    src/ChronologyEngine.cpp
+    src/GlobalTemporalID.cpp
+    src/SolarEngine.cpp
+    src/LunarEngine.cpp
+    src/WeekEngine.cpp
+)
+
+target_include_directories(
+    GlobalTemporalMetadataTest PRIVATE include
+)
+
+add_test(
+    NAME GlobalTemporalMetadataTest
+    COMMAND GlobalTemporalMetadataTest
+)
