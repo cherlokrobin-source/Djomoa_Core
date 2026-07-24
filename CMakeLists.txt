@@ -250,3 +250,20 @@ add_test(
     NAME CycleAccuracyTest
     COMMAND CycleAccuracyTest
 )
+add_test(
+    NAME TemporalCoordinateTest
+    COMMAND TemporalCoordinateTest
+)
+add_executable(
+    TemporalCoordinateTest
+    tests/temporal_coordinate_test.cpp
+    src/TemporalCoordinateEngine.cpp
+    src/ChronologyEngine.cpp
+    src/SolarEngine.cpp
+    src/LunarEngine.cpp
+    src/WeekEngine.cpp
+)
+
+target_include_directories(
+    TemporalCoordinateTest PRIVATE include
+)
