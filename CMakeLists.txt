@@ -329,3 +329,26 @@ add_test(
     NAME GlobalTemporalMetadataTest
     COMMAND GlobalTemporalMetadataTest
 )
+# ==============================
+# Temporal Query Engine Test
+# ==============================
+
+add_executable(
+    TemporalQueryTest
+    tests/temporal_query_test.cpp
+    src/TemporalQueryEngine.cpp
+    src/ChronologyEngine.cpp
+    src/GlobalTemporalID.cpp
+    src/SolarEngine.cpp
+    src/LunarEngine.cpp
+    src/WeekEngine.cpp
+)
+
+target_include_directories(
+    TemporalQueryTest PRIVATE include
+)
+
+add_test(
+    NAME TemporalQueryTest
+    COMMAND TemporalQueryTest
+)
