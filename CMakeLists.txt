@@ -352,3 +352,29 @@ add_test(
     NAME TemporalQueryTest
     COMMAND TemporalQueryTest
 )
+# ============================================
+# Temporal API Test
+# ============================================
+
+add_executable(
+    TemporalAPITest
+    tests/api/temporal_api_test.cpp
+    src/api/TemporalAPI.cpp
+    src/TemporalQueryEngine.cpp
+    src/ChronologyEngine.cpp
+    src/GlobalTemporalID.cpp
+    src/SolarEngine.cpp
+    src/LunarEngine.cpp
+    src/WeekEngine.cpp
+)
+
+target_include_directories(
+    TemporalAPITest PRIVATE
+    include
+    include/api
+)
+
+add_test(
+    NAME TemporalAPITest
+    COMMAND TemporalAPITest
+)
