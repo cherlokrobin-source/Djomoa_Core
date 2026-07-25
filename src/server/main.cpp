@@ -1,27 +1,16 @@
-#include "server/TemporalServer.h"
+#include "server/HttpServer.h"
 
 #include <iostream>
 
 int main()
 {
-    std::cout << "=====================================\n";
-    std::cout << " Golden Calendar Temporal Server v1\n";
-    std::cout << " 50000 Year Chronology Engine\n";
-    std::cout << "=====================================\n";
+    std::cout
+        << "Starting Golden Calendar HTTP Layer..."
+        << std::endl;
 
-    TemporalServer server;
+    HttpServer server(8080);
 
-    std::cout << "\n[STATUS]\n";
-    std::cout << server.handleStatusRequest() << std::endl;
-
-    std::cout << "\n[DAY QUERY]\n";
-    std::cout << server.handleDayRequest(1) << std::endl;
-
-    std::cout << "\n[SOLAR QUERY]\n";
-    std::cout << server.handleSolarRequest(1, 1, 1) << std::endl;
-
-    std::cout << "\n[LUNAR QUERY]\n";
-    std::cout << server.handleLunarRequest(1, 1, 1) << std::endl;
+    server.run();
 
     return 0;
 }

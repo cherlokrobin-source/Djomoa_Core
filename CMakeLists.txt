@@ -430,6 +430,7 @@ add_test(
 add_executable(
     TemporalServer
     src/server/main.cpp
+    src/server/HttpServer.cpp
     src/server/TemporalServer.cpp
     src/api/TemporalAPI.cpp
     src/TemporalQueryEngine.cpp

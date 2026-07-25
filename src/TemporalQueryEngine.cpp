@@ -1,4 +1,5 @@
 #include "TemporalQueryEngine.h"
+#include <iostream>
 
 
 TemporalQueryEngine::TemporalQueryEngine()
@@ -6,11 +7,22 @@ TemporalQueryEngine::TemporalQueryEngine()
 }
 
 
-GlobalTemporalID TemporalQueryEngine::queryDay(long long dayId)
+// ===============================
+// Query by Day ID
+// ===============================
+
+GlobalTemporalID TemporalQueryEngine::queryDay(
+    long long dayId
+)
 {
     return chronology.generateGlobalID(dayId);
 }
 
+
+
+// ===============================
+// Query by Solar Date
+// ===============================
 
 GlobalTemporalID TemporalQueryEngine::querySolar(
     int year,
@@ -25,9 +37,15 @@ GlobalTemporalID TemporalQueryEngine::querySolar(
             day
         );
 
+
     return chronology.generateGlobalID(id);
 }
 
+
+
+// ===============================
+// Query by Lunar Date
+// ===============================
 
 GlobalTemporalID TemporalQueryEngine::queryLunar(
     int year,
@@ -35,6 +53,9 @@ GlobalTemporalID TemporalQueryEngine::queryLunar(
     int day
 )
 {
+    std::cout << "LUNAR QUERY START\n";
+
+
     Chronology c =
         chronology.getByLunar(
             year,
@@ -42,5 +63,14 @@ GlobalTemporalID TemporalQueryEngine::queryLunar(
             day
         );
 
-    return chronology.generateGlobalID(c.dayId);
+
+    std::cout
+        << "LUNAR DAY ID = "
+        << c.dayId
+        << "\n";
+
+
+    return chronology.generateGlobalID(
+        c.dayId
+    );
 }
