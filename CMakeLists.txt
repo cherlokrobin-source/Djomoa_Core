@@ -10,11 +10,12 @@ enable_testing()
 include_directories(include)
 
 
-# ==============================
+# ============================================
 # Main Core Library
-# ==============================
+# ============================================
 
-add_library(GoldenCalendar2083_Core
+add_library(
+    GoldenCalendar2083_Core
     src/SolarEngine.cpp
     src/LunarEngine.cpp
     src/ChronologyEngine.cpp
@@ -25,9 +26,10 @@ add_library(GoldenCalendar2083_Core
 )
 
 
-# ==============================
-# Tests
-# ==============================
+# ============================================
+# Archive Tests
+# ============================================
+
 add_executable(
     Archive50000Test
     tests/archive_50000_test.cpp
@@ -43,71 +45,99 @@ add_test(
     COMMAND Archive50000Test
 )
 
-add_executable(Cycle33Test
+
+# ============================================
+# Chronology Tests
+# ============================================
+
+add_executable(
+    Cycle33Test
     tests/cycle_33_test.cpp
     src/SolarEngine.cpp
     src/LunarEngine.cpp
     src/ChronologyEngine.cpp
 )
 
-add_test(NAME Cycle33Test COMMAND Cycle33Test)
+add_test(
+    NAME Cycle33Test
+    COMMAND Cycle33Test
+)
 
 
-
-add_executable(MultiCycleTest
+add_executable(
+    MultiCycleTest
     tests/multi_cycle_test.cpp
     src/SolarEngine.cpp
     src/LunarEngine.cpp
     src/ChronologyEngine.cpp
 )
 
-add_test(NAME MultiCycleTest COMMAND MultiCycleTest)
+add_test(
+    NAME MultiCycleTest
+    COMMAND MultiCycleTest
+)
 
 
-
-add_executable(Year2083Test
+add_executable(
+    Year2083Test
     tests/year_2083_test.cpp
     src/SolarEngine.cpp
     src/LunarEngine.cpp
     src/ChronologyEngine.cpp
 )
 
-add_test(NAME Year2083Test COMMAND Year2083Test)
+add_test(
+    NAME Year2083Test
+    COMMAND Year2083Test
+)
 
 
-
-add_executable(ChronologyMainTest
+add_executable(
+    ChronologyMainTest
     tests/chronology_main_test.cpp
     src/SolarEngine.cpp
     src/LunarEngine.cpp
     src/ChronologyEngine.cpp
 )
 
-add_test(NAME ChronologyMainTest COMMAND ChronologyMainTest)
+add_test(
+    NAME ChronologyMainTest
+    COMMAND ChronologyMainTest
+)
 
 
+# ============================================
+# Day / Time Tests
+# ============================================
 
-add_executable(DayIdTest
+add_executable(
+    DayIdTest
     tests/dayid_test.cpp
     src/SolarEngine.cpp
 )
 
-add_test(NAME DayIdTest COMMAND DayIdTest)
+add_test(
+    NAME DayIdTest
+    COMMAND DayIdTest
+)
 
 
-
-add_executable(Reference2083Test
+add_executable(
+    Reference2083Test
     tests/reference_2083_test.cpp
     src/SolarEngine.cpp
     src/LunarEngine.cpp
     src/ChronologyEngine.cpp
 )
 
-add_test(NAME Reference2083Test COMMAND Reference2083Test)
+add_test(
+    NAME Reference2083Test
+    COMMAND Reference2083Test
+)
 
 
-
-add_executable(TimeEngineTest
+add_executable(
+    TimeEngineTest
     tests/time_engine_test.cpp
     src/TimeEngine.cpp
     src/ChronologyEngine.cpp
@@ -115,11 +145,14 @@ add_executable(TimeEngineTest
     src/LunarEngine.cpp
 )
 
-add_test(NAME TimeEngineTest COMMAND TimeEngineTest)
+add_test(
+    NAME TimeEngineTest
+    COMMAND TimeEngineTest
+)
 
 
-
-add_executable(LongTimeEngineTest
+add_executable(
+    LongTimeEngineTest
     src/LongTimeEngine.cpp
     src/ChronologyEngine.cpp
     src/SolarEngine.cpp
@@ -128,16 +161,16 @@ add_executable(LongTimeEngineTest
     tests/long_time_engine_test.cpp
 )
 
-add_test(NAME LongTimeEngineTest COMMAND LongTimeEngineTest)
-
-
-
-# ==============================
+add_test(
+    NAME LongTimeEngineTest
+    COMMAND LongTimeEngineTest
+)
+# ============================================
 # Cycle Synchronization Tests
-# ==============================
+# ============================================
 
-
-add_executable(Cycle33_34_SynchronizationTest
+add_executable(
+    Cycle33_34_SynchronizationTest
     tests/Cycle33_34_SynchronizationTest.cpp
     src/SolarEngine.cpp
     src/LunarEngine.cpp
@@ -149,8 +182,8 @@ add_test(
 )
 
 
-
-add_executable(CycleSynchronizationLongTermTest
+add_executable(
+    CycleSynchronizationLongTermTest
     tests/CycleSynchronizationLongTermTest.cpp
 )
 
@@ -165,11 +198,9 @@ add_test(
 )
 
 
-
-# ==============================
-# Archive Engine
-# ==============================
-
+# ============================================
+# Archive Engine Tests
+# ============================================
 
 add_executable(
     ArchiveEngineTest
@@ -182,14 +213,14 @@ target_link_libraries(
 )
 
 target_include_directories(
-    ArchiveEngineTest PRIVATE include
+    ArchiveEngineTest PRIVATE
+    include
 )
 
 add_test(
     NAME ArchiveEngineTest
     COMMAND ArchiveEngineTest
 )
-
 
 
 add_executable(
@@ -203,7 +234,8 @@ target_link_libraries(
 )
 
 target_include_directories(
-    ArchiveGeneratorTest PRIVATE include
+    ArchiveGeneratorTest PRIVATE
+    include
 )
 
 add_test(
@@ -212,11 +244,9 @@ add_test(
 )
 
 
-
-# ==============================
+# ============================================
 # CLI Application
-# ==============================
-
+# ============================================
 
 add_executable(
     GoldenCalendarCLI
@@ -229,11 +259,9 @@ target_link_libraries(
 )
 
 
-
-# ==============================
+# ============================================
 # Cycle Accuracy
-# ==============================
-
+# ============================================
 
 add_executable(
     CycleAccuracyTest
@@ -243,17 +271,20 @@ add_executable(
 )
 
 target_include_directories(
-    CycleAccuracyTest PRIVATE include
+    CycleAccuracyTest PRIVATE
+    include
 )
 
 add_test(
     NAME CycleAccuracyTest
     COMMAND CycleAccuracyTest
 )
-add_test(
-    NAME TemporalCoordinateTest
-    COMMAND TemporalCoordinateTest
-)
+
+
+# ============================================
+# Temporal Coordinate Engine
+# ============================================
+
 add_executable(
     TemporalCoordinateTest
     tests/temporal_coordinate_test.cpp
@@ -265,11 +296,19 @@ add_executable(
 )
 
 target_include_directories(
-    TemporalCoordinateTest PRIVATE include
+    TemporalCoordinateTest PRIVATE
+    include
 )
-# ==============================
-# Global Temporal ID Test
-# ==============================
+
+add_test(
+    NAME TemporalCoordinateTest
+    COMMAND TemporalCoordinateTest
+)
+
+
+# ============================================
+# Global Temporal ID
+# ============================================
 
 add_executable(
     GlobalTemporalIDTest
@@ -278,16 +317,15 @@ add_executable(
 )
 
 target_include_directories(
-    GlobalTemporalIDTest PRIVATE include
+    GlobalTemporalIDTest PRIVATE
+    include
 )
 
 add_test(
     NAME GlobalTemporalIDTest
     COMMAND GlobalTemporalIDTest
 )
-# ==============================
-# Global Temporal ID Integration Test
-# ==============================
+
 
 add_executable(
     GlobalTemporalIDIntegrationTest
@@ -300,16 +338,15 @@ add_executable(
 )
 
 target_include_directories(
-    GlobalTemporalIDIntegrationTest PRIVATE include
+    GlobalTemporalIDIntegrationTest PRIVATE
+    include
 )
 
 add_test(
     NAME GlobalTemporalIDIntegrationTest
     COMMAND GlobalTemporalIDIntegrationTest
 )
-# ==============================
-# Global Temporal Metadata Test
-# ==============================
+
 
 add_executable(
     GlobalTemporalMetadataTest
@@ -322,16 +359,19 @@ add_executable(
 )
 
 target_include_directories(
-    GlobalTemporalMetadataTest PRIVATE include
+    GlobalTemporalMetadataTest PRIVATE
+    include
 )
 
 add_test(
     NAME GlobalTemporalMetadataTest
     COMMAND GlobalTemporalMetadataTest
 )
-# ==============================
-# Temporal Query Engine Test
-# ==============================
+
+
+# ============================================
+# Temporal Query Engine
+# ============================================
 
 add_executable(
     TemporalQueryTest
@@ -345,13 +385,16 @@ add_executable(
 )
 
 target_include_directories(
-    TemporalQueryTest PRIVATE include
+    TemporalQueryTest PRIVATE
+    include
 )
 
 add_test(
     NAME TemporalQueryTest
     COMMAND TemporalQueryTest
 )
+
+
 # ============================================
 # Temporal API Test
 # ============================================
@@ -377,4 +420,34 @@ target_include_directories(
 add_test(
     NAME TemporalAPITest
     COMMAND TemporalAPITest
+)
+
+
+# ============================================
+# Temporal Server Application
+# ============================================
+
+add_executable(
+    TemporalServer
+    src/server/main.cpp
+    src/server/TemporalServer.cpp
+    src/api/TemporalAPI.cpp
+    src/TemporalQueryEngine.cpp
+    src/ChronologyEngine.cpp
+    src/GlobalTemporalID.cpp
+    src/SolarEngine.cpp
+    src/LunarEngine.cpp
+    src/WeekEngine.cpp
+)
+
+target_include_directories(
+    TemporalServer PRIVATE
+    include
+    include/api
+    include/server
+)
+
+target_link_libraries(
+    TemporalServer
+    GoldenCalendar2083_Core
 )
