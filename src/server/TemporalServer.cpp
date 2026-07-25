@@ -1,10 +1,8 @@
 #include "TemporalServer.h"
 
-
 TemporalServer::TemporalServer()
 {
 }
-
 
 // طلب بواسطة Day ID
 std::string TemporalServer::handleDayRequest(
@@ -13,7 +11,6 @@ std::string TemporalServer::handleDayRequest(
 {
     return api.getDayAsJSON(dayId);
 }
-
 
 // طلب بواسطة التاريخ الشمسي
 std::string TemporalServer::handleSolarRequest(
@@ -29,7 +26,6 @@ std::string TemporalServer::handleSolarRequest(
     );
 }
 
-
 // طلب بواسطة التاريخ القمري
 std::string TemporalServer::handleLunarRequest(
     int year,
@@ -42,4 +38,10 @@ std::string TemporalServer::handleLunarRequest(
         month,
         day
     );
+}
+
+// طلب حالة المحرك
+std::string TemporalServer::handleStatusRequest()
+{
+    return api.getStatusJSON();
 }

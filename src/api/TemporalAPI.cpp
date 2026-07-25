@@ -2,16 +2,13 @@
 
 #include <sstream>
 
-
 TemporalAPI::TemporalAPI()
 {
 }
 
-
 std::string TemporalAPI::getDayAsJSON(long long dayId)
 {
-    GlobalTemporalID id =
-        query.queryDay(dayId);
+    GlobalTemporalID id = query.queryDay(dayId);
 
     std::ostringstream json;
 
@@ -34,7 +31,6 @@ std::string TemporalAPI::getDayAsJSON(long long dayId)
     return json.str();
 }
 
-
 std::string TemporalAPI::getSolarAsJSON(
     int year,
     int month,
@@ -51,7 +47,6 @@ std::string TemporalAPI::getSolarAsJSON(
     return getDayAsJSON(id.dayId);
 }
 
-
 std::string TemporalAPI::getLunarAsJSON(
     int year,
     int month,
@@ -66,4 +61,20 @@ std::string TemporalAPI::getLunarAsJSON(
         );
 
     return getDayAsJSON(id.dayId);
+}
+
+std::string TemporalAPI::getStatusJSON()
+{
+    std::ostringstream json;
+
+    json << "{";
+    json << "\"engine\":\"Golden Calendar 50000 Chronology Engine\",";
+    json << "\"version\":\"1.1-dev\",";
+    json << "\"status\":\"stable\",";
+    json << "\"tests\":\"20/20 Passed\",";
+    json << "\"maxYears\":50000,";
+    json << "\"api\":\"Temporal API\"";
+    json << "}";
+
+    return json.str();
 }

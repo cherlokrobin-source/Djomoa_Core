@@ -5,7 +5,6 @@
 
 #include "../api/TemporalAPI.h"
 
-
 class TemporalServer
 {
 
@@ -13,12 +12,10 @@ public:
 
     TemporalServer();
 
-
     // استقبال طلب يوم بواسطة Day ID
     std::string handleDayRequest(
         long long dayId
     );
-
 
     // استقبال طلب التاريخ الشمسي
     std::string handleSolarRequest(
@@ -27,7 +24,6 @@ public:
         int day
     );
 
-
     // استقبال طلب التاريخ القمري
     std::string handleLunarRequest(
         int year,
@@ -35,6 +31,8 @@ public:
         int day
     );
 
+    // استقبال طلب حالة المحرك
+    std::string handleStatusRequest();
 
 private:
 
@@ -42,5 +40,5 @@ private:
 
 };
 
-
 #endif
+
