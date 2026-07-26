@@ -2,108 +2,116 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Golden Calendar | 50000-Year Chronology Engine</title>
+<title>Digital Astrolabe Engine</title>
 
-    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+
 </head>
+
 
 <body>
 
-<header class="hero">
 
-    <h1>
-        GOLDEN CALENDAR
-    </h1>
+<header>
 
-    <h2>
-        50000-Year Chronology Engine
-    </h2>
+<h1>Digital Astrolabe Engine</h1>
 
-    <p>
-        A high-precision temporal computing system
-        for solar, lunar and historical chronology.
-    </p>
+<h2>50,000-Year Chronology Research Platform</h2>
+
+<p>
+Experimental temporal computing architecture for solar and lunar chronology,
+global temporal indexing and API-based exploration.
+</p>
 
 </header>
 
 
-<main>
+
+<section class="status-card">
+
+<h3>Engine Status</h3>
+
+<div class="status-grid">
+
+<div>
+<span>Status</span>
+<strong id="engineStatus">Loading...</strong>
+</div>
 
 
-<section id="dashboard">
-
-    <h2>Engine Dashboard</h2>
-
-    <div class="cards">
-
-        <div class="card">
-            <h3>Status</h3>
-            <p id="engineStatus">
-                Loading...
-            </p>
-        </div>
+<div>
+<span>Version</span>
+<strong id="engineVersion">---</strong>
+</div>
 
 
-        <div class="card">
-            <h3>Version</h3>
-            <p id="engineVersion">
-                Loading...
-            </p>
-        </div>
+<div>
+<span>Tests</span>
+<strong id="engineTests">---</strong>
+</div>
 
-
-        <div class="card">
-            <h3>Time Range</h3>
-            <p>
-                50,000 Years
-            </p>
-        </div>
-
-
-        <div class="card">
-            <h3>Tests</h3>
-            <p id="engineTests">
-                Loading...
-            </p>
-        </div>
-
-    </div>
+</div>
 
 </section>
 
 
 
-<section id="explorer">
 
-<h2>
-Temporal Explorer
-</h2>
+<section class="clock-card">
+
+<h3>Global Clock</h3>
+
+<div id="clock">
+00:00:00
+</div>
+
+<div id="date">
+Loading date...
+</div>
+
+</section>
 
 
-<div class="search-box">
 
-<label>
-Day ID
-</label>
+
+<section class="query-card">
+
+
+<h3>Day ID Query</h3>
+
 
 <input 
-type="number"
 id="dayInput"
+type="number"
 placeholder="Enter Day ID">
 
 
 <button onclick="searchDay()">
-Search
+QUERY
 </button>
 
-</div>
+
+</section>
+
+
+
+
+
+<section class="console">
+
+
+<h3>API Response</h3>
 
 
 <pre id="result">
-Waiting for query...
+{
+    "waiting": true
+}
 </pre>
 
 
@@ -111,79 +119,33 @@ Waiting for query...
 
 
 
-<section id="converter">
-
-<h2>
-Calendar Converter
-</h2>
-
-<div class="converter-box">
-
-<button>
-Solar Date
-</button>
-
-<button>
-Lunar Date
-</button>
-
-</div>
-
-
-</section>
-
-
-
-<section id="timeline">
-
-<h2>
-Timeline Explorer
-</h2>
-
-
-<input 
-type="range"
-min="1"
-max="50000"
-value="1"
-id="timelineRange">
-
-
-<p>
-Year:
-<span id="yearValue">
-1
-</span>
-</p>
-
-
-</section>
-
-
-</main>
-
-
 
 <footer>
 
 <p>
-Golden Calendar Project
+Digital Astrolabe Engine v0.1 Demo
 </p>
 
 <p>
-50000-Year Temporal Computing Framework
+Research Prototype - Golden Calendar Project
+</p>
+
+<footer>
+
+<p>
+Digital Astrolabe Engine v0.1 Demo
+</p>
+
+<p>
+Research Prototype - Golden Calendar Project
 </p>
 
 <p>
 Developed by Nemimeche Benaissa
 </p>
 
+<p>
+© 2026 Golden Calendar Project
+</p>
+
 </footer>
-
-
-
-<script type="module" src="app.js"></script>
-
-</body>
-
-</html>

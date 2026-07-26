@@ -1,360 +1,233 @@
-/* ==========================================
-   GOLDEN CALENDAR
-   50000-Year Chronology Engine
-   Frontend v1.0
-========================================== */
-
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+box-sizing:border-box;
 }
 
 
-body {
+body{
 
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
+margin:0;
 
-    background:
-        radial-gradient(
-            circle at top,
-            #1a1a1a,
-            #050505
-        );
+background:
+linear-gradient(
+135deg,
+#050505,
+#111827
+);
 
-    color: #ffffff;
+color:#ffffff;
 
-    min-height: 100vh;
-
-}
-
-
-/* ==========================
-   HERO HEADER
-========================== */
-
-
-.hero {
-
-    text-align: center;
-
-    padding: 60px 20px;
-
-    border-bottom:
-        1px solid #b8860b;
-
-}
-
-
-.hero h1 {
-
-    font-size: 48px;
-
-    letter-spacing: 5px;
-
-    color:
-        #d4af37;
-
-    text-shadow:
-        0 0 20px
-        rgba(212,175,55,0.6);
-
-}
-
-
-.hero h2 {
-
-    margin-top: 15px;
-
-    font-size: 28px;
-
-    color: #ffffff;
-
-}
-
-
-.hero p {
-
-    margin-top: 20px;
-
-    color: #cccccc;
-
-    font-size: 18px;
+font-family:Inter,Arial,sans-serif;
 
 }
 
 
 
-/* ==========================
-   MAIN SECTIONS
-========================== */
+header{
 
+text-align:center;
 
-main {
-
-    width: 90%;
-
-    max-width: 1200px;
-
-    margin:
-        40px auto;
-
-}
-
-
-section {
-
-    margin-bottom: 50px;
-
-}
-
-
-section h2 {
-
-    color:
-        #d4af37;
-
-    margin-bottom: 25px;
-
-    border-left:
-        4px solid #d4af37;
-
-    padding-left: 15px;
+padding:40px 20px;
 
 }
 
 
 
-/* ==========================
-   DASHBOARD CARDS
-========================== */
+h1{
 
+font-family:Orbitron;
 
-.cards {
+font-size:42px;
 
-    display: grid;
-
-    grid-template-columns:
-        repeat(
-            auto-fit,
-            minmax(220px,1fr)
-        );
-
-    gap: 20px;
+color:#d4af37;
 
 }
 
 
-.card {
+h2{
 
-    background:
-        rgba(255,255,255,0.05);
+font-weight:400;
 
-    border:
-        1px solid
-        rgba(212,175,55,0.4);
-
-    border-radius: 15px;
-
-    padding: 25px;
-
-    text-align: center;
-
-    backdrop-filter:
-        blur(10px);
-
-}
-
-
-.card h3 {
-
-    color:
-        #d4af37;
-
-    margin-bottom: 15px;
-
-}
-
-
-.card p {
-
-    font-size: 20px;
+color:#cccccc;
 
 }
 
 
 
-/* ==========================
-   EXPLORER
-========================== */
+section{
 
+width:90%;
 
-.search-box {
+max-width:900px;
 
-    display:
-        flex;
+margin:25px auto;
 
-    gap: 15px;
+background:
 
-    flex-wrap:
-        wrap;
+rgba(255,255,255,0.05);
 
-}
+border:1px solid rgba(212,175,55,0.3);
 
+border-radius:18px;
 
-input {
+padding:25px;
 
-    padding: 12px;
-
-    border-radius: 8px;
-
-    border:
-        1px solid #d4af37;
-
-    background:
-        #111;
-
-    color:
-        white;
-
-    font-size: 16px;
-
-}
-
-
-button {
-
-    padding: 12px 25px;
-
-    border-radius: 8px;
-
-    border: none;
-
-    cursor: pointer;
-
-    background:
-        #d4af37;
-
-    color:
-        #000;
-
-    font-weight:
-        bold;
-
-}
-
-
-button:hover {
-
-    background:
-        #f5d76e;
+box-shadow:
+0 0 25px rgba(0,0,0,0.5);
 
 }
 
 
 
-pre {
+h3{
 
-    margin-top: 25px;
-
-    background:
-        #000;
-
-    padding: 20px;
-
-    border-radius: 10px;
-
-    border:
-        1px solid #333;
-
-    overflow-x:
-        auto;
-
-    color:
-        #00ff99;
+color:#d4af37;
 
 }
 
 
 
-/* ==========================
-   TIMELINE
-========================== */
+.status-grid{
 
+display:grid;
 
-input[type="range"] {
+grid-template-columns:
+repeat(auto-fit,minmax(180px,1fr));
 
-    width:
-        100%;
-
-}
-
-
-
-/* ==========================
-   FOOTER
-========================== */
-
-
-footer {
-
-    text-align:
-        center;
-
-    padding:
-        30px;
-
-    border-top:
-        1px solid #333;
-
-    color:
-        #999;
-
-}
-
-
-footer p:first-child {
-
-    color:
-        #d4af37;
+gap:20px;
 
 }
 
 
 
-/* ==========================
-   MOBILE
-========================== */
+.status-grid div{
+
+background:#111827;
+
+padding:20px;
+
+border-radius:12px;
+
+}
 
 
-@media(max-width:600px) {
+
+.status-grid span{
+
+display:block;
+
+color:#aaa;
+
+}
 
 
-    .hero h1 {
 
-        font-size:
-            32px;
+.status-grid strong{
 
-    }
+font-size:22px;
 
+color:#00ff99;
 
-    .hero h2 {
-
-        font-size:
-            20px;
-
-    }
+}
 
 
-    main {
 
-        width:
-            95%;
+.clock-card{
 
-    }
+text-align:center;
+
+}
+
+
+
+#clock{
+
+font-family:Orbitron;
+
+font-size:55px;
+
+color:#d4af37;
+
+}
+
+
+
+#date{
+
+font-size:20px;
+
+}
+
+
+
+input{
+
+width:70%;
+
+padding:15px;
+
+border-radius:10px;
+
+border:none;
+
+font-size:18px;
+
+}
+
+
+
+button{
+
+padding:15px 30px;
+
+background:#d4af37;
+
+border:none;
+
+border-radius:10px;
+
+cursor:pointer;
+
+font-weight:bold;
+
+}
+
+
+
+button:hover{
+
+background:#ffd700;
+
+}
+
+
+
+pre{
+
+background:#020617;
+
+padding:25px;
+
+border-radius:15px;
+
+overflow:auto;
+
+color:#00ff99;
+
+font-family:
+"Courier New",monospace;
+
+font-size:16px;
+
+}
+
+
+
+footer{
+
+text-align:center;
+
+padding:30px;
+
+color:#999;
 
 }
