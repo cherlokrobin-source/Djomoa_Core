@@ -3,6 +3,7 @@
 
 #include "GlobalSolarDay.h"
 #include "SolarCycle.h"
+
 #include <vector>
 #include <cstdint>
 
@@ -19,18 +20,27 @@ private:
 
 public:
 
+    // بناء دورة شمسية واحدة
     void buildCycle(
         int cycleId
     );
 
 
+    // بناء مجموعة دورات شمسية
+    void buildCycles(
+        int startCycle,
+        int endCycle
+    );
+
+
+    // عدد الأيام المخزنة
     int64_t size() const;
 
 
+    // الحصول على يوم حسب الفهرس
     GlobalSolarDay getDay(
         int64_t index
     ) const;
-
 
 };
 
