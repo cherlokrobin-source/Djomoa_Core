@@ -452,3 +452,22 @@ target_link_libraries(
     TemporalServer
     GoldenCalendar2083_Core
 )
+# ============================================
+# Solar Cycle Engine Test
+# ============================================
+
+add_executable(
+    SolarCycleEngineTest
+    tests/SolarCycleEngineTest.cpp
+    src/SolarCycleEngine.cpp
+)
+
+target_include_directories(
+    SolarCycleEngineTest PRIVATE
+    include
+)
+
+add_test(
+    NAME SolarCycleEngineTest
+    COMMAND SolarCycleEngineTest
+)

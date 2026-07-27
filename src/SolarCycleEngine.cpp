@@ -1,8 +1,22 @@
 #include "../include/SolarCycleEngine.h"
-#include "../include/LeapYearRules.h"
 
 namespace Gabary
 {
+
+static bool isLeapYear(int year)
+{
+    if(year % 400 == 0)
+        return true;
+
+    if(year % 100 == 0)
+        return false;
+
+    if(year % 4 == 0)
+        return true;
+
+    return false;
+}
+
 
 SolarCycle SolarCycleEngine::buildCycle(int cycleId)
 {
@@ -10,8 +24,10 @@ SolarCycle SolarCycleEngine::buildCycle(int cycleId)
 
     cycle.cycleId = cycleId;
 
+
     cycle.startYear =
         (cycleId - 1) * 63 + 1;
+
 
     cycle.endYear =
         cycle.startYear + 62;
@@ -20,12 +36,13 @@ SolarCycle SolarCycleEngine::buildCycle(int cycleId)
     cycle.startDayId = 1;
 
 
+    cycle.totalDays = 0;
+
+
     for(int y = 1; y < cycle.startYear; y++)
     {
         cycle.startDayId +=
-            LeapYearRules::isLeapYear(y)
-            ? 366
-            : 365;
+            isLeapYear(y) ? 366 : 365;
     }
 
 
@@ -36,9 +53,7 @@ SolarCycle SolarCycleEngine::buildCycle(int cycleId)
     )
     {
         cycle.totalDays +=
-            LeapYearRules::isLeapYear(y)
-            ? 366
-            : 365;
+            isLeapYear(y) ? 366 : 365;
     }
 
 

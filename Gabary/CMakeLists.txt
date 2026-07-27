@@ -1,4 +1,51 @@
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.15)
+
+project(GoldenCalendar2083_Core)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+enable_testing()
+
+include_directories(include)
+
+
+# Core Library
+
+add_library(
+    GoldenCalendar2083_Core
+
+    src/SolarEngine.cpp
+    src/LunarEngine.cpp
+    src/ChronologyEngine.cpp
+    src/WeekEngine.cpp
+    src/TimeEngine.cpp
+    src/ArchiveEngine.cpp
+    src/ArchiveGenerator.cpp
+)
+
+
+# Solar Cycle Engine Test
+
+add_executable(
+    SolarCycleEngineTest
+
+    src/SolarCycleEngine.cpp
+    src/LeapYearRules.cpp
+    tests/SolarCycleEngineTest.cpp
+)
+
+
+target_include_directories(
+    SolarCycleEngineTest PRIVATE
+    include
+)
+
+
+add_test(
+    NAME SolarCycleEngineTest
+    COMMAND SolarCycleEngineTest
+)cmake_minimum_required(VERSION 3.10)
 
 project(Gabary)
 
