@@ -471,3 +471,30 @@ add_test(
     NAME SolarCycleEngineTest
     COMMAND SolarCycleEngineTest
 )
+
+# ============================================
+# Solar Cycle Archive Range Test
+# ============================================
+
+add_executable(
+    SolarCycleArchiveRangeTest
+
+    tests/SolarCycleArchiveRangeTest.cpp
+
+    Gabary/src/SolarCycleArchive.cpp
+    Gabary/src/SolarCycleEngine.cpp
+    Gabary/src/SolarEngineV2.cpp
+    Gabary/src/LeapYearRules.cpp
+    Gabary/src/WeekCycleEngine.cpp
+)
+
+target_include_directories(
+    SolarCycleArchiveRangeTest PRIVATE
+    include
+    Gabary/include
+)
+
+add_test(
+    NAME SolarCycleArchiveRangeTest
+    COMMAND SolarCycleArchiveRangeTest
+)
