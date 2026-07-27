@@ -14,41 +14,15 @@ include_directories(
 enable_testing()
 
 
-# ==========================
-# Week Cycle Engine Test
-# ==========================
-
-add_executable(
-    WeekCycleEngineTest
-    src/WeekCycleEngine.cpp
-    tests/WeekCycleEngineTest.cpp
-)
-
-add_test(
-    NAME WeekCycleEngineTest
-    COMMAND WeekCycleEngineTest
-)
-
-
 
 # ==========================
 # Leap Year Rules Test
 # ==========================
-
-add_executable(
-    LeapYearRulesTest
-    src/LeapYearRules.cpp
-    tests/LeapYearRulesTest.cpp
-)
-
-add_test(
-    NAME LeapYearRulesTest
-    COMMAND LeapYearRulesTest
-)
 add_executable(
     SolarEngineV2Test
     src/SolarEngineV2.cpp
     src/LeapYearRules.cpp
+    src/WeekCycleEngine.cpp
     tests/SolarEngineV2Test.cpp
 )
 

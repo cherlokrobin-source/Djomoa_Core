@@ -3,7 +3,8 @@
 
 #include "SolarDate.h"
 #include <cstdint>
-
+#include "GlobalSolarDay.h"
+#include "WeekCycleEngine.h"
 namespace Gabary
 {
 
@@ -11,7 +12,7 @@ class SolarEngineV2
 {
 
 public:
-
+    GlobalSolarDay buildDay(int64_t dayId);
     SolarDate fromDayId(int64_t dayId);
 
     int64_t toDayId(

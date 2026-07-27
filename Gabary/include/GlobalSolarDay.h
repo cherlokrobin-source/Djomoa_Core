@@ -2,20 +2,27 @@
 #define GABARY_GLOBAL_SOLAR_DAY_H
 
 #include <cstdint>
+#include <string>
 
 namespace Gabary
 {
 
 struct GlobalSolarDay
 {
-    // Primary global coordinate
+    // Global coordinate
     int64_t dayId = 0;
 
     // Solar chronology
     int32_t solarYear = 1;
+    int32_t solarMonth = 1;
+    int32_t solarDay = 1;
     int32_t dayOfYear = 1;
 
-    // Leap year flag
+    // Week cycle
+    int32_t weekIndex = 0;
+    std::string weekName = "Friday";
+
+    // Leap information
     bool leapYear = false;
 };
 

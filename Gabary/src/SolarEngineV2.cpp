@@ -119,8 +119,23 @@ int64_t SolarEngineV2::toDayId(
     return total;
 }
 
+GlobalSolarDay SolarEngineV2::buildDay(int64_t dayId)
+{
+    SolarDate date = fromDayId(dayId);
 
+    GlobalSolarDay result;
+
+    result.dayId = dayId;
+    result.solarYear = date.year;
+    result.solarMonth = date.month;
+    result.solarDay = date.day;
+    result.dayOfYear = date.dayOfYear;
+    result.leapYear = date.leapYear;
+
+    result.weekIndex = WeekCycleEngine::weekdayIndex(dayId);
+    result.weekName = WeekCycleEngine::weekdayName(dayId);
+
+    return result;
 }
 
-
-
+}
