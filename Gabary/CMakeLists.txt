@@ -30,3 +30,15 @@ add_test(
     NAME SolarEngineV2Test
     COMMAND SolarEngineV2Test
 )
+add_executable(
+    GlobalSolarDayTest
+    src/SolarEngineV2.cpp
+    src/LeapYearRules.cpp
+    src/WeekCycleEngine.cpp
+    tests/GlobalSolarDayTest.cpp
+)
+
+add_test(
+    NAME GlobalSolarDayTest
+    COMMAND GlobalSolarDayTest
+)
