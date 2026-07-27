@@ -134,3 +134,13 @@ add_test(
     NAME SolarTimelineArchiveTransitionTest
     COMMAND SolarTimelineArchiveTransitionTest
 )
+add_executable(
+    SolarCycleEngineTest
+    src/SolarCycleEngine.cpp
+    tests/SolarCycleEngineTest.cpp
+)
+
+add_test(
+    NAME SolarCycleEngineTest
+    COMMAND SolarCycleEngineTest
+)
