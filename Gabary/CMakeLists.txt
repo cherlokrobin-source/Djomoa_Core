@@ -54,3 +54,15 @@ add_test(
     NAME GlobalSolarDayTransitionTest
     COMMAND GlobalSolarDayTransitionTest
 )
+add_executable(
+    LeapCycleSolarTest
+    src/SolarEngineV2.cpp
+    src/LeapYearRules.cpp
+    src/WeekCycleEngine.cpp
+    tests/LeapCycleSolarTest.cpp
+)
+
+add_test(
+    NAME LeapCycleSolarTest
+    COMMAND LeapCycleSolarTest
+)
