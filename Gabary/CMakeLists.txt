@@ -120,3 +120,17 @@ add_test(
     NAME SolarTimelineArchiveRangeTest
     COMMAND SolarTimelineArchiveRangeTest
 )
+add_executable(
+    SolarTimelineArchiveTransitionTest
+    src/SolarEngineV2.cpp
+    src/LeapYearRules.cpp
+    src/WeekCycleEngine.cpp
+    src/SolarTimelineGenerator.cpp
+    src/SolarTimelineArchive.cpp
+    tests/SolarTimelineArchiveTransitionTest.cpp
+)
+
+add_test(
+    NAME SolarTimelineArchiveTransitionTest
+    COMMAND SolarTimelineArchiveTransitionTest
+)
