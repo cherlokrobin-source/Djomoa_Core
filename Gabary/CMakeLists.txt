@@ -92,3 +92,17 @@ add_test(
     NAME SolarTimelineCycleTest
     COMMAND SolarTimelineCycleTest
 )
+add_executable(
+    SolarTimelineArchiveTest
+    src/SolarEngineV2.cpp
+    src/LeapYearRules.cpp
+    src/WeekCycleEngine.cpp
+    src/SolarTimelineGenerator.cpp
+    src/SolarTimelineArchive.cpp
+    tests/SolarTimelineArchiveTest.cpp
+)
+
+add_test(
+    NAME SolarTimelineArchiveTest
+    COMMAND SolarTimelineArchiveTest
+)
