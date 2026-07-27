@@ -66,3 +66,16 @@ add_test(
     NAME LeapCycleSolarTest
     COMMAND LeapCycleSolarTest
 )
+add_executable(
+    SolarTimelineGeneratorTest
+    src/SolarEngineV2.cpp
+    src/LeapYearRules.cpp
+    src/WeekCycleEngine.cpp
+    src/SolarTimelineGenerator.cpp
+    tests/SolarTimelineGeneratorTest.cpp
+)
+
+add_test(
+    NAME SolarTimelineGeneratorTest
+    COMMAND SolarTimelineGeneratorTest
+)
