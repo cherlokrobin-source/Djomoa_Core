@@ -21,8 +21,9 @@ public:
         int endCycle
     );
 
-
     SolarCycleArchive& getArchive();
+
+    const SolarCycleArchive& getArchive() const;
 
 };
 

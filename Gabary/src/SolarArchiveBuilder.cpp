@@ -20,4 +20,10 @@ SolarCycleArchive& SolarArchiveBuilder::getArchive()
     return archive;
 }
 
+
+const SolarCycleArchive& SolarArchiveBuilder::getArchive() const
+{
+    return archive;
+}
+
 }
