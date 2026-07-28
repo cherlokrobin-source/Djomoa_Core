@@ -528,3 +528,46 @@ add_test(
 
     COMMAND SolarCycleArchiveMultiTest
 )
+# ============================================
+# Solar Cycle Boundary Test
+# ============================================
+
+add_executable(
+    SolarCycleBoundaryTest
+    tests/SolarCycleBoundaryTest.cpp
+    Gabary/src/SolarCycleEngine.cpp
+    Gabary/src/LeapYearRules.cpp
+)
+
+target_include_directories(
+    SolarCycleBoundaryTest PRIVATE
+    Gabary/include
+)
+
+add_test(
+    NAME SolarCycleBoundaryTest
+    COMMAND SolarCycleBoundaryTest
+)
+# ============================================
+# Solar 50000 Year Archive Test (DISABLED)
+# ============================================
+
+# add_executable(
+#     SolarCycleArchive50000Test
+#     tests/SolarCycleArchive50000Test.cpp
+#     Gabary/src/SolarCycleArchive.cpp
+#     Gabary/src/SolarCycleEngine.cpp
+#     Gabary/src/SolarEngineV2.cpp
+#     Gabary/src/LeapYearRules.cpp
+#     Gabary/src/WeekCycleEngine.cpp
+# )
+
+# target_include_directories(
+#     SolarCycleArchive50000Test PRIVATE
+#     Gabary/include
+# )
+
+# add_test(
+#     NAME SolarCycleArchive50000Test
+#     COMMAND SolarCycleArchive50000Test
+# )
