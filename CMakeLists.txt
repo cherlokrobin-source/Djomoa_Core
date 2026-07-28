@@ -571,3 +571,27 @@ add_test(
 #     NAME SolarCycleArchive50000Test
 #     COMMAND SolarCycleArchive50000Test
 # )
+# ============================================
+# Solar Archive Builder Test
+# ============================================
+
+add_executable(
+    SolarArchiveBuilderTest
+    Gabary/tests/SolarArchiveBuilderTest.cpp
+    Gabary/src/SolarArchiveBuilder.cpp
+    Gabary/src/SolarCycleArchive.cpp
+    Gabary/src/SolarCycleEngine.cpp
+    Gabary/src/SolarEngineV2.cpp
+    Gabary/src/LeapYearRules.cpp
+    Gabary/src/WeekCycleEngine.cpp
+)
+
+target_include_directories(
+    SolarArchiveBuilderTest PRIVATE
+    Gabary/include
+)
+
+add_test(
+    NAME SolarArchiveBuilderTest
+    COMMAND SolarArchiveBuilderTest
+)
