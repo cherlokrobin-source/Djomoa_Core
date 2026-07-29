@@ -732,3 +732,24 @@ add_test(
     NAME SolarTimelinePerformanceTest
     COMMAND SolarTimelinePerformanceTest
 )
+# ============================================
+# Solar Timeline Generation Test
+# ============================================
+
+add_executable(
+    SolarTimelineGenerationTest
+    Gabary/tests/SolarTimelineGenerationTest.cpp
+    Gabary/src/SolarEngineV2.cpp
+    Gabary/src/LeapYearRules.cpp
+    Gabary/src/WeekCycleEngine.cpp
+)
+
+target_include_directories(
+    SolarTimelineGenerationTest PRIVATE
+    Gabary/include
+)
+
+add_test(
+    NAME SolarTimelineGenerationTest
+    COMMAND SolarTimelineGenerationTest
+)
