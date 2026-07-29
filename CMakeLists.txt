@@ -795,3 +795,66 @@ add_test(
     NAME SolarMonthIntegrityTest
     COMMAND SolarMonthIntegrityTest
 )
+# ============================================
+# Solar Date Round Trip Test
+# ============================================
+
+add_executable(
+    SolarDateRoundTripTest
+    Gabary/tests/SolarDateRoundTripTest.cpp
+    Gabary/src/SolarEngineV2.cpp
+    Gabary/src/LeapYearRules.cpp
+    Gabary/src/WeekCycleEngine.cpp
+)
+
+target_include_directories(
+    SolarDateRoundTripTest PRIVATE
+    Gabary/include
+)
+
+add_test(
+    NAME SolarDateRoundTripTest
+    COMMAND SolarDateRoundTripTest
+)
+# ============================================
+# Solar Day Continuity Test
+# ============================================
+
+add_executable(
+    SolarDayContinuityTest
+    Gabary/tests/SolarDayContinuityTest.cpp
+    Gabary/src/SolarEngineV2.cpp
+    Gabary/src/LeapYearRules.cpp
+    Gabary/src/WeekCycleEngine.cpp
+)
+
+target_include_directories(
+    SolarDayContinuityTest PRIVATE
+    Gabary/include
+)
+
+add_test(
+    NAME SolarDayContinuityTest
+    COMMAND SolarDayContinuityTest
+)
+# ============================================
+# Solar 50K Day ID Range Test
+# ============================================
+
+add_executable(
+    Solar50KDayIDRangeTest
+    Gabary/tests/Solar50KDayIDRangeTest.cpp
+    Gabary/src/SolarEngineV2.cpp
+    Gabary/src/LeapYearRules.cpp
+    Gabary/src/WeekCycleEngine.cpp
+)
+
+target_include_directories(
+    Solar50KDayIDRangeTest PRIVATE
+    Gabary/include
+)
+
+add_test(
+    NAME Solar50KDayIDRangeTest
+    COMMAND Solar50KDayIDRangeTest
+)
