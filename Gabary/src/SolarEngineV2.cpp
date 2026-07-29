@@ -85,6 +85,15 @@ SolarDate SolarEngineV2::fromDayId(
 
     date.month = month;
     date.day = remaining + 1;
+    date.dayOfYear = 1;
+
+    for(int m = 1; m < month; ++m)
+    {
+        date.dayOfYear += daysInMonth(year, m);
+    }
+
+    date.dayOfYear += date.day - 1;
+
 
 
     return date;
