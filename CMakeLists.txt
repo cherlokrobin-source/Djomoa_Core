@@ -669,3 +669,24 @@ add_test(
     NAME SolarCycleLongRangeTest
     COMMAND SolarCycleLongRangeTest
 )
+# ============================================
+# Solar 50K Year Boundary Test
+# ============================================
+
+add_executable(
+    Solar50KYearBoundaryTest
+    Gabary/tests/Solar50KYearBoundaryTest.cpp
+    Gabary/src/SolarEngineV2.cpp
+    Gabary/src/LeapYearRules.cpp
+    Gabary/src/WeekCycleEngine.cpp
+)
+
+target_include_directories(
+    Solar50KYearBoundaryTest PRIVATE
+    Gabary/include
+)
+
+add_test(
+    NAME Solar50KYearBoundaryTest
+    COMMAND Solar50KYearBoundaryTest
+)
