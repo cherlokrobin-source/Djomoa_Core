@@ -774,3 +774,24 @@ add_test(
     NAME SolarYearIntegrityTest
     COMMAND SolarYearIntegrityTest
 )
+# ============================================
+# Solar Month Integrity Test
+# ============================================
+
+add_executable(
+    SolarMonthIntegrityTest
+    Gabary/tests/SolarMonthIntegrityTest.cpp
+    Gabary/src/SolarEngineV2.cpp
+    Gabary/src/LeapYearRules.cpp
+    Gabary/src/WeekCycleEngine.cpp
+)
+
+target_include_directories(
+    SolarMonthIntegrityTest PRIVATE
+    Gabary/include
+)
+
+add_test(
+    NAME SolarMonthIntegrityTest
+    COMMAND SolarMonthIntegrityTest
+)
