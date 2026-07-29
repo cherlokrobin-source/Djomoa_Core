@@ -858,3 +858,66 @@ add_test(
     NAME Solar50KDayIDRangeTest
     COMMAND Solar50KDayIDRangeTest
 )
+# ============================================
+# Solar 50K Random Sampling Test
+# ============================================
+
+add_executable(
+    Solar50KRandomSamplingTest
+    Gabary/tests/Solar50KRandomSamplingTest.cpp
+    Gabary/src/SolarEngineV2.cpp
+    Gabary/src/LeapYearRules.cpp
+    Gabary/src/WeekCycleEngine.cpp
+)
+
+target_include_directories(
+    Solar50KRandomSamplingTest PRIVATE
+    Gabary/include
+)
+
+add_test(
+    NAME Solar50KRandomSamplingTest
+    COMMAND Solar50KRandomSamplingTest
+)
+# ============================================
+# Solar Leap Year Consistency Test
+# ============================================
+
+add_executable(
+    SolarLeapYearConsistencyTest
+    Gabary/tests/SolarLeapYearConsistencyTest.cpp
+    Gabary/src/SolarEngineV2.cpp
+    Gabary/src/LeapYearRules.cpp
+    Gabary/src/WeekCycleEngine.cpp
+)
+
+target_include_directories(
+    SolarLeapYearConsistencyTest PRIVATE
+    Gabary/include
+)
+
+add_test(
+    NAME SolarLeapYearConsistencyTest
+    COMMAND SolarLeapYearConsistencyTest
+)
+# ============================================
+# Solar 50K Full Year Count Test
+# ============================================
+
+add_executable(
+    Solar50KFullYearCountTest
+    Gabary/tests/Solar50KFullYearCountTest.cpp
+    Gabary/src/SolarEngineV2.cpp
+    Gabary/src/LeapYearRules.cpp
+    Gabary/src/WeekCycleEngine.cpp
+)
+
+target_include_directories(
+    Solar50KFullYearCountTest PRIVATE
+    Gabary/include
+)
+
+add_test(
+    NAME Solar50KFullYearCountTest
+    COMMAND Solar50KFullYearCountTest
+)
