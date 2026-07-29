@@ -753,3 +753,24 @@ add_test(
     NAME SolarTimelineGenerationTest
     COMMAND SolarTimelineGenerationTest
 )
+# ============================================
+# Solar Year Integrity Test
+# ============================================
+
+add_executable(
+    SolarYearIntegrityTest
+    Gabary/tests/SolarYearIntegrityTest.cpp
+    Gabary/src/SolarEngineV2.cpp
+    Gabary/src/LeapYearRules.cpp
+    Gabary/src/WeekCycleEngine.cpp
+)
+
+target_include_directories(
+    SolarYearIntegrityTest PRIVATE
+    Gabary/include
+)
+
+add_test(
+    NAME SolarYearIntegrityTest
+    COMMAND SolarYearIntegrityTest
+)
