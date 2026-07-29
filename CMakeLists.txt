@@ -921,3 +921,24 @@ add_test(
     NAME Solar50KFullYearCountTest
     COMMAND Solar50KFullYearCountTest
 )
+# ============================================
+# Solar Day Of Year Integrity Test
+# ============================================
+
+add_executable(
+    SolarDayOfYearIntegrityTest
+    Gabary/tests/SolarDayOfYearIntegrityTest.cpp
+    Gabary/src/SolarEngineV2.cpp
+    Gabary/src/LeapYearRules.cpp
+    Gabary/src/WeekCycleEngine.cpp
+)
+
+target_include_directories(
+    SolarDayOfYearIntegrityTest PRIVATE
+    Gabary/include
+)
+
+add_test(
+    NAME SolarDayOfYearIntegrityTest
+    COMMAND SolarDayOfYearIntegrityTest
+)
