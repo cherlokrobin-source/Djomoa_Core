@@ -216,3 +216,28 @@ add_test(
     NAME SolarTimeEngineTest
     COMMAND SolarTimeEngineTest
 )
+# ============================================
+# Solar Time Engine Reference Test
+# ============================================
+
+add_executable(
+    SolarTimeEngineReferenceTest
+    Gabary/tests/SolarTimeEngineReferenceTest.cpp
+    Gabary/src/SolarTimeEngine.cpp
+    Gabary/src/SolarArchiveBuilder.cpp
+    Gabary/src/SolarCycleArchive.cpp
+    Gabary/src/SolarCycleEngine.cpp
+    Gabary/src/SolarEngineV2.cpp
+    Gabary/src/LeapYearRules.cpp
+    Gabary/src/WeekCycleEngine.cpp
+)
+
+target_include_directories(
+    SolarTimeEngineReferenceTest PRIVATE
+    Gabary/include
+)
+
+add_test(
+    NAME SolarTimeEngineReferenceTest
+    COMMAND SolarTimeEngineReferenceTest
+)
