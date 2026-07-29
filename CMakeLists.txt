@@ -711,3 +711,24 @@ add_test(
     NAME GlobalSolarDayConsistencyTest
     COMMAND GlobalSolarDayConsistencyTest
 )
+# ============================================
+# Solar Timeline Performance Test
+# ============================================
+
+add_executable(
+    SolarTimelinePerformanceTest
+    Gabary/tests/SolarTimelinePerformanceTest.cpp
+    Gabary/src/SolarEngineV2.cpp
+    Gabary/src/LeapYearRules.cpp
+    Gabary/src/WeekCycleEngine.cpp
+)
+
+target_include_directories(
+    SolarTimelinePerformanceTest PRIVATE
+    Gabary/include
+)
+
+add_test(
+    NAME SolarTimelinePerformanceTest
+    COMMAND SolarTimelinePerformanceTest
+)
