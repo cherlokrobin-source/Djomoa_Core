@@ -942,3 +942,20 @@ add_test(
     NAME SolarDayOfYearIntegrityTest
     COMMAND SolarDayOfYearIntegrityTest
 )
+add_executable(
+    SolarMonthBoundaryTest
+    Gabary/tests/SolarMonthBoundaryTest.cpp
+    Gabary/src/SolarEngineV2.cpp
+    Gabary/src/LeapYearRules.cpp
+    Gabary/src/WeekCycleEngine.cpp
+)
+
+target_include_directories(
+    SolarMonthBoundaryTest PRIVATE
+    Gabary/include
+)
+
+add_test(
+    NAME SolarMonthBoundaryTest
+    COMMAND SolarMonthBoundaryTest
+)
