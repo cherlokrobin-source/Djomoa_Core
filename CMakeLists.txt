@@ -690,3 +690,24 @@ add_test(
     NAME Solar50KYearBoundaryTest
     COMMAND Solar50KYearBoundaryTest
 )
+# ============================================
+# Global Solar Day Consistency Test
+# ============================================
+
+add_executable(
+    GlobalSolarDayConsistencyTest
+    Gabary/tests/GlobalSolarDayConsistencyTest.cpp
+    Gabary/src/SolarEngineV2.cpp
+    Gabary/src/LeapYearRules.cpp
+    Gabary/src/WeekCycleEngine.cpp
+)
+
+target_include_directories(
+    GlobalSolarDayConsistencyTest PRIVATE
+    Gabary/include
+)
+
+add_test(
+    NAME GlobalSolarDayConsistencyTest
+    COMMAND GlobalSolarDayConsistencyTest
+)
