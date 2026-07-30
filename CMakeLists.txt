@@ -1042,3 +1042,18 @@ add_test(
     NAME SolarMonthStatisticsValidationTest
     COMMAND SolarMonthStatisticsValidationTest
 )
+add_executable(
+    SolarLeapStatisticsValidationTest
+    Gabary/tests/SolarLeapStatisticsValidationTest.cpp
+    Gabary/src/LeapYearRules.cpp
+)
+
+target_include_directories(
+    SolarLeapStatisticsValidationTest PRIVATE
+    Gabary/include
+)
+
+add_test(
+    NAME SolarLeapStatisticsValidationTest
+    COMMAND SolarLeapStatisticsValidationTest
+)
