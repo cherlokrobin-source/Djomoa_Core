@@ -26,6 +26,14 @@ add_library(
 )
 
 
+
+
+
+
+# ============================================
+# Temporal Automation Engine
+# ============================================
+
 # ============================================
 # Archive Tests
 # ============================================
@@ -45,6 +53,31 @@ add_test(
     COMMAND Archive50000Test
 )
 
+
+# ============================================
+# Temporal Automation Engine
+# ============================================
+
+add_executable(
+    TemporalAutomationTest
+    tests/temporal_automation_test.cpp
+    src/automation/TemporalAutomationEngine.cpp
+    src/TemporalCoordinateEngine.cpp
+    src/ChronologyEngine.cpp
+    src/SolarEngine.cpp
+    src/LunarEngine.cpp
+    src/WeekEngine.cpp
+)
+
+target_include_directories(
+    TemporalAutomationTest PRIVATE
+    include
+)
+
+add_test(
+    NAME TemporalAutomationTest
+    COMMAND TemporalAutomationTest
+)
 
 # ============================================
 # Chronology Tests
@@ -289,6 +322,7 @@ add_executable(
     TemporalCoordinateTest
     tests/temporal_coordinate_test.cpp
     src/TemporalCoordinateEngine.cpp
+    src/automation/TemporalAutomationEngine.cpp
     src/ChronologyEngine.cpp
     src/SolarEngine.cpp
     src/LunarEngine.cpp
@@ -1088,4 +1122,14 @@ target_include_directories(
 add_test(
     NAME Solar50KChronologyReportTest
     COMMAND Solar50KChronologyReportTest
+)
+add_executable(
+    GabaryConsole
+    Gabary/console/main.cpp
+    Gabary/console/ConsoleApp.cpp
+)
+
+target_include_directories(
+    GabaryConsole PRIVATE
+    Gabary/console
 )
