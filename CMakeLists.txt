@@ -1,3 +1,4 @@
+
 cmake_minimum_required(VERSION 3.15)
 
 project(GoldenCalendar2083_Core)
@@ -1123,13 +1124,28 @@ add_test(
     NAME Solar50KChronologyReportTest
     COMMAND Solar50KChronologyReportTest
 )
+
+
+# ============================================
+# Gabary Console
+# ============================================
+
 add_executable(
     GabaryConsole
+
     Gabary/console/main.cpp
     Gabary/console/ConsoleApp.cpp
+
+    Gabary/src/SolarEngineV2.cpp
+    Gabary/src/GlobalSolarDay.cpp
+    Gabary/src/WeekCycleEngine.cpp
+    Gabary/src/LeapYearRules.cpp
 )
 
 target_include_directories(
-    GabaryConsole PRIVATE
+    GabaryConsole
+    PRIVATE
+
     Gabary/console
+    Gabary/include
 )
