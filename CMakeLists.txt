@@ -1072,3 +1072,20 @@ add_test(
     NAME SolarDayOfYearStatisticsValidationTest
     COMMAND SolarDayOfYearStatisticsValidationTest
 )
+add_executable(
+    Solar50KChronologyReportTest
+    Gabary/tests/Solar50KChronologyReportTest.cpp
+    Gabary/src/SolarEngineV2.cpp
+    Gabary/src/LeapYearRules.cpp
+    Gabary/src/WeekCycleEngine.cpp
+)
+
+target_include_directories(
+    Solar50KChronologyReportTest PRIVATE
+    Gabary/include
+)
+
+add_test(
+    NAME Solar50KChronologyReportTest
+    COMMAND Solar50KChronologyReportTest
+)
