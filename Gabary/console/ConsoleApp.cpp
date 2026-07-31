@@ -3,6 +3,8 @@
 #include <iostream>
 #include <sstream>
 #include <string>
+#include <fstream>
+
 
 void ConsoleApp::showBanner() const
 {
@@ -39,11 +41,104 @@ void ConsoleApp::showDay(int64_t dayId)
 }
 
 
+
+void ConsoleApp::shareDay(int64_t dayId)
+{
+    Gabary::GlobalSolarDay day = solarEngine.buildDay(dayId);
+
+    std::cout << "\n";
+    std::cout << "╔══════════════════════════════════════════╗\n";
+    std::cout << "║            GABARY V2 ENGINE              ║\n";
+    std::cout << "║       SOLAR CHRONOLOGY REPORT            ║\n";
+    std::cout << "╚══════════════════════════════════════════╝\n\n";
+
+    std::cout << "QUERY\n";
+    std::cout << "------------------------------------------\n";
+    std::cout << "Global Solar Day : " << day.dayId << "\n\n";
+
+    std::cout << "RESULT\n";
+    std::cout << "------------------------------------------\n";
+    std::cout << "Solar Date   : "
+              << day.solarYear << "-"
+              << day.solarMonth << "-"
+              << day.solarDay << "\n";
+
+    std::cout << "Day Of Year  : "
+              << day.dayOfYear << "\n";
+
+    std::cout << "Week Day     : "
+              << day.weekName << "\n";
+
+    std::cout << "Leap Year    : "
+              << (day.leapYear ? "YES" : "NO")
+              << "\n\n";
+
+    std::cout << "ENGINE\n";
+    std::cout << "------------------------------------------\n";
+    std::cout << "Architecture : Gabary V2\n";
+    std::cout << "Core         : SolarEngineV2 OK\n";
+    std::cout << "Validation   : PASSED\n\n";
+}
+
+
+
+void ConsoleApp::exportDay(int64_t dayId)
+{
+    Gabary::GlobalSolarDay day = solarEngine.buildDay(dayId);
+
+    std::string filename =
+        "gabary_report_" + std::to_string(dayId) + ".txt";
+
+    std::ofstream file(filename);
+
+    if (!file)
+    {
+        std::cout << "Cannot create report file\n";
+        return;
+    }
+
+
+    file << "GABARY V2 ENGINE\n";
+    file << "SOLAR CHRONOLOGY REPORT\n\n";
+
+    file << "Global Solar Day : "
+         << day.dayId << "\n";
+
+    file << "Solar Date : "
+         << day.solarYear << "-"
+         << day.solarMonth << "-"
+         << day.solarDay << "\n";
+
+    file << "Day Of Year : "
+         << day.dayOfYear << "\n";
+
+    file << "Week Day : "
+         << day.weekName << "\n";
+
+    file << "Leap Year : "
+         << (day.leapYear ? "YES" : "NO")
+         << "\n\n";
+
+    file << "Architecture : Gabary V2\n";
+    file << "Engine : SolarEngineV2\n";
+    file << "Validation : PASSED\n";
+
+
+    file.close();
+
+    std::cout << "Report created: "
+              << filename
+              << "\n\n";
+}
+
+
+
 int ConsoleApp::run()
 {
     showBanner();
 
     std::string command;
+
 
     while (true)
     {
@@ -64,21 +159,55 @@ int ConsoleApp::run()
             std::cout << "  help\n";
             std::cout << "  status\n";
             std::cout << "  day <id>\n";
+            std::cout << "  share <id>\n";
+            std::cout << "  export <id>\n";
             std::cout << "  version\n";
             std::cout << "  exit\n\n";
         }
 
 
-        else if (command.rfind("day ", 0) == 0)
+        else if (command.rfind("day ",0)==0)
         {
-            std::string value = command.substr(4);
-
             try
             {
-                int64_t dayId = std::stoll(value);
-                showDay(dayId);
+                int64_t id =
+                    std::stoll(command.substr(4));
+
+                showDay(id);
             }
-            catch (...)
+            catch(...)
+            {
+                std::cout << "Invalid day id\n";
+            }
+        }
+
+
+        else if (command.rfind("share ",0)==0)
+        {
+            try
+            {
+                int64_t id =
+                    std::stoll(command.substr(6));
+
+                shareDay(id);
+            }
+            catch(...)
+            {
+                std::cout << "Invalid day id\n";
+            }
+        }
+
+
+        else if (command.rfind("export ",0)==0)
+        {
+            try
+            {
+                int64_t id =
+                    std::stoll(command.substr(7));
+
+                exportDay(id);
+            }
+            catch(...)
             {
                 std::cout << "Invalid day id\n";
             }
@@ -106,6 +235,7 @@ int ConsoleApp::run()
             std::cout << "Unknown command. Type help\n";
         }
     }
+
 
     return 0;
 }

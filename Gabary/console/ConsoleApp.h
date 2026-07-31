@@ -16,6 +16,10 @@ private:
 
     void showDay(int64_t dayId);
 
+    void shareDay(int64_t dayId);
+
+    void exportDay(int64_t dayId);
+
     Gabary::SolarEngineV2 solarEngine;
 };
 
