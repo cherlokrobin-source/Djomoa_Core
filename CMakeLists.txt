@@ -51,6 +51,33 @@ add_test(
 )
 
 
+# ============================================
+# Gabary Console
+# ============================================
+
+add_executable(
+    GabaryConsole
+    Gabary/console/main.cpp
+    Gabary/console/ConsoleApp.cpp
+    Gabary/src/SolarEngineV2.cpp
+    Gabary/src/GlobalSolarDay.cpp
+    Gabary/src/WeekCycleEngine.cpp
+    Gabary/src/LeapYearRules.cpp
+    src/report/TemporalReportEngine.cpp
+    src/report/TemporalReportJSON.cpp
+    src/ChronologyEngine.cpp
+    src/SolarEngine.cpp
+    src/LunarEngine.cpp
+    src/WeekEngine.cpp
+)
+
+
+target_include_directories(
+    GabaryConsole PRIVATE
+    Gabary/console
+    Gabary/include
+    include
+)
 
 
 
@@ -1244,26 +1271,4 @@ add_test(
     COMMAND SolarLeapStatisticsValidationTest
 )
 
-# ============================================
-# Gabary Console
-# ============================================
 
-add_executable(
-    GabaryConsole
-
-    Gabary/console/main.cpp
-    Gabary/console/ConsoleApp.cpp
-
-    Gabary/src/SolarEngineV2.cpp
-    Gabary/src/GlobalSolarDay.cpp
-    Gabary/src/WeekCycleEngine.cpp
-    Gabary/src/LeapYearRules.cpp
-)
-
-target_include_directories(
-    GabaryConsole
-    PRIVATE
-
-    Gabary/console
-    Gabary/include
-)

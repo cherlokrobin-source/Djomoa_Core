@@ -167,7 +167,22 @@ void ConsoleApp::inspectDay(int64_t dayId)
 }
 
 
+void ConsoleApp::reportDay(int64_t dayId)
+{
+    TemporalReport report =
+        reportEngine.generate(dayId);
 
+
+    std::cout << "\n";
+    std::cout << "╔══════════════════════════════════════════╗\n";
+    std::cout << "║          TEMPORAL REPORT JSON             ║\n";
+    std::cout << "╚══════════════════════════════════════════╝\n\n";
+
+
+    std::cout
+        << TemporalReportJSON::toJSON(report)
+        << "\n\n";
+}
 int ConsoleApp::run()
 {
     showBanner();
@@ -196,7 +211,8 @@ int ConsoleApp::run()
             std::cout << "  day <id>\n";
             std::cout << "  share <id>\n";
             std::cout << "  export <id>\n";
-            std::cout << "  inspect <id>\n";
+std::cout << "  report <id>\n";
+std::cout << "  inspect <id>\n";
             std::cout << "  version\n";
             std::cout << "  exit\n\n";
         }
@@ -253,7 +269,19 @@ int ConsoleApp::run()
             }
         }
 
-
+else if (command.rfind("report ",0)==0)
+{
+    try
+    {
+        reportDay(
+            std::stoll(command.substr(7))
+        );
+    }
+    catch(...)
+    {
+        std::cout << "Invalid day id\n";
+    }
+}
         else if (command == "status")
         {
             std::cout << "\nGABARY ENGINE STATUS\n";
