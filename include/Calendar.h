@@ -3,7 +3,6 @@
 
 #include <string>
 
-
 struct Date
 {
     long long dayId;
@@ -12,10 +11,13 @@ struct Date
     int month;
     int day;
 
+    // معلومات إضافية
+    int dayOfYear;
+    bool leapYear;
+
     std::string monthName;
     std::string weekday;
 };
-
 
 struct Chronology
 {
@@ -27,6 +29,5 @@ struct Chronology
     int weekIndex;
     const char* weekName;
 };
-
 
 #endif

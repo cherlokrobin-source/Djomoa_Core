@@ -1,7 +1,5 @@
 #include "SolarEngine.h"
 #include "Names.h"
-#include "SolarEngine.h"
-
 
 SolarEngine::SolarEngine()
 {
@@ -56,20 +54,17 @@ Date SolarEngine::getDate(long long day)
 {
     Date result;
 
-
     // تقدير السنة مباشرة
     long long low = 1;
     long long high = 60000;
 
     long long year = 1;
 
-
-    while(low <= high)
+    while (low <= high)
     {
         long long mid = (low + high) / 2;
 
-
-        if(daysUntilYear(mid) < day)
+        if (daysUntilYear(mid) < day)
         {
             year = mid;
             low = mid + 1;
@@ -80,10 +75,8 @@ Date SolarEngine::getDate(long long day)
         }
     }
 
-
     long long remaining =
         day - daysUntilYear(year);
-
 
     int months[] =
     {
@@ -92,28 +85,36 @@ Date SolarEngine::getDate(long long day)
         30,31,30,31
     };
 
+    bool leap = isLeap(year);
 
-    if(isLeap(year))
+    if (leap)
         months[1] = 29;
-
 
     int month = 1;
 
-
-    while(remaining > months[month-1])
+    while (remaining > months[month - 1])
     {
-        remaining -= months[month-1];
+        remaining -= months[month - 1];
         month++;
     }
-
 
     result.dayId = day;
     result.year = year;
     result.month = month;
-    result.day = remaining;
+    result.day = static_cast<int>(remaining);
 
-result.monthName =
-    CalendarNames::SOLAR_MONTHS[month - 1];
+    // بيانات إضافية
+    result.leapYear = leap;
+
+    result.dayOfYear = result.day;
+    for (int i = 0; i < month - 1; i++)
+    {
+        result.dayOfYear += months[i];
+    }
+
+    result.monthName =
+        CalendarNames::SOLAR_MONTHS[month - 1];
+
     return result;
 }
 
@@ -128,7 +129,6 @@ long long SolarEngine::getDayId(
     long long id =
         daysUntilYear(year);
 
-
     int months[] =
     {
         31,28,31,30,
@@ -136,19 +136,15 @@ long long SolarEngine::getDayId(
         30,31,30,31
     };
 
-
-    if(isLeap(year))
+    if (isLeap(year))
         months[1] = 29;
 
-
-    for(int m = 1; m < month; m++)
+    for (int m = 1; m < month; m++)
     {
-        id += months[m-1];
+        id += months[m - 1];
     }
 
-
     id += day;
-
 
     return id;
 }
