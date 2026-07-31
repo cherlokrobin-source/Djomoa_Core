@@ -25,7 +25,30 @@ add_library(
     src/ArchiveEngine.cpp
     src/ArchiveGenerator.cpp
 )
+# ============================================
+# Temporal Report JSON Test
+# ============================================
 
+add_executable(
+    TemporalReportJSONTest
+    tests/temporal_report_json_test.cpp
+    src/report/TemporalReportEngine.cpp
+    src/report/TemporalReportJSON.cpp
+    src/ChronologyEngine.cpp
+    src/SolarEngine.cpp
+    src/LunarEngine.cpp
+    src/WeekEngine.cpp
+)
+
+target_include_directories(
+    TemporalReportJSONTest PRIVATE
+    include
+)
+
+add_test(
+    NAME TemporalReportJSONTest
+    COMMAND TemporalReportJSONTest
+)
 
 
 
