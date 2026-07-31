@@ -34,7 +34,26 @@ add_library(
 # ============================================
 # Temporal Automation Engine
 # ============================================
+add_executable(
+    TemporalAutomationReportTest
+    tests/temporal_automation_report_test.cpp
+    src/automation/TemporalAutomationEngine.cpp
+    src/TemporalCoordinateEngine.cpp
+    src/ChronologyEngine.cpp
+    src/SolarEngine.cpp
+    src/LunarEngine.cpp
+    src/WeekEngine.cpp
+)
 
+target_include_directories(
+    TemporalAutomationReportTest PRIVATE
+    include
+)
+
+add_test(
+    NAME TemporalAutomationReportTest
+    COMMAND TemporalAutomationReportTest
+)
 # ============================================
 # Archive Tests
 # ============================================
