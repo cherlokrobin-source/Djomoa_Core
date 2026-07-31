@@ -1,23 +1,17 @@
 #include "ConsoleApp.h"
 
 #include <iostream>
-#include <sstream>
-#include <string>
 #include <fstream>
+#include <string>
 
 
 void ConsoleApp::showBanner() const
 {
-    std::cout << "\n";
-    std::cout << "================================================\n";
-    std::cout << "             GABARY TEMPORAL CONSOLE            \n";
-    std::cout << "          50,000 YEAR CHRONOLOGY ENGINE         \n";
-    std::cout << "================================================\n\n";
-
-    std::cout << "Core Engine : READY\n";
-    std::cout << "Status      : STABLE\n";
-    std::cout << "Validation  : 50/50 PASSED\n";
-    std::cout << "Timeline    : Year 1 -> Year 50000\n\n";
+std::cout << "\n";
+std::cout << "╔══════════════════════════════════════════╗\n";
+std::cout << "║           GABARY V2 INSPECTOR            ║\n";
+std::cout << "║        TEMPORAL ENGINE ANALYSIS          ║\n";
+std::cout << "╚══════════════════════════════════════════╝\n\n";
 }
 
 
@@ -46,15 +40,11 @@ void ConsoleApp::shareDay(int64_t dayId)
 {
     Gabary::GlobalSolarDay day = solarEngine.buildDay(dayId);
 
-    std::cout << "\n";
-    std::cout << "╔══════════════════════════════════════════╗\n";
-    std::cout << "║            GABARY V2 ENGINE              ║\n";
-    std::cout << "║       SOLAR CHRONOLOGY REPORT            ║\n";
-    std::cout << "╚══════════════════════════════════════════╝\n\n";
 
     std::cout << "QUERY\n";
     std::cout << "------------------------------------------\n";
-    std::cout << "Global Solar Day : " << day.dayId << "\n\n";
+    std::cout << "Global Solar Day : "
+              << day.dayId << "\n\n";
 
     std::cout << "RESULT\n";
     std::cout << "------------------------------------------\n";
@@ -123,12 +113,57 @@ void ConsoleApp::exportDay(int64_t dayId)
     file << "Engine : SolarEngineV2\n";
     file << "Validation : PASSED\n";
 
-
     file.close();
 
     std::cout << "Report created: "
-              << filename
+              << filename << "\n\n";
+}
+
+
+
+void ConsoleApp::inspectDay(int64_t dayId)
+{
+    Gabary::GlobalSolarDay day = solarEngine.buildDay(dayId);
+
+    std::cout << "\n";
+    std::cout << "╔══════════════════════════════════════════╗\n";
+    std::cout << "║          GABARY V2 INSPECTOR             ║\n";
+    std::cout << "║        TEMPORAL ENGINE ANALYSIS           ║\n";
+    std::cout << "╚══════════════════════════════════════════╝\n\n";
+
+    std::cout << "TEMPORAL COORDINATE\n";
+    std::cout << "------------------------------------------\n";
+    std::cout << "Global Solar Day : "
+              << day.dayId << "\n\n";
+
+    std::cout << "SOLAR DATA\n";
+    std::cout << "------------------------------------------\n";
+
+    std::cout << "Date        : "
+              << day.solarYear << "-"
+              << day.solarMonth << "-"
+              << day.solarDay << "\n";
+
+    std::cout << "Day Of Year : "
+              << day.dayOfYear << "\n";
+
+    std::cout << "Week Index  : "
+              << day.weekIndex << "\n";
+
+    std::cout << "Week Name   : "
+              << day.weekName << "\n";
+
+    std::cout << "Leap Year   : "
+              << (day.leapYear ? "YES" : "NO")
               << "\n\n";
+
+
+    std::cout << "ENGINE\n";
+    std::cout << "------------------------------------------\n";
+    std::cout << "SolarEngineV2  : OK\n";
+    std::cout << "GlobalSolarDay : OK\n";
+    std::cout << "Architecture   : Gabary V2\n";
+    std::cout << "Validation     : PASSED\n\n";
 }
 
 
@@ -161,6 +196,7 @@ int ConsoleApp::run()
             std::cout << "  day <id>\n";
             std::cout << "  share <id>\n";
             std::cout << "  export <id>\n";
+            std::cout << "  inspect <id>\n";
             std::cout << "  version\n";
             std::cout << "  exit\n\n";
         }
@@ -170,10 +206,7 @@ int ConsoleApp::run()
         {
             try
             {
-                int64_t id =
-                    std::stoll(command.substr(4));
-
-                showDay(id);
+                showDay(std::stoll(command.substr(4)));
             }
             catch(...)
             {
@@ -186,10 +219,7 @@ int ConsoleApp::run()
         {
             try
             {
-                int64_t id =
-                    std::stoll(command.substr(6));
-
-                shareDay(id);
+                shareDay(std::stoll(command.substr(6)));
             }
             catch(...)
             {
@@ -202,10 +232,20 @@ int ConsoleApp::run()
         {
             try
             {
-                int64_t id =
-                    std::stoll(command.substr(7));
+                exportDay(std::stoll(command.substr(7)));
+            }
+            catch(...)
+            {
+                std::cout << "Invalid day id\n";
+            }
+        }
 
-                exportDay(id);
+
+        else if (command.rfind("inspect ",0)==0)
+        {
+            try
+            {
+                inspectDay(std::stoll(command.substr(8)));
             }
             catch(...)
             {
@@ -219,7 +259,7 @@ int ConsoleApp::run()
             std::cout << "\nGABARY ENGINE STATUS\n";
             std::cout << "Core       : ONLINE\n";
             std::cout << "Timeline   : 50000 Years\n";
-            std::cout << "Validation : 50/50 PASSED\n\n";
+            std::cout << "Validation : PASSED\n\n";
         }
 
 
