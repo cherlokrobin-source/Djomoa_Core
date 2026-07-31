@@ -940,22 +940,69 @@ add_test(
 # ============================================
 
 add_executable(
-    Solar50KFullYearCountTest
-    Gabary/tests/Solar50KFullYearCountTest.cpp
+    SolarDayOfYearStatisticsValidationTest
+    Gabary/tests/SolarDayOfYearStatisticsValidationTest.cpp
+    Gabary/src/LeapYearRules.cpp
+)
+
+target_include_directories(
+    SolarDayOfYearStatisticsValidationTest PRIVATE
+    Gabary/include
+)
+
+add_test(
+    NAME SolarDayOfYearStatisticsValidationTest
+    COMMAND SolarDayOfYearStatisticsValidationTest
+)
+
+
+# ============================================
+# Solar Metadata Test
+# ============================================
+
+add_executable(
+    SolarMetadataTest
+    tests/solar_metadata_test.cpp
+    src/SolarEngine.cpp
+)
+
+target_include_directories(
+    SolarMetadataTest PRIVATE
+    include
+)
+
+add_test(
+    NAME SolarMetadataTest
+    COMMAND SolarMetadataTest
+)
+
+
+# ============================================
+# Solar 50K Chronology Report Test
+# ============================================
+
+add_executable(
+    Solar50KChronologyReportTest
+    Gabary/tests/Solar50KChronologyReportTest.cpp
     Gabary/src/SolarEngineV2.cpp
     Gabary/src/LeapYearRules.cpp
     Gabary/src/WeekCycleEngine.cpp
 )
 
 target_include_directories(
-    Solar50KFullYearCountTest PRIVATE
+    Solar50KChronologyReportTest PRIVATE
     Gabary/include
 )
 
 add_test(
-    NAME Solar50KFullYearCountTest
-    COMMAND Solar50KFullYearCountTest
+    NAME Solar50KChronologyReportTest
+    COMMAND Solar50KChronologyReportTest
 )
+
+# ============================================
+# Solar Day Of Year Integrity Test
+# ============================================
+
 # ============================================
 # Solar Day Of Year Integrity Test
 # ============================================
@@ -977,6 +1024,12 @@ add_test(
     NAME SolarDayOfYearIntegrityTest
     COMMAND SolarDayOfYearIntegrityTest
 )
+
+
+# ============================================
+# Solar Month Boundary Test
+# ============================================
+
 add_executable(
     SolarMonthBoundaryTest
     Gabary/tests/SolarMonthBoundaryTest.cpp
@@ -994,6 +1047,12 @@ add_test(
     NAME SolarMonthBoundaryTest
     COMMAND SolarMonthBoundaryTest
 )
+
+
+# ============================================
+# Solar Year Transition Integrity Test
+# ============================================
+
 add_executable(
     SolarYearTransitionIntegrityTest
     Gabary/tests/SolarYearTransitionIntegrityTest.cpp
@@ -1011,6 +1070,12 @@ add_test(
     NAME SolarYearTransitionIntegrityTest
     COMMAND SolarYearTransitionIntegrityTest
 )
+
+
+# ============================================
+# Solar Month Year Sum Integrity Test
+# ============================================
+
 add_executable(
     SolarMonthYearSumIntegrityTest
     Gabary/tests/SolarMonthYearSumIntegrityTest.cpp
@@ -1028,6 +1093,12 @@ add_test(
     NAME SolarMonthYearSumIntegrityTest
     COMMAND SolarMonthYearSumIntegrityTest
 )
+
+
+# ============================================
+# Solar 50K Endpoint Integrity Test
+# ============================================
+
 add_executable(
     Solar50KEndpointIntegrityTest
     Gabary/tests/Solar50KEndpointIntegrityTest.cpp
@@ -1045,6 +1116,12 @@ add_test(
     NAME Solar50KEndpointIntegrityTest
     COMMAND Solar50KEndpointIntegrityTest
 )
+
+
+# ============================================
+# Solar Statistics Validation Test
+# ============================================
+
 add_executable(
     SolarStatisticsValidationTest
     Gabary/tests/SolarStatisticsValidationTest.cpp
@@ -1062,6 +1139,12 @@ add_test(
     NAME SolarStatisticsValidationTest
     COMMAND SolarStatisticsValidationTest
 )
+
+
+# ============================================
+# Solar Month Statistics Validation Test
+# ============================================
+
 add_executable(
     SolarMonthStatisticsValidationTest
     Gabary/tests/SolarMonthStatisticsValidationTest.cpp
@@ -1077,6 +1160,12 @@ add_test(
     NAME SolarMonthStatisticsValidationTest
     COMMAND SolarMonthStatisticsValidationTest
 )
+
+
+# ============================================
+# Solar Leap Statistics Validation Test
+# ============================================
+
 add_executable(
     SolarLeapStatisticsValidationTest
     Gabary/tests/SolarLeapStatisticsValidationTest.cpp
@@ -1092,39 +1181,6 @@ add_test(
     NAME SolarLeapStatisticsValidationTest
     COMMAND SolarLeapStatisticsValidationTest
 )
-add_executable(
-    SolarDayOfYearStatisticsValidationTest
-    Gabary/tests/SolarDayOfYearStatisticsValidationTest.cpp
-    Gabary/src/LeapYearRules.cpp
-)
-
-target_include_directories(
-    SolarDayOfYearStatisticsValidationTest PRIVATE
-    Gabary/include
-)
-
-add_test(
-    NAME SolarDayOfYearStatisticsValidationTest
-    COMMAND SolarDayOfYearStatisticsValidationTest
-)
-add_executable(
-    Solar50KChronologyReportTest
-    Gabary/tests/Solar50KChronologyReportTest.cpp
-    Gabary/src/SolarEngineV2.cpp
-    Gabary/src/LeapYearRules.cpp
-    Gabary/src/WeekCycleEngine.cpp
-)
-
-target_include_directories(
-    Solar50KChronologyReportTest PRIVATE
-    Gabary/include
-)
-
-add_test(
-    NAME Solar50KChronologyReportTest
-    COMMAND Solar50KChronologyReportTest
-)
-
 
 # ============================================
 # Gabary Console
