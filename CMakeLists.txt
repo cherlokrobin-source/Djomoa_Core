@@ -62,7 +62,10 @@ add_executable(
     Gabary/src/SolarEngineV2.cpp
     Gabary/src/GlobalSolarDay.cpp
     Gabary/src/WeekCycleEngine.cpp
-    Gabary/src/LeapYearRules.cpp
+Gabary/src/LeapYearRules.cpp
+Gabary/src/ExportManager.cpp
+Gabary/src/ReportFormatter.cpp
+Gabary/src/ExportManager.cpp
     src/report/TemporalReportEngine.cpp
     src/report/TemporalReportJSON.cpp
     src/ChronologyEngine.cpp
