@@ -18,3 +18,4 @@ Gabary/CTestTestfile.cmake
 Gabary/*Test
 Gabary/GabaryConsole
 Gabary/TemporalServer
+Gabary/GoldenCalendarCLI
