@@ -2,10 +2,11 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Digital Astrolabe Engine</title>
+<title>Gabary V2 Engine Dashboard</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -19,13 +20,13 @@
 
 <header>
 
-<h1>Digital Astrolabe Engine</h1>
+<h1>GABARY V2 ENGINE DASHBOARD</h1>
 
-<h2>50,000-Year Chronology Research Platform</h2>
+<h2>Golden Calendar 50,000-Year Chronology Engine</h2>
 
 <p>
-Experimental temporal computing architecture for solar and lunar chronology,
-global temporal indexing and API-based exploration.
+Long range solar chronology architecture based on
+Global Solar Day ID temporal coordinates.
 </p>
 
 </header>
@@ -34,26 +35,34 @@ global temporal indexing and API-based exploration.
 
 <section class="status-card">
 
-<h3>Engine Status</h3>
+<h3>ENGINE STATUS</h3>
 
 <div class="status-grid">
 
+
 <div>
 <span>Status</span>
-<strong id="engineStatus">Loading...</strong>
+<strong id="engineStatus">
+Loading...
+</strong>
 </div>
 
 
 <div>
 <span>Version</span>
-<strong id="engineVersion">---</strong>
+<strong id="engineVersion">
+---
+</strong>
 </div>
 
 
 <div>
-<span>Tests</span>
-<strong id="engineTests">---</strong>
+<span>Validation</span>
+<strong id="engineTests">
+---
+</strong>
 </div>
+
 
 </div>
 
@@ -64,7 +73,7 @@ global temporal indexing and API-based exploration.
 
 <section class="clock-card">
 
-<h3>Global Clock</h3>
+<h3>GLOBAL TIME</h3>
 
 <div id="clock">
 00:00:00
@@ -79,20 +88,28 @@ Loading date...
 
 
 
+
 <section class="query-card">
 
 
-<h3>Day ID Query</h3>
+<h3>
+GLOBAL SOLAR DAY QUERY
+</h3>
 
 
-<input 
+<p>
+Enter a Global Solar Day ID from the 50,000 year timeline.
+</p>
+
+
+<input
 id="dayInput"
 type="number"
-placeholder="Enter Day ID">
+placeholder="Example: 739823">
 
 
 <button onclick="searchDay()">
-QUERY
+QUERY ENGINE
 </button>
 
 
@@ -102,16 +119,19 @@ QUERY
 
 
 
+
 <section class="console">
 
 
-<h3>API Response</h3>
+<h3>
+TEMPORAL REPORT
+</h3>
 
 
 <pre id="result">
-{
-    "waiting": true
-}
+
+Waiting for query...
+
 </pre>
 
 
@@ -120,32 +140,39 @@ QUERY
 
 
 
-<footer>
 
-<p>
-Digital Astrolabe Engine v0.1 Demo
-</p>
-
-<p>
-Research Prototype - Golden Calendar Project
-</p>
 
 <footer>
 
-<p>
-Digital Astrolabe Engine v0.1 Demo
-</p>
 
 <p>
-Research Prototype - Golden Calendar Project
+GABARY V2 Architecture
 </p>
+
+
+<p>
+Golden Calendar Project
+</p>
+
 
 <p>
 Developed by Nemimeche Benaissa
 </p>
 
+
 <p>
 © 2026 Golden Calendar Project
 </p>
 
+
 </footer>
+
+
+
+
+<script src="app.js"></script>
+
+
+</body>
+
+</html>
