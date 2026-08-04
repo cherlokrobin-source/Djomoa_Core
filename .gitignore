@@ -8,3 +8,13 @@ CMakeCache.txt
 *.o
 *.a
 data/
+# Gabary build artifacts
+Gabary/build/
+Gabary/CMakeFiles/
+Gabary/CMakeCache.txt
+Gabary/Makefile
+Gabary/cmake_install.cmake
+Gabary/CTestTestfile.cmake
+Gabary/*Test
+Gabary/GabaryConsole
+Gabary/TemporalServer
