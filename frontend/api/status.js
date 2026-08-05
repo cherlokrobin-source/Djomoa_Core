@@ -6,9 +6,7 @@
 */
 
 
-const API_BASE =
-    "http://localhost:8080";
-
+const API_BASE = "http://192.168.210.156:8080";
 
 
 export async function getStatus()

@@ -29,7 +29,7 @@ add_library(
 # Temporal Report JSON Test
 # ============================================
 
-add_executable(
+    add_executable(
     TemporalReportJSONTest
     tests/temporal_report_json_test.cpp
     src/report/TemporalReportEngine.cpp
@@ -559,25 +559,20 @@ add_executable(
     src/server/main.cpp
     src/server/HttpServer.cpp
     src/server/TemporalServer.cpp
-    src/api/TemporalAPI.cpp
-    src/TemporalQueryEngine.cpp
-    src/ChronologyEngine.cpp
-    src/GlobalTemporalID.cpp
-    src/SolarEngine.cpp
-    src/LunarEngine.cpp
-    src/WeekEngine.cpp
+
+    Gabary/src/SolarEngineV2.cpp
+    Gabary/src/WeekCycleEngine.cpp
+    Gabary/src/LeapYearRules.cpp
+    Gabary/src/GlobalSolarDay.cpp
+    Gabary/src/ReportFormatter.cpp
 )
 
 target_include_directories(
     TemporalServer PRIVATE
     include
-    include/api
     include/server
-)
-
-target_link_libraries(
-    TemporalServer
-    GoldenCalendar2083_Core
+    include/api
+    Gabary/include
 )
 # ============================================
 # Solar Cycle Engine Test

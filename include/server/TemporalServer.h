@@ -2,43 +2,37 @@
 #define TEMPORAL_SERVER_H
 
 #include <string>
-
-#include "../api/TemporalAPI.h"
+#include "../../Gabary/include/SolarEngineV2.h"
 
 class TemporalServer
 {
-
 public:
 
     TemporalServer();
 
-    // استقبال طلب يوم بواسطة Day ID
     std::string handleDayRequest(
         long long dayId
     );
 
-    // استقبال طلب التاريخ الشمسي
     std::string handleSolarRequest(
         int year,
         int month,
         int day
     );
 
-    // استقبال طلب التاريخ القمري
     std::string handleLunarRequest(
         int year,
         int month,
         int day
     );
 
-    // استقبال طلب حالة المحرك
     std::string handleStatusRequest();
+
 
 private:
 
-    TemporalAPI api;
+    Gabary::SolarEngineV2 solarEngine;
 
 };
 
 #endif
-
