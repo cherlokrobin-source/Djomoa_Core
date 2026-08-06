@@ -4,7 +4,7 @@
 #include <string>
 
 #include "../TemporalQueryEngine.h"
-
+#include "../../Gabary/include/SolarEngineV2.h"
 class TemporalAPI
 {
 public:
@@ -38,6 +38,7 @@ public:
 private:
 
     TemporalQueryEngine query;
+    Gabary::SolarEngineV2 solarEngine;
 };
 
 #endif

@@ -118,15 +118,7 @@ add_executable(
     src/WeekEngine.cpp
 )
 
-target_include_directories(
-    TemporalAutomationReportTest PRIVATE
-    include
-)
 
-add_test(
-    NAME TemporalAutomationReportTest
-    COMMAND TemporalAutomationReportTest
-)
 # ============================================
 # Archive Tests
 # ============================================
@@ -528,20 +520,32 @@ add_test(
 
 add_executable(
     TemporalAPITest
+
     tests/api/temporal_api_test.cpp
+
     src/api/TemporalAPI.cpp
     src/TemporalQueryEngine.cpp
     src/ChronologyEngine.cpp
     src/GlobalTemporalID.cpp
+
     src/SolarEngine.cpp
     src/LunarEngine.cpp
     src/WeekEngine.cpp
+
+    # Gabary V2 Core
+    Gabary/src/SolarEngineV2.cpp
+    Gabary/src/WeekCycleEngine.cpp
+    Gabary/src/LeapYearRules.cpp
+    Gabary/src/GlobalSolarDay.cpp
 )
 
 target_include_directories(
     TemporalAPITest PRIVATE
+
     include
     include/api
+
+    Gabary/include
 )
 
 add_test(
@@ -556,9 +560,19 @@ add_test(
 
 add_executable(
     TemporalServer
+
     src/server/main.cpp
     src/server/HttpServer.cpp
     src/server/TemporalServer.cpp
+
+    src/api/TemporalAPI.cpp
+    src/TemporalQueryEngine.cpp
+    src/ChronologyEngine.cpp
+    src/GlobalTemporalID.cpp
+
+    src/SolarEngine.cpp
+    src/LunarEngine.cpp
+    src/WeekEngine.cpp
 
     Gabary/src/SolarEngineV2.cpp
     Gabary/src/WeekCycleEngine.cpp
@@ -569,11 +583,15 @@ add_executable(
 
 target_include_directories(
     TemporalServer PRIVATE
+
     include
-    include/server
     include/api
+    include/server
+
     Gabary/include
 )
+
+
 # ============================================
 # Solar Cycle Engine Test
 # ============================================

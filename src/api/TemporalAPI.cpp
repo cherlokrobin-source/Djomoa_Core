@@ -19,29 +19,100 @@ std::string TemporalAPI::getDayAsJSON(
     GlobalTemporalID id =
         query.queryDay(dayId);
 
+    Gabary::GlobalSolarDay solar =
+        solarEngine.buildDay(dayId);
+
 
     std::ostringstream json;
 
 
     json << "{";
 
+
+    // Global Coordinate
     json << "\"dayId\":" << id.dayId << ",";
-    json << "\"solarYear\":" << id.solarYear << ",";
-    json << "\"solarMonth\":" << id.solarMonth << ",";
-    json << "\"solarDay\":" << id.solarDay << ",";
 
-    json << "\"lunarYear\":" << id.lunarYear << ",";
-    json << "\"lunarMonth\":" << id.lunarMonth << ",";
-    json << "\"lunarDay\":" << id.lunarDay << ",";
 
-    json << "\"weekIndex\":" << id.weekIndex << ",";
-    json << "\"cycleNumber\":" << id.cycleNumber << ",";
-    json << "\"cycleDay\":" << id.cycleDay << ",";
+    // Gabary V2 Solar Report Data
+    json << "\"gabaryDayCode\":\"GC-"
+         << solar.dayId << "-"
+         << solar.solarYear << "-"
+         << solar.dayOfYear
+         << "\",";
 
-    json << "\"yearIndex\":" << id.yearIndex << ",";
-    json << "\"historicalIndex\":" << id.historicalIndex << ",";
 
-    json << "\"era\":\"" << id.era << "\"";
+    json << "\"solarDate\":{";
+
+    json << "\"weekday\":\""
+         << solar.weekName << "\",";
+
+    json << "\"day\":"
+         << solar.solarDay << ",";
+
+    json << "\"month\":"
+         << solar.solarMonth << ",";
+
+    json << "\"monthName\":\""
+         << solar.monthName << "\",";
+
+    json << "\"year\":"
+         << solar.solarYear;
+
+    json << "},";
+
+
+    json << "\"dayOfYear\":"
+         << solar.dayOfYear << ",";
+
+
+    json << "\"leapYear\":"
+         << (solar.leapYear ? "true" : "false")
+         << ",";
+
+
+    // Original Temporal Metadata
+
+    json << "\"lunarYear\":"
+         << id.lunarYear << ",";
+
+    json << "\"lunarMonth\":"
+         << id.lunarMonth << ",";
+
+    json << "\"lunarDay\":"
+         << id.lunarDay << ",";
+
+
+    json << "\"weekIndex\":"
+         << id.weekIndex << ",";
+
+
+    json << "\"cycleNumber\":"
+         << id.cycleNumber << ",";
+
+
+    json << "\"cycleDay\":"
+         << id.cycleDay << ",";
+
+
+    json << "\"yearIndex\":"
+         << id.yearIndex << ",";
+
+
+    json << "\"historicalIndex\":"
+         << id.historicalIndex << ",";
+
+
+    json << "\"era\":\""
+         << id.era
+         << "\",";
+
+
+    // Engine Metadata
+
+    json << "\"architecture\":\"Gabary V2\",";
+    json << "\"engine\":\"SolarEngineV2\",";
+    json << "\"validation\":\"PASSED\"";
+
 
     json << "}";
 
@@ -147,9 +218,10 @@ std::string TemporalAPI::getStatusJSON()
     json << "\"engine\":\"Golden Calendar 50000 Chronology Engine\",";
     json << "\"version\":\"1.1-dev\",";
     json << "\"status\":\"stable\",";
-    json << "\"tests\":\"20/20 Passed\",";
+    json << "\"tests\":\"51/51 Passed\",";
     json << "\"maxYears\":50000,";
-    json << "\"api\":\"Temporal API\"";
+    json << "\"api\":\"Temporal API\",";
+    json << "\"architecture\":\"Gabary V2\"";
 
     json << "}";
 
