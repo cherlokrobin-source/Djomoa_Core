@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Gabary V2 Engine Dashboard</title>
+<title>Digital Astrolabe | Gabary V2</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -20,13 +20,13 @@
 
 <header>
 
-<h1>GABARY V2 ENGINE DASHBOARD</h1>
+<h1>DIGITAL ASTROLABE</h1>
 
-<h2>Golden Calendar 50,000-Year Chronology Engine</h2>
+<h2>Gabary V2 Temporal Engine</h2>
 
 <p>
-Long range solar chronology architecture based on
-Global Solar Day ID temporal coordinates.
+Golden Calendar 50,000-Year Chronology Research Platform
+based on Global Solar Day coordinates.
 </p>
 
 </header>
@@ -39,30 +39,22 @@ Global Solar Day ID temporal coordinates.
 
 <div class="status-grid">
 
-
 <div>
 <span>Status</span>
-<strong id="engineStatus">
-Loading...
-</strong>
+<strong id="engineStatus">Loading...</strong>
 </div>
 
 
 <div>
-<span>Version</span>
-<strong id="engineVersion">
----
-</strong>
+<span>Engine</span>
+<strong id="engineVersion">---</strong>
 </div>
 
 
 <div>
 <span>Validation</span>
-<strong id="engineTests">
----
-</strong>
+<strong id="engineTests">---</strong>
 </div>
-
 
 </div>
 
@@ -89,8 +81,68 @@ Loading date...
 
 
 
-<section class="query-card">
+<section class="dashboard-card">
 
+<h3>
+TEMPORAL DASHBOARD
+</h3>
+
+
+<div class="dashboard-grid">
+
+
+<div class="card">
+<span>Global Solar Day</span>
+<strong id="globalSolarDay">---</strong>
+</div>
+
+
+<div class="card">
+<span>Solar Date</span>
+<strong id="solarDate">---</strong>
+</div>
+
+
+<div class="card">
+<span>Day Of Year</span>
+<strong id="dayOfYear">---</strong>
+</div>
+
+
+<div class="card">
+<span>Week Index</span>
+<strong id="weekIndex">---</strong>
+</div>
+
+
+<div class="card">
+<span>Cycle Number</span>
+<strong id="cycleNumber">---</strong>
+</div>
+
+
+<div class="card">
+<span>Historical Index</span>
+<strong id="historicalIndex">---</strong>
+</div>
+
+
+<div class="card">
+<span>Engine</span>
+<strong id="engineName">---</strong>
+</div>
+
+
+<div class="card">
+<span>Validation</span>
+<strong id="validationState">---</strong>
+</div>
+
+
+</div>
+
+</section>
+<section class="query-card">
 
 <h3>
 GLOBAL SOLAR DAY QUERY
@@ -118,19 +170,16 @@ QUERY ENGINE
 
 
 
-
-
-<section class="console">
-
+<section class="report-card">
 
 <h3>
-TEMPORAL REPORT
+GABARY V2 TEXT REPORT
 </h3>
 
 
-<pre id="result">
+<pre id="textReport">
 
-Waiting for query...
+Waiting for report...
 
 </pre>
 
@@ -141,12 +190,36 @@ Waiting for query...
 
 
 
+<section class="console">
+
+<h3>
+RAW JSON DATA
+</h3>
+
+
+<pre id="result">
+
+Waiting for JSON...
+
+</pre>
+
+
+</section>
+
+
+
+
 
 <footer>
 
 
 <p>
 GABARY V2 Architecture
+</p>
+
+
+<p>
+Digital Astrolabe Interface
 </p>
 
 
@@ -166,7 +239,6 @@ Developed by Nemimeche Benaissa
 
 
 </footer>
-
 
 
 

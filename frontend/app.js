@@ -1,4 +1,4 @@
-const API_BASE = "https://chess-macintosh-temporary-toward.trycloudflare.com";
+const API_BASE = "http://localhost:8080";
 
 
 // =====================================
@@ -19,7 +19,7 @@ async function loadStatus() {
         document.getElementById(
             "engineStatus"
         ).textContent =
-            data.status || "Unknown";
+            data.status || "stable";
 
 
         document.getElementById(
@@ -41,18 +41,7 @@ async function loadStatus() {
             "engineStatus"
         ).textContent =
             "Offline";
-
-        document.getElementById(
-            "engineVersion"
-        ).textContent =
-            "---";
-
-        document.getElementById(
-            "engineTests"
-        ).textContent =
-            "---";
     }
-
 }
 
 
@@ -75,19 +64,83 @@ async function searchDay(){
 
         const response =
             await fetch(
-                `${API_BASE}/api/day/${day}`
+                `${API_BASE}/api/json/day/${day}`
             );
 
 
         const data =
-            await response.text();
+            await response.json();
+
+
+
+        document.getElementById(
+            "globalSolarDay"
+        ).textContent =
+            data.globalSolarDay;
+
+
+        document.getElementById(
+            "solarDate"
+        ).textContent =
+            `${data.solarDate.weekday}, ${data.solarDate.day} ${data.solarDate.monthName} ${data.solarDate.year}`;
+
+
+        document.getElementById(
+            "dayOfYear"
+        ).textContent =
+            data.solarDate.dayOfYear;
+
+
+        document.getElementById(
+            "weekIndex"
+        ).textContent =
+            data.calendarMetadata.weekIndex;
+
+
+        document.getElementById(
+            "cycleNumber"
+        ).textContent =
+            data.temporalMetadata.cycleNumber;
+
+
+        document.getElementById(
+            "historicalIndex"
+        ).textContent =
+            data.temporalMetadata.historicalIndex;
+
+
+        document.getElementById(
+            "engineName"
+        ).textContent =
+            data.architecture.engine;
+
+
+        document.getElementById(
+            "validationState"
+        ).textContent =
+            data.architecture.validation;
+
 
 
         document.getElementById(
             "result"
-        ).textContent = data;
+        ).textContent =
+            JSON.stringify(data, null, 4);
+
+const reportResponse =
+    await fetch(
+        `${API_BASE}/api/day/${day}`
+    );
 
 
+const reportText =
+    await reportResponse.text();
+
+
+document.getElementById(
+    "textReport"
+).textContent =
+    reportText;
     }
     catch(error){
 
@@ -108,15 +161,13 @@ async function searchDay(){
 
 function updateClock(){
 
-    const now =
-        new Date();
+    const now = new Date();
 
 
     document.getElementById(
         "clock"
     ).textContent =
-        now.toUTCString()
-        .split(" ")[4];
+        now.toUTCString().split(" ")[4];
 
 
     document.getElementById(
@@ -132,11 +183,7 @@ function updateClock(){
 // Startup
 // =====================================
 
-setInterval(
-    updateClock,
-    1000
-);
-
+setInterval(updateClock,1000);
 
 updateClock();
 
