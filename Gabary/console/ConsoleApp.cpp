@@ -1,5 +1,5 @@
 #include "ConsoleApp.h"
-
+#include "../include/ReportFormatter.h"
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -19,19 +19,8 @@ void ConsoleApp::showDay(int64_t dayId)
 {
     Gabary::GlobalSolarDay day = solarEngine.buildDay(dayId);
 
-    std::cout << "\n";
-    std::cout << "========= SOLAR DAY REPORT =========\n";
-    std::cout << "Day ID      : " << day.dayId << "\n";
-    std::cout << "Solar Year  : " << day.solarYear << "\n";
-    std::cout << "Solar Month : " << day.solarMonth << "\n";
-    std::cout << "Solar Day   : " << day.solarDay << "\n";
-    std::cout << "Day Of Year : " << day.dayOfYear << "\n";
-    std::cout << "Week Index  : " << day.weekIndex << "\n";
-    std::cout << "Week Name   : " << day.weekName << "\n";
-    std::cout << "Leap Year   : "
-              << (day.leapYear ? "YES" : "NO")
-              << "\n";
-    std::cout << "===================================\n\n";
+    std::cout 
+        << Gabary::ReportFormatter::createTextReport(day);
 }
 
 

@@ -1,10 +1,37 @@
 #include "ReportFormatter.h"
 
 #include <sstream>
-#include <iomanip>
+#include <array>
 
 namespace Gabary
 {
+
+static const std::array<std::string, 12> MONTH_NAMES =
+{
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December"
+};
+
+
+static std::string getMonthName(int month)
+{
+    if(month >= 1 && month <= 12)
+        return MONTH_NAMES[month - 1];
+
+    return "Unknown";
+}
+
+
 
 std::string ReportFormatter::createShareReport(
     const GlobalSolarDay& day
@@ -18,37 +45,53 @@ std::string ReportFormatter::createShareReport(
     out << "║       SOLAR CHRONOLOGY REPORT            ║\n";
     out << "╚══════════════════════════════════════════╝\n\n";
 
-    out << "QUERY\n";
-    out << "------------------------------------------\n";
     out << "Global Solar Day : "
         << day.dayId << "\n\n";
 
-    out << "RESULT\n";
+    out << "Gabary Day Code : GC-"
+        << day.dayId
+        << "-"
+        << day.solarYear
+        << "-"
+        << day.dayOfYear
+        << "\n\n";
+
+
+    out << "Solar Date\n";
     out << "------------------------------------------\n";
 
-    out << "Solar Date   : "
-        << day.solarYear << "-"
-        << std::setw(2) << std::setfill('0')
-        << day.solarMonth << "-"
-        << std::setw(2)
+    out << day.weekName
+        << ", "
+        << day.solarDay
+        << " "
+        << getMonthName(day.solarMonth)
+        << " "
+        << day.solarYear
+        << "\n\n";
+
+
+    out << "Year        : "
+        << day.solarYear << "\n";
+
+    out << "Month       : "
+        << getMonthName(day.solarMonth)
+        << "\n";
+
+    out << "Day         : "
         << day.solarDay << "\n";
 
-    out << "Day Of Year  : "
-        << day.dayOfYear << "\n";
+    out << "Day Of Year : "
+        << day.dayOfYear << "\n\n";
 
-    out << "Week Day     : "
-        << day.weekName << "\n";
 
-    out << "Leap Year    : "
+    out << "Leap Year : "
         << (day.leapYear ? "YES" : "NO")
         << "\n\n";
 
 
-    out << "ENGINE\n";
-    out << "------------------------------------------\n";
     out << "Architecture : Gabary V2\n";
-    out << "Core         : SolarEngineV2 OK\n";
-    out << "Validation   : PASSED\n\n";
+    out << "Engine : SolarEngineV2\n";
+    out << "Validation : PASSED\n";
 
 
     return out.str();
@@ -69,42 +112,34 @@ std::string ReportFormatter::createInspectReport(
     out << "╚══════════════════════════════════════════╝\n\n";
 
 
-    out << "TEMPORAL COORDINATE\n";
-    out << "------------------------------------------\n";
     out << "Global Solar Day : "
         << day.dayId << "\n\n";
 
 
-    out << "SOLAR DATA\n";
-    out << "------------------------------------------\n";
+    out << "Date : "
+        << day.weekName
+        << ", "
+        << day.solarDay
+        << " "
+        << getMonthName(day.solarMonth)
+        << " "
+        << day.solarYear
+        << "\n";
 
-    out << "Date        : "
-        << day.solarYear << "-"
-        << std::setw(2) << std::setfill('0')
-        << day.solarMonth << "-"
-        << std::setw(2)
-        << day.solarDay << "\n";
 
     out << "Day Of Year : "
         << day.dayOfYear << "\n";
 
-    out << "Week Index  : "
+    out << "Week Index : "
         << day.weekIndex << "\n";
 
-    out << "Week Name   : "
-        << day.weekName << "\n";
-
-    out << "Leap Year   : "
+    out << "Leap Year : "
         << (day.leapYear ? "YES" : "NO")
         << "\n\n";
 
 
-    out << "ENGINE\n";
-    out << "------------------------------------------\n";
-    out << "SolarEngineV2  : OK\n";
-    out << "GlobalSolarDay : OK\n";
-    out << "Architecture   : Gabary V2\n";
-    out << "Validation     : PASSED\n\n";
+    out << "Architecture : Gabary V2\n";
+    out << "Validation : PASSED\n";
 
 
     return out.str();
@@ -122,29 +157,50 @@ std::string ReportFormatter::createTextReport(
     out << "GABARY V2 ENGINE\n";
     out << "SOLAR CHRONOLOGY REPORT\n\n";
 
+
     out << "Global Solar Day : "
-        << day.dayId << "\n";
+        << day.dayId << "\n\n";
 
-    out << "Solar Date : "
-        << day.solarYear << "-"
-        << day.solarMonth << "-"
-        << day.solarDay << "\n";
 
-    out << "Day Of Year : "
-        << day.dayOfYear << "\n";
-
-    out << "Week Day : "
-        << day.weekName << "\n";
-
-    out << "Leap Year : "
-        << (day.leapYear ? "YES" : "NO")
+    out << "Gabary Day Code : GC-"
+        << day.dayId
+        << "-"
+        << day.solarYear
+        << "-"
+        << day.dayOfYear
         << "\n\n";
 
 
-    out << "Architecture : Gabary V2\n";
-    out << "Engine : SolarEngineV2\n";
-    out << "Validation : PASSED\n";
+    out << "Solar Date\n";
+out << "----------------------------------\n";
+    out << day.weekName
+        << ", "
+        << day.solarDay
+        << " "
+        << getMonthName(day.solarMonth)
+        << " "
+        << day.solarYear
+        << "\n\n";
 
+    out << "Year        : "
+        << day.solarYear << "\n";
+
+    out << "Month       : "
+        << getMonthName(day.solarMonth) << "\n";
+
+    out << "Day         : "
+        << day.solarDay << "\n";
+
+    out << "Day Of Year : "
+        << day.dayOfYear << "\n\n";
+
+    out << "Leap Year   : "
+        << (day.leapYear ? "YES" : "NO")
+        << "\n\n";
+
+    out << "Architecture : Gabary V2\n";
+    out << "Engine       : SolarEngineV2\n";
+    out << "Validation   : PASSED\n";
 
     return out.str();
 }
