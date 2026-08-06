@@ -553,7 +553,49 @@ add_test(
     COMMAND TemporalAPITest
 )
 
+# ============================================
+# Temporal JSON API Test
+# ============================================
 
+add_executable(
+    TemporalJSONAPITest
+
+    tests/api/temporal_json_api_test.cpp
+
+    src/server/TemporalServer.cpp
+    src/api/TemporalAPI.cpp
+
+    src/TemporalQueryEngine.cpp
+    src/ChronologyEngine.cpp
+    src/GlobalTemporalID.cpp
+
+    src/SolarEngine.cpp
+    src/LunarEngine.cpp
+    src/WeekEngine.cpp
+
+    Gabary/src/SolarEngineV2.cpp
+    Gabary/src/WeekCycleEngine.cpp
+    Gabary/src/LeapYearRules.cpp
+    Gabary/src/GlobalSolarDay.cpp
+    Gabary/src/ReportFormatter.cpp
+)
+
+
+target_include_directories(
+    TemporalJSONAPITest PRIVATE
+
+    include
+    include/api
+    include/server
+
+    Gabary/include
+)
+
+
+add_test(
+    NAME TemporalJSONAPITest
+    COMMAND TemporalJSONAPITest
+)
 # ============================================
 # Temporal Server Application
 # ============================================
