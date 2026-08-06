@@ -1,4 +1,5 @@
 #include <sstream>
+
 #include "TemporalServer.h"
 #include "../../Gabary/include/ReportFormatter.h"
 
@@ -8,58 +9,22 @@ TemporalServer::TemporalServer()
 }
 
 
-// طلب بواسطة Day ID
-std::string TemporalServer::handleDayRequest(long long dayId)
-{
-    Gabary::GlobalSolarDay day = solarEngine.buildDay(dayId);
+// =====================================
+// JSON Day API
+// =====================================
 
-    return Gabary::ReportFormatter::createTextReport(day);
-}
-
-
-// طلب بواسطة التاريخ الشمسي
-std::string TemporalServer::handleSolarRequest(
-    int year,
-    int month,
-    int day
-)
-{
-    long long dayId = solarEngine.toDayId(year, month, day);
-
-    Gabary::GlobalSolarDay result = solarEngine.buildDay(dayId);
-
-    return Gabary::ReportFormatter::createTextReport(result);
-}
-
-
-// طلب بواسطة التاريخ القمري
-std::string TemporalServer::handleLunarRequest(
-    int year,
-    int month,
-    int day
-)
-{
-    return R"({"error":"Lunar V2 endpoint pending"})";
-}
-
-
-// حالة المحرك
-std::string TemporalServer::handleStatusRequest()
-{
-    return R"({
-"engine":"Gabary V2",
-"core":"SolarEngineV2",
-"architecture":"50,000 Year Solar Chronology",
-"status":"stable",
-"validation":"PASSED"
-})";
-}
 std::string TemporalServer::handleDayJSONRequest(long long dayId)
 {
     Gabary::GlobalSolarDay day =
         solarEngine.buildDay(dayId);
 
+
+    GlobalTemporalID temporal =
+        queryEngine.queryDay(dayId);
+
+
     std::ostringstream json;
+
 
     json
     << "{"
@@ -109,6 +74,31 @@ std::string TemporalServer::handleDayJSONRequest(long long dayId)
     << "},"
 
 
+    << "\"temporalMetadata\":{"
+
+    << "\"cycleNumber\":"
+    << temporal.cycleNumber
+    << ","
+
+    << "\"cycleDay\":"
+    << temporal.cycleDay
+    << ","
+
+    << "\"yearIndex\":"
+    << temporal.yearIndex
+    << ","
+
+    << "\"historicalIndex\":"
+    << temporal.historicalIndex
+    << ","
+
+    << "\"era\":\""
+    << temporal.era
+    << "\""
+
+    << "},"
+
+
     << "\"architecture\":{"
 
     << "\"name\":\"Gabary V2\","
@@ -123,4 +113,78 @@ std::string TemporalServer::handleDayJSONRequest(long long dayId)
 
 
     return json.str();
+}
+
+
+
+// =====================================
+// Text Report API
+// =====================================
+
+std::string TemporalServer::handleDayRequest(long long dayId)
+{
+    Gabary::GlobalSolarDay day =
+        solarEngine.buildDay(dayId);
+
+
+    return Gabary::ReportFormatter::createTextReport(day);
+}
+
+
+
+// =====================================
+// Solar Query
+// =====================================
+
+std::string TemporalServer::handleSolarRequest(
+    int year,
+    int month,
+    int day
+)
+{
+    long long dayId =
+        solarEngine.toDayId(
+            year,
+            month,
+            day
+        );
+
+
+    Gabary::GlobalSolarDay result =
+        solarEngine.buildDay(dayId);
+
+
+    return Gabary::ReportFormatter::createTextReport(result);
+}
+
+
+
+// =====================================
+// Lunar Query
+// =====================================
+
+std::string TemporalServer::handleLunarRequest(
+    int year,
+    int month,
+    int day
+)
+{
+    return R"({"error":"Lunar V2 endpoint pending"})";
+}
+
+
+
+// =====================================
+// Status
+// =====================================
+
+std::string TemporalServer::handleStatusRequest()
+{
+    return R"({
+"engine":"Gabary V2",
+"core":"SolarEngineV2",
+"architecture":"50,000 Year Solar Chronology",
+"status":"stable",
+"validation":"PASSED"
+})";
 }
