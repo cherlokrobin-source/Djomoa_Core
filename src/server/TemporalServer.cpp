@@ -56,52 +56,71 @@ std::string TemporalServer::handleStatusRequest()
 }
 std::string TemporalServer::handleDayJSONRequest(long long dayId)
 {
-    Gabary::GlobalSolarDay day = solarEngine.buildDay(dayId);
+    Gabary::GlobalSolarDay day =
+        solarEngine.buildDay(dayId);
 
     std::ostringstream json;
 
-    json << "{";
+    json
+    << "{"
 
-    json << "\"dayId\":" << day.dayId << ",";
+    << "\"globalSolarDay\":"
+    << day.dayId
+    << ","
 
-    json << "\"gabaryDayCode\":\"GC-"
-         << day.dayId << "-"
-         << day.solarYear << "-"
-         << day.dayOfYear
-         << "\",";
 
-    json << "\"solarDate\":{";
+    << "\"solarDate\":{"
 
-    json << "\"weekday\":\""
-         << day.weekName << "\",";
+    << "\"weekday\":\""
+    << day.weekName
+    << "\","
 
-    json << "\"year\":"
-         << day.solarYear << ",";
+    << "\"year\":"
+    << day.solarYear
+    << ","
 
-    json << "\"month\":"
-         << day.solarMonth << ",";
+    << "\"month\":"
+    << day.solarMonth
+    << ","
 
-    json << "\"monthName\":\""
-         << day.monthName << "\",";
+    << "\"monthName\":\""
+    << day.monthName
+    << "\","
 
-    json << "\"day\":"
-         << day.solarDay;
+    << "\"day\":"
+    << day.solarDay
+    << ","
 
-    json << "},";
+    << "\"dayOfYear\":"
+    << day.dayOfYear
 
-    json << "\"dayOfYear\":"
-         << day.dayOfYear << ",";
+    << "},"
 
-    json << "\"leapYear\":"
-         << (day.leapYear ? "true" : "false") << ",";
 
-    json << "\"architecture\":\"Gabary V2\",";
+    << "\"calendarMetadata\":{"
 
-    json << "\"engine\":\"SolarEngineV2\",";
+    << "\"weekIndex\":"
+    << day.weekIndex
+    << ","
 
-    json << "\"validation\":\"PASSED\"";
+    << "\"leapYear\":"
+    << (day.leapYear ? "true" : "false")
 
-    json << "}";
+    << "},"
+
+
+    << "\"architecture\":{"
+
+    << "\"name\":\"Gabary V2\","
+
+    << "\"engine\":\"SolarEngineV2\","
+
+    << "\"validation\":\"PASSED\""
+
+    << "}"
+
+    << "}";
+
 
     return json.str();
 }
