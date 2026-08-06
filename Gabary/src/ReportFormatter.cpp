@@ -6,32 +6,6 @@
 namespace Gabary
 {
 
-static const std::array<std::string, 12> MONTH_NAMES =
-{
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December"
-};
-
-
-static std::string getMonthName(int month)
-{
-    if(month >= 1 && month <= 12)
-        return MONTH_NAMES[month - 1];
-
-    return "Unknown";
-}
-
-
 
 std::string ReportFormatter::createShareReport(
     const GlobalSolarDay& day
@@ -64,7 +38,7 @@ std::string ReportFormatter::createShareReport(
         << ", "
         << day.solarDay
         << " "
-        << getMonthName(day.solarMonth)
+        << day.monthName
         << " "
         << day.solarYear
         << "\n\n";
@@ -74,7 +48,7 @@ std::string ReportFormatter::createShareReport(
         << day.solarYear << "\n";
 
     out << "Month       : "
-        << getMonthName(day.solarMonth)
+        << day.monthName
         << "\n";
 
     out << "Day         : "
@@ -121,7 +95,7 @@ std::string ReportFormatter::createInspectReport(
         << ", "
         << day.solarDay
         << " "
-        << getMonthName(day.solarMonth)
+        << day.monthName
         << " "
         << day.solarYear
         << "\n";
@@ -177,7 +151,7 @@ out << "----------------------------------\n";
         << ", "
         << day.solarDay
         << " "
-        << getMonthName(day.solarMonth)
+        << day.monthName
         << " "
         << day.solarYear
         << "\n\n";
@@ -186,7 +160,7 @@ out << "----------------------------------\n";
         << day.solarYear << "\n";
 
     out << "Month       : "
-        << getMonthName(day.solarMonth) << "\n";
+        << day.monthName << "\n";
 
     out << "Day         : "
         << day.solarDay << "\n";

@@ -20,6 +20,7 @@ struct GlobalSolarDay
 
     // Week cycle
     int32_t weekIndex = 0;
+    std::string monthName = "January";
     std::string weekName = "Friday";
 
     // Leap information

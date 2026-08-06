@@ -1,9 +1,24 @@
 #include "../include/SolarEngineV2.h"
 #include "../include/LeapYearRules.h"
-
+#include <array>
 namespace Gabary
 {
 
+static const std::array<std::string, 12> MONTH_NAMES =
+{
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December"
+};
 
 int SolarEngineV2::daysInYear(int year)
 {
@@ -137,6 +152,7 @@ GlobalSolarDay SolarEngineV2::buildDay(int64_t dayId)
     result.dayId = dayId;
     result.solarYear = date.year;
     result.solarMonth = date.month;
+    result.monthName = MONTH_NAMES[date.month - 1]; 
     result.solarDay = date.day;
     result.dayOfYear = date.dayOfYear;
     result.leapYear = date.leapYear;
