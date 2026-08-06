@@ -20,28 +20,63 @@ int main()
     std::cout << json << std::endl;
 
 
-    if(json.find("\"dayId\":739823") == std::string::npos)
+    if(json.find("\"globalSolarDay\":739823")
+       == std::string::npos)
     {
-        std::cerr << "FAIL: dayId missing\n";
+        std::cerr
+            << "FAIL: globalSolarDay missing\n";
         return 1;
     }
 
 
-    if(json.find("\"architecture\":\"Gabary V2\"") == std::string::npos)
+    if(json.find("\"solarDate\"")
+       == std::string::npos)
     {
-        std::cerr << "FAIL: architecture missing\n";
+        std::cerr
+            << "FAIL: solarDate missing\n";
         return 1;
     }
 
 
-    if(json.find("\"validation\":\"PASSED\"") == std::string::npos)
+    if(json.find("\"calendarMetadata\"")
+       == std::string::npos)
     {
-        std::cerr << "FAIL: validation missing\n";
+        std::cerr
+            << "FAIL: calendarMetadata missing\n";
         return 1;
     }
 
 
-    std::cout << "JSON API TEST PASSED\n";
+    if(json.find("\"architecture\"")
+       == std::string::npos)
+    {
+        std::cerr
+            << "FAIL: architecture missing\n";
+        return 1;
+    }
+
+
+    if(json.find("\"name\":\"Gabary V2\"")
+       == std::string::npos)
+    {
+        std::cerr
+            << "FAIL: Gabary V2 missing\n";
+        return 1;
+    }
+
+
+    if(json.find("\"validation\":\"PASSED\"")
+       == std::string::npos)
+    {
+        std::cerr
+            << "FAIL: validation missing\n";
+        return 1;
+    }
+
+
+    std::cout
+        << "JSON API TEST PASSED\n";
+
 
     return 0;
 }
