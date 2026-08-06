@@ -1,7 +1,23 @@
 # Gabary V2 Architecture Documentation
 
 ## 1. Overview
+## Version Information
 
+Architecture:
+
+Gabary V2
+
+Engine:
+
+SolarEngineV2
+
+Validation:
+
+54/54 Tests Passed
+
+Branch:
+
+v2-engine
 Gabary V2 is the temporal computation architecture
 inside GoldenCalendar 50000 Chronology Engine.
 
@@ -268,3 +284,22 @@ Planned:
 - Lunar mapping layer.
 - Digital Astrolabe frontend integration.
 - Historical timeline exploration.
+---
+
+Document Signature
+
+Project: GoldenCalendar 50000 Chronology Engine
+Architecture: Gabary V2
+Document: Gabary V2 Architecture Documentation
+
+Developed by:
+Nemimeche Benaissa
+
+Validation Status:
+54/54 Tests Passed
+
+Branch:
+v2-engine
+
+Date:
+2026
