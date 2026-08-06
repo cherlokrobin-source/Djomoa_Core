@@ -50,7 +50,15 @@ async function loadStatus() {
 // Global Solar Day Query
 // =====================================
 
+
+// =====================================
+// Global Solar Day Query
+// =====================================
+
 async function searchDay(){
+
+    console.log("SEARCH DAY CLICKED");
+
 
     const day =
         document.getElementById("dayInput").value;
@@ -61,6 +69,7 @@ async function searchDay(){
 
 
     try{
+
 
         const response =
             await fetch(
@@ -79,10 +88,12 @@ async function searchDay(){
             data.globalSolarDay;
 
 
+
         document.getElementById(
             "solarDate"
         ).textContent =
             `${data.solarDate.weekday}, ${data.solarDate.day} ${data.solarDate.monthName} ${data.solarDate.year}`;
+
 
 
         document.getElementById(
@@ -91,10 +102,12 @@ async function searchDay(){
             data.solarDate.dayOfYear;
 
 
+
         document.getElementById(
             "weekIndex"
         ).textContent =
             data.calendarMetadata.weekIndex;
+
 
 
         document.getElementById(
@@ -103,16 +116,19 @@ async function searchDay(){
             data.temporalMetadata.cycleNumber;
 
 
+
         document.getElementById(
             "historicalIndex"
         ).textContent =
             data.temporalMetadata.historicalIndex;
 
 
+
         document.getElementById(
             "engineName"
         ).textContent =
             data.architecture.engine;
+
 
 
         document.getElementById(
@@ -122,37 +138,48 @@ async function searchDay(){
 
 
 
+        // RAW JSON DISPLAY
+
         document.getElementById(
             "result"
         ).textContent =
             JSON.stringify(data, null, 4);
 
-const reportResponse =
-    await fetch(
-        `${API_BASE}/api/day/${day}`
-    );
 
 
-const reportText =
-    await reportResponse.text();
+        // TEXT REPORT DISPLAY
+
+        const reportResponse =
+            await fetch(
+                `${API_BASE}/api/day/${day}`
+            );
 
 
-document.getElementById(
-    "textReport"
-).textContent =
-    reportText;
+        const reportText =
+            await reportResponse.text();
+
+
+        document.getElementById(
+            "textReport"
+        ).textContent =
+            reportText;
+
+
     }
     catch(error){
+
 
         document.getElementById(
             "result"
         ).textContent =
             "API CONNECTION ERROR";
 
+
+        console.error(error);
+
     }
 
 }
-
 
 
 // =====================================
@@ -186,5 +213,61 @@ function updateClock(){
 setInterval(updateClock,1000);
 
 updateClock();
+// =====================================
+// Timeline Explorer
+// =====================================
 
-loadStatus();
+async function loadTimeline(){
+
+    console.log("Timeline button clicked");
+
+
+    const start =
+        document.getElementById("timelineStart").value;
+
+
+    const end =
+        document.getElementById("timelineEnd").value;
+
+
+    if(!start || !end)
+        return;
+
+
+    let output = "";
+
+
+    for(let day = Number(start); day <= Number(end); day++){
+
+        try{
+
+            const response =
+                await fetch(
+                    `${API_BASE}/api/json/day/${day}`
+                );
+
+
+            const data =
+                await response.json();
+
+
+            output +=
+`
+-----------------------------
+Global Solar Day : ${data.globalSolarDay}
+
+Date :
+${data.solarDate.weekday}
+${data.solarDate.day} ${data.solarDate.monthName} ${data.solarDate.year}
+
+Day Of Year :
+${data.solarDate.dayOfYear}
+
+Cycle :
+${data.temporalMetadata.cycleNumber}
+
+Historical Index :
+${data.temporalMetadata.historicalIndex}
+`;
+
+        }
