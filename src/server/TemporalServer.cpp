@@ -1,3 +1,4 @@
+#include <sstream>
 #include "TemporalServer.h"
 #include "../../Gabary/include/ReportFormatter.h"
 
@@ -52,4 +53,55 @@ std::string TemporalServer::handleStatusRequest()
 "status":"stable",
 "validation":"PASSED"
 })";
+}
+std::string TemporalServer::handleDayJSONRequest(long long dayId)
+{
+    Gabary::GlobalSolarDay day = solarEngine.buildDay(dayId);
+
+    std::ostringstream json;
+
+    json << "{";
+
+    json << "\"dayId\":" << day.dayId << ",";
+
+    json << "\"gabaryDayCode\":\"GC-"
+         << day.dayId << "-"
+         << day.solarYear << "-"
+         << day.dayOfYear
+         << "\",";
+
+    json << "\"solarDate\":{";
+
+    json << "\"weekday\":\""
+         << day.weekName << "\",";
+
+    json << "\"year\":"
+         << day.solarYear << ",";
+
+    json << "\"month\":"
+         << day.solarMonth << ",";
+
+    json << "\"monthName\":\""
+         << day.monthName << "\",";
+
+    json << "\"day\":"
+         << day.solarDay;
+
+    json << "},";
+
+    json << "\"dayOfYear\":"
+         << day.dayOfYear << ",";
+
+    json << "\"leapYear\":"
+         << (day.leapYear ? "true" : "false") << ",";
+
+    json << "\"architecture\":\"Gabary V2\",";
+
+    json << "\"engine\":\"SolarEngineV2\",";
+
+    json << "\"validation\":\"PASSED\"";
+
+    json << "}";
+
+    return json.str();
 }

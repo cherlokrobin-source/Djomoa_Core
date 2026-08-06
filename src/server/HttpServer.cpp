@@ -175,7 +175,23 @@ void HttpServer::handleClient(
             temporalServer.handleStatusRequest();
     }
 
+// =========================
+// DAY JSON V2
+// =========================
 
+else if(path.find("/api/json/day/") == 0)
+{
+    long long dayId =
+        std::stoll(
+            path.substr(14)
+        );
+
+
+    body =
+        temporalServer.handleDayJSONRequest(
+            dayId
+        );
+}
 
     // =========================
     // DAY
