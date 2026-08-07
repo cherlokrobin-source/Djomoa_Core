@@ -5,33 +5,35 @@ const API_BASE = "http://localhost:8080";
 // Load Gabary V2 Engine Status
 // =====================================
 
-async function loadStatus() {
+async function loadStatus(){
 
-    try {
+    try{
 
-        const response = await fetch(
-            `${API_BASE}/api/status`
-        );
+        const response =
+            await fetch(
+                `${API_BASE}/api/status`
+            );
 
-        const data = await response.json();
+        const data =
+            await response.json();
 
 
         document.getElementById(
             "engineStatus"
         ).textContent =
-            data.status || "stable";
+            data.status;
 
 
         document.getElementById(
             "engineVersion"
         ).textContent =
-            data.core || "SolarEngineV2";
+            data.core;
 
 
         document.getElementById(
             "engineTests"
         ).textContent =
-            data.validation || "PASSED";
+            data.validation;
 
 
     }
@@ -41,14 +43,11 @@ async function loadStatus() {
             "engineStatus"
         ).textContent =
             "Offline";
+
     }
+
 }
 
-
-
-// =====================================
-// Global Solar Day Query
-// =====================================
 
 
 // =====================================
@@ -61,7 +60,9 @@ async function searchDay(){
 
 
     const day =
-        document.getElementById("dayInput").value;
+        document.getElementById(
+            "dayInput"
+        ).value;
 
 
     if(!day)
@@ -69,7 +70,6 @@ async function searchDay(){
 
 
     try{
-
 
         const response =
             await fetch(
@@ -81,12 +81,10 @@ async function searchDay(){
             await response.json();
 
 
-
         document.getElementById(
             "globalSolarDay"
         ).textContent =
             data.globalSolarDay;
-
 
 
         document.getElementById(
@@ -95,12 +93,10 @@ async function searchDay(){
             `${data.solarDate.weekday}, ${data.solarDate.day} ${data.solarDate.monthName} ${data.solarDate.year}`;
 
 
-
         document.getElementById(
             "dayOfYear"
         ).textContent =
             data.solarDate.dayOfYear;
-
 
 
         document.getElementById(
@@ -109,12 +105,10 @@ async function searchDay(){
             data.calendarMetadata.weekIndex;
 
 
-
         document.getElementById(
             "cycleNumber"
         ).textContent =
             data.temporalMetadata.cycleNumber;
-
 
 
         document.getElementById(
@@ -123,12 +117,10 @@ async function searchDay(){
             data.temporalMetadata.historicalIndex;
 
 
-
         document.getElementById(
             "engineName"
         ).textContent =
             data.architecture.engine;
-
 
 
         document.getElementById(
@@ -137,17 +129,16 @@ async function searchDay(){
             data.architecture.validation;
 
 
-
-        // RAW JSON DISPLAY
-
         document.getElementById(
             "result"
         ).textContent =
-            JSON.stringify(data, null, 4);
+            JSON.stringify(
+                data,
+                null,
+                4
+            );
 
 
-
-        // TEXT REPORT DISPLAY
 
         const reportResponse =
             await fetch(
@@ -168,33 +159,29 @@ async function searchDay(){
     }
     catch(error){
 
-
         document.getElementById(
             "result"
         ).textContent =
             "API CONNECTION ERROR";
 
-
-        console.error(error);
-
     }
 
 }
-
-
 // =====================================
 // Digital Clock
 // =====================================
 
 function updateClock(){
 
-    const now = new Date();
+    const now =
+        new Date();
 
 
     document.getElementById(
         "clock"
     ).textContent =
-        now.toUTCString().split(" ")[4];
+        now.toUTCString()
+        .split(" ")[4];
 
 
     document.getElementById(
@@ -207,13 +194,6 @@ function updateClock(){
 
 
 // =====================================
-// Startup
-// =====================================
-
-setInterval(updateClock,1000);
-
-updateClock();
-// =====================================
 // Timeline Explorer
 // =====================================
 
@@ -223,11 +203,15 @@ async function loadTimeline(){
 
 
     const start =
-        document.getElementById("timelineStart").value;
+        document.getElementById(
+            "timelineStart"
+        ).value;
 
 
     const end =
-        document.getElementById("timelineEnd").value;
+        document.getElementById(
+            "timelineEnd"
+        ).value;
 
 
     if(!start || !end)
@@ -237,7 +221,11 @@ async function loadTimeline(){
     let output = "";
 
 
-    for(let day = Number(start); day <= Number(end); day++){
+    for(
+        let day = Number(start);
+        day <= Number(end);
+        day++
+    ){
 
         try{
 
@@ -268,6 +256,77 @@ ${data.temporalMetadata.cycleNumber}
 
 Historical Index :
 ${data.temporalMetadata.historicalIndex}
+
+Architecture :
+${data.architecture.name}
+
+Engine :
+${data.architecture.engine}
+
+Validation :
+${data.architecture.validation}
+
 `;
 
         }
+        catch(error){
+
+            output +=
+            "\nERROR loading day " + day;
+
+        }
+
+    }
+
+
+    document.getElementById(
+        "timelineResult"
+    ).textContent =
+        output;
+
+}
+
+
+
+// =====================================
+// Day Navigation
+// =====================================
+
+function jumpDay(value){
+
+    const input =
+        document.getElementById(
+            "dayInput"
+        );
+
+
+    let current =
+        Number(input.value) || 1;
+
+
+    current += value;
+
+
+    input.value =
+        current;
+
+
+    searchDay();
+
+}
+
+
+
+// =====================================
+// Startup
+// =====================================
+
+setInterval(
+    updateClock,
+    1000
+);
+
+
+updateClock();
+
+loadStatus();
