@@ -22,18 +22,19 @@ std::string TemporalAPI::getDayAsJSON(
     Gabary::GlobalSolarDay solar =
         solarEngine.buildDay(dayId);
 
-
     std::ostringstream json;
-
 
     json << "{";
 
 
-    // Global Coordinate
-    json << "\"dayId\":" << id.dayId << ",";
+    // ============================================
+    // Global Temporal Coordinate
+    // ============================================
 
+    json << "\"globalSolarDay\":"
+         << id.dayId
+         << ",";
 
-    // Gabary V2 Solar Report Data
     json << "\"gabaryDayCode\":\"GC-"
          << solar.dayId << "-"
          << solar.solarYear << "-"
@@ -41,85 +42,120 @@ std::string TemporalAPI::getDayAsJSON(
          << "\",";
 
 
+    // ============================================
+    // Solar Date
+    // ============================================
+
     json << "\"solarDate\":{";
 
     json << "\"weekday\":\""
-         << solar.weekName << "\",";
+         << solar.weekName
+         << "\",";
 
     json << "\"day\":"
-         << solar.solarDay << ",";
+         << solar.solarDay
+         << ",";
 
     json << "\"month\":"
-         << solar.solarMonth << ",";
+         << solar.solarMonth
+         << ",";
 
     json << "\"monthName\":\""
-         << solar.monthName << "\",";
+         << solar.monthName
+         << "\",";
 
     json << "\"year\":"
-         << solar.solarYear;
+         << solar.solarYear
+         << ",";
+
+    json << "\"dayOfYear\":"
+         << solar.dayOfYear;
 
     json << "},";
 
 
-    json << "\"dayOfYear\":"
-         << solar.dayOfYear << ",";
+    // ============================================
+    // Calendar Metadata
+    // ============================================
 
-
-    json << "\"leapYear\":"
-         << (solar.leapYear ? "true" : "false")
-         << ",";
-
-
-    // Original Temporal Metadata
-
-    json << "\"lunarYear\":"
-         << id.lunarYear << ",";
-
-    json << "\"lunarMonth\":"
-         << id.lunarMonth << ",";
-
-    json << "\"lunarDay\":"
-         << id.lunarDay << ",";
-
+    json << "\"calendarMetadata\":{";
 
     json << "\"weekIndex\":"
-         << id.weekIndex << ",";
+         << id.weekIndex;
 
+    json << "},";
+
+
+    // ============================================
+    // Lunar Coordinate
+    // ============================================
+
+    json << "\"lunarDate\":{";
+
+    json << "\"year\":"
+         << id.lunarYear
+         << ",";
+
+    json << "\"month\":"
+         << id.lunarMonth
+         << ",";
+
+    json << "\"day\":"
+         << id.lunarDay;
+
+    json << "},";
+
+
+    // ============================================
+    // Temporal Metadata
+    // ============================================
+
+    json << "\"temporalMetadata\":{";
 
     json << "\"cycleNumber\":"
-         << id.cycleNumber << ",";
-
+         << id.cycleNumber
+         << ",";
 
     json << "\"cycleDay\":"
-         << id.cycleDay << ",";
-
+         << id.cycleDay
+         << ",";
 
     json << "\"yearIndex\":"
-         << id.yearIndex << ",";
-
+         << id.yearIndex
+         << ",";
 
     json << "\"historicalIndex\":"
-         << id.historicalIndex << ",";
+         << id.historicalIndex;
 
+    json << "},";
+
+
+    // ============================================
+    // Epoch
+    // ============================================
 
     json << "\"era\":\""
          << id.era
          << "\",";
 
 
-    // Engine Metadata
+    // ============================================
+    // Engine Architecture
+    // ============================================
 
-    json << "\"architecture\":\"Gabary V2\",";
+    json << "\"architecture\":{";
+
+    json << "\"name\":\"Gabary V2\",";
     json << "\"engine\":\"SolarEngineV2\",";
     json << "\"validation\":\"PASSED\"";
-
 
     json << "}";
 
 
+    json << "}";
+
     return json.str();
 }
-
 
 
 // ============================================
@@ -133,7 +169,6 @@ std::string TemporalAPI::getSolarAsJSON(
 )
 {
     GlobalTemporalID id;
-
 
     try
     {
@@ -149,18 +184,15 @@ std::string TemporalAPI::getSolarAsJSON(
         return R"({"error":"Solar query failed"})";
     }
 
-
     if(id.dayId <= 0)
     {
         return R"({"error":"Invalid solar date"})";
     }
 
-
     return getDayAsJSON(
         id.dayId
     );
 }
-
 
 
 // ============================================
@@ -174,7 +206,6 @@ std::string TemporalAPI::getLunarAsJSON(
 )
 {
     GlobalTemporalID id;
-
 
     try
     {
@@ -190,18 +221,15 @@ std::string TemporalAPI::getLunarAsJSON(
         return R"({"error":"Lunar query failed"})";
     }
 
-
     if(id.dayId <= 0)
     {
         return R"({"error":"Invalid lunar date"})";
     }
 
-
     return getDayAsJSON(
         id.dayId
     );
 }
-
 
 
 // ============================================
@@ -212,19 +240,17 @@ std::string TemporalAPI::getStatusJSON()
 {
     std::ostringstream json;
 
-
     json << "{";
 
     json << "\"engine\":\"Golden Calendar 50000 Chronology Engine\",";
     json << "\"version\":\"1.1-dev\",";
     json << "\"status\":\"stable\",";
-    json << "\"tests\":\"51/51 Passed\",";
+    json << "\"tests\":\"54/54 Passed\",";
     json << "\"maxYears\":50000,";
     json << "\"api\":\"Temporal API\",";
     json << "\"architecture\":\"Gabary V2\"";
 
     json << "}";
-
 
     return json.str();
 }

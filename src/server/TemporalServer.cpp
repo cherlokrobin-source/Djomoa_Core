@@ -13,123 +13,170 @@ TemporalServer::TemporalServer()
 // JSON Day API
 // =====================================
 
-std::string TemporalServer::handleDayJSONRequest(long long dayId)
+std::string TemporalServer::handleDayJSONRequest(
+    long long dayId
+)
 {
     Gabary::GlobalSolarDay day =
         solarEngine.buildDay(dayId);
 
-
     GlobalTemporalID temporal =
         queryEngine.queryDay(dayId);
 
-
     std::ostringstream json;
+
+    json
+        << "{";
+
+
+    // =====================================
+    // Global Temporal Coordinate
+    // =====================================
+
+    json
+        << "\"globalSolarDay\":"
+        << day.dayId
+        << ",";
+
+
+    // =====================================
+    // Solar Date
+    // =====================================
+
+    json
+        << "\"solarDate\":{"
+
+        << "\"weekday\":\""
+        << day.weekName
+        << "\","
+
+        << "\"year\":"
+        << day.solarYear
+        << ","
+
+        << "\"month\":"
+        << day.solarMonth
+        << ","
+
+        << "\"monthName\":\""
+        << day.monthName
+        << "\","
+
+        << "\"day\":"
+        << day.solarDay
+        << ","
+
+        << "\"dayOfYear\":"
+        << day.dayOfYear
+
+        << "},";
+
+
+    // =====================================
+    // Calendar Metadata
+    // =====================================
+
+    json
+        << "\"calendarMetadata\":{"
+
+        << "\"weekIndex\":"
+        << day.weekIndex
+        << ","
+
+        << "\"leapYear\":"
+        << (day.leapYear ? "true" : "false")
+
+        << "},";
+
+
+    // =====================================
+    // Lunar Coordinate
+    // =====================================
+
+    json
+        << "\"lunarDate\":{"
+
+        << "\"year\":"
+        << temporal.lunarYear
+        << ","
+
+        << "\"month\":"
+        << temporal.lunarMonth
+        << ","
+
+        << "\"day\":"
+        << temporal.lunarDay
+
+        << "},";
+
+
+    // =====================================
+    // Temporal Metadata
+    // =====================================
+
+    json
+        << "\"temporalMetadata\":{"
+
+        << "\"cycleNumber\":"
+        << temporal.cycleNumber
+        << ","
+
+        << "\"cycleDay\":"
+        << temporal.cycleDay
+        << ","
+
+        << "\"yearIndex\":"
+        << temporal.yearIndex
+        << ","
+
+        << "\"historicalIndex\":"
+        << temporal.historicalIndex
+        << ","
+
+        << "\"era\":\""
+        << temporal.era
+        << "\""
+
+        << "},";
+
+
+    // =====================================
+    // Architecture
+    // =====================================
+
+    json
+        << "\"architecture\":{"
+
+        << "\"name\":\"Gabary V2\","
+
+        << "\"engine\":\"SolarEngineV2\","
+
+        << "\"validation\":\"PASSED\""
+
+        << "}";
 
 
     json
-    << "{"
-
-    << "\"globalSolarDay\":"
-    << day.dayId
-    << ","
-
-
-    << "\"solarDate\":{"
-
-    << "\"weekday\":\""
-    << day.weekName
-    << "\","
-
-    << "\"year\":"
-    << day.solarYear
-    << ","
-
-    << "\"month\":"
-    << day.solarMonth
-    << ","
-
-    << "\"monthName\":\""
-    << day.monthName
-    << "\","
-
-    << "\"day\":"
-    << day.solarDay
-    << ","
-
-    << "\"dayOfYear\":"
-    << day.dayOfYear
-
-    << "},"
-
-
-    << "\"calendarMetadata\":{"
-
-    << "\"weekIndex\":"
-    << day.weekIndex
-    << ","
-
-    << "\"leapYear\":"
-    << (day.leapYear ? "true" : "false")
-
-    << "},"
-
-
-    << "\"temporalMetadata\":{"
-
-    << "\"cycleNumber\":"
-    << temporal.cycleNumber
-    << ","
-
-    << "\"cycleDay\":"
-    << temporal.cycleDay
-    << ","
-
-    << "\"yearIndex\":"
-    << temporal.yearIndex
-    << ","
-
-    << "\"historicalIndex\":"
-    << temporal.historicalIndex
-    << ","
-
-    << "\"era\":\""
-    << temporal.era
-    << "\""
-
-    << "},"
-
-
-    << "\"architecture\":{"
-
-    << "\"name\":\"Gabary V2\","
-
-    << "\"engine\":\"SolarEngineV2\","
-
-    << "\"validation\":\"PASSED\""
-
-    << "}"
-
-    << "}";
+        << "}";
 
 
     return json.str();
 }
 
 
-
 // =====================================
 // Text Report API
 // =====================================
 
-std::string TemporalServer::handleDayRequest(long long dayId)
+std::string TemporalServer::handleDayRequest(
+    long long dayId
+)
 {
     Gabary::GlobalSolarDay day =
         solarEngine.buildDay(dayId);
 
-
     return Gabary::ReportFormatter::createTextReport(day);
 }
-
 
 
 // =====================================
@@ -149,14 +196,13 @@ std::string TemporalServer::handleSolarRequest(
             day
         );
 
-
     Gabary::GlobalSolarDay result =
         solarEngine.buildDay(dayId);
 
-
-    return Gabary::ReportFormatter::createTextReport(result);
+    return Gabary::ReportFormatter::createTextReport(
+        result
+    );
 }
-
 
 
 // =====================================
@@ -171,7 +217,6 @@ std::string TemporalServer::handleLunarRequest(
 {
     return R"({"error":"Lunar V2 endpoint pending"})";
 }
-
 
 
 // =====================================
