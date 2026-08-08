@@ -26,9 +26,29 @@ TemporalReport TemporalReportEngine::generate(long long dayId)
     report.weekIndex =
         data.weekIndex;
 
-    report.weekName =
-        data.weekName;
 
+    // ============================================
+    // English Weekday Name
+    // ============================================
+
+    static const char* ENGLISH_WEEKDAYS[7] =
+    {
+        "Friday",
+        "Saturday",
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday"
+    };
+
+    report.weekName =
+        ENGLISH_WEEKDAYS[data.weekIndex];
+
+
+    // ============================================
+    // Temporal Metadata
+    // ============================================
 
     GlobalTemporalID id =
         chronology.generateGlobalID(dayId);
