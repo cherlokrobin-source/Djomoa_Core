@@ -1,158 +1,479 @@
-# Golden Calendar 50000 Chronology Engine
+Golden Calendar
 
-## A High-Precision Temporal Computing System
+50,000-Year Chronology Engine
 
-Golden Calendar is an advanced chronology engine designed to explore, calculate, and index time across a 50,000-year temporal range.
+Golden Calendar is an open-source temporal computing project for building, calculating, indexing, and exploring a long-range chronology spanning 50,000 years.
 
-The project provides a unified temporal framework combining:
+The project is implemented primarily in C++ and uses a global solar day coordinate as the foundation for long-range temporal calculations.
 
-- Solar chronology
-- Lunar chronology
-- Global temporal indexing
-- Long-range date conversion
-- HTTP API access
-- Web-based exploration interface
-
+The current V2 architecture is called Gabary.
 
 ---
 
-# Project Vision
+What is Golden Calendar?
 
-Traditional calendar systems are designed for limited historical periods.
-Golden Calendar explores a different approach:
+Most calendar software is designed around relatively short date ranges and user-facing calendar operations.
 
-A computational temporal architecture capable of managing a complete chronological timeline extending to 50,000 years.
+Golden Calendar takes a different approach: it treats chronology as a computational coordinate system.
 
-The goal is to create a stable digital framework for:
+The core idea is to assign every solar day in the supported chronology a unique Global Solar Day ID.
 
-- Temporal research
-- Historical exploration
-- Calendar computation
-- Long-range chronology analysis
+This allows different temporal systems and higher-level services to reference the same underlying day coordinate.
 
+The current project includes:
+
+- Long-range solar chronology
+- Global temporal day indexing
+- Solar date ↔ global day conversion
+- Week-cycle calculation
+- Leap-year handling
+- Temporal reports
+- JSON report generation
+- Temporal API components
+- Gabary V2 console tools
+- Automated validation tests
+- A web/frontend layer
 
 ---
 
-# Architecture
+Gabary V2
 
-The system is divided into independent layers:
-Golden Calendar Engine
-├── Core Temporal Engine │   ├── ChronologyEngine │   ├── SolarEngine │   ├── LunarEngine │   ├── TemporalQueryEngine │   └── GlobalTemporalID │ ├── API Layer │   └── Temporal API │ ├── HTTP Server │   └── TemporalServer │ └── Frontend ├── Dashboard ├── Temporal Explorer ├── Timeline Explorer └── API Interface
+Gabary is the V2 architectural layer of the Golden Calendar project.
 
+The architecture is organized around independent temporal components rather than placing all chronology logic into one large class.
+
+The current Gabary layer includes components such as:
+
+Gabary
+├── SolarEngineV2
+├── GlobalSolarDay
+├── LeapYearRules
+├── WeekCycleEngine
+├── SolarTimelineGenerator
+└── Console
+
+The wider Golden Calendar engine also contains the earlier chronology, API, reporting, and frontend components.
 
 ---
 
-# Main Features
+Global Solar Day
 
-## 50,000-Year Timeline
+The primary temporal coordinate is the:
 
-The engine supports chronological calculations from:
-                 Year 1 to Year 50000
+Global Solar Day
 
+Day "1" represents:
 
-## Temporal Query System
+Friday, 1 January Year 1
 
-Query the timeline using:
+Every following solar day receives an increasing integer ID.
 
-- Global Day ID
-- Solar Date
-- Lunar Date
+For example:
 
+Global Solar Day 1
+→ Year 1, January 1
 
-## API Endpoints
+Global Solar Day 365
+→ Year 1, December 31
 
-### Engine Status
-                 GET /api/status
+Global Solar Day 739823
+→ Year 2026, July 26
+
+This coordinate is intended to provide a stable reference axis for other temporal systems and research layers.
+
+---
+
+SolarEngineV2
+
+"SolarEngineV2" is the current optimized solar chronology engine inside Gabary V2.
+
+It provides:
+
+SolarDate fromDayId(int64_t dayId);
+
+int64_t toDayId(
+    int year,
+    int month,
+    int day
+);
+
+It also provides:
+
+GlobalSolarDay buildDay(int64_t dayId);
+
+The engine calculates:
+
+- Solar year
+- Solar month
+- Solar day
+- Day of year
+- Month name
+- Week index
+- Week name
+- Leap-year status
+
+---
+
+Long-Range Conversion
+
+The original implementation resolved a day ID by iterating through years from the beginning of the chronology.
+
+"SolarEngineV2" was optimized to jump across 400-year Gregorian-style cycles before resolving the remaining years.
+
+A 400-year cycle contains:
+
+146,097 days
+
+The implementation therefore avoids iterating through tens of thousands of individual years when resolving a distant day.
+
+The optimization is implemented in:
+
+Gabary/src/SolarEngineV2.cpp
+
+---
+
+Supported Chronology Range
+
+The current solar chronology supports:
+
+Year 1 → Year 50,000
+
+The final solar day is:
+
+Global Solar Day : 18,262,125
+Solar Date       : 31 December 50000
+
+The engine has been tested against dates across the supported range, including the beginning and end of the chronology.
+
+---
+
+Example
+
+Using the Gabary console:
+
+gabary> day 739823
+
+produces a report equivalent to:
+
+GABARY V2 ENGINE
+SOLAR CHRONOLOGY REPORT
+
+Global Solar Day : 739823
+Gabary Day Code  : GC-739823-2026-207
+
+Solar Date
+----------------------------------
+Thursday, 26 July 2026
+
+Year        : 2026
+Month       : July
+Day         : 26
+Day Of Year : 207
+Leap Year   : NO
+
+Architecture : Gabary V2
+Engine        : SolarEngineV2
+Validation    : PASSED
+
+Other tested points include:
+
+Day 1
+→ Friday, 1 January Year 1
+
+Day 365
+→ Friday, 31 December Year 1
+
+Day 739823
+→ Thursday, 26 July 2026
+
+Day 3652059
+→ Tuesday, 31 December Year 9999
+
+Day 9125000
+→ Sunday, 26 May Year 24984
+
+Day 18262125
+→ Thursday, 31 December Year 50000
+
+---
+
+Gabary Console
+
+The project includes a command-line interface for inspecting the chronology engine.
+
+Start it with:
+
+./build_clean/GabaryConsole
+
+Available commands include:
+
+help
+status
+day <id>
+share <id>
+export <id>
+report <id>
+inspect <id>
+version
+exit
+
+For example:
+
+gabary> inspect 739823
+
+The inspector exposes the temporal coordinate and the calculated solar properties.
+
+The "report" command can produce a JSON representation:
+
+gabary> report 739823
 
 Example:
 
-```json
 {
- "engine":"Golden Calendar 50000 Chronology Engine",
- "version":"1.1-dev",
- "status":"stable",
- "tests":"20/20 Passed",
- "maxYears":50000
+  "dayId": 739823,
+  "solar": {
+    "year": 2026,
+    "month": 7,
+    "day": 26
+  },
+  "lunar": {
+    "year": 2088,
+    "month": 12,
+    "day": 5
+  },
+  "week": {
+    "index": 6,
+    "name": "Thursday"
+  },
+  "cycle": 62,
+  "historicalIndex": 739823
 }
-Day Query
-GET /api/day/{id}
-Example:
-/api/day/1000
-Solar Query
-GET /api/solar/{year}/{month}/{day}
-Example:
-/api/solar/50000/12/31
-Lunar Query
-GET /api/lunar/{year}/{month}/{day}
-Example:
-/api/lunar/2083/1/1
-                   Validation
-Current engine validation:
-20/20 Tests Passed
-The system has been tested across:
-Temporal queries
-Solar calculations
-Lunar calculations
-API responses
-Long-range dates
-Technology Stack
-Core Engine
-C++
-CMake
-Modular architecture
-Server
-HTTP Server Layer
-REST-style API
-Frontend
-HTML5
-CSS3
-JavaScript
-API Integration
-                  Running The Project
+
+The JSON report is generated by the project's temporal reporting layer.
+
+---
+
+Validation
+
+The current test suite contains:
+
+54 / 54 tests passed
+
+The validation suite covers different parts of the chronology system, including solar calculations, chronology integrity, temporal reporting, statistics, month calculations, and leap-year behavior.
+
+Recent validation includes:
+
+SolarStatisticsValidationTest
+SolarMonthStatisticsValidationTest
+SolarLeapStatisticsValidationTest
+
+All currently pass.
+
+The latest full validation result:
+
+100% tests passed out of 54
+
+---
+
 Build
-mkdir build
-cd build
 
-cmake ..
-cmake --build .
-                     Start Server
-./TemporalServer
-Server:
-http://localhost:8080
-Start Frontend
-cd frontend
+The project uses CMake.
 
-python -m http.server 3000
-Open:
-http://localhost:3000
-Example Output
-Day 18250000:
-{
- "dayId":18250000,
- "solarYear":49967,
- "lunarYear":49999,
- "historicalIndex":18250000
-}
-Final solar date:
-Solar:
-Year 50000
-Month 12
-Day 31
-                      Project Status
+From the project root:
 
+cmake -S . -B build_clean
+cmake --build build_clean
 
-               ## License
+To build the Gabary console:
+
+cmake --build build_clean --target GabaryConsole
+
+Run it with:
+
+./build_clean/GabaryConsole
+
+---
+
+Run the Tests
+
+Run the complete test suite with:
+
+ctest --test-dir build_clean --output-on-failure
+
+The current validated state is:
+
+54/54 tests passed
+
+---
+
+Temporal Reports
+
+The project contains a temporal reporting layer:
+
+include/report/TemporalReport.h
+include/report/TemporalReportEngine.h
+include/report/TemporalReportJSON.h
+
+src/report/TemporalReportEngine.cpp
+src/report/TemporalReportJSON.cpp
+
+A temporal report currently combines information such as:
+
+- Global day ID
+- Solar date
+- Lunar date
+- Week information
+- Cycle information
+- Historical index
+
+The JSON representation provides a machine-readable form of the report.
+
+---
+
+Temporal API
+
+Golden Calendar also contains a temporal API layer and HTTP server components.
+
+The API architecture was developed to expose chronology information to external clients and the frontend.
+
+The project includes components for:
+
+Temporal API
+Temporal Query
+Temporal Server
+JSON responses
+Frontend integration
+
+The API layer is part of the broader Golden Calendar architecture and is separate from the core "SolarEngineV2" implementation.
+
+---
+
+Lunar Chronology
+
+The project also contains lunar chronology components and temporal mapping infrastructure.
+
+The long-term architecture is to use the Global Solar Day as the common temporal coordinate and map other temporal systems onto that coordinate.
+
+The solar chronology is currently the primary stabilized foundation.
+
+The lunar layer should therefore be considered part of the broader research architecture rather than the same maturity level as the current validated solar engine.
+
+---
+
+Architecture Overview
+
+The broader project can be viewed as several layers:
+
+Golden Calendar
+│
+├── Core Chronology
+│   ├── ChronologyEngine
+│   ├── SolarEngine
+│   ├── LunarEngine
+│   ├── TemporalQueryEngine
+│   └── GlobalTemporalID
+│
+├── Gabary V2
+│   ├── SolarEngineV2
+│   ├── GlobalSolarDay
+│   ├── LeapYearRules
+│   ├── WeekCycleEngine
+│   └── Gabary Console
+│
+├── Reporting
+│   ├── TemporalReport
+│   └── TemporalReportJSON
+│
+├── API
+│   ├── Temporal API
+│   └── Temporal Server
+│
+└── Frontend
+    ├── Dashboard
+    ├── Temporal Explorer
+    └── API Interface
+
+---
+
+Design Direction
+
+The current development direction is:
+
+Global Solar Day
+        ↓
+Solar Chronology
+        ↓
+Temporal Mapping
+        ↓
+Lunar / Other Calendrical Systems
+        ↓
+Research and Exploration Tools
+
+The intention is to keep the underlying temporal coordinate stable while allowing additional calendar systems and interfaces to be built above it.
+
+---
+
+Project Status
+
+Current development branch:
+
+v2-engine
+
+Current Gabary V2 solar-engine checkpoint:
+
+SolarEngineV2 : Stable
+Tests         : 54/54 Passed
+Working Tree  : Clean
+
+Latest optimization commit:
+
+2139f69
+Optimize SolarEngineV2 chronology conversion
+
+The repository is maintained as an active development project.
+
+---
+
+Repository
+
+Source code:
+
+https://github.com/cherlokrobin-source/Djomoa_Core
+
+---
+
+Technology
+
+Core:
+
+- C++
+- CMake
+
+Interfaces and supporting layers:
+
+- HTML
+- CSS
+- JavaScript
+- HTTP/REST-style API
+
+Development environment includes Linux/Termux-compatible tooling.
+
+---
+
+License
 
 This project is licensed under the MIT License.
 
-Current Version:
-v1.0.0 Development Release
-Status:
-Stable Core
-Working API
-Working Frontend
+See:
+
+LICENSE
+
+---
+
 Author
+
 Developed by:
+
 Nemimeche Benaissa
-@2026__1448
-.
+
+@2026_SBA
