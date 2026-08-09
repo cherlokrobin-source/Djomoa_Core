@@ -199,23 +199,39 @@ Explore the 50,000-Year Solar Chronology by Global Solar Day ID.
 </p>
 
 
-<div>
+<div class="timeline-controls">
 
-<input
-id="timelineStart"
-type="number"
-placeholder="Start Day ID">
+    <input
+        id="timelineStart"
+        type="number"
+        placeholder="Start Day ID">
 
+    <input
+        id="timelineEnd"
+        type="number"
+        placeholder="End Day ID">
 
-<input
-id="timelineEnd"
-type="number"
-placeholder="End Day ID">
+    <button onclick="loadTimeline()">
+        VIEW TIMELINE
+    </button>
 
+</div>
 
-<button onclick="loadTimeline()">
-VIEW TIMELINE
-</button>
+<div class="timeline-quick-range">
+
+    <span>QUICK RANGE</span>
+
+    <button onclick="setTimelineRange(1)">
+        1 DAY
+    </button>
+
+    <button onclick="setTimelineRange(7)">
+        7 DAYS
+    </button>
+
+    <button onclick="setTimelineRange(30)">
+        30 DAYS
+    </button>
 
 </div>
 

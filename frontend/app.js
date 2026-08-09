@@ -190,7 +190,33 @@ function updateClock(){
         now.toDateString();
 
 }
+// =====================================
+// Timeline Quick Range
+// =====================================
 
+function setTimelineRange(days){
+
+    const startInput =
+        document.getElementById("timelineStart");
+
+    const endInput =
+        document.getElementById("timelineEnd");
+
+    let start =
+        Number(startInput.value);
+
+    if(!Number.isInteger(start) || start < 1){
+
+        start = 1;
+
+        startInput.value = start;
+    }
+
+    const end =
+        start + days - 1;
+
+    endInput.value = end;
+}
 
 // =====================================
 // Timeline Explorer V3
