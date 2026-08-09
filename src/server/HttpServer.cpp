@@ -3,7 +3,7 @@
 #include <iostream>
 #include <sstream>
 #include <exception>
-
+#include <fstream>
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
@@ -287,11 +287,40 @@ else if(path.find("/api/json/day/") == 0)
 
 
 
-    else
+else
+{
+    std::string staticBody =
+        serveStaticFile(path);
+
+    if(!staticBody.empty())
     {
-        body =
-            R"({"error":"Endpoint not found"})";
+        std::string contentType =
+            getContentType(path);
+
+        std::string response =
+            "HTTP/1.1 200 OK\r\n"
+            "Content-Type: "
+            + contentType +
+            "\r\n"
+            "Access-Control-Allow-Origin: *\r\n"
+            "Content-Length: "
+            + std::to_string(staticBody.size())
+            + "\r\n\r\n"
+            + staticBody;
+
+        send(
+            clientSocket,
+            response.c_str(),
+            response.size(),
+            0
+        );
+
+        return;
     }
+
+    body =
+        R"({"error":"Endpoint not found"})";
+}
 
 
 
@@ -309,7 +338,76 @@ else if(path.find("/api/json/day/") == 0)
 }
 
 
+// ======================================
+// Static Frontend Files
+// ======================================
 
+std::string HttpServer::serveStaticFile(
+    const std::string& path
+)
+{
+    std::string filePath;
+
+    if(path == "/")
+    {
+        filePath = "frontend/index.html";
+    }
+    else if(path == "/style.css")
+    {
+        filePath = "frontend/style.css";
+    }
+    else if(path == "/app.js")
+    {
+        filePath = "frontend/app.js";
+    }
+    else
+    {
+        return "";
+    }
+
+    std::ifstream file(
+        filePath,
+        std::ios::binary
+    );
+
+    if(!file)
+    {
+        return "";
+    }
+
+    std::ostringstream content;
+    content << file.rdbuf();
+
+    return content.str();
+}
+
+
+// ======================================
+// Static Content Type
+// ======================================
+
+std::string HttpServer::getContentType(
+    const std::string& path
+)
+{
+    if(path == "/" ||
+       path == "/index.html")
+    {
+        return "text/html; charset=UTF-8";
+    }
+
+    if(path == "/style.css")
+    {
+        return "text/css; charset=UTF-8";
+    }
+
+    if(path == "/app.js")
+    {
+        return "application/javascript; charset=UTF-8";
+    }
+
+    return "application/octet-stream";
+}
 
 
 // ======================================

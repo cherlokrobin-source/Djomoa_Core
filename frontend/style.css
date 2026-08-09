@@ -681,3 +681,41 @@ footer{
     text-align: center;
     opacity: 0.65;
 }
+/* =====================================
+   TIMELINE QUICK RANGE
+   ===================================== */
+
+.timeline-quick-range {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.timeline-quick-range span {
+    font-size: 0.70rem;
+    letter-spacing: 0.10em;
+    color: #94a3b8;
+}
+
+.timeline-quick-range button {
+    padding: 10px 16px;
+    margin-left: 0;
+    border-radius: 10px;
+    font-size: 0.80rem;
+}
+
+@media (max-width: 600px) {
+
+    .timeline-quick-range {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .timeline-quick-range button {
+        width: 100%;
+        margin-left: 0;
+    }
+
+}

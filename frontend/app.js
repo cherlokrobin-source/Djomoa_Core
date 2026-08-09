@@ -57,7 +57,7 @@ async function loadStatus(){
 async function searchDay(){
 
 
-    console.log("Gabary Visual Timeline V3");
+      console.log("Gabary Solar Day Query");
 
     const day =
         document.getElementById(
