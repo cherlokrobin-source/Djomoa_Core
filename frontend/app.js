@@ -505,3 +505,17 @@ async function loadTimeline(){
         timelineHTML;
 
 }
+
+
+// =====================================
+// Application Startup
+// =====================================
+
+setInterval(
+    updateClock,
+    1000
+);
+
+updateClock();
+
+loadStatus();
