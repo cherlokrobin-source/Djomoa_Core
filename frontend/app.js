@@ -192,38 +192,134 @@ function updateClock(){
 }
 
 
-
 // =====================================
-// Timeline Explorer
+// Timeline Explorer V2
 // =====================================
 
 async function loadTimeline(){
 
-    console.log("Timeline button clicked");
+    console.log("Gabary Timeline Explorer V2");
+
+
+    const startInput =
+        document.getElementById(
+            "timelineStart"
+        );
+
+    const endInput =
+        document.getElementById(
+            "timelineEnd"
+        );
+
+    const outputElement =
+        document.getElementById(
+            "timelineResult"
+        );
 
 
     const start =
-        document.getElementById(
-            "timelineStart"
-        ).value;
-
+        Number(startInput.value);
 
     const end =
-        document.getElementById(
-            "timelineEnd"
-        ).value;
+        Number(endInput.value);
 
 
-    if(!start || !end)
+    // ==============================
+    // Input Validation
+    // ==============================
+
+    if(
+        !Number.isInteger(start) ||
+        !Number.isInteger(end)
+    ){
+
+        outputElement.textContent =
+            "Please enter valid Global Solar Day IDs.";
+
         return;
+    }
 
 
-    let output = "";
+    if(start < 1){
 
+        outputElement.textContent =
+            "Global Solar Day must be >= 1.";
+
+        return;
+    }
+
+
+    if(end < start){
+
+        outputElement.textContent =
+            "End Day ID must be greater than or equal to Start Day ID.";
+
+        return;
+    }
+
+
+    const count =
+        end - start + 1;
+
+
+    // ==============================
+    // Safety Limit
+    // ==============================
+
+    if(count > 100){
+
+        outputElement.textContent =
+`
+TIMELINE RANGE TOO LARGE
+
+Requested days : ${count}
+
+Maximum per query : 100
+
+Please use a smaller range.
+`;
+
+        return;
+    }
+
+
+    // ==============================
+    // Loading State
+    // ==============================
+
+    outputElement.textContent =
+`
+GABARY V2 TIMELINE EXPLORER
+
+Loading...
+----------------------------------
+Start Day : ${start}
+End Day   : ${end}
+Days      : ${count}
+`;
+
+
+    let output =
+`
+GABARY V2 TIMELINE EXPLORER
+
+Range
+----------------------------------
+Start Global Solar Day : ${start}
+End Global Solar Day   : ${end}
+Total Days             : ${count}
+
+==================================
+`;
+
+
+    // ==============================
+    // Query Timeline
+    // ==============================
 
     for(
-        let day = Number(start);
-        day <= Number(end);
+        let day = start;
+        day <= end;
         day++
     ){
 
@@ -235,98 +331,72 @@ async function loadTimeline(){
                 );
 
 
+            if(!response.ok){
+
+                throw new Error(
+                    `HTTP ${response.status}`
+                );
+
+            }
+
+
             const data =
                 await response.json();
 
 
             output +=
 `
------------------------------
+----------------------------------
 Global Solar Day : ${data.globalSolarDay}
 
-Date :
-${data.solarDate.weekday}
-${data.solarDate.day} ${data.solarDate.monthName} ${data.solarDate.year}
+Solar Date
+${data.solarDate.weekday}, ${data.solarDate.day} ${data.solarDate.monthName} ${data.solarDate.year}
 
-Day Of Year :
-${data.solarDate.dayOfYear}
+Day Of Year : ${data.solarDate.dayOfYear}
+Week Index  : ${data.calendarMetadata.weekIndex}
+Leap Year   : ${data.calendarMetadata.leapYear ? "YES" : "NO"}
 
-Cycle :
-${data.temporalMetadata.cycleNumber}
+Cycle Number     : ${data.temporalMetadata.cycleNumber}
+Historical Index : ${data.temporalMetadata.historicalIndex}
 
-Historical Index :
-${data.temporalMetadata.historicalIndex}
-
-Architecture :
-${data.architecture.name}
-
-Engine :
-${data.architecture.engine}
-
-Validation :
-${data.architecture.validation}
-
+Architecture : ${data.architecture.name}
+Engine       : ${data.architecture.engine}
+Validation   : ${data.architecture.validation}
 `;
 
         }
         catch(error){
 
             output +=
-            "\nERROR loading day " + day;
+`
+----------------------------------
+ERROR
+
+Global Solar Day : ${day}
+Message          : ${error.message}
+`;
 
         }
+
+
+        // Update display during long queries
+
+        outputElement.textContent =
+            output;
 
     }
 
 
-    document.getElementById(
-        "timelineResult"
-    ).textContent =
+    output +=
+`
+==================================
+
+TIMELINE QUERY COMPLETE
+
+Days Processed : ${count}
+`;
+
+    outputElement.textContent =
         output;
 
 }
-
-
-
-// =====================================
-// Day Navigation
-// =====================================
-
-function jumpDay(value){
-
-    const input =
-        document.getElementById(
-            "dayInput"
-        );
-
-
-    let current =
-        Number(input.value) || 1;
-
-
-    current += value;
-
-
-    input.value =
-        current;
-
-
-    searchDay();
-
-}
-
-
-
-// =====================================
-// Startup
-// =====================================
-
-setInterval(
-    updateClock,
-    1000
-);
-
-
-updateClock();
-
-loadStatus();
