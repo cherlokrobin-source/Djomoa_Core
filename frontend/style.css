@@ -291,3 +291,393 @@ footer{
     line-height:1.8;
 
 }
+
+
+/* =====================================
+   GABARY V2 VISUAL TIMELINE
+   ===================================== */
+
+.timeline-track {
+    position: relative;
+    margin-top: 30px;
+    padding: 10px 0 10px 35px;
+    border-left: 2px solid rgba(255,255,255,0.18);
+}
+
+.timeline-empty {
+    padding: 25px;
+    text-align: center;
+    opacity: 0.7;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 28px;
+}
+
+.timeline-node {
+    position: absolute;
+    left: -45px;
+    top: 20px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 3px solid currentColor;
+    background: #111;
+    box-sizing: border-box;
+}
+
+.timeline-content {
+    padding: 20px;
+    border-radius: 14px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.10);
+}
+
+.timeline-day-id {
+    font-size: 0.85rem;
+    opacity: 0.7;
+    margin-bottom: 8px;
+}
+
+.timeline-date {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+.timeline-meta {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    font-size: 0.9rem;
+}
+
+.timeline-meta span {
+    padding: 8px 10px;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.04);
+}
+
+.timeline-range {
+    margin-bottom: 25px;
+    padding: 15px 18px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.10);
+}
+
+.timeline-complete {
+    margin-top: 20px;
+    padding: 15px;
+    text-align: center;
+    font-weight: 700;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.05);
+}
+
+.timeline-error {
+    padding: 15px;
+    border-radius: 10px;
+    background: rgba(255,0,0,0.08);
+}
+
+@media (max-width: 600px) {
+
+    .timeline-track {
+        padding-left: 28px;
+    }
+
+    .timeline-node {
+        left: -38px;
+    }
+
+    .timeline-meta {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline-content {
+        padding: 15px;
+    }
+
+}
+
+
+/* =====================================
+   GABARY V2 VISUAL TIMELINE V3
+   ===================================== */
+
+.timeline-result {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.visual-timeline {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.timeline-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 30px;
+    padding: 18px 20px;
+    border-radius: 14px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.10);
+}
+
+.timeline-header > div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.timeline-header strong {
+    font-size: 1.05rem;
+}
+
+.timeline-label {
+    font-size: 0.70rem;
+    letter-spacing: 0.12em;
+    opacity: 0.60;
+}
+
+.timeline-range {
+    margin: 0;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    letter-spacing: 0.10em;
+    background: rgba(255,255,255,0.06);
+}
+
+.visual-timeline .timeline-track {
+    position: relative;
+    margin: 0;
+    padding: 10px 0 10px 42px;
+    border-left: 2px solid rgba(255,255,255,0.18);
+}
+
+.visual-timeline .timeline-node {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: auto;
+    height: auto;
+    margin: 0 0 30px 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-sizing: border-box;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: -53px;
+    top: 22px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #111;
+    border: 3px solid currentColor;
+    box-sizing: border-box;
+    z-index: 2;
+}
+
+.timeline-marker span {
+    display: block;
+    width: 6px;
+    height: 6px;
+    margin: 3px auto;
+    border-radius: 50%;
+    background: currentColor;
+}
+
+.timeline-content {
+    padding: 20px;
+    border-radius: 14px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.10);
+    box-sizing: border-box;
+}
+
+.timeline-day-id {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    opacity: 0.70;
+    margin-bottom: 10px;
+}
+
+.timeline-day-id strong {
+    font-size: 1rem;
+    opacity: 1;
+}
+
+.timeline-date {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.timeline-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.timeline-stat {
+    padding: 11px;
+    border-radius: 9px;
+    background: rgba(255,255,255,0.04);
+}
+
+.timeline-stat span {
+    display: block;
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    opacity: 0.55;
+    margin-bottom: 5px;
+}
+
+.timeline-stat strong {
+    font-size: 0.9rem;
+}
+
+.timeline-engine {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.timeline-engine span {
+    padding: 6px 10px;
+    border-radius: 7px;
+    background: rgba(255,255,255,0.05);
+    font-size: 0.72rem;
+}
+
+.timeline-validation {
+    font-weight: 700;
+}
+
+.timeline-progress {
+    text-align: center;
+    padding: 12px;
+    opacity: 0.60;
+    font-size: 0.8rem;
+}
+
+.timeline-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 5px;
+    padding: 15px 18px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+.timeline-loading,
+.timeline-message {
+    padding: 25px;
+    text-align: center;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.10);
+}
+
+.timeline-error-message {
+    padding: 12px;
+    border-radius: 8px;
+    background: rgba(255,0,0,0.08);
+}
+
+@media (max-width: 600px) {
+
+    .timeline-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .timeline-header > div {
+        width: 100%;
+    }
+
+    .timeline-range {
+        align-self: flex-start;
+    }
+
+    .visual-timeline .timeline-track {
+        padding-left: 28px;
+    }
+
+    .timeline-marker {
+        left: -39px;
+    }
+
+    .timeline-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .timeline-content {
+        padding: 15px;
+    }
+
+    .timeline-day-id {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .timeline-date {
+        font-size: 1.05rem;
+    }
+
+    .timeline-footer {
+        flex-direction: column;
+    }
+}
+
+
+/* =====================================
+   TIMELINE EXPLORER OUTER FRAME
+   ===================================== */
+
+.timeline-card {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.timeline-result {
+    display: block;
+    min-height: 120px;
+    width: 100%;
+    margin-top: 25px;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 16px;
+    background: rgba(255,255,255,0.025);
+    border: 1px solid rgba(255,255,255,0.10);
+}
+
+.timeline-empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80px;
+    text-align: center;
+    opacity: 0.65;
+}

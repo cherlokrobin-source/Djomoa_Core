@@ -56,8 +56,8 @@ async function loadStatus(){
 
 async function searchDay(){
 
-    console.log("SEARCH DAY CLICKED");
 
+    console.log("Gabary Visual Timeline V3");
 
     const day =
         document.getElementById(
@@ -193,36 +193,27 @@ function updateClock(){
 
 
 // =====================================
-// Timeline Explorer V2
+// Timeline Explorer V3
 // =====================================
 
 async function loadTimeline(){
 
-    console.log("Gabary Timeline Explorer V2");
-
+    console.log("Gabary Visual Timeline V3");
 
     const startInput =
-        document.getElementById(
-            "timelineStart"
-        );
+        document.getElementById("timelineStart");
 
     const endInput =
-        document.getElementById(
-            "timelineEnd"
-        );
+        document.getElementById("timelineEnd");
 
     const outputElement =
-        document.getElementById(
-            "timelineResult"
-        );
-
+        document.getElementById("timelineResult");
 
     const start =
         Number(startInput.value);
 
     const end =
         Number(endInput.value);
-
 
     // ==============================
     // Input Validation
@@ -233,34 +224,30 @@ async function loadTimeline(){
         !Number.isInteger(end)
     ){
 
-        outputElement.textContent =
-            "Please enter valid Global Solar Day IDs.";
+        outputElement.innerHTML =
+            "<div class=\"timeline-message\">Please enter valid Global Solar Day IDs.</div>";
 
         return;
     }
-
 
     if(start < 1){
 
-        outputElement.textContent =
-            "Global Solar Day must be >= 1.";
+        outputElement.innerHTML =
+            "<div class=\"timeline-message\">Global Solar Day must be >= 1.</div>";
 
         return;
     }
-
 
     if(end < start){
 
-        outputElement.textContent =
-            "End Day ID must be greater than or equal to Start Day ID.";
+        outputElement.innerHTML =
+            "<div class=\"timeline-message\">End Day ID must be greater than or equal to Start Day ID.</div>";
 
         return;
     }
 
-
     const count =
         end - start + 1;
-
 
     // ==============================
     // Safety Limit
@@ -268,50 +255,70 @@ async function loadTimeline(){
 
     if(count > 100){
 
-        outputElement.textContent =
-`
-TIMELINE RANGE TOO LARGE
-
-Requested days : ${count}
-
-Maximum per query : 100
-
-Please use a smaller range.
-`;
+        outputElement.innerHTML = `
+            <div class="timeline-message">
+                <strong>TIMELINE RANGE TOO LARGE</strong>
+                <br><br>
+                Requested days : ${count}
+                <br>
+                Maximum per query : 100
+                <br><br>
+                Please use a smaller range.
+            </div>
+        `;
 
         return;
     }
-
 
     // ==============================
     // Loading State
     // ==============================
 
-    outputElement.textContent =
-`
-GABARY V2 TIMELINE EXPLORER
+    outputElement.innerHTML = `
+        <div class="timeline-loading">
+            <strong>GABARY V2 VISUAL TIMELINE</strong>
+            <br><br>
+            Loading ${count} day${count === 1 ? "" : "s"}...
+        </div>
+    `;
 
-Loading...
-----------------------------------
-Start Day : ${start}
-End Day   : ${end}
-Days      : ${count}
-`;
+    // ==============================
+    // Timeline Container
+    // ==============================
 
+    let timelineHTML = `
+        <div class="visual-timeline">
 
-    let output =
-`
-GABARY V2 TIMELINE EXPLORER
+            <div class="timeline-header">
 
-Range
-----------------------------------
-Start Global Solar Day : ${start}
-End Global Solar Day   : ${end}
-Total Days             : ${count}
+                <div>
+                    <span class="timeline-label">
+                        START
+                    </span>
 
-==================================
-`;
+                    <strong>
+                        ${start}
+                    </strong>
+                </div>
 
+                <div class="timeline-range">
+                    ${count} DAY${count === 1 ? "" : "S"}
+                </div>
+
+                <div>
+                    <span class="timeline-label">
+                        END
+                    </span>
+
+                    <strong>
+                        ${end}
+                    </strong>
+                </div>
+
+            </div>
+
+            <div class="timeline-track">
+    `;
 
     // ==============================
     // Query Timeline
@@ -330,7 +337,6 @@ Total Days             : ${count}
                     `${API_BASE}/api/json/day/${day}`
                 );
 
-
             if(!response.ok){
 
                 throw new Error(
@@ -339,64 +345,163 @@ Total Days             : ${count}
 
             }
 
-
             const data =
                 await response.json();
 
+            const leapYear =
+                data.calendarMetadata.leapYear
+                    ? "LEAP YEAR"
+                    : "COMMON YEAR";
 
-            output +=
-`
-----------------------------------
-Global Solar Day : ${data.globalSolarDay}
+            timelineHTML += `
+                <article class="timeline-node">
 
-Solar Date
-${data.solarDate.weekday}, ${data.solarDate.day} ${data.solarDate.monthName} ${data.solarDate.year}
+                    <div class="timeline-marker">
+                        <span></span>
+                    </div>
 
-Day Of Year : ${data.solarDate.dayOfYear}
-Week Index  : ${data.calendarMetadata.weekIndex}
-Leap Year   : ${data.calendarMetadata.leapYear ? "YES" : "NO"}
+                    <div class="timeline-content">
 
-Cycle Number     : ${data.temporalMetadata.cycleNumber}
-Historical Index : ${data.temporalMetadata.historicalIndex}
+                        <div class="timeline-day-id">
+                            GLOBAL SOLAR DAY
+                            <strong>
+                                ${data.globalSolarDay}
+                            </strong>
+                        </div>
 
-Architecture : ${data.architecture.name}
-Engine       : ${data.architecture.engine}
-Validation   : ${data.architecture.validation}
-`;
+                        <div class="timeline-date">
+                            ${data.solarDate.weekday},
+                            ${data.solarDate.day}
+                            ${data.solarDate.monthName}
+                            ${data.solarDate.year}
+                        </div>
+
+                        <div class="timeline-grid">
+
+                            <div class="timeline-stat">
+                                <span>DAY OF YEAR</span>
+                                <strong>
+                                    ${data.solarDate.dayOfYear}
+                                </strong>
+                            </div>
+
+                            <div class="timeline-stat">
+                                <span>WEEK INDEX</span>
+                                <strong>
+                                    ${data.calendarMetadata.weekIndex}
+                                </strong>
+                            </div>
+
+                            <div class="timeline-stat">
+                                <span>YEAR TYPE</span>
+                                <strong>
+                                    ${leapYear}
+                                </strong>
+                            </div>
+
+                            <div class="timeline-stat">
+                                <span>CYCLE</span>
+                                <strong>
+                                    ${data.temporalMetadata.cycleNumber}
+                                </strong>
+                            </div>
+
+                            <div class="timeline-stat">
+                                <span>HISTORICAL INDEX</span>
+                                <strong>
+                                    ${data.temporalMetadata.historicalIndex}
+                                </strong>
+                            </div>
+
+                        </div>
+
+                        <div class="timeline-engine">
+
+                            <span>
+                                ${data.architecture.name}
+                            </span>
+
+                            <span>
+                                ${data.architecture.engine}
+                            </span>
+
+                            <span class="timeline-validation">
+                                ${data.architecture.validation}
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+            `;
 
         }
         catch(error){
 
-            output +=
-`
-----------------------------------
-ERROR
+            timelineHTML += `
+                <article class="timeline-node timeline-error">
 
-Global Solar Day : ${day}
-Message          : ${error.message}
-`;
+                    <div class="timeline-marker">
+                        <span></span>
+                    </div>
+
+                    <div class="timeline-content">
+
+                        <div class="timeline-day-id">
+                            GLOBAL SOLAR DAY
+                            <strong>${day}</strong>
+                        </div>
+
+                        <div class="timeline-error-message">
+                            Timeline data unavailable
+                            <br>
+                            ${error.message}
+                        </div>
+
+                    </div>
+
+                </article>
+            `;
 
         }
 
-
-        // Update display during long queries
-
-        outputElement.textContent =
-            output;
+        // Render progressively during the query.
+        outputElement.innerHTML =
+            timelineHTML +
+            `
+                </div>
+                <div class="timeline-progress">
+                    Processed ${day - start + 1} / ${count}
+                </div>
+            </div>
+            `;
 
     }
 
+    // ==============================
+    // Complete Timeline
+    // ==============================
 
-    output +=
-`
-==================================
+    timelineHTML += `
+            </div>
 
-TIMELINE QUERY COMPLETE
+            <div class="timeline-footer">
 
-Days Processed : ${count}
-`;
+                <strong>
+                    TIMELINE QUERY COMPLETE
+                </strong>
 
-    outputElement.textContent =
-        output;
+                <span>
+                    ${count} day${count === 1 ? "" : "s"} processed
+                </span>
+
+            </div>
+
+        </div>
+    `;
+
+    outputElement.innerHTML =
+        timelineHTML;
 
 }
