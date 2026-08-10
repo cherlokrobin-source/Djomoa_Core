@@ -1330,3 +1330,43 @@ add_test(
 )
 
 
+# ============================================
+# Gabary V2 - Lunar Engine Test
+# ============================================
+
+add_executable(
+    LunarEngineV2Test
+    tests/lunar_engine_v2_test.cpp
+    Gabary/src/LunarEngineV2.cpp
+)
+
+target_include_directories(
+    LunarEngineV2Test PRIVATE
+    Gabary/include
+    include
+)
+
+add_test(
+    NAME LunarEngineV2Test
+    COMMAND LunarEngineV2Test
+)
+# ============================================
+# Gabary V2 - Lunar Engine Boundary Test
+# ============================================
+
+add_executable(
+    LunarEngineV2BoundaryTest
+    tests/lunar_engine_v2_boundary_test.cpp
+    Gabary/src/LunarEngineV2.cpp
+)
+
+target_include_directories(
+    LunarEngineV2BoundaryTest PRIVATE
+    Gabary/include
+    include
+)
+
+add_test(
+    NAME LunarEngineV2BoundaryTest
+    COMMAND LunarEngineV2BoundaryTest
+)
