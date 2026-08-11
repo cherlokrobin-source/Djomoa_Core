@@ -1370,3 +1370,23 @@ add_test(
     NAME LunarEngineV2BoundaryTest
     COMMAND LunarEngineV2BoundaryTest
 )
+# ============================================
+# Gabary V2 - Lunar Engine Long Cycle Test
+# ============================================
+
+add_executable(
+    LunarEngineV2LongCycleTest
+    Gabary/tests/LunarEngineV2LongCycleTest.cpp
+    Gabary/src/LunarEngineV2.cpp
+)
+
+target_include_directories(
+    LunarEngineV2LongCycleTest PRIVATE
+    Gabary/include
+    include
+)
+
+add_test(
+    NAME LunarEngineV2LongCycleTest
+    COMMAND LunarEngineV2LongCycleTest
+)

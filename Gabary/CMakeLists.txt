@@ -241,3 +241,43 @@ add_test(
     NAME SolarTimeEngineReferenceTest
     COMMAND SolarTimeEngineReferenceTest
 )
+# ============================================
+# Gabary Lunar Engine V2
+# ============================================
+
+add_executable(
+    LunarEngineV2Test
+    Gabary/src/LunarEngineV2.cpp
+    Gabary/tests/LunarEngineV2Test.cpp
+)
+
+target_include_directories(
+    LunarEngineV2Test PRIVATE
+    Gabary/include
+    include
+)
+
+add_test(
+    NAME LunarEngineV2Test
+    COMMAND LunarEngineV2Test
+)
+# ============================================
+# Gabary Lunar Engine V2 - Long Cycle Test
+# ============================================
+
+add_executable(
+    LunarEngineV2LongCycleTest
+    Gabary/src/LunarEngineV2.cpp
+    Gabary/tests/LunarEngineV2LongCycleTest.cpp
+)
+
+target_include_directories(
+    LunarEngineV2LongCycleTest PRIVATE
+    Gabary/include
+    include
+)
+
+add_test(
+    NAME LunarEngineV2LongCycleTest
+    COMMAND LunarEngineV2LongCycleTest
+)
