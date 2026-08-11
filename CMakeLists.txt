@@ -1413,3 +1413,27 @@ add_test(
     NAME GabaryDualCalendarIntegrationTest
     COMMAND GabaryDualCalendarIntegrationTest
 )
+# ============================================
+# Gabary V2 - Dual Calendar Engine Test
+# ============================================
+
+add_executable(
+    GabaryDualCalendarEngineTest
+    Gabary/src/GabaryDualCalendarEngine.cpp
+    Gabary/tests/GabaryDualCalendarEngineTest.cpp
+    Gabary/src/SolarEngineV2.cpp
+    Gabary/src/LunarEngineV2.cpp
+    Gabary/src/WeekCycleEngine.cpp
+    Gabary/src/LeapYearRules.cpp
+)
+
+target_include_directories(
+    GabaryDualCalendarEngineTest PRIVATE
+    Gabary/include
+    include
+)
+
+add_test(
+    NAME GabaryDualCalendarEngineTest
+    COMMAND GabaryDualCalendarEngineTest
+)
