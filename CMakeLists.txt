@@ -1390,3 +1390,26 @@ add_test(
     NAME LunarEngineV2LongCycleTest
     COMMAND LunarEngineV2LongCycleTest
 )
+# ============================================
+# Gabary V2 - Dual Calendar Integration Test
+# ============================================
+
+add_executable(
+    GabaryDualCalendarIntegrationTest
+    Gabary/tests/GabaryDualCalendarIntegrationTest.cpp
+    Gabary/src/SolarEngineV2.cpp
+    Gabary/src/LunarEngineV2.cpp
+    Gabary/src/LeapYearRules.cpp
+    Gabary/src/WeekCycleEngine.cpp
+)
+
+target_include_directories(
+    GabaryDualCalendarIntegrationTest PRIVATE
+    Gabary/include
+    include
+)
+
+add_test(
+    NAME GabaryDualCalendarIntegrationTest
+    COMMAND GabaryDualCalendarIntegrationTest
+)
