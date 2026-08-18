@@ -1,20 +1,31 @@
 const http = require('http');
 const { execFile } = require('child_process');
 const path = require('path');
+const fs = require('fs');
 
 const PORT = 8080;
 const binaryPath = path.join(__dirname, 'build', 'gabary_json');
 
-console.log(`SERVER CONNECTED TO: ${binaryPath}`);
-
 const server = http.createServer((req, res) => {
-    const url = req.url;
+    let url = req.url.split('?')[0]; // إزالة الـ query parameters إن وجدت
 
-    // مسار الاستعلام باليوم العالمي /api/json/day/454457
+    // 1. تقديم الصفحة الرئيسية
+    if (url === '/' || url === '/index.html') {
+        const indexPath = path.join(__dirname, 'public', 'index.html');
+        return fs.readFile(indexPath, (err, data) => {
+            if (err) {
+                res.writeHead(500, { 'Content-Type': 'application/json' });
+                return res.end(JSON.stringify({ error: "Index file not found", path: indexPath }));
+            }
+            res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+            res.end(data);
+        });
+    }
+
+    // 2. مسار /api/json/day/:dayId
     const dayMatch = url.match(/^\/api\/json\/day\/(\d+)/);
     if (dayMatch) {
-        const dayId = dayMatch[1];
-        return execFile(binaryPath, ['day', dayId], (error, stdout) => {
+        return execFile(binaryPath, ['day', dayMatch[1]], (error, stdout) => {
             if (error) {
                 res.writeHead(500, { 'Content-Type': 'application/json' });
                 return res.end(JSON.stringify({ error: "Execution error", details: error.message }));
@@ -24,7 +35,7 @@ const server = http.createServer((req, res) => {
         });
     }
 
-    // مسار تحويل التاريخ الشمسي /api/json/solar/1245/4/5
+    // 3. مسار /api/json/solar/:year/:month/:day
     const solarMatch = url.match(/^\/api\/json\/solar\/(\d+)\/(\d+)\/(\d+)/);
     if (solarMatch) {
         const [, year, month, day] = solarMatch;
@@ -38,7 +49,7 @@ const server = http.createServer((req, res) => {
         });
     }
 
-    // مسار تحويل التاريخ القمري /api/json/lunar/1283/7/24
+    // 4. مسار /api/json/lunar/:year/:month/:day
     const lunarMatch = url.match(/^\/api\/json\/lunar\/(\d+)\/(\d+)\/(\d+)/);
     if (lunarMatch) {
         const [, year, month, day] = lunarMatch;
