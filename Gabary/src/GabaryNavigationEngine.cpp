@@ -1,4 +1,4 @@
-#include "../include/GabaryNavigationEngine.h"
+#include "GabaryNavigationEngine.h"
 
 namespace Gabary
 {
@@ -10,36 +10,21 @@ GabaryNavigationEngine::GabaryNavigationEngine()
 DualCalendarDate
 GabaryNavigationEngine::getDate(int64_t dayId)
 {
-    if (dayId < MIN_GLOBAL_DAY)
-    {
-        return dualCalendarEngine.getDate(MIN_GLOBAL_DAY);
-    }
-
-    if (dayId > MAX_GLOBAL_DAY)
-    {
-        return dualCalendarEngine.getDate(MAX_GLOBAL_DAY);
-    }
-
     return dualCalendarEngine.getDate(dayId);
 }
 
 DualCalendarDate
 GabaryNavigationEngine::nextDay(int64_t dayId)
 {
-    if (dayId >= MAX_GLOBAL_DAY)
-    {
-        return dualCalendarEngine.getDate(MAX_GLOBAL_DAY);
-    }
-
     return dualCalendarEngine.getDate(dayId + 1);
 }
 
 DualCalendarDate
 GabaryNavigationEngine::previousDay(int64_t dayId)
 {
-    if (dayId <= MIN_GLOBAL_DAY)
+    if (dayId <= 1)
     {
-        return dualCalendarEngine.getDate(MIN_GLOBAL_DAY);
+        return dualCalendarEngine.getDate(1);
     }
 
     return dualCalendarEngine.getDate(dayId - 1);
@@ -59,6 +44,4 @@ GabaryNavigationEngine::jumpToSolarDate(
     );
 }
 
-
-
-} // Closing bracket for block at line 4
+} // namespace Gabary
