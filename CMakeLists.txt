@@ -1433,10 +1433,6 @@ target_include_directories(
     include
 )
 
-add_test(
-    NAME GabaryDualCalendarEngineTest
-    COMMAND GabaryDualCalendarEngineTest
-)
 # ============================================
 # Gabary V2 - Navigation Engine Test
 # ============================================
@@ -1444,12 +1440,12 @@ add_test(
 add_executable(
     GabaryNavigationEngineTest
     Gabary/src/GabaryNavigationEngine.cpp
+    Gabary/tests/GabaryNavigationEngineTest.cpp
     Gabary/src/GabaryDualCalendarEngine.cpp
     Gabary/src/SolarEngineV2.cpp
     Gabary/src/LunarEngineV2.cpp
     Gabary/src/WeekCycleEngine.cpp
     Gabary/src/LeapYearRules.cpp
-    Gabary/tests/GabaryNavigationEngineTest.cpp
 )
 
 target_include_directories(
@@ -1462,51 +1458,3 @@ add_test(
     NAME GabaryNavigationEngineTest
     COMMAND GabaryNavigationEngineTest
 )
-# Add new test executable
-add_executable(NewEngineTest
-    Gabary/tests/NewEngineTest.cpp
-    Gabary/src/GabaryNavigationEngine.cpp
-    Gabary/src/WeekCycleEngine.cpp
-    Gabary/src/LeapYearRules.cpp
-)
-
-# Include directories
-target_include_directories(NewEngineTest PRIVATE
-    Gabary/include
-    include
-)
-
-# Optional: Add to CTest
-add_test(NAME NewEngineTest COMMAND NewEngineTest)
-
-
-# --- Catch2 Integration via FetchContent ---
-include(FetchContent)
-
-FetchContent_Declare(
-    Catch2
-    GIT_REPOSITORY https://github.com/catchorg/Catch2.git
-    GIT_TAG        v3.5.2
-)
-FetchContent_MakeAvailable(Catch2)
-
-# NewEngineTest Executable Target
-add_executable(NewEngineTest
-    Gabary/tests/NewEngineTest.cpp
-    Gabary/src/GabaryNavigationEngine.cpp
-    Gabary/src/WeekCycleEngine.cpp
-    Gabary/src/LeapYearRules.cpp
-)
-
-target_include_directories(NewEngineTest PRIVATE
-    Gabary/include
-    include
-)
-
-target_link_libraries(NewEngineTest PRIVATE Catch2::Catch2WithMain)
-
-include(CTest)
-include(Catch)
-catch_discover_tests(NewEngineTest)
-
-
