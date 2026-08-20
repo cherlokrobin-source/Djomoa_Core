@@ -44,4 +44,18 @@ GabaryNavigationEngine::jumpToSolarDate(
     );
 }
 
+int64_t
+GabaryNavigationEngine::jumpToLunarDate(
+    int year,
+    int month,
+    int day
+)
+{
+    return dualCalendarEngine.lunarToDayId(
+        year,
+        month,
+        day
+    );
+}
+
 } // namespace Gabary

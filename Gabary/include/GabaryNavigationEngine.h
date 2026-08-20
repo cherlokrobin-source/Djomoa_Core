@@ -19,6 +19,12 @@ public:
     DualCalendarDate nextDay(int64_t dayId);
     DualCalendarDate previousDay(int64_t dayId);
 
+    int64_t jumpToLunarDate(
+        int year,
+        int month,
+        int day
+    );
+
     int64_t jumpToSolarDate(
         int year,
         int month,
