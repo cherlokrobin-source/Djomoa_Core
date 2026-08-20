@@ -1615,3 +1615,28 @@ add_test(
     NAME GabaryDualCalendarBoundaryTest
     COMMAND GabaryDualCalendarBoundaryTest
 )
+# ============================================
+# Gabary V2 - 50,000-Year End Boundary Test
+# ============================================
+
+add_executable(
+    GabaryDualCalendarEndBoundaryTest
+    Gabary/src/GabaryDualCalendarEngine.cpp
+    Gabary/src/GabaryNavigationEngine.cpp
+    Gabary/src/SolarEngineV2.cpp
+    Gabary/src/LunarEngineV2.cpp
+    Gabary/src/WeekCycleEngine.cpp
+    Gabary/src/LeapYearRules.cpp
+    Gabary/tests/GabaryDualCalendarEndBoundaryTest.cpp
+)
+
+target_include_directories(
+    GabaryDualCalendarEndBoundaryTest PRIVATE
+    Gabary/include
+    include
+)
+
+add_test(
+    NAME GabaryDualCalendarEndBoundaryTest
+    COMMAND GabaryDualCalendarEndBoundaryTest
+)
