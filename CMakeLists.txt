@@ -1563,3 +1563,31 @@ add_test(
     NAME GabaryQueryEngineTest
     COMMAND GabaryQueryEngineTest
 )
+
+# ============================================
+# Gabary V2 - Dual Report Formatter Test
+# ============================================
+
+add_executable(
+    GabaryDualReportFormatterTest
+    Gabary/src/GabaryDualReportFormatter.cpp
+    Gabary/src/GabaryQueryEngine.cpp
+    Gabary/src/GabaryNavigationEngine.cpp
+    Gabary/tests/GabaryDualReportFormatterTest.cpp
+    Gabary/src/GabaryDualCalendarEngine.cpp
+    Gabary/src/SolarEngineV2.cpp
+    Gabary/src/LunarEngineV2.cpp
+    Gabary/src/WeekCycleEngine.cpp
+    Gabary/src/LeapYearRules.cpp
+)
+
+target_include_directories(
+    GabaryDualReportFormatterTest PRIVATE
+    Gabary/include
+    include
+)
+
+add_test(
+    NAME GabaryDualReportFormatterTest
+    COMMAND GabaryDualReportFormatterTest
+)
