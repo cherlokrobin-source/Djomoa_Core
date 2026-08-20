@@ -1591,3 +1591,27 @@ add_test(
     NAME GabaryDualReportFormatterTest
     COMMAND GabaryDualReportFormatterTest
 )
+# ============================================
+# Gabary V2 - Dual Calendar Boundary Test
+# ============================================
+
+add_executable(
+    GabaryDualCalendarBoundaryTest
+    Gabary/src/GabaryDualCalendarEngine.cpp
+    Gabary/src/SolarEngineV2.cpp
+    Gabary/src/LunarEngineV2.cpp
+    Gabary/src/WeekCycleEngine.cpp
+    Gabary/src/LeapYearRules.cpp
+    Gabary/tests/GabaryDualCalendarBoundaryTest.cpp
+)
+
+target_include_directories(
+    GabaryDualCalendarBoundaryTest PRIVATE
+    Gabary/include
+    include
+)
+
+add_test(
+    NAME GabaryDualCalendarBoundaryTest
+    COMMAND GabaryDualCalendarBoundaryTest
+)
