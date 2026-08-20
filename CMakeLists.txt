@@ -1458,3 +1458,81 @@ add_test(
     NAME GabaryNavigationEngineTest
     COMMAND GabaryNavigationEngineTest
 )
+
+# ============================================
+# Gabary V2 - Navigation Engine Boundary Test
+# ============================================
+
+add_executable(
+    GabaryNavigationEngineBoundaryTest
+    Gabary/src/GabaryNavigationEngine.cpp
+    Gabary/tests/GabaryNavigationEngineBoundaryTest.cpp
+    Gabary/src/GabaryDualCalendarEngine.cpp
+    Gabary/src/SolarEngineV2.cpp
+    Gabary/src/LunarEngineV2.cpp
+    Gabary/src/WeekCycleEngine.cpp
+    Gabary/src/LeapYearRules.cpp
+)
+
+target_include_directories(
+    GabaryNavigationEngineBoundaryTest PRIVATE
+    Gabary/include
+    include
+)
+
+add_test(
+    NAME GabaryNavigationEngineBoundaryTest
+    COMMAND GabaryNavigationEngineBoundaryTest
+)
+
+# ============================================
+# Gabary V2 - Navigation Engine Long-Range Test
+# ============================================
+
+add_executable(
+    GabaryNavigationEngineLongRangeTest
+    Gabary/src/GabaryNavigationEngine.cpp
+    Gabary/tests/GabaryNavigationEngineLongRangeTest.cpp
+    Gabary/src/GabaryDualCalendarEngine.cpp
+    Gabary/src/SolarEngineV2.cpp
+    Gabary/src/LunarEngineV2.cpp
+    Gabary/src/WeekCycleEngine.cpp
+    Gabary/src/LeapYearRules.cpp
+)
+
+target_include_directories(
+    GabaryNavigationEngineLongRangeTest PRIVATE
+    Gabary/include
+    include
+)
+
+add_test(
+    NAME GabaryNavigationEngineLongRangeTest
+    COMMAND GabaryNavigationEngineLongRangeTest
+)
+
+# ============================================
+# Gabary V2 - Navigation Solar Round-Trip Test
+# ============================================
+
+add_executable(
+    GabaryNavigationEngineSolarRoundTripTest
+    Gabary/src/GabaryNavigationEngine.cpp
+    Gabary/tests/GabaryNavigationEngineSolarRoundTripTest.cpp
+    Gabary/src/GabaryDualCalendarEngine.cpp
+    Gabary/src/SolarEngineV2.cpp
+    Gabary/src/LunarEngineV2.cpp
+    Gabary/src/WeekCycleEngine.cpp
+    Gabary/src/LeapYearRules.cpp
+)
+
+target_include_directories(
+    GabaryNavigationEngineSolarRoundTripTest PRIVATE
+    Gabary/include
+    include
+)
+
+add_test(
+    NAME GabaryNavigationEngineSolarRoundTripTest
+    COMMAND GabaryNavigationEngineSolarRoundTripTest
+)
