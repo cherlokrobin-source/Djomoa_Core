@@ -1978,3 +1978,32 @@ add_test(
 # ============================================
 # EOF
 # ============================================
+# ============================================
+# Gabary V2 - API Adapter Contract Test
+# ============================================
+
+add_executable(
+    GabaryAPIAdapterContractTest
+    Gabary/src/GabaryAPIAdapter.cpp
+    Gabary/src/GabaryTemporalService.cpp
+    Gabary/src/GabaryDualReportFormatter.cpp
+    Gabary/src/GabaryQueryEngine.cpp
+    Gabary/src/GabaryNavigationEngine.cpp
+    Gabary/src/GabaryDualCalendarEngine.cpp
+    Gabary/src/SolarEngineV2.cpp
+    Gabary/src/LunarEngineV2.cpp
+    Gabary/src/WeekCycleEngine.cpp
+    Gabary/src/LeapYearRules.cpp
+    Gabary/tests/GabaryAPIAdapterContractTest.cpp
+)
+
+target_include_directories(
+    GabaryAPIAdapterContractTest PRIVATE
+    Gabary/include
+    include
+)
+
+add_test(
+    NAME GabaryAPIAdapterContractTest
+    COMMAND GabaryAPIAdapterContractTest
+)
