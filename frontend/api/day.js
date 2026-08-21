@@ -6,7 +6,7 @@
 */
 
 
-const API_BASE = "";
+const API_BASE = "http://localhost:8080";
 
 
 export async function getDay(dayId)

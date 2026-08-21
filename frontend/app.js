@@ -1,4 +1,4 @@
-const API_BASE = "";
+const API_BASE = "http://localhost:8080";
 
 
 // =====================================
@@ -545,3 +545,121 @@ setInterval(
 updateClock();
 
 loadStatus();
+
+/* ==========================================
+   GABARY V2 — DUAL CALENDAR OBSERVATORY
+   ========================================== */
+
+function updateDualCalendar(data){
+
+    if(!data || !data.solar || !data.lunar)
+        return;
+
+    // Global coordinate
+    document.getElementById("dualDayId").textContent =
+        data.dayId ?? "---";
+
+    // Solar calendar
+    document.getElementById("solarWeekday").textContent =
+        data.solar.weekday ?? "---";
+
+    document.getElementById("dualSolarYear").textContent =
+        data.solar.year ?? "---";
+
+    document.getElementById("dualSolarMonth").textContent =
+        data.solar.month ?? "---";
+
+    document.getElementById("dualSolarMonthName").textContent =
+        data.solar.monthName ?? "---";
+
+    document.getElementById("dualSolarDay").textContent =
+        data.solar.day ?? "---";
+
+    document.getElementById("dualSolarDayOfYear").textContent =
+        data.solar.dayOfYear ?? "---";
+
+    document.getElementById("dualSolarLeap").textContent =
+        data.solar.leapYear ? "YES" : "NO";
+
+    document.getElementById("dualSolarWeekIndex").textContent =
+        data.solar.weekIndex ?? "---";
+
+    // Lunar calendar
+    document.getElementById("lunarWeekday").textContent =
+        data.lunar.weekday ?? "---";
+
+    document.getElementById("dualLunarYear").textContent =
+        data.lunar.year ?? "---";
+
+    document.getElementById("dualLunarMonth").textContent =
+        data.lunar.month ?? "---";
+
+    document.getElementById("dualLunarMonthName").textContent =
+        data.lunar.monthName ?? "---";
+
+    document.getElementById("dualLunarDay").textContent =
+        data.lunar.day ?? "---";
+
+    document.getElementById("dualLunarDayOfYear").textContent =
+        data.lunar.dayOfYear ?? "---";
+
+    document.getElementById("dualLunarLeap").textContent =
+        data.lunar.leapYear ? "YES" : "NO";
+
+    // Architecture metadata
+    if(data.architecture){
+
+        document.getElementById("architectureName").textContent =
+            data.architecture.name ?? "---";
+
+        document.getElementById("architectureEngine").textContent =
+            data.architecture.engine ?? "---";
+
+        document.getElementById("architectureCoordinate").textContent =
+            data.architecture.coordinate ?? "---";
+
+        document.getElementById("architectureValidation").textContent =
+            data.architecture.validation ?? "---";
+    }
+}
+
+
+/* ==========================================
+   Attach Observatory to Existing Query
+   ========================================== */
+
+const gabaryOriginalSearchDay = searchDay;
+
+searchDay = async function(){
+
+    await gabaryOriginalSearchDay();
+
+    const dayInput = document.getElementById("dayInput");
+
+    if(!dayInput || !dayInput.value)
+        return;
+
+    try{
+
+        const response = await fetch(
+            `${API_BASE}/api/json/day/${dayInput.value}`
+        );
+
+        if(!response.ok)
+            return;
+
+        const data = await response.json();
+
+        updateDualCalendar(data);
+
+    }
+    catch(error){
+
+        console.error(
+            "Dual Calendar Observatory Error:",
+            error
+        );
+
+    }
+};
+

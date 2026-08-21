@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -11,299 +10,370 @@
 <link rel="stylesheet" href="style.css">
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
-
 </head>
-
 
 <body>
 
-
 <header>
+    <h1>DIGITAL ASTROLABE</h1>
+    <h2>Gabary V2 Temporal Engine</h2>
 
-<h1>DIGITAL ASTROLABE</h1>
-
-<h2>Gabary V2 Temporal Engine</h2>
-
-<p>
-Golden Calendar 50,000-Year Chronology Research Platform
-based on Global Solar Day coordinates.
-</p>
-
+    <p>
+        Golden Calendar 50,000-Year Chronology Research Platform
+        based on Global Solar Day coordinates.
+    </p>
 </header>
-
-
 
 <section class="status-card">
 
-<h3>ENGINE STATUS</h3>
+    <h3>ENGINE STATUS</h3>
 
-<div class="status-grid">
+    <div class="status-grid">
 
-<div>
-<span>Status</span>
-<strong id="engineStatus">Loading...</strong>
-</div>
+        <div>
+            <span>Status</span>
+            <strong id="engineStatus">Loading...</strong>
+        </div>
 
+        <div>
+            <span>Engine</span>
+            <strong id="engineVersion">---</strong>
+        </div>
 
-<div>
-<span>Engine</span>
-<strong id="engineVersion">---</strong>
-</div>
+        <div>
+            <span>Validation</span>
+            <strong id="engineTests">---</strong>
+        </div>
 
-
-<div>
-<span>Validation</span>
-<strong id="engineTests">---</strong>
-</div>
-
-</div>
+    </div>
 
 </section>
-
-
 
 
 <section class="clock-card">
 
-<h3>GLOBAL TIME</h3>
+    <h3>GLOBAL TIME</h3>
 
-<div id="clock">
-00:00:00
-</div>
+    <div id="clock">00:00:00</div>
 
-<div id="date">
-Loading date...
-</div>
+    <div id="date">
+        Loading date...
+    </div>
 
 </section>
-
-
-
 
 
 <section class="dashboard-card">
 
-<h3>
-TEMPORAL DASHBOARD
-</h3>
+    <h3>TEMPORAL DASHBOARD</h3>
 
+    <div class="dashboard-grid">
 
-<div class="dashboard-grid">
+        <div class="card">
+            <span>Global Solar Day</span>
+            <strong id="globalSolarDay">---</strong>
+        </div>
 
+        <div class="card">
+            <span>Solar Date</span>
+            <strong id="solarDate">---</strong>
+        </div>
 
-<div class="card">
-<span>Global Solar Day</span>
-<strong id="globalSolarDay">---</strong>
-</div>
+        <div class="card">
+            <span>Day Of Year</span>
+            <strong id="dayOfYear">---</strong>
+        </div>
 
+        <div class="card">
+            <span>Week Index</span>
+            <strong id="weekIndex">---</strong>
+        </div>
 
-<div class="card">
-<span>Solar Date</span>
-<strong id="solarDate">---</strong>
-</div>
+        <div class="card">
+            <span>Cycle Number</span>
+            <strong id="cycleNumber">---</strong>
+        </div>
 
+        <div class="card">
+            <span>Historical Index</span>
+            <strong id="historicalIndex">---</strong>
+        </div>
 
-<div class="card">
-<span>Day Of Year</span>
-<strong id="dayOfYear">---</strong>
-</div>
+        <div class="card">
+            <span>Engine</span>
+            <strong id="engineName">---</strong>
+        </div>
 
+        <div class="card">
+            <span>Validation</span>
+            <strong id="validationState">---</strong>
+        </div>
 
-<div class="card">
-<span>Week Index</span>
-<strong id="weekIndex">---</strong>
-</div>
-
-
-<div class="card">
-<span>Cycle Number</span>
-<strong id="cycleNumber">---</strong>
-</div>
-
-
-<div class="card">
-<span>Historical Index</span>
-<strong id="historicalIndex">---</strong>
-</div>
-
-
-<div class="card">
-<span>Engine</span>
-<strong id="engineName">---</strong>
-</div>
-
-
-<div class="card">
-<span>Validation</span>
-<strong id="validationState">---</strong>
-</div>
-
-
-</div>
+    </div>
 
 </section>
+
+
 <section class="query-card">
 
-<h3>
-GLOBAL SOLAR DAY QUERY
-</h3>
+    <h3>GLOBAL SOLAR DAY QUERY</h3>
 
+    <p>
+        Enter a Global Solar Day ID from the 50,000 year timeline.
+    </p>
 
-<p>
-Enter a Global Solar Day ID from the 50,000 year timeline.
-</p>
+    <input
+        id="dayInput"
+        type="number"
+        min="1"
+        placeholder="Example: 739823"
+    >
 
-
-<input
-id="dayInput"
-type="number"
-placeholder="Example: 739823">
-
-
-<button onclick="searchDay()">
-QUERY ENGINE
-</button>
-
+    <button onclick="searchDay()">
+        QUERY ENGINE
+    </button>
 
 </section>
 
 
+<section class="dual-calendar-card">
+
+    <h3>DUAL CALENDAR OBSERVATORY</h3>
+
+    <div class="global-coordinate">
+        <span>GLOBAL SOLAR DAY</span>
+        <strong id="dualDayId">---</strong>
+    </div>
+
+
+    <div class="calendar-columns">
+
+        <!-- SOLAR -->
+
+        <article class="calendar-panel solar-panel">
+
+            <div class="calendar-panel-header">
+                <span>SOLAR CALENDAR</span>
+                <strong>☀</strong>
+            </div>
+
+            <div class="calendar-data">
+
+                <div>
+                    <span>Weekday</span>
+                    <strong id="solarWeekday">---</strong>
+                </div>
+
+                <div>
+                    <span>Year</span>
+                    <strong id="dualSolarYear">---</strong>
+                </div>
+
+                <div>
+                    <span>Month</span>
+                    <strong id="dualSolarMonth">---</strong>
+                </div>
+
+                <div>
+                    <span>Month Name</span>
+                    <strong id="dualSolarMonthName">---</strong>
+                </div>
+
+                <div>
+                    <span>Day</span>
+                    <strong id="dualSolarDay">---</strong>
+                </div>
+
+                <div>
+                    <span>Day Of Year</span>
+                    <strong id="dualSolarDayOfYear">---</strong>
+                </div>
+
+                <div>
+                    <span>Leap Year</span>
+                    <strong id="dualSolarLeap">---</strong>
+                </div>
+
+                <div>
+                    <span>Week Index</span>
+                    <strong id="dualSolarWeekIndex">---</strong>
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- LUNAR -->
+
+        <article class="calendar-panel lunar-panel">
+
+            <div class="calendar-panel-header">
+                <span>LUNAR CALENDAR</span>
+                <strong>☾</strong>
+            </div>
+
+            <div class="calendar-data">
+
+                <div>
+                    <span>Weekday</span>
+                    <strong id="lunarWeekday">---</strong>
+                </div>
+
+                <div>
+                    <span>Year</span>
+                    <strong id="dualLunarYear">---</strong>
+                </div>
+
+                <div>
+                    <span>Month</span>
+                    <strong id="dualLunarMonth">---</strong>
+                </div>
+
+                <div>
+                    <span>Month Name</span>
+                    <strong id="dualLunarMonthName">---</strong>
+                </div>
+
+                <div>
+                    <span>Day</span>
+                    <strong id="dualLunarDay">---</strong>
+                </div>
+
+                <div>
+                    <span>Day Of Year</span>
+                    <strong id="dualLunarDayOfYear">---</strong>
+                </div>
+
+                <div>
+                    <span>Leap Year</span>
+                    <strong id="dualLunarLeap">---</strong>
+                </div>
+
+            </div>
+
+        </article>
+
+    </div>
+
+
+    <div class="architecture-panel">
+
+        <h4>ARCHITECTURE</h4>
+
+        <div class="architecture-grid">
+
+            <div>
+                <span>Name</span>
+                <strong id="architectureName">---</strong>
+            </div>
+
+            <div>
+                <span>Engine</span>
+                <strong id="architectureEngine">---</strong>
+            </div>
+
+            <div>
+                <span>Coordinate</span>
+                <strong id="architectureCoordinate">---</strong>
+            </div>
+
+            <div>
+                <span>Validation</span>
+                <strong id="architectureValidation">---</strong>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 
 
 <section class="report-card">
 
-<h3>
-GABARY V2 TEXT REPORT
-</h3>
+    <h3>GABARY V2 TEXT REPORT</h3>
 
-
-<pre id="textReport">
-
+    <pre id="textReport">
 Waiting for report...
-
-</pre>
-
+    </pre>
 
 </section>
-
 
 
 <section class="timeline-card">
 
-<h3>
-TIMELINE EXPLORER
-</h3>
+    <h3>TIMELINE EXPLORER</h3>
 
-<p>
-Explore the 50,000-Year Solar Chronology by Global Solar Day ID.
-</p>
+    <p>
+        Explore the 50,000-Year Solar Chronology by Global Solar Day ID.
+    </p>
 
+    <div class="timeline-controls">
 
-<div class="timeline-controls">
+        <input
+            id="timelineStart"
+            type="number"
+            min="1"
+            placeholder="Start Day ID"
+        >
 
-    <input
-        id="timelineStart"
-        type="number"
-        placeholder="Start Day ID">
+        <input
+            id="timelineEnd"
+            type="number"
+            min="1"
+            placeholder="End Day ID"
+        >
 
-    <input
-        id="timelineEnd"
-        type="number"
-        placeholder="End Day ID">
+        <button onclick="loadTimeline()">
+            VIEW TIMELINE
+        </button>
 
-    <button onclick="loadTimeline()">
-        VIEW TIMELINE
-    </button>
+    </div>
 
-</div>
+    <div class="timeline-quick-range">
 
-<div class="timeline-quick-range">
+        <span>QUICK RANGE</span>
 
-    <span>QUICK RANGE</span>
+        <button onclick="setTimelineRange(1)">1 DAY</button>
+        <button onclick="setTimelineRange(7)">7 DAYS</button>
+        <button onclick="setTimelineRange(30)">30 DAYS</button>
 
-    <button onclick="setTimelineRange(1)">
-        1 DAY
-    </button>
+    </div>
 
-    <button onclick="setTimelineRange(7)">
-        7 DAYS
-    </button>
+    <div
+        id="timelineResult"
+        class="timeline-result"
+    >
 
-    <button onclick="setTimelineRange(30)">
-        30 DAYS
-    </button>
+        <div class="timeline-empty">
+            Waiting for timeline query...
+        </div>
 
-</div>
-
-
-<div
-id="timelineResult"
-class="timeline-result">
-
-<div class="timeline-empty">
-Waiting for timeline query...
-</div>
-
-</div>
-
+    </div>
 
 </section>
+
 
 <section class="console">
 
-<h3>
-RAW JSON DATA
-</h3>
+    <h3>RAW JSON DATA</h3>
 
-
-<pre id="result">
-
-Waiting for JSON...
-
-</pre>
-
+    <pre id="result">
+Waiting for API query...
+    </pre>
 
 </section>
-
-
-
-
-
-<footer>
-
-
-<p>
-GABARY V2 Architecture
-</p>
-
-
-<p>
-Digital Astrolabe Interface
-</p>
-
-
-<p>
-Golden Calendar Project
-</p>
-
-
-<p>
-Developed by Nemimeche Benaissa
-</p>
-
-
-<p>
-© 2026 Golden Calendar Project
-</p>
-
-
-</footer>
-
 
 
 <script src="app.js"></script>
 
+<script>
+    loadStatus();
+    updateClock();
+
+    setInterval(updateClock, 1000);
+</script>
 
 </body>
-
 </html>
