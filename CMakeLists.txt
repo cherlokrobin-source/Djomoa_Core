@@ -1728,3 +1728,44 @@ add_test(
     NAME GabaryAPIIntegrationTest
     COMMAND GabaryAPIIntegrationTest
 )
+
+
+# ============================================
+# Gabary V2 - Final API Contract Test
+# ============================================
+
+add_executable(
+    GabaryAPIContractTest
+    Gabary/src/GabaryAPIAdapter.cpp
+    Gabary/src/GabaryTemporalService.cpp
+    Gabary/src/GabaryDualReportFormatter.cpp
+    Gabary/src/GabaryQueryEngine.cpp
+    Gabary/src/GabaryNavigationEngine.cpp
+    Gabary/src/GabaryDualCalendarEngine.cpp
+    Gabary/src/SolarEngineV2.cpp
+    Gabary/src/LunarEngineV2.cpp
+    Gabary/src/WeekCycleEngine.cpp
+    Gabary/src/LeapYearRules.cpp
+    Gabary/src/GlobalSolarDay.cpp
+    Gabary/src/ReportFormatter.cpp
+    src/TemporalQueryEngine.cpp
+    src/ChronologyEngine.cpp
+    src/GlobalTemporalID.cpp
+    src/SolarEngine.cpp
+    src/LunarEngine.cpp
+    src/WeekEngine.cpp
+    src/server/TemporalServer.cpp
+    Gabary/tests/GabaryAPIContractTest.cpp
+)
+
+target_include_directories(
+    GabaryAPIContractTest PRIVATE
+    Gabary/include
+    include
+    include/server
+)
+
+add_test(
+    NAME GabaryAPIContractTest
+    COMMAND GabaryAPIContractTest
+)

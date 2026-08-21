@@ -1,4 +1,5 @@
 #include "server/HttpServer.h"
+#include "../../Gabary/include/GabaryNavigationEngine.h"
 
 #include <iostream>
 #include <sstream>
@@ -186,6 +187,29 @@ else if(path.find("/api/json/day/") == 0)
             path.substr(14)
         );
 
+
+    if(dayId < Gabary::GabaryNavigationEngine::MIN_GLOBAL_DAY ||
+       dayId > Gabary::GabaryNavigationEngine::MAX_GLOBAL_DAY)
+    {
+        body =
+            R"({"error":"Global Solar Day out of range","minGlobalDay":1,"maxGlobalDay":18262125})";
+
+        std::string response =
+            buildResponse(
+                body,
+                400,
+                "Bad Request"
+            );
+
+        send(
+            clientSocket,
+            response.c_str(),
+            response.size(),
+            0
+        );
+
+        return;
+    }
 
     body =
         temporalServer.handleDayJSONRequest(
@@ -440,18 +464,23 @@ std::string HttpServer::parsePath(
 // ======================================
 
 std::string HttpServer::buildResponse(
-    const std::string& body
+    const std::string& body,
+    int statusCode,
+    const std::string& statusText
 )
 {
     std::string response =
-        "HTTP/1.1 200 OK\r\n"
+        "HTTP/1.1 "
+        + std::to_string(statusCode)
+        + " "
+        + statusText
+        + "\r\n"
         "Content-Type: application/json\r\n"
         "Access-Control-Allow-Origin: *\r\n"
         "Content-Length: "
         + std::to_string(body.size())
         + "\r\n\r\n"
         + body;
-
 
     return response;
 }

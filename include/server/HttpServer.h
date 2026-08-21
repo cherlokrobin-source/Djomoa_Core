@@ -26,7 +26,9 @@ private:
     );
 
     std::string buildResponse(
-        const std::string& body
+        const std::string& body,
+        int statusCode = 200,
+        const std::string& statusText = "OK"
     );
 
     std::string serveStaticFile(
