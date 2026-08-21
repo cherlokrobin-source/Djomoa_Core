@@ -1769,3 +1769,24 @@ add_test(
     NAME GabaryAPIContractTest
     COMMAND GabaryAPIContractTest
 )
+
+# ============================================
+# Gabary V2 - HTTP API Contract Test
+# ============================================
+
+add_executable(
+    GabaryHTTPAPIContractTest
+    Gabary/tests/GabaryHTTPAPIContractTest.cpp
+)
+
+target_include_directories(
+    GabaryHTTPAPIContractTest PRIVATE
+    Gabary/include
+    include
+    include/server
+)
+
+add_test(
+    NAME GabaryHTTPAPIContractTest
+    COMMAND GabaryHTTPAPIContractTest
+)
