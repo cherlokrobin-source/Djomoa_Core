@@ -1790,3 +1790,45 @@ add_test(
     NAME GabaryHTTPAPIContractTest
     COMMAND GabaryHTTPAPIContractTest
 )
+
+# ============================================
+# Gabary V2 - API Response Schema v1 Test
+# ============================================
+
+add_executable(
+    GabaryAPIResponseSchemaTest
+    Gabary/tests/GabaryAPIResponseSchemaTest.cpp
+)
+
+target_include_directories(
+    GabaryAPIResponseSchemaTest PRIVATE
+    Gabary/include
+    include
+    include/server
+)
+
+add_test(
+    NAME GabaryAPIResponseSchemaTest
+    COMMAND GabaryAPIResponseSchemaTest
+)
+
+# ============================================
+# Gabary V2 - API Response Boundary Schema Test
+# ============================================
+
+add_executable(
+    GabaryAPIResponseBoundarySchemaTest
+    Gabary/tests/GabaryAPIResponseBoundarySchemaTest.cpp
+)
+
+target_include_directories(
+    GabaryAPIResponseBoundarySchemaTest PRIVATE
+    Gabary/include
+    include
+    include/server
+)
+
+add_test(
+    NAME GabaryAPIResponseBoundarySchemaTest
+    COMMAND GabaryAPIResponseBoundarySchemaTest
+)
