@@ -1946,3 +1946,35 @@ add_test(
     NAME GabaryQueryEngineContractTest
     COMMAND GabaryQueryEngineContractTest
 )
+# ============================================
+# Gabary V2 - Temporal Service Contract Test
+# ============================================
+
+add_executable(
+    GabaryTemporalServiceContractTest
+    Gabary/src/GabaryTemporalService.cpp
+    Gabary/src/GabaryQueryEngine.cpp
+    Gabary/src/GabaryNavigationEngine.cpp
+    Gabary/src/GabaryDualReportFormatter.cpp
+    Gabary/src/GabaryDualCalendarEngine.cpp
+    Gabary/src/SolarEngineV2.cpp
+    Gabary/src/LunarEngineV2.cpp
+    Gabary/src/WeekCycleEngine.cpp
+    Gabary/src/LeapYearRules.cpp
+    Gabary/tests/GabaryTemporalServiceContractTest.cpp
+)
+
+target_include_directories(
+    GabaryTemporalServiceContractTest PRIVATE
+    Gabary/include
+    include
+)
+
+add_test(
+    NAME GabaryTemporalServiceContractTest
+    COMMAND GabaryTemporalServiceContractTest
+)
+
+# ============================================
+# EOF
+# ============================================
