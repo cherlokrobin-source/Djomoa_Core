@@ -208,11 +208,23 @@ Date LunarEngineV2::getDate(long long globalSolarDay) const
     result.day =
         static_cast<int>(remaining) + 1;
 
+    // Day of year
+    result.dayOfYear =
+        static_cast<int>(globalSolarDay - daysUntilYear(year));
+
+    // Lunar leap year
+    result.leapYear = isLeap(year);
+
+    // Localized lunar month name
     if (month >= 1 && month <= 12)
     {
         result.monthName =
             CalendarNames::LUNAR_MONTHS[month - 1];
     }
+
+    // Global weekday follows the shared temporal coordinate
+    result.weekday =
+        CalendarNames::getWeekday(globalSolarDay);
 
     return result;
 }
