@@ -1832,3 +1832,90 @@ add_test(
     NAME GabaryAPIResponseBoundarySchemaTest
     COMMAND GabaryAPIResponseBoundarySchemaTest
 )
+
+# ============================================
+# Gabary V2 - Navigation Engine Contract Test
+# ============================================
+
+add_executable(
+    GabaryNavigationEngineContractTest
+    Gabary/src/GabaryNavigationEngine.cpp
+    Gabary/src/GabaryDualCalendarEngine.cpp
+    Gabary/src/SolarEngineV2.cpp
+    Gabary/src/LunarEngineV2.cpp
+    Gabary/src/WeekCycleEngine.cpp
+    Gabary/src/LeapYearRules.cpp
+    Gabary/src/GlobalSolarDay.cpp
+    Gabary/src/ReportFormatter.cpp
+    Gabary/tests/GabaryNavigationEngineContractTest.cpp
+)
+
+target_include_directories(
+    GabaryNavigationEngineContractTest PRIVATE
+    Gabary/include
+    include
+    include/server
+)
+
+add_test(
+    NAME GabaryNavigationEngineContractTest
+    COMMAND GabaryNavigationEngineContractTest
+)
+
+# ============================================
+# Gabary V2 - Navigation Date Round-Trip Test
+# ============================================
+
+add_executable(
+    GabaryNavigationEngineDateRoundTripTest
+    Gabary/src/GabaryNavigationEngine.cpp
+    Gabary/src/GabaryDualCalendarEngine.cpp
+    Gabary/src/SolarEngineV2.cpp
+    Gabary/src/LunarEngineV2.cpp
+    Gabary/src/WeekCycleEngine.cpp
+    Gabary/src/LeapYearRules.cpp
+    Gabary/src/GlobalSolarDay.cpp
+    Gabary/src/ReportFormatter.cpp
+    Gabary/tests/GabaryNavigationEngineDateRoundTripTest.cpp
+)
+
+target_include_directories(
+    GabaryNavigationEngineDateRoundTripTest PRIVATE
+    Gabary/include
+    include
+    include/server
+)
+
+add_test(
+    NAME GabaryNavigationEngineDateRoundTripTest
+    COMMAND GabaryNavigationEngineDateRoundTripTest
+)
+
+# ============================================
+# Gabary V2 - Navigation Boundary Date Test
+# ============================================
+
+add_executable(
+    GabaryNavigationEngineBoundaryDateTest
+    Gabary/src/GabaryNavigationEngine.cpp
+    Gabary/src/GabaryDualCalendarEngine.cpp
+    Gabary/src/SolarEngineV2.cpp
+    Gabary/src/LunarEngineV2.cpp
+    Gabary/src/WeekCycleEngine.cpp
+    Gabary/src/LeapYearRules.cpp
+    Gabary/src/GlobalSolarDay.cpp
+    Gabary/src/ReportFormatter.cpp
+    Gabary/tests/GabaryNavigationEngineBoundaryDateTest.cpp
+)
+
+target_include_directories(
+    GabaryNavigationEngineBoundaryDateTest PRIVATE
+    Gabary/include
+    include
+    include/server
+)
+
+add_test(
+    NAME GabaryNavigationEngineBoundaryDateTest
+    COMMAND GabaryNavigationEngineBoundaryDateTest
+)
