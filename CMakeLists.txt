@@ -2014,3 +2014,30 @@ add_test(
     NAME GabaryAPIAdapterContractTest
     COMMAND GabaryAPIAdapterContractTest
 )
+
+# ============================================
+# Gabary V2 - Dual Calendar Engine Contract Test
+# ============================================
+
+add_executable(
+    GabaryDualCalendarEngineContractTest
+    Gabary/src/GabaryDualCalendarEngine.cpp
+    Gabary/src/SolarEngineV2.cpp
+    Gabary/src/LunarEngineV2.cpp
+    Gabary/src/WeekCycleEngine.cpp
+    Gabary/src/LeapYearRules.cpp
+    Gabary/tests/GabaryDualCalendarEngineContractTest.cpp
+)
+
+target_include_directories(
+    GabaryDualCalendarEngineContractTest PRIVATE
+    Gabary/include
+    include
+)
+
+add_test(
+    NAME GabaryDualCalendarEngineContractTest
+    COMMAND GabaryDualCalendarEngineContractTest
+)
+
+# ============================================
