@@ -616,7 +616,14 @@ add_executable(
     src/LunarEngine.cpp
     src/WeekEngine.cpp
 
+    Gabary/src/GabaryAPIAdapter.cpp
+    Gabary/src/GabaryTemporalService.cpp
+    Gabary/src/GabaryDualReportFormatter.cpp
+    Gabary/src/GabaryQueryEngine.cpp
+    Gabary/src/GabaryNavigationEngine.cpp
+    Gabary/src/GabaryDualCalendarEngine.cpp
     Gabary/src/SolarEngineV2.cpp
+    Gabary/src/LunarEngineV2.cpp
     Gabary/src/WeekCycleEngine.cpp
     Gabary/src/LeapYearRules.cpp
     Gabary/src/GlobalSolarDay.cpp

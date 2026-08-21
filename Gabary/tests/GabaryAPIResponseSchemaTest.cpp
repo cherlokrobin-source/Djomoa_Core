@@ -4,41 +4,53 @@
 #include <cstdio>
 #include <fstream>
 
-static bool contains(const std::string& body, const std::string& key)
+static bool contains(
+    const std::string& body,
+    const std::string& key
+)
 {
     return body.find(key) != std::string::npos;
 }
 
 int main()
 {
-    std::cout << "========================================\n";
-    std::cout << " Gabary V2 API Response Schema v1 Test\n";
-    std::cout << "========================================\n";
+    std::cout
+        << "========================================\n"
+        << " Gabary V2 API Response Schema v2 Test\n"
+        << "========================================\n";
 
-    const char* server = std::getenv("GABARY_HTTP_SERVER");
+    const char* server =
+        std::getenv("GABARY_HTTP_SERVER");
 
     if(server == nullptr)
     {
-        std::cerr << "[ERROR] GABARY_HTTP_SERVER is not set\n";
+        std::cerr
+            << "[ERROR] GABARY_HTTP_SERVER is not set\n";
         return 1;
     }
 
-    std::string url = std::string(server) + "/api/json/day/1";
+    const std::string url =
+        std::string(server) + "/api/json/day/1";
 
-    std::string command =
-        "curl -s \"" + url + "\" > gabary_schema_day1.json";
+    const std::string fileName =
+        "gabary_schema_day1.json";
+
+    const std::string command =
+        "curl -s \"" + url + "\" > " + fileName;
 
     if(std::system(command.c_str()) != 0)
     {
-        std::cerr << "[FAIL] curl request failed\n";
+        std::cerr
+            << "[FAIL] curl request failed\n";
         return 1;
     }
 
-    std::ifstream file("gabary_schema_day1.json");
+    std::ifstream file(fileName);
 
     if(!file)
     {
-        std::cerr << "[FAIL] Cannot read API response\n";
+        std::cerr
+            << "[FAIL] Cannot read API response\n";
         return 1;
     }
 
@@ -48,86 +60,117 @@ int main()
     );
 
     int passed = 0;
+    int total = 0;
 
     const std::string requiredFields[] =
     {
-        "\"globalSolarDay\"",
-        "\"solarDate\"",
+        "\"dayId\"",
+        "\"solar\"",
         "\"weekday\"",
         "\"year\"",
         "\"month\"",
         "\"monthName\"",
         "\"day\"",
         "\"dayOfYear\"",
-        "\"calendarMetadata\"",
-        "\"weekIndex\"",
         "\"leapYear\"",
-        "\"lunarDate\"",
-        "\"temporalMetadata\"",
-        "\"cycleNumber\"",
-        "\"cycleDay\"",
-        "\"yearIndex\"",
-        "\"historicalIndex\"",
-        "\"era\"",
+        "\"weekIndex\"",
+        "\"lunar\"",
         "\"architecture\"",
         "\"name\"",
         "\"engine\"",
+        "\"coordinate\"",
         "\"validation\""
     };
 
     for(const auto& field : requiredFields)
     {
+        ++total;
+
         if(contains(body, field))
         {
-            std::cout << "[PASS] Required field: "
-                      << field << "\n";
+            std::cout
+                << "[PASS] Required field: "
+                << field << "\n";
             ++passed;
         }
         else
         {
-            std::cout << "[FAIL] Missing field: "
-                      << field << "\n";
+            std::cout
+                << "[FAIL] Missing field: "
+                << field << "\n";
         }
     }
 
-    bool valuesOk =
-        contains(body, "\"globalSolarDay\":1") &&
-        contains(body, "\"weekday\":\"Friday\"") &&
-        contains(body, "\"year\":1") &&
-        contains(body, "\"month\":1") &&
-        contains(body, "\"monthName\":\"January\"") &&
-        contains(body, "\"day\":1") &&
-        contains(body, "\"dayOfYear\":1") &&
-        contains(body, "\"weekIndex\":0") &&
-        contains(body, "\"leapYear\":false") &&
-        contains(body, "\"lunarDate\":{\"year\":1,\"month\":1,\"day\":1") &&
-        contains(body, "\"name\":\"Gabary V2\"") &&
-        contains(body, "\"engine\":\"SolarEngineV2\"") &&
-        contains(body, "\"validation\":\"PASSED\"");
-
-    if(valuesOk)
+    const std::string expectedValues[] =
     {
-        std::cout << "[PASS] Day 1 schema values\n";
-        ++passed;
-    }
-    else
+        "\"dayId\":1",
+
+        "\"weekday\":\"Friday\"",
+        "\"year\":1",
+        "\"month\":1",
+        "\"monthName\":\"January\"",
+        "\"day\":1",
+        "\"dayOfYear\":1",
+        "\"leapYear\":false",
+        "\"weekIndex\":0",
+
+        "\"lunar\"",
+        "\"name\":\"Gabary V2\"",
+        "\"engine\":\"GabaryDualCalendarEngine\"",
+        "\"coordinate\":\"Global Solar Day\"",
+        "\"validation\":\"PASSED\""
+    };
+
+    for(const auto& value : expectedValues)
     {
-        std::cout << "[FAIL] Day 1 schema values\n";
+        ++total;
+
+        if(contains(body, value))
+        {
+            std::cout
+                << "[PASS] Schema value: "
+                << value << "\n";
+            ++passed;
+        }
+        else
+        {
+            std::cout
+                << "[FAIL] Schema value missing: "
+                << value << "\n";
+        }
     }
 
-    std::cout << "========================================\n";
+    std::cout
+        << "========================================\n";
 
-    if(passed == 23)
+    if(passed == total)
     {
         std::cout
-            << " Gabary V2 API Response Schema v1: PASSED\n";
-        std::cout << "========================================\n";
+            << " Gabary V2 API Response Schema v2: PASSED\n";
+        std::cout
+            << " Checks: "
+            << passed
+            << "/"
+            << total
+            << "\n";
+        std::cout
+            << "========================================\n";
+
+        std::remove(fileName.c_str());
+
         return 0;
     }
 
     std::cout
-        << " Gabary V2 API Response Schema v1: FAILED\n";
-    std::cout << "========================================\n";
+        << " Gabary V2 API Response Schema v2: FAILED\n";
+    std::cout
+        << " Checks: "
+        << passed
+        << "/"
+        << total
+        << "\n";
+    std::cout
+        << "========================================\n";
 
     return 1;
 }

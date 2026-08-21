@@ -2,6 +2,7 @@
 #define HTTP_SERVER_H
 
 #include "TemporalServer.h"
+#include "GabaryAPIAdapter.h"
 #include <string>
 
 class HttpServer
@@ -16,6 +17,8 @@ private:
 
     int port;
     TemporalServer temporalServer;
+
+    Gabary::GabaryAPIAdapter gabaryAPI;
 
     void handleClient(
         int clientSocket

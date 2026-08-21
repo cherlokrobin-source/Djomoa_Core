@@ -212,9 +212,7 @@ else if(path.find("/api/json/day/") == 0)
     }
 
     body =
-        temporalServer.handleDayJSONRequest(
-            dayId
-        );
+        gabaryAPI.getDay(dayId);
 }
 
     // =========================
