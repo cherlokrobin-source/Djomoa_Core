@@ -190,8 +190,8 @@ std::string TemporalServer::handleSolarRequest(
     int day
 )
 {
-    // Solar API Timeline: Years 1 through 49999
-    if (year < 1 || year > 49999)
+    // Solar API Timeline: Years 1 through 50000
+    if (year < 1 || year > 50000)
     {
         return "OUT OF RANGE";
     }
