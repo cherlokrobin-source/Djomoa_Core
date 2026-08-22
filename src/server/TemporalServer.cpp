@@ -1,6 +1,7 @@
 #include <sstream>
 
 #include "TemporalServer.h"
+#include "LunarEngineV2.h"
 #include "../../Gabary/include/ReportFormatter.h"
 
 
@@ -189,6 +190,12 @@ std::string TemporalServer::handleSolarRequest(
     int day
 )
 {
+    // Solar API Timeline: Years 1 through 49999
+    if (year < 1 || year > 49999)
+    {
+        return "OUT OF RANGE";
+    }
+
     long long dayId =
         solarEngine.toDayId(
             year,
@@ -215,7 +222,15 @@ std::string TemporalServer::handleLunarRequest(
     int day
 )
 {
-    return R"({"error":"Lunar V2 endpoint pending"})";
+    Gabary::LunarEngineV2 lunarEngine;
+    int64_t dayId = lunarEngine.getDayId(year, month, day);
+
+    Gabary::GlobalSolarDay result =
+        solarEngine.buildDay(dayId);
+
+    return Gabary::ReportFormatter::createTextReport(
+        result
+    );
 }
 
 

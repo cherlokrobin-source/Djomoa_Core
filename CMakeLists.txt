@@ -574,6 +574,7 @@ add_executable(
     src/WeekEngine.cpp
 
     Gabary/src/SolarEngineV2.cpp
+    Gabary/src/LunarEngineV2.cpp
     Gabary/src/WeekCycleEngine.cpp
     Gabary/src/LeapYearRules.cpp
     Gabary/src/GlobalSolarDay.cpp
