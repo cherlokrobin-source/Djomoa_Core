@@ -2073,3 +2073,25 @@ add_test(
 )
 
 # ============================================
+
+# ============================================
+# Gabary V2 - HTTP API Data Integrity Test
+# ============================================
+
+add_executable(
+    GabaryHTTPAPIDataIntegrityTest
+    Gabary/tests/GabaryHTTPAPIDataIntegrityTest.cpp
+)
+
+target_include_directories(
+    GabaryHTTPAPIDataIntegrityTest PRIVATE
+    Gabary/include
+    include
+)
+
+add_test(
+    NAME GabaryHTTPAPIDataIntegrityTest
+    COMMAND GabaryHTTPAPIDataIntegrityTest
+)
+
+# ============================================
