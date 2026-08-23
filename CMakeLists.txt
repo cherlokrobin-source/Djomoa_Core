@@ -2096,3 +2096,25 @@ add_test(
 )
 
 # ============================================
+
+# ============================================
+# Solar 50K Full Year Count Test
+# ============================================
+
+add_executable(
+    Solar50KFullYearCountTest
+    Gabary/tests/Solar50KFullYearCountTest.cpp
+    Gabary/src/SolarEngineV2.cpp
+    Gabary/src/LeapYearRules.cpp
+    Gabary/src/WeekCycleEngine.cpp
+)
+
+target_include_directories(
+    Solar50KFullYearCountTest PRIVATE
+    Gabary/include
+)
+
+add_test(
+    NAME Solar50KFullYearCountTest
+    COMMAND Solar50KFullYearCountTest
+)
