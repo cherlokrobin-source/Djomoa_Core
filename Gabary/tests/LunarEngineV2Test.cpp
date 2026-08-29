@@ -102,7 +102,7 @@ int main()
     // 50,000-year solar timeline endpoint
     // --------------------------------------------------------
 
-    Date finalDay = lunar.getDate(18262125);
+    Date finalDay = lunar.getDate(18261759);
 
     std::cout
         << "\n50,000-Year Endpoint:\n"

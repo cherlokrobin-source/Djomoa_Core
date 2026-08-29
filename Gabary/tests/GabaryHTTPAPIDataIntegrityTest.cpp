@@ -136,19 +136,19 @@ int main()
 
     {
         std::string json =
-            getBody(base + "/api/json/day/18262125");
+            getBody(base + "/api/json/day/18261759");
 
         ++total;
 
         bool ok =
-            contains(json, "\"dayId\":18262125") &&
-            contains(json, "\"year\":50000") &&
+            contains(json, "\"dayId\":18261759") &&
+            contains(json, "\"year\":49999") &&
             contains(json, "\"month\":12") &&
             contains(json, "\"day\":31") &&
             contains(json, "\"monthName\":\"December\"") &&
             contains(json, "\"weekday\":\"Thursday\"") &&
-            contains(json, "\"dayOfYear\":366") &&
-            contains(json, "\"leapYear\":true") &&
+            contains(json, "\"dayOfYear\":365") &&
+            contains(json, "\"leapYear\":false") &&
             contains(json, "\"architecture\"") &&
             contains(json, "\"name\":\"Gabary V2\"") &&
             contains(json, "\"engine\":\"GabaryDualCalendarEngine\"") &&

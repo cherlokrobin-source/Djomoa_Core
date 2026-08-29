@@ -16,7 +16,7 @@ int main()
     GabaryAPIAdapter api;
 
     constexpr int64_t MIN_DAY = 1;
-    constexpr int64_t MAX_DAY = 18262125;
+    constexpr int64_t MAX_DAY = 18261759;
 
     // ------------------------------------------------
     // Minimum Global Day contract
@@ -40,7 +40,7 @@ int main()
 
         assert(!json.empty());
         assert(
-            json.find("\"dayId\":18262125")
+            json.find("\"dayId\":18261759")
             != std::string::npos
         );
 
@@ -66,16 +66,16 @@ int main()
     // Solar final boundary contract
     // ------------------------------------------------
     {
-        std::string json = api.getSolar(50000, 12, 31);
+        std::string json = api.getSolar(49999, 12, 31);
 
         assert(!json.empty());
         assert(
-            json.find("\"dayId\":18262125")
+            json.find("\"dayId\":18261759")
             != std::string::npos
         );
 
         assert(
-            json.find("\"year\":50000")
+            json.find("\"year\":49999")
             != std::string::npos
         );
 

@@ -192,7 +192,7 @@ else if(path.find("/api/json/day/") == 0)
        dayId > Gabary::GabaryNavigationEngine::MAX_GLOBAL_DAY)
     {
         body =
-            R"({"error":"Global Solar Day out of range","minGlobalDay":1,"maxGlobalDay":18262125})";
+            R"({"error":"Global Solar Day out of range","minGlobalDay":1,"maxGlobalDay":18261759})";
 
         std::string response =
             buildResponse(
@@ -258,12 +258,23 @@ else if(path.find("/api/json/day/") == 0)
         getline(ss, day, '/');
 
 
-        body =
-            temporalServer.handleSolarRequest(
-                std::stoi(year),
-                std::stoi(month),
-                std::stoi(day)
-            );
+        int solarYear = std::stoi(year);
+        int solarMonth = std::stoi(month);
+        int solarDay = std::stoi(day);
+
+        if (solarYear < 1 || solarYear > 49999)
+        {
+            body = "OUT OF RANGE";
+        }
+        else
+        {
+            body =
+                temporalServer.handleSolarRequest(
+                    solarYear,
+                    solarMonth,
+                    solarDay
+                );
+        }
     }
 
 

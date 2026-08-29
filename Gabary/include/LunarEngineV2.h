@@ -9,7 +9,10 @@ namespace Gabary
 class LunarEngineV2
 {
 public:
-
+static constexpr long long MIN_GLOBAL_DAY = 1LL;
+static constexpr long long MAX_GLOBAL_DAY = 17716312LL;
+static constexpr int MIN_LUNAR_YEAR = 1;
+static constexpr int MAX_LUNAR_YEAR = 49999;
     static constexpr int CYCLE_YEARS = 33;
 
     static constexpr int NORMAL_YEAR_DAYS = 354;

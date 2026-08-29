@@ -42,15 +42,15 @@ int main()
     // FINAL DAY
     // ----------------------------------------
     std::string finalDay =
-        server.handleDayJSONRequest(18262125);
+        server.handleDayJSONRequest(18261759);
 
     assert(
-        finalDay.find("\"globalSolarDay\":18262125")
+        finalDay.find("\"globalSolarDay\":18261759")
         != std::string::npos
     );
 
     assert(
-        finalDay.find("\"year\":50000")
+        finalDay.find("\"year\":49999")
         != std::string::npos
     );
 
@@ -65,25 +65,25 @@ int main()
     );
 
     assert(
-        finalDay.find("\"dayOfYear\":366")
+        finalDay.find("\"dayOfYear\":365")
         != std::string::npos
     );
 
     assert(
-        finalDay.find("\"leapYear\":true")
+        finalDay.find("\"leapYear\":false")
         != std::string::npos
     );
 
-    std::cout << "[PASS] Global Solar Day 18262125\n";
+    std::cout << "[PASS] Global Solar Day 18261759\n";
 
     // ----------------------------------------
     // CONTRACT RANGE
     // ----------------------------------------
     constexpr long long MIN_DAY = 1;
-    constexpr long long MAX_DAY = 18262125;
+    constexpr long long MAX_DAY = 18261759;
 
     assert(MIN_DAY == 1);
-    assert(MAX_DAY == 18262125);
+    assert(MAX_DAY == 18261759);
     assert(MAX_DAY > MIN_DAY);
 
     std::cout << "[PASS] Global Solar Day range\n";

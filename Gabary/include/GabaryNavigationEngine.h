@@ -11,7 +11,7 @@ class GabaryNavigationEngine
 {
 public:
     static constexpr int64_t MIN_GLOBAL_DAY = 1;
-    static constexpr int64_t MAX_GLOBAL_DAY = 18262125;
+    static constexpr int64_t MAX_GLOBAL_DAY = 18261759;
 
     GabaryNavigationEngine();
 

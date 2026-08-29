@@ -86,7 +86,7 @@ int main()
     const std::string serverUrl(server);
 
     const long long MIN_DAY = 1;
-    const long long MAX_DAY = 18262125;
+    const long long MAX_DAY = 18261759;
 
     int passed = 0;
     int total = 0;
@@ -209,23 +209,23 @@ int main()
 
     total++;
     if(check(
-        "Global Solar Day 18262125 -> dayId",
+        "Global Solar Day 18261759 -> dayId",
         maxBody,
-        "\"dayId\":18262125"
+        "\"dayId\":18261759"
     ))
         passed++;
 
     total++;
     if(check(
-        "Global Solar Day 18262125 -> solar year",
+        "Global Solar Day 18261759 -> solar year",
         maxBody,
-        "\"year\":50000"
+        "\"year\":49999"
     ))
         passed++;
 
     total++;
     if(check(
-        "Global Solar Day 18262125 -> solar month",
+        "Global Solar Day 18261759 -> solar month",
         maxBody,
         "\"month\":12"
     ))
@@ -233,7 +233,7 @@ int main()
 
     total++;
     if(check(
-        "Global Solar Day 18262125 -> solar day",
+        "Global Solar Day 18261759 -> solar day",
         maxBody,
         "\"day\":31"
     ))
@@ -241,7 +241,7 @@ int main()
 
     total++;
     if(check(
-        "Global Solar Day 18262125 -> monthName",
+        "Global Solar Day 18261759 -> monthName",
         maxBody,
         "\"monthName\":\"December\""
     ))
@@ -249,7 +249,7 @@ int main()
 
     total++;
     if(check(
-        "Global Solar Day 18262125 -> weekday",
+        "Global Solar Day 18261759 -> weekday",
         maxBody,
         "\"weekday\":\"Thursday\""
     ))
@@ -257,23 +257,23 @@ int main()
 
     total++;
     if(check(
-        "Global Solar Day 18262125 -> dayOfYear",
+        "Global Solar Day 18261759 -> dayOfYear",
         maxBody,
-        "\"dayOfYear\":366"
+        "\"dayOfYear\":365"
     ))
         passed++;
 
     total++;
     if(check(
-        "Global Solar Day 18262125 -> leapYear",
+        "Global Solar Day 18261759 -> leapYear",
         maxBody,
-        "\"leapYear\":true"
+        "\"leapYear\":false"
     ))
         passed++;
 
     total++;
     if(check(
-        "Global Solar Day 18262125 -> lunar",
+        "Global Solar Day 18261759 -> lunar",
         maxBody,
         "\"lunar\""
     ))
@@ -281,7 +281,7 @@ int main()
 
     total++;
     if(check(
-        "Global Solar Day 18262125 -> architecture",
+        "Global Solar Day 18261759 -> architecture",
         maxBody,
         "\"name\":\"Gabary V2\""
     ))

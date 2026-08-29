@@ -140,6 +140,50 @@ int main()
     );
 
     // ========================================================
+    // Lunar timeline final boundary
+    // ========================================================
+
+    auto finalDay = lunar.getDate(17716312);
+
+    std::cout
+        << "\nLunar Timeline Final Supported Date:\n"
+        << "Lunar Date: "
+        << finalDay.day << "/"
+        << finalDay.month << "/"
+        << finalDay.year << "\n"
+        << "Global Day ID: "
+        << finalDay.dayId << "\n";
+
+    check(
+        finalDay.day == 29 &&
+        finalDay.month == 12 &&
+        finalDay.year == 49999 &&
+        finalDay.dayId == 17716312,
+        "Lunar 29/12/49999 is valid"
+    );
+
+    auto lunarAfterEnd = lunar.getDate(17716313);
+
+    check(
+        lunarAfterEnd.dayId == 0,
+        "Lunar day after final boundary is rejected"
+    );
+
+    check(
+        lunar.getDayId(49999, 12, 29) == 17716312,
+        "Lunar 49999/12/29 -> Day 17716312"
+    );
+
+    check(
+        lunar.getDayId(49999, 12, 30) == -1,
+        "Lunar 49999/12/30 is invalid"
+    );
+
+    check(
+        lunar.getDayId(50000, 1, 1) == -1,
+        "Lunar Year 50000 is rejected"
+    );
+
     // Final result
     // ========================================================
 

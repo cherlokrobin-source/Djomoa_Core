@@ -17,7 +17,7 @@ int main()
     GabaryQueryEngine query;
 
     constexpr int64_t MIN_DAY = 1;
-    constexpr int64_t MAX_DAY = 18262125;
+    constexpr int64_t MAX_DAY = 18261759;
 
     // ------------------------------------------------
     // 1. Minimum Global Day

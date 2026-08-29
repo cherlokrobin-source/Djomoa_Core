@@ -184,7 +184,7 @@ int main()
     // ------------------------------------------------
     // FINAL BOUNDARY
     // ------------------------------------------------
-    verifyDay(api, engine, 18262125);
+    verifyDay(api, engine, 18261759);
 
     std::cout
         << "[PASS] Final boundary JSON data integrity\n";

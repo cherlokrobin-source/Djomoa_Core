@@ -120,7 +120,8 @@ Date LunarEngineV2::getDate(long long globalSolarDay) const
 {
     Date result{};
 
-    if (globalSolarDay < 1)
+    if (globalSolarDay < MIN_GLOBAL_DAY ||
+        globalSolarDay > MAX_GLOBAL_DAY)
     {
         return result;
     }
@@ -241,7 +242,8 @@ long long LunarEngineV2::getDayId(
     int day
 ) const
 {
-    if (year < 1 ||
+    if (year < MIN_LUNAR_YEAR ||
+        year > MAX_LUNAR_YEAR ||
         month < 1 ||
         month > 12 ||
         day < 1)

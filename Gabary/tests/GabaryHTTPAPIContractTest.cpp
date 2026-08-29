@@ -39,8 +39,8 @@ int main()
             200
         },
         {
-            "GET /api/json/day/18262125",
-            "/api/json/day/18262125",
+            "GET /api/json/day/18261759",
+            "/api/json/day/18261759",
             200
         },
         {
@@ -49,8 +49,8 @@ int main()
             400
         },
         {
-            "GET /api/json/day/18262126",
-            "/api/json/day/18262126",
+            "GET /api/json/day/18261760",
+            "/api/json/day/18261760",
             400
         }
     };
