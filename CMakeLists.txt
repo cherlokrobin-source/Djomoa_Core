@@ -623,6 +623,7 @@ add_executable(
     Gabary/src/GabaryQueryEngine.cpp
     Gabary/src/GabaryNavigationEngine.cpp
     Gabary/src/GabaryDualCalendarEngine.cpp
+    Gabary/src/GabaryNavigationEngine.cpp
     Gabary/src/SolarEngineV2.cpp
     Gabary/src/LunarEngineV2.cpp
     Gabary/src/WeekCycleEngine.cpp
@@ -1428,6 +1429,7 @@ add_test(
 add_executable(
     GabaryDualCalendarEngineTest
     Gabary/src/GabaryDualCalendarEngine.cpp
+    Gabary/src/GabaryNavigationEngine.cpp
     Gabary/tests/GabaryDualCalendarEngineTest.cpp
     Gabary/src/SolarEngineV2.cpp
     Gabary/src/LunarEngineV2.cpp
@@ -1450,6 +1452,7 @@ add_executable(
     Gabary/src/GabaryNavigationEngine.cpp
     Gabary/tests/GabaryNavigationEngineTest.cpp
     Gabary/src/GabaryDualCalendarEngine.cpp
+    Gabary/src/GabaryNavigationEngine.cpp
     Gabary/src/SolarEngineV2.cpp
     Gabary/src/LunarEngineV2.cpp
     Gabary/src/WeekCycleEngine.cpp
@@ -1476,6 +1479,7 @@ add_executable(
     Gabary/src/GabaryNavigationEngine.cpp
     Gabary/tests/GabaryNavigationEngineBoundaryTest.cpp
     Gabary/src/GabaryDualCalendarEngine.cpp
+    Gabary/src/GabaryNavigationEngine.cpp
     Gabary/src/SolarEngineV2.cpp
     Gabary/src/LunarEngineV2.cpp
     Gabary/src/WeekCycleEngine.cpp
@@ -1502,6 +1506,7 @@ add_executable(
     Gabary/src/GabaryNavigationEngine.cpp
     Gabary/tests/GabaryNavigationEngineLongRangeTest.cpp
     Gabary/src/GabaryDualCalendarEngine.cpp
+    Gabary/src/GabaryNavigationEngine.cpp
     Gabary/src/SolarEngineV2.cpp
     Gabary/src/LunarEngineV2.cpp
     Gabary/src/WeekCycleEngine.cpp
@@ -1528,6 +1533,7 @@ add_executable(
     Gabary/src/GabaryNavigationEngine.cpp
     Gabary/tests/GabaryNavigationEngineSolarRoundTripTest.cpp
     Gabary/src/GabaryDualCalendarEngine.cpp
+    Gabary/src/GabaryNavigationEngine.cpp
     Gabary/src/SolarEngineV2.cpp
     Gabary/src/LunarEngineV2.cpp
     Gabary/src/WeekCycleEngine.cpp
@@ -1555,6 +1561,7 @@ add_executable(
     Gabary/src/GabaryNavigationEngine.cpp
     Gabary/tests/GabaryQueryEngineTest.cpp
     Gabary/src/GabaryDualCalendarEngine.cpp
+    Gabary/src/GabaryNavigationEngine.cpp
     Gabary/src/SolarEngineV2.cpp
     Gabary/src/LunarEngineV2.cpp
     Gabary/src/WeekCycleEngine.cpp
@@ -1583,6 +1590,7 @@ add_executable(
     Gabary/src/GabaryNavigationEngine.cpp
     Gabary/tests/GabaryDualReportFormatterTest.cpp
     Gabary/src/GabaryDualCalendarEngine.cpp
+    Gabary/src/GabaryNavigationEngine.cpp
     Gabary/src/SolarEngineV2.cpp
     Gabary/src/LunarEngineV2.cpp
     Gabary/src/WeekCycleEngine.cpp
@@ -1606,6 +1614,7 @@ add_test(
 add_executable(
     GabaryDualCalendarBoundaryTest
     Gabary/src/GabaryDualCalendarEngine.cpp
+    Gabary/src/GabaryNavigationEngine.cpp
     Gabary/src/SolarEngineV2.cpp
     Gabary/src/LunarEngineV2.cpp
     Gabary/src/WeekCycleEngine.cpp
@@ -1630,6 +1639,7 @@ add_test(
 add_executable(
     GabaryDualCalendarEndBoundaryTest
     Gabary/src/GabaryDualCalendarEngine.cpp
+    Gabary/src/GabaryNavigationEngine.cpp
     Gabary/src/GabaryNavigationEngine.cpp
     Gabary/src/SolarEngineV2.cpp
     Gabary/src/LunarEngineV2.cpp
@@ -1660,6 +1670,7 @@ add_executable(
     Gabary/src/GabaryNavigationEngine.cpp
     Gabary/src/GabaryDualReportFormatter.cpp
     Gabary/src/GabaryDualCalendarEngine.cpp
+    Gabary/src/GabaryNavigationEngine.cpp
     Gabary/src/SolarEngineV2.cpp
     Gabary/src/LunarEngineV2.cpp
     Gabary/src/WeekCycleEngine.cpp
@@ -1689,6 +1700,7 @@ add_executable(
     Gabary/src/GabaryQueryEngine.cpp
     Gabary/src/GabaryNavigationEngine.cpp
     Gabary/src/GabaryDualCalendarEngine.cpp
+    Gabary/src/GabaryNavigationEngine.cpp
     Gabary/src/SolarEngineV2.cpp
     Gabary/src/LunarEngineV2.cpp
     Gabary/src/WeekCycleEngine.cpp
@@ -1719,6 +1731,7 @@ add_executable(
     Gabary/src/GabaryQueryEngine.cpp
     Gabary/src/GabaryNavigationEngine.cpp
     Gabary/src/GabaryDualCalendarEngine.cpp
+    Gabary/src/GabaryNavigationEngine.cpp
     Gabary/src/SolarEngineV2.cpp
     Gabary/src/LunarEngineV2.cpp
     Gabary/src/WeekCycleEngine.cpp
@@ -1750,6 +1763,7 @@ add_executable(
     Gabary/src/GabaryQueryEngine.cpp
     Gabary/src/GabaryNavigationEngine.cpp
     Gabary/src/GabaryDualCalendarEngine.cpp
+    Gabary/src/GabaryNavigationEngine.cpp
     Gabary/src/SolarEngineV2.cpp
     Gabary/src/LunarEngineV2.cpp
     Gabary/src/WeekCycleEngine.cpp
@@ -1849,6 +1863,7 @@ add_executable(
     GabaryNavigationEngineContractTest
     Gabary/src/GabaryNavigationEngine.cpp
     Gabary/src/GabaryDualCalendarEngine.cpp
+    Gabary/src/GabaryNavigationEngine.cpp
     Gabary/src/SolarEngineV2.cpp
     Gabary/src/LunarEngineV2.cpp
     Gabary/src/WeekCycleEngine.cpp
@@ -1878,6 +1893,7 @@ add_executable(
     GabaryNavigationEngineDateRoundTripTest
     Gabary/src/GabaryNavigationEngine.cpp
     Gabary/src/GabaryDualCalendarEngine.cpp
+    Gabary/src/GabaryNavigationEngine.cpp
     Gabary/src/SolarEngineV2.cpp
     Gabary/src/LunarEngineV2.cpp
     Gabary/src/WeekCycleEngine.cpp
@@ -1907,6 +1923,7 @@ add_executable(
     GabaryNavigationEngineBoundaryDateTest
     Gabary/src/GabaryNavigationEngine.cpp
     Gabary/src/GabaryDualCalendarEngine.cpp
+    Gabary/src/GabaryNavigationEngine.cpp
     Gabary/src/SolarEngineV2.cpp
     Gabary/src/LunarEngineV2.cpp
     Gabary/src/WeekCycleEngine.cpp
@@ -1937,6 +1954,7 @@ add_executable(
     Gabary/src/GabaryQueryEngine.cpp
     Gabary/src/GabaryNavigationEngine.cpp
     Gabary/src/GabaryDualCalendarEngine.cpp
+    Gabary/src/GabaryNavigationEngine.cpp
     Gabary/src/SolarEngineV2.cpp
     Gabary/src/LunarEngineV2.cpp
     Gabary/src/WeekCycleEngine.cpp
@@ -1965,6 +1983,7 @@ add_executable(
     Gabary/src/GabaryNavigationEngine.cpp
     Gabary/src/GabaryDualReportFormatter.cpp
     Gabary/src/GabaryDualCalendarEngine.cpp
+    Gabary/src/GabaryNavigationEngine.cpp
     Gabary/src/SolarEngineV2.cpp
     Gabary/src/LunarEngineV2.cpp
     Gabary/src/WeekCycleEngine.cpp
@@ -1998,6 +2017,7 @@ add_executable(
     Gabary/src/GabaryQueryEngine.cpp
     Gabary/src/GabaryNavigationEngine.cpp
     Gabary/src/GabaryDualCalendarEngine.cpp
+    Gabary/src/GabaryNavigationEngine.cpp
     Gabary/src/SolarEngineV2.cpp
     Gabary/src/LunarEngineV2.cpp
     Gabary/src/WeekCycleEngine.cpp
@@ -2023,6 +2043,7 @@ add_test(
 add_executable(
     GabaryDualCalendarEngineContractTest
     Gabary/src/GabaryDualCalendarEngine.cpp
+    Gabary/src/GabaryNavigationEngine.cpp
     Gabary/src/SolarEngineV2.cpp
     Gabary/src/LunarEngineV2.cpp
     Gabary/src/WeekCycleEngine.cpp
@@ -2055,6 +2076,7 @@ add_executable(
     Gabary/src/GabaryQueryEngine.cpp
     Gabary/src/GabaryNavigationEngine.cpp
     Gabary/src/GabaryDualCalendarEngine.cpp
+    Gabary/src/GabaryNavigationEngine.cpp
     Gabary/src/SolarEngineV2.cpp
     Gabary/src/LunarEngineV2.cpp
     Gabary/src/WeekCycleEngine.cpp
@@ -2117,4 +2139,30 @@ target_include_directories(
 add_test(
     NAME Solar50KFullYearCountTest
     COMMAND Solar50KFullYearCountTest
+)
+# ============================================
+# Gabary V2 - Dual Calendar Long-Range Test
+# ============================================
+
+add_executable(
+    GabaryDualCalendarLongRangeTest
+    Gabary/tests/GabaryDualCalendarLongRangeTest.cpp
+    Gabary/src/GabaryDualCalendarEngine.cpp
+    Gabary/src/GabaryNavigationEngine.cpp
+    Gabary/src/SolarEngineV2.cpp
+    Gabary/src/LunarEngineV2.cpp
+    Gabary/src/WeekCycleEngine.cpp
+    Gabary/src/LeapYearRules.cpp
+    Gabary/src/GlobalSolarDay.cpp
+)
+
+target_include_directories(
+    GabaryDualCalendarLongRangeTest PRIVATE
+    Gabary/include
+    include
+)
+
+add_test(
+    NAME GabaryDualCalendarLongRangeTest
+    COMMAND GabaryDualCalendarLongRangeTest
 )
