@@ -1954,7 +1954,6 @@ add_executable(
     Gabary/src/GabaryQueryEngine.cpp
     Gabary/src/GabaryNavigationEngine.cpp
     Gabary/src/GabaryDualCalendarEngine.cpp
-    Gabary/src/GabaryNavigationEngine.cpp
     Gabary/src/SolarEngineV2.cpp
     Gabary/src/LunarEngineV2.cpp
     Gabary/src/WeekCycleEngine.cpp
@@ -1971,6 +1970,32 @@ target_include_directories(
 add_test(
     NAME GabaryQueryEngineContractTest
     COMMAND GabaryQueryEngineContractTest
+)
+# ============================================
+# Gabary V2 - Query Engine Long-Range Test
+# ============================================
+
+add_executable(
+    GabaryQueryEngineLongRangeTest
+    Gabary/tests/GabaryQueryEngineLongRangeTest.cpp
+    Gabary/src/GabaryQueryEngine.cpp
+    Gabary/src/GabaryNavigationEngine.cpp
+    Gabary/src/GabaryDualCalendarEngine.cpp
+    Gabary/src/SolarEngineV2.cpp
+    Gabary/src/LunarEngineV2.cpp
+    Gabary/src/WeekCycleEngine.cpp
+    Gabary/src/LeapYearRules.cpp
+)
+
+target_include_directories(
+    GabaryQueryEngineLongRangeTest PRIVATE
+    Gabary/include
+    include
+)
+
+add_test(
+    NAME GabaryQueryEngineLongRangeTest
+    COMMAND GabaryQueryEngineLongRangeTest
 )
 # ============================================
 # Gabary V2 - Temporal Service Contract Test
