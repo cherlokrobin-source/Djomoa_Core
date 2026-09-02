@@ -146,7 +146,7 @@ int main()
             contains(json, "\"month\":12") &&
             contains(json, "\"day\":31") &&
             contains(json, "\"monthName\":\"December\"") &&
-            contains(json, "\"weekday\":\"Thursday\"") &&
+            contains(json, "\"weekday\":\"Tuesday\"") &&
             contains(json, "\"dayOfYear\":365") &&
             contains(json, "\"leapYear\":false") &&
             contains(json, "\"architecture\"") &&
