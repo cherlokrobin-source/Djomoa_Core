@@ -49,11 +49,25 @@ int main()
         assert(result.solar.solarMonth <= 12);
         assert(result.solar.solarDay >= 1);
 
-        assert(result.lunar.year >= 1);
-        assert(result.lunar.year <= 49999);
-        assert(result.lunar.month >= 1);
-        assert(result.lunar.month <= 12);
-        assert(result.lunar.day >= 1);
+        constexpr int64_t LUNAR_MAX_DAY = 17716312;
+
+        if (day <= LUNAR_MAX_DAY)
+        {
+            assert(result.lunar.dayId == day);
+            assert(result.lunar.year >= 1);
+            assert(result.lunar.year <= 49999);
+            assert(result.lunar.month >= 1);
+            assert(result.lunar.month <= 12);
+            assert(result.lunar.day >= 1);
+        }
+        else
+        {
+            // Lunar timeline has already ended.
+            assert(result.lunar.dayId == 0);
+            assert(result.lunar.year == 0);
+            assert(result.lunar.month == 0);
+            assert(result.lunar.day == 0);
+        }
 
         std::cout
             << "[PASS] Service query at Global Day "

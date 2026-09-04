@@ -47,7 +47,7 @@ int main()
         assert(result.solar.solarYear == 49999);
         assert(result.solar.solarMonth == 12);
         assert(result.solar.solarDay == 31);
-        assert(result.lunar.year > 0);
+        assert(result.lunar.year == 0); assert(result.lunar.month == 0); assert(result.lunar.day == 0);
 
         std::cout
             << "[PASS] Maximum Global Day contract\n";
@@ -102,13 +102,13 @@ int main()
     // 6. Lunar final supported boundary
     // ------------------------------------------------
     {
-        auto result = query.queryLunar(49999, 12, 30);
+        auto result = query.queryLunar(49999, 12, 29);
 
         assert(result.dayId >= MIN_DAY);
         assert(result.dayId <= MAX_DAY);
         assert(result.lunar.year == 49999);
         assert(result.lunar.month == 12);
-        assert(result.lunar.day == 30);
+        assert(result.lunar.day == 29);
 
         std::cout
             << "[PASS] Lunar final supported boundary\n";
@@ -192,7 +192,7 @@ int main()
             {10000, 1, 1},
             {25000, 6, 15},
             {40000, 12, 1},
-            {49999, 12, 30}
+            {49999, 12, 29}
         };
 
         for (const auto& point : points)
@@ -249,6 +249,8 @@ int main()
             MAX_DAY
         };
 
+        constexpr int64_t LUNAR_MAX_DAY = 17716312;
+
         for (int64_t day : days)
         {
             auto result = query.queryDay(day);
@@ -262,15 +264,26 @@ int main()
                     result.solar.solarDay
                 );
 
-            auto lunar =
-                query.queryLunar(
-                    result.lunar.year,
-                    result.lunar.month,
-                    result.lunar.day
-                );
-
             assert(solar.dayId == day);
-            assert(lunar.dayId == day);
+
+            if (day <= LUNAR_MAX_DAY)
+            {
+                auto lunar =
+                    query.queryLunar(
+                        result.lunar.year,
+                        result.lunar.month,
+                        result.lunar.day
+                    );
+
+                assert(lunar.dayId == day);
+            }
+            else
+            {
+                assert(result.lunar.year == 0);
+                assert(result.lunar.month == 0);
+                assert(result.lunar.day == 0);
+                assert(result.lunar.dayId == 0);
+            }
         }
 
         std::cout

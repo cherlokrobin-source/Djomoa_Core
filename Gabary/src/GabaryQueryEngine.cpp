@@ -27,6 +27,12 @@ GabaryQueryEngine::querySolar(
             day
         );
 
+    if (dayId < GabaryNavigationEngine::MIN_GLOBAL_DAY ||
+        dayId > GabaryNavigationEngine::MAX_GLOBAL_DAY)
+    {
+        return DualCalendarDate{};
+    }
+
     return navigationEngine.getDate(dayId);
 }
 
@@ -43,6 +49,12 @@ GabaryQueryEngine::queryLunar(
             month,
             day
         );
+
+    if (dayId < GabaryNavigationEngine::MIN_GLOBAL_DAY ||
+        dayId > GabaryNavigationEngine::MAX_GLOBAL_DAY)
+    {
+        return DualCalendarDate{};
+    }
 
     return navigationEngine.getDate(dayId);
 }

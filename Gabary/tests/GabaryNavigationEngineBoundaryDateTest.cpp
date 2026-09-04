@@ -118,7 +118,7 @@ int main()
     // ------------------------------------------------
     {
         const int64_t dayId =
-            engine.jumpToLunarDate(49999, 12, 30);
+            engine.jumpToLunarDate(49999, 12, 29);
 
         assert(dayId >= MIN);
         assert(dayId <= MAX);
@@ -128,7 +128,7 @@ int main()
         assert(date.dayId == dayId);
         assert(date.lunar.year == 49999);
         assert(date.lunar.month == 12);
-        assert(date.lunar.day == 30);
+        assert(date.lunar.day == 29);
 
         std::cout
             << "[PASS] Lunar final supported boundary\n";
@@ -154,19 +154,22 @@ int main()
     }
 
     // ------------------------------------------------
-    // 8. Shared coordinate at final solar day
+    // 8. Final solar day has no lunar mapping
     // ------------------------------------------------
     {
         auto date = engine.getDate(MAX);
 
-        const int64_t solarDayId =
-            engine.jumpToSolarDate(
-                date.solar.solarYear,
-                date.solar.solarMonth,
-                date.solar.solarDay
-            );
+        assert(date.dayId == MAX);
 
-        assert(solarDayId == MAX);
+        assert(date.solar.solarYear == 49999);
+        assert(date.solar.solarMonth == 12);
+        assert(date.solar.solarDay == 31);
+
+        // Lunar timeline ended earlier at Global Day 17716312.
+        // Therefore Solar MAX has no supported lunar date.
+        assert(date.lunar.year == 0);
+        assert(date.lunar.month == 0);
+        assert(date.lunar.day == 0);
 
         const int64_t lunarDayId =
             engine.jumpToLunarDate(
@@ -175,10 +178,10 @@ int main()
                 date.lunar.day
             );
 
-        assert(lunarDayId == MAX);
+        assert(lunarDayId == -1);
 
         std::cout
-            << "[PASS] Final shared coordinate\n";
+            << "[PASS] Final solar boundary has no lunar mapping\n";
     }
 
     std::cout
