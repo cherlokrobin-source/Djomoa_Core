@@ -1,18 +1,18 @@
-Start testing: Sep 03 21:02 CET
+Start testing: Sep 04 14:06 CET
 ----------------------------------------------------------
 1/86 Testing: TemporalReportJSONTest
 1/86 Test: TemporalReportJSONTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/TemporalReportJSONTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"TemporalReportJSONTest" start time: Sep 03 21:02 CET
+"TemporalReportJSONTest" start time: Sep 04 14:06 CET
 Output:
 ----------------------------------------------------------
 {"dayId":739823,"solar":{"year":2026,"month":7,"day":26},"lunar":{"year":2088,"month":12,"day":5},"week":{"index":6,"name":"Thursday"},"cycle":62,"historicalIndex":739823}
 <end of output>
-Test time =   0.02 sec
+Test time =   0.04 sec
 ----------------------------------------------------------
 Test Passed.
-"TemporalReportJSONTest" end time: Sep 03 21:02 CET
+"TemporalReportJSONTest" end time: Sep 04 14:06 CET
 "TemporalReportJSONTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -20,7 +20,7 @@ Test Passed.
 2/86 Test: TemporalReportTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/TemporalReportTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"TemporalReportTest" start time: Sep 03 21:02 CET
+"TemporalReportTest" start time: Sep 04 14:06 CET
 Output:
 ----------------------------------------------------------
 Temporal Report Validation Test
@@ -36,7 +36,7 @@ Temporal Report Validation SUCCESS
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"TemporalReportTest" end time: Sep 03 21:02 CET
+"TemporalReportTest" end time: Sep 04 14:06 CET
 "TemporalReportTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -44,7 +44,7 @@ Test Passed.
 3/86 Test: Archive50000Test
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/Archive50000Test"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"Archive50000Test" start time: Sep 03 21:02 CET
+"Archive50000Test" start time: Sep 04 14:06 CET
 Output:
 ----------------------------------------------------------
 Golden Calendar 50000 Years Archive Test
@@ -92,7 +92,7 @@ Lunar Year: 49999
 Test time =   0.03 sec
 ----------------------------------------------------------
 Test Passed.
-"Archive50000Test" end time: Sep 03 21:02 CET
+"Archive50000Test" end time: Sep 04 14:06 CET
 "Archive50000Test" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -100,7 +100,7 @@ Test Passed.
 4/86 Test: TemporalAutomationTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/TemporalAutomationTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"TemporalAutomationTest" start time: Sep 03 21:02 CET
+"TemporalAutomationTest" start time: Sep 04 14:06 CET
 Output:
 ----------------------------------------------------------
 Temporal Automation Test
@@ -109,7 +109,7 @@ Temporal Automation Test Passed
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"TemporalAutomationTest" end time: Sep 03 21:02 CET
+"TemporalAutomationTest" end time: Sep 04 14:06 CET
 "TemporalAutomationTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -117,7 +117,7 @@ Test Passed.
 5/86 Test: Cycle33Test
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/Cycle33Test"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"Cycle33Test" start time: Sep 03 21:02 CET
+"Cycle33Test" start time: Sep 04 14:06 CET
 Output:
 ----------------------------------------------------------
 Golden Calendar - Lunar 33 Year Cycle Test
@@ -307,7 +307,7 @@ Lunar End Date: 1 محرم 34
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"Cycle33Test" end time: Sep 03 21:02 CET
+"Cycle33Test" end time: Sep 04 14:06 CET
 "Cycle33Test" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -315,7 +315,7 @@ Test Passed.
 6/86 Test: MultiCycleTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/MultiCycleTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"MultiCycleTest" start time: Sep 03 21:02 CET
+"MultiCycleTest" start time: Sep 04 14:06 CET
 Output:
 ----------------------------------------------------------
 Golden Calendar - Multi 33 Year Cycle Test
@@ -372,10 +372,10 @@ Solar: 23 فبراير 321
 Lunar: 1 محرم 331
 --------------------------
 <end of output>
-Test time =   0.01 sec
+Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"MultiCycleTest" end time: Sep 03 21:02 CET
+"MultiCycleTest" end time: Sep 04 14:06 CET
 "MultiCycleTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -383,7 +383,7 @@ Test Passed.
 7/86 Test: Year2083Test
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/Year2083Test"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"Year2083Test" start time: Sep 03 21:02 CET
+"Year2083Test" start time: Sep 04 14:06 CET
 Output:
 ----------------------------------------------------------
 Golden Calendar 50000-Year Chronology Engine Reference Test
@@ -400,7 +400,7 @@ Lunar:
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"Year2083Test" end time: Sep 03 21:02 CET
+"Year2083Test" end time: Sep 04 14:06 CET
 "Year2083Test" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -408,7 +408,7 @@ Test Passed.
 8/86 Test: ChronologyMainTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/ChronologyMainTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"ChronologyMainTest" start time: Sep 03 21:02 CET
+"ChronologyMainTest" start time: Sep 04 14:06 CET
 Output:
 ----------------------------------------------------------
 Golden Calendar Chronology Test
@@ -431,7 +431,7 @@ Week: الثلاثاء
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"ChronologyMainTest" end time: Sep 03 21:02 CET
+"ChronologyMainTest" end time: Sep 04 14:06 CET
 "ChronologyMainTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -439,7 +439,7 @@ Test Passed.
 9/86 Test: DayIdTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/DayIdTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"DayIdTest" start time: Sep 03 21:02 CET
+"DayIdTest" start time: Sep 04 14:06 CET
 Output:
 ----------------------------------------------------------
 Golden Calendar - Solar Day ID Test
@@ -463,7 +463,7 @@ Day ID 760436 -> 1/1/2083
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"DayIdTest" end time: Sep 03 21:02 CET
+"DayIdTest" end time: Sep 04 14:06 CET
 "DayIdTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -471,7 +471,7 @@ Test Passed.
 10/86 Test: Reference2083Test
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/Reference2083Test"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"Reference2083Test" start time: Sep 03 21:02 CET
+"Reference2083Test" start time: Sep 04 14:06 CET
 Output:
 ----------------------------------------------------------
 Golden Calendar 50000-Year Chronology EngineY 3M 3D Test
@@ -488,7 +488,7 @@ Lunar:
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"Reference2083Test" end time: Sep 03 21:02 CET
+"Reference2083Test" end time: Sep 04 14:06 CET
 "Reference2083Test" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -496,7 +496,7 @@ Test Passed.
 11/86 Test: TimeEngineTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/TimeEngineTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"TimeEngineTest" start time: Sep 03 21:02 CET
+"TimeEngineTest" start time: Sep 04 14:06 CET
 Output:
 ----------------------------------------------------------
 Golden Calendar TimeEngine Test
@@ -511,7 +511,7 @@ Lunar: 7/2/2147
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"TimeEngineTest" end time: Sep 03 21:02 CET
+"TimeEngineTest" end time: Sep 04 14:06 CET
 "TimeEngineTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -519,7 +519,7 @@ Test Passed.
 12/86 Test: LongTimeEngineTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/LongTimeEngineTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"LongTimeEngineTest" start time: Sep 03 21:02 CET
+"LongTimeEngineTest" start time: Sep 04 14:06 CET
 Output:
 ----------------------------------------------------------
 Golden Calendar Long Time Engine Test
@@ -549,7 +549,7 @@ Lunar: 30/12/49999
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"LongTimeEngineTest" end time: Sep 03 21:02 CET
+"LongTimeEngineTest" end time: Sep 04 14:06 CET
 "LongTimeEngineTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -557,7 +557,7 @@ Test Passed.
 13/86 Test: Cycle33_34_SynchronizationTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/Cycle33_34_SynchronizationTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"Cycle33_34_SynchronizationTest" start time: Sep 03 21:02 CET
+"Cycle33_34_SynchronizationTest" start time: Sep 04 14:06 CET
 Output:
 ----------------------------------------------------------
 Golden Calendar 99/102 Cycle Synchronization Test
@@ -575,7 +575,7 @@ Cycle Status: PASS
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"Cycle33_34_SynchronizationTest" end time: Sep 03 21:02 CET
+"Cycle33_34_SynchronizationTest" end time: Sep 04 14:06 CET
 "Cycle33_34_SynchronizationTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -583,7 +583,7 @@ Test Passed.
 14/86 Test: CycleSynchronizationLongTermTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/CycleSynchronizationLongTermTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"CycleSynchronizationLongTermTest" start time: Sep 03 21:02 CET
+"CycleSynchronizationLongTermTest" start time: Sep 04 14:06 CET
 Output:
 ----------------------------------------------------------
 Golden Calendar Long Cycle Synchronization Test
@@ -614,7 +614,7 @@ Status: PASS
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"CycleSynchronizationLongTermTest" end time: Sep 03 21:02 CET
+"CycleSynchronizationLongTermTest" end time: Sep 04 14:06 CET
 "CycleSynchronizationLongTermTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -622,7 +622,7 @@ Test Passed.
 15/86 Test: ArchiveEngineTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/ArchiveEngineTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"ArchiveEngineTest" start time: Sep 03 21:02 CET
+"ArchiveEngineTest" start time: Sep 04 14:06 CET
 Output:
 ----------------------------------------------------------
 Golden Calendar Archive Engine Test
@@ -656,7 +656,7 @@ Week: الأربعاء
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"ArchiveEngineTest" end time: Sep 03 21:02 CET
+"ArchiveEngineTest" end time: Sep 04 14:06 CET
 "ArchiveEngineTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -664,7 +664,7 @@ Test Passed.
 16/86 Test: ArchiveGeneratorTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/ArchiveGeneratorTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"ArchiveGeneratorTest" start time: Sep 03 21:02 CET
+"ArchiveGeneratorTest" start time: Sep 04 14:06 CET
 Output:
 ----------------------------------------------------------
 Golden Calendar 10000 Years Archive Test
@@ -774,18 +774,18 @@ Full archive generated: ../data/archive_10000_years.csv
 
 10000 Years archive generation completed successfully.
 <end of output>
-Test time = 1650.07 sec
+Test time = 1200.23 sec
 ----------------------------------------------------------
 Test Passed.
-"ArchiveGeneratorTest" end time: Sep 03 21:30 CET
-"ArchiveGeneratorTest" time elapsed: 00:27:30
+"ArchiveGeneratorTest" end time: Sep 04 14:39 CET
+"ArchiveGeneratorTest" time elapsed: 00:20:00
 ----------------------------------------------------------
 
 17/86 Testing: CycleAccuracyTest
 17/86 Test: CycleAccuracyTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/CycleAccuracyTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"CycleAccuracyTest" start time: Sep 03 21:30 CET
+"CycleAccuracyTest" start time: Sep 04 14:39 CET
 Output:
 ----------------------------------------------------------
 Golden Calendar Cycle Accuracy Test
@@ -812,7 +812,7 @@ Test completed.
 Test time =   0.06 sec
 ----------------------------------------------------------
 Test Passed.
-"CycleAccuracyTest" end time: Sep 03 21:30 CET
+"CycleAccuracyTest" end time: Sep 04 14:39 CET
 "CycleAccuracyTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -820,7 +820,7 @@ Test Passed.
 18/86 Test: TemporalCoordinateTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/TemporalCoordinateTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"TemporalCoordinateTest" start time: Sep 03 21:30 CET
+"TemporalCoordinateTest" start time: Sep 04 14:39 CET
 Output:
 ----------------------------------------------------------
 Golden Calendar Temporal Coordinate Test
@@ -846,7 +846,7 @@ Temporal Coordinate Test Completed
 Test time =   0.03 sec
 ----------------------------------------------------------
 Test Passed.
-"TemporalCoordinateTest" end time: Sep 03 21:30 CET
+"TemporalCoordinateTest" end time: Sep 04 14:39 CET
 "TemporalCoordinateTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -854,7 +854,7 @@ Test Passed.
 19/86 Test: GlobalTemporalIDTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/GlobalTemporalIDTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"GlobalTemporalIDTest" start time: Sep 03 21:30 CET
+"GlobalTemporalIDTest" start time: Sep 04 14:39 CET
 Output:
 ----------------------------------------------------------
 Golden Calendar Global Temporal ID Test
@@ -867,7 +867,7 @@ Era: Golden Calendar Epoch
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"GlobalTemporalIDTest" end time: Sep 03 21:30 CET
+"GlobalTemporalIDTest" end time: Sep 04 14:39 CET
 "GlobalTemporalIDTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -875,7 +875,7 @@ Test Passed.
 20/86 Test: GlobalTemporalIDIntegrationTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/GlobalTemporalIDIntegrationTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"GlobalTemporalIDIntegrationTest" start time: Sep 03 21:30 CET
+"GlobalTemporalIDIntegrationTest" start time: Sep 04 14:39 CET
 Output:
 ----------------------------------------------------------
 Global Temporal ID Integration Test
@@ -890,7 +890,7 @@ Global Temporal ID Integration SUCCESS
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"GlobalTemporalIDIntegrationTest" end time: Sep 03 21:30 CET
+"GlobalTemporalIDIntegrationTest" end time: Sep 04 14:39 CET
 "GlobalTemporalIDIntegrationTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -898,7 +898,7 @@ Test Passed.
 21/86 Test: GlobalTemporalMetadataTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/GlobalTemporalMetadataTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"GlobalTemporalMetadataTest" start time: Sep 03 21:30 CET
+"GlobalTemporalMetadataTest" start time: Sep 04 14:39 CET
 Output:
 ----------------------------------------------------------
 Global Temporal Metadata Validation Test
@@ -916,7 +916,7 @@ Global Temporal Metadata SUCCESS
 Test time =   0.03 sec
 ----------------------------------------------------------
 Test Passed.
-"GlobalTemporalMetadataTest" end time: Sep 03 21:30 CET
+"GlobalTemporalMetadataTest" end time: Sep 04 14:39 CET
 "GlobalTemporalMetadataTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -924,7 +924,7 @@ Test Passed.
 22/86 Test: TemporalQueryTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/TemporalQueryTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"TemporalQueryTest" start time: Sep 03 21:30 CET
+"TemporalQueryTest" start time: Sep 04 14:39 CET
 Output:
 ----------------------------------------------------------
 Temporal Query Engine Test
@@ -939,7 +939,7 @@ SUCCESS
 Test time =   0.03 sec
 ----------------------------------------------------------
 Test Passed.
-"TemporalQueryTest" end time: Sep 03 21:30 CET
+"TemporalQueryTest" end time: Sep 04 14:39 CET
 "TemporalQueryTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -947,7 +947,7 @@ Test Passed.
 23/86 Test: TemporalAPITest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/TemporalAPITest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"TemporalAPITest" start time: Sep 03 21:30 CET
+"TemporalAPITest" start time: Sep 04 14:39 CET
 Output:
 ----------------------------------------------------------
 Temporal API Test
@@ -957,7 +957,7 @@ Temporal API Test
 Test time =   0.03 sec
 ----------------------------------------------------------
 Test Passed.
-"TemporalAPITest" end time: Sep 03 21:30 CET
+"TemporalAPITest" end time: Sep 04 14:39 CET
 "TemporalAPITest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -965,7 +965,7 @@ Test Passed.
 24/86 Test: TemporalJSONAPITest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/TemporalJSONAPITest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"TemporalJSONAPITest" start time: Sep 03 21:30 CET
+"TemporalJSONAPITest" start time: Sep 04 14:39 CET
 Output:
 ----------------------------------------------------------
 Temporal JSON API Test
@@ -976,7 +976,7 @@ JSON API TEST PASSED
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"TemporalJSONAPITest" end time: Sep 03 21:30 CET
+"TemporalJSONAPITest" end time: Sep 04 14:39 CET
 "TemporalJSONAPITest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -984,7 +984,7 @@ Test Passed.
 25/86 Test: SolarCycleEngineTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/SolarCycleEngineTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"SolarCycleEngineTest" start time: Sep 03 21:30 CET
+"SolarCycleEngineTest" start time: Sep 04 14:39 CET
 Output:
 ----------------------------------------------------------
 Cycle ID: 1
@@ -995,7 +995,7 @@ SolarCycleEngineTest PASSED
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"SolarCycleEngineTest" end time: Sep 03 21:30 CET
+"SolarCycleEngineTest" end time: Sep 04 14:39 CET
 "SolarCycleEngineTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1003,7 +1003,7 @@ Test Passed.
 26/86 Test: SolarCycleArchiveRangeTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/SolarCycleArchiveRangeTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"SolarCycleArchiveRangeTest" start time: Sep 03 21:30 CET
+"SolarCycleArchiveRangeTest" start time: Sep 04 14:39 CET
 Output:
 ----------------------------------------------------------
 Cycle 1 days: 23010
@@ -1013,7 +1013,7 @@ SolarCycleArchiveRangeTest Passed
 Test time =   0.14 sec
 ----------------------------------------------------------
 Test Passed.
-"SolarCycleArchiveRangeTest" end time: Sep 03 21:30 CET
+"SolarCycleArchiveRangeTest" end time: Sep 04 14:39 CET
 "SolarCycleArchiveRangeTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1021,7 +1021,7 @@ Test Passed.
 27/86 Test: SolarCycleArchiveMultiTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/SolarCycleArchiveMultiTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"SolarCycleArchiveMultiTest" start time: Sep 03 21:30 CET
+"SolarCycleArchiveMultiTest" start time: Sep 04 14:39 CET
 Output:
 ----------------------------------------------------------
 Archived days: 69031
@@ -1032,7 +1032,7 @@ SolarCycleArchiveMultiTest Passed
 Test time =   0.27 sec
 ----------------------------------------------------------
 Test Passed.
-"SolarCycleArchiveMultiTest" end time: Sep 03 21:30 CET
+"SolarCycleArchiveMultiTest" end time: Sep 04 14:39 CET
 "SolarCycleArchiveMultiTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1040,7 +1040,7 @@ Test Passed.
 28/86 Test: SolarCycleBoundaryTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/SolarCycleBoundaryTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"SolarCycleBoundaryTest" start time: Sep 03 21:30 CET
+"SolarCycleBoundaryTest" start time: Sep 04 14:39 CET
 Output:
 ----------------------------------------------------------
 Cycle 1 End Day ID: 23010
@@ -1050,7 +1050,7 @@ SolarCycleBoundaryTest Passed
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"SolarCycleBoundaryTest" end time: Sep 03 21:30 CET
+"SolarCycleBoundaryTest" end time: Sep 04 14:39 CET
 "SolarCycleBoundaryTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1058,7 +1058,7 @@ Test Passed.
 29/86 Test: SolarArchiveBuilderTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/SolarArchiveBuilderTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"SolarArchiveBuilderTest" start time: Sep 03 21:30 CET
+"SolarArchiveBuilderTest" start time: Sep 04 14:39 CET
 Output:
 ----------------------------------------------------------
 SolarArchiveBuilder OK
@@ -1067,7 +1067,7 @@ Days: 230102
 Test time =   1.24 sec
 ----------------------------------------------------------
 Test Passed.
-"SolarArchiveBuilderTest" end time: Sep 03 21:30 CET
+"SolarArchiveBuilderTest" end time: Sep 04 14:39 CET
 "SolarArchiveBuilderTest" time elapsed: 00:00:01
 ----------------------------------------------------------
 
@@ -1075,16 +1075,16 @@ Test Passed.
 30/86 Test: SolarTimeEngineTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/SolarTimeEngineTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"SolarTimeEngineTest" start time: Sep 03 21:30 CET
+"SolarTimeEngineTest" start time: Sep 04 14:39 CET
 Output:
 ----------------------------------------------------------
 SolarTimeEngine OK
 Days: 230102
 <end of output>
-Test time =   1.24 sec
+Test time =   1.21 sec
 ----------------------------------------------------------
 Test Passed.
-"SolarTimeEngineTest" end time: Sep 03 21:30 CET
+"SolarTimeEngineTest" end time: Sep 04 14:39 CET
 "SolarTimeEngineTest" time elapsed: 00:00:01
 ----------------------------------------------------------
 
@@ -1092,7 +1092,7 @@ Test Passed.
 31/86 Test: SolarTimeEngineReferenceTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/SolarTimeEngineReferenceTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"SolarTimeEngineReferenceTest" start time: Sep 03 21:30 CET
+"SolarTimeEngineReferenceTest" start time: Sep 04 14:39 CET
 Output:
 ----------------------------------------------------------
 SolarTimeEngine Reference OK
@@ -1101,7 +1101,7 @@ First Day ID: 1
 Test time =   0.07 sec
 ----------------------------------------------------------
 Test Passed.
-"SolarTimeEngineReferenceTest" end time: Sep 03 21:30 CET
+"SolarTimeEngineReferenceTest" end time: Sep 04 14:39 CET
 "SolarTimeEngineReferenceTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1109,17 +1109,17 @@ Test Passed.
 32/86 Test: SolarCycleLongRangeTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/SolarCycleLongRangeTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"SolarCycleLongRangeTest" start time: Sep 03 21:30 CET
+"SolarCycleLongRangeTest" start time: Sep 04 14:39 CET
 Output:
 ----------------------------------------------------------
 Solar Cycle Long Range OK
 Cycles tested: 1-10
 Total days: 230102
 <end of output>
-Test time =   1.20 sec
+Test time =   1.25 sec
 ----------------------------------------------------------
 Test Passed.
-"SolarCycleLongRangeTest" end time: Sep 03 21:30 CET
+"SolarCycleLongRangeTest" end time: Sep 04 14:39 CET
 "SolarCycleLongRangeTest" time elapsed: 00:00:01
 ----------------------------------------------------------
 
@@ -1127,7 +1127,7 @@ Test Passed.
 33/86 Test: Solar50KYearBoundaryTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/Solar50KYearBoundaryTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"Solar50KYearBoundaryTest" start time: Sep 03 21:30 CET
+"Solar50KYearBoundaryTest" start time: Sep 04 14:39 CET
 Output:
 ----------------------------------------------------------
 OK: 1-1-1 DayID=1
@@ -1136,10 +1136,10 @@ OK: 10000-1-1 DayID=3652060
 OK: 50000-12-31 DayID=18262125
 Solar50KYearBoundaryTest PASSED
 <end of output>
-Test time =   0.03 sec
+Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"Solar50KYearBoundaryTest" end time: Sep 03 21:30 CET
+"Solar50KYearBoundaryTest" end time: Sep 04 14:39 CET
 "Solar50KYearBoundaryTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1147,7 +1147,7 @@ Test Passed.
 34/86 Test: GlobalSolarDayConsistencyTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/GlobalSolarDayConsistencyTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"GlobalSolarDayConsistencyTest" start time: Sep 03 21:30 CET
+"GlobalSolarDayConsistencyTest" start time: Sep 04 14:39 CET
 Output:
 ----------------------------------------------------------
 OK Day ID: 1
@@ -1160,7 +1160,7 @@ GlobalSolarDayConsistencyTest PASSED
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"GlobalSolarDayConsistencyTest" end time: Sep 03 21:30 CET
+"GlobalSolarDayConsistencyTest" end time: Sep 04 14:39 CET
 "GlobalSolarDayConsistencyTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1168,17 +1168,17 @@ Test Passed.
 35/86 Test: SolarTimelinePerformanceTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/SolarTimelinePerformanceTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"SolarTimelinePerformanceTest" start time: Sep 03 21:30 CET
+"SolarTimelinePerformanceTest" start time: Sep 04 14:39 CET
 Output:
 ----------------------------------------------------------
 Solar Timeline Performance OK
 Days processed: 100000
-Time(ms): 375
+Time(ms): 372
 <end of output>
 Test time =   0.40 sec
 ----------------------------------------------------------
 Test Passed.
-"SolarTimelinePerformanceTest" end time: Sep 03 21:30 CET
+"SolarTimelinePerformanceTest" end time: Sep 04 14:39 CET
 "SolarTimelinePerformanceTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1186,7 +1186,7 @@ Test Passed.
 36/86 Test: SolarTimelineGenerationTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/SolarTimelineGenerationTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"SolarTimelineGenerationTest" start time: Sep 03 21:30 CET
+"SolarTimelineGenerationTest" start time: Sep 04 14:39 CET
 Output:
 ----------------------------------------------------------
 Solar Timeline Generation OK
@@ -1195,7 +1195,7 @@ Years tested: 100
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"SolarTimelineGenerationTest" end time: Sep 03 21:30 CET
+"SolarTimelineGenerationTest" end time: Sep 04 14:39 CET
 "SolarTimelineGenerationTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1203,7 +1203,7 @@ Test Passed.
 37/86 Test: SolarYearIntegrityTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/SolarYearIntegrityTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"SolarYearIntegrityTest" start time: Sep 03 21:30 CET
+"SolarYearIntegrityTest" start time: Sep 04 14:39 CET
 Output:
 ----------------------------------------------------------
 Year 1 OK - Days: 365
@@ -1218,7 +1218,7 @@ SolarYearIntegrityTest PASSED
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"SolarYearIntegrityTest" end time: Sep 03 21:30 CET
+"SolarYearIntegrityTest" end time: Sep 04 14:39 CET
 "SolarYearIntegrityTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1226,7 +1226,7 @@ Test Passed.
 38/86 Test: SolarMonthIntegrityTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/SolarMonthIntegrityTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"SolarMonthIntegrityTest" start time: Sep 03 21:30 CET
+"SolarMonthIntegrityTest" start time: Sep 04 14:39 CET
 Output:
 ----------------------------------------------------------
 Month 1-1 OK Days=31
@@ -1242,7 +1242,7 @@ SolarMonthIntegrityTest PASSED
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"SolarMonthIntegrityTest" end time: Sep 03 21:30 CET
+"SolarMonthIntegrityTest" end time: Sep 04 14:39 CET
 "SolarMonthIntegrityTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1250,7 +1250,7 @@ Test Passed.
 39/86 Test: SolarDateRoundTripTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/SolarDateRoundTripTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"SolarDateRoundTripTest" start time: Sep 03 21:30 CET
+"SolarDateRoundTripTest" start time: Sep 04 14:39 CET
 Output:
 ----------------------------------------------------------
 Round-trip OK: 1-1-1 -> DayID 1
@@ -1266,7 +1266,7 @@ SolarDateRoundTripTest PASSED
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"SolarDateRoundTripTest" end time: Sep 03 21:30 CET
+"SolarDateRoundTripTest" end time: Sep 04 14:39 CET
 "SolarDateRoundTripTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1274,7 +1274,7 @@ Test Passed.
 40/86 Test: SolarDayContinuityTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/SolarDayContinuityTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"SolarDayContinuityTest" start time: Sep 03 21:30 CET
+"SolarDayContinuityTest" start time: Sep 04 14:39 CET
 Output:
 ----------------------------------------------------------
 SolarDayContinuityTest PASSED
@@ -1282,7 +1282,7 @@ SolarDayContinuityTest PASSED
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"SolarDayContinuityTest" end time: Sep 03 21:30 CET
+"SolarDayContinuityTest" end time: Sep 04 14:39 CET
 "SolarDayContinuityTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1290,7 +1290,7 @@ Test Passed.
 41/86 Test: Solar50KDayIDRangeTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/Solar50KDayIDRangeTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"Solar50KDayIDRangeTest" start time: Sep 03 21:30 CET
+"Solar50KDayIDRangeTest" start time: Sep 04 14:39 CET
 Output:
 ----------------------------------------------------------
 First Day ID: 1
@@ -1301,7 +1301,7 @@ Solar50KDayIDRangeTest PASSED
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"Solar50KDayIDRangeTest" end time: Sep 03 21:30 CET
+"Solar50KDayIDRangeTest" end time: Sep 04 14:39 CET
 "Solar50KDayIDRangeTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1309,7 +1309,7 @@ Test Passed.
 42/86 Test: Solar50KRandomSamplingTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/Solar50KRandomSamplingTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"Solar50KRandomSamplingTest" start time: Sep 03 21:30 CET
+"Solar50KRandomSamplingTest" start time: Sep 04 14:39 CET
 Output:
 ----------------------------------------------------------
 Solar50KRandomSamplingTest PASSED
@@ -1317,7 +1317,7 @@ Solar50KRandomSamplingTest PASSED
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"Solar50KRandomSamplingTest" end time: Sep 03 21:30 CET
+"Solar50KRandomSamplingTest" end time: Sep 04 14:39 CET
 "Solar50KRandomSamplingTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1325,7 +1325,7 @@ Test Passed.
 43/86 Test: SolarLeapYearConsistencyTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/SolarLeapYearConsistencyTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"SolarLeapYearConsistencyTest" start time: Sep 03 21:30 CET
+"SolarLeapYearConsistencyTest" start time: Sep 04 14:39 CET
 Output:
 ----------------------------------------------------------
 SolarLeapYearConsistencyTest PASSED
@@ -1333,7 +1333,7 @@ SolarLeapYearConsistencyTest PASSED
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"SolarLeapYearConsistencyTest" end time: Sep 03 21:30 CET
+"SolarLeapYearConsistencyTest" end time: Sep 04 14:39 CET
 "SolarLeapYearConsistencyTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1341,7 +1341,7 @@ Test Passed.
 44/86 Test: SolarDayOfYearStatisticsValidationTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/SolarDayOfYearStatisticsValidationTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"SolarDayOfYearStatisticsValidationTest" start time: Sep 03 21:30 CET
+"SolarDayOfYearStatisticsValidationTest" start time: Sep 04 14:39 CET
 Output:
 ----------------------------------------------------------
 
@@ -1359,7 +1359,7 @@ SolarDayOfYearStatisticsValidationTest PASSED
 Test time =   0.18 sec
 ----------------------------------------------------------
 Test Passed.
-"SolarDayOfYearStatisticsValidationTest" end time: Sep 03 21:30 CET
+"SolarDayOfYearStatisticsValidationTest" end time: Sep 04 14:39 CET
 "SolarDayOfYearStatisticsValidationTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1367,7 +1367,7 @@ Test Passed.
 45/86 Test: SolarMetadataTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/SolarMetadataTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"SolarMetadataTest" start time: Sep 03 21:30 CET
+"SolarMetadataTest" start time: Sep 04 14:39 CET
 Output:
 ----------------------------------------------------------
 Solar Metadata Test
@@ -1376,7 +1376,7 @@ Solar Metadata Test Passed
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"SolarMetadataTest" end time: Sep 03 21:30 CET
+"SolarMetadataTest" end time: Sep 04 14:39 CET
 "SolarMetadataTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1384,7 +1384,7 @@ Test Passed.
 46/86 Test: Solar50KChronologyReportTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/Solar50KChronologyReportTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"Solar50KChronologyReportTest" start time: Sep 03 21:30 CET
+"Solar50KChronologyReportTest" start time: Sep 04 14:39 CET
 Output:
 ----------------------------------------------------------
 
@@ -1407,10 +1407,10 @@ Last Day
 
 Solar50KChronologyReportTest PASSED
 <end of output>
-Test time =   0.03 sec
+Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"Solar50KChronologyReportTest" end time: Sep 03 21:30 CET
+"Solar50KChronologyReportTest" end time: Sep 04 14:39 CET
 "Solar50KChronologyReportTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1418,7 +1418,7 @@ Test Passed.
 47/86 Test: SolarDayOfYearIntegrityTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/SolarDayOfYearIntegrityTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"SolarDayOfYearIntegrityTest" start time: Sep 03 21:30 CET
+"SolarDayOfYearIntegrityTest" start time: Sep 04 14:39 CET
 Output:
 ----------------------------------------------------------
 SolarDayOfYearIntegrityTest PASSED
@@ -1426,7 +1426,7 @@ SolarDayOfYearIntegrityTest PASSED
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"SolarDayOfYearIntegrityTest" end time: Sep 03 21:30 CET
+"SolarDayOfYearIntegrityTest" end time: Sep 04 14:39 CET
 "SolarDayOfYearIntegrityTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1434,7 +1434,7 @@ Test Passed.
 48/86 Test: SolarMonthBoundaryTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/SolarMonthBoundaryTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"SolarMonthBoundaryTest" start time: Sep 03 21:30 CET
+"SolarMonthBoundaryTest" start time: Sep 04 14:39 CET
 Output:
 ----------------------------------------------------------
 SolarMonthBoundaryTest PASSED
@@ -1442,7 +1442,7 @@ SolarMonthBoundaryTest PASSED
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"SolarMonthBoundaryTest" end time: Sep 03 21:30 CET
+"SolarMonthBoundaryTest" end time: Sep 04 14:39 CET
 "SolarMonthBoundaryTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1450,7 +1450,7 @@ Test Passed.
 49/86 Test: SolarYearTransitionIntegrityTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/SolarYearTransitionIntegrityTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"SolarYearTransitionIntegrityTest" start time: Sep 03 21:30 CET
+"SolarYearTransitionIntegrityTest" start time: Sep 04 14:39 CET
 Output:
 ----------------------------------------------------------
 SolarYearTransitionIntegrityTest PASSED
@@ -1458,7 +1458,7 @@ SolarYearTransitionIntegrityTest PASSED
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"SolarYearTransitionIntegrityTest" end time: Sep 03 21:30 CET
+"SolarYearTransitionIntegrityTest" end time: Sep 04 14:39 CET
 "SolarYearTransitionIntegrityTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1466,15 +1466,15 @@ Test Passed.
 50/86 Test: SolarMonthYearSumIntegrityTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/SolarMonthYearSumIntegrityTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"SolarMonthYearSumIntegrityTest" start time: Sep 03 21:30 CET
+"SolarMonthYearSumIntegrityTest" start time: Sep 04 14:39 CET
 Output:
 ----------------------------------------------------------
 SolarMonthYearSumIntegrityTest PASSED
 <end of output>
-Test time =   0.03 sec
+Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"SolarMonthYearSumIntegrityTest" end time: Sep 03 21:30 CET
+"SolarMonthYearSumIntegrityTest" end time: Sep 04 14:39 CET
 "SolarMonthYearSumIntegrityTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1482,7 +1482,7 @@ Test Passed.
 51/86 Test: Solar50KEndpointIntegrityTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/Solar50KEndpointIntegrityTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"Solar50KEndpointIntegrityTest" start time: Sep 03 21:30 CET
+"Solar50KEndpointIntegrityTest" start time: Sep 04 14:39 CET
 Output:
 ----------------------------------------------------------
 Solar50KEndpointIntegrityTest PASSED
@@ -1490,7 +1490,7 @@ Solar50KEndpointIntegrityTest PASSED
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"Solar50KEndpointIntegrityTest" end time: Sep 03 21:30 CET
+"Solar50KEndpointIntegrityTest" end time: Sep 04 14:39 CET
 "Solar50KEndpointIntegrityTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1498,7 +1498,7 @@ Test Passed.
 52/86 Test: SolarStatisticsValidationTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/SolarStatisticsValidationTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"SolarStatisticsValidationTest" start time: Sep 03 21:30 CET
+"SolarStatisticsValidationTest" start time: Sep 04 14:39 CET
 Output:
 ----------------------------------------------------------
 
@@ -1525,10 +1525,10 @@ Validation
 SolarStatisticsValidationTest PASSED
 
 <end of output>
-Test time =   0.50 sec
+Test time =   0.45 sec
 ----------------------------------------------------------
 Test Passed.
-"SolarStatisticsValidationTest" end time: Sep 03 21:30 CET
+"SolarStatisticsValidationTest" end time: Sep 04 14:39 CET
 "SolarStatisticsValidationTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1536,7 +1536,7 @@ Test Passed.
 53/86 Test: SolarMonthStatisticsValidationTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/SolarMonthStatisticsValidationTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"SolarMonthStatisticsValidationTest" start time: Sep 03 21:30 CET
+"SolarMonthStatisticsValidationTest" start time: Sep 04 14:39 CET
 Output:
 ----------------------------------------------------------
 
@@ -1566,7 +1566,7 @@ SolarMonthStatisticsValidationTest PASSED
 Test time =   0.03 sec
 ----------------------------------------------------------
 Test Passed.
-"SolarMonthStatisticsValidationTest" end time: Sep 03 21:30 CET
+"SolarMonthStatisticsValidationTest" end time: Sep 04 14:39 CET
 "SolarMonthStatisticsValidationTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1574,7 +1574,7 @@ Test Passed.
 54/86 Test: SolarLeapStatisticsValidationTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/SolarLeapStatisticsValidationTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"SolarLeapStatisticsValidationTest" start time: Sep 03 21:30 CET
+"SolarLeapStatisticsValidationTest" start time: Sep 04 14:39 CET
 Output:
 ----------------------------------------------------------
 
@@ -1592,7 +1592,7 @@ SolarLeapStatisticsValidationTest PASSED
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"SolarLeapStatisticsValidationTest" end time: Sep 03 21:30 CET
+"SolarLeapStatisticsValidationTest" end time: Sep 04 14:39 CET
 "SolarLeapStatisticsValidationTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1600,7 +1600,7 @@ Test Passed.
 55/86 Test: LunarEngineV2Test
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/LunarEngineV2Test"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"LunarEngineV2Test" start time: Sep 03 21:30 CET
+"LunarEngineV2Test" start time: Sep 04 14:39 CET
 Output:
 ----------------------------------------------------------
 [PASS] Day 1 = Lunar 1/1/1
@@ -1633,7 +1633,7 @@ LunarEngineV2 Test: PASSED
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"LunarEngineV2Test" end time: Sep 03 21:30 CET
+"LunarEngineV2Test" end time: Sep 04 14:39 CET
 "LunarEngineV2Test" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1641,7 +1641,7 @@ Test Passed.
 56/86 Test: LunarEngineV2BoundaryTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/LunarEngineV2BoundaryTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"LunarEngineV2BoundaryTest" start time: Sep 03 21:30 CET
+"LunarEngineV2BoundaryTest" start time: Sep 04 14:39 CET
 Output:
 ----------------------------------------------------------
 [PASS] Day 354 = final day of Lunar Year 1
@@ -1678,7 +1678,7 @@ LunarEngineV2 Boundary Test: PASSED
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"LunarEngineV2BoundaryTest" end time: Sep 03 21:30 CET
+"LunarEngineV2BoundaryTest" end time: Sep 04 14:39 CET
 "LunarEngineV2BoundaryTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1686,7 +1686,7 @@ Test Passed.
 57/86 Test: LunarEngineV2LongCycleTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/LunarEngineV2LongCycleTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"LunarEngineV2LongCycleTest" start time: Sep 03 21:30 CET
+"LunarEngineV2LongCycleTest" start time: Sep 04 14:39 CET
 Output:
 ----------------------------------------------------------
 /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/Gabary/tests/LunarEngineV2LongCycleTest.cpp:96: int main(): assertion "endDay + 1 == nextDay" failed
@@ -1694,7 +1694,7 @@ Output:
 Test time =   0.09 sec
 ----------------------------------------------------------
 Test Failed.
-"LunarEngineV2LongCycleTest" end time: Sep 03 21:30 CET
+"LunarEngineV2LongCycleTest" end time: Sep 04 14:39 CET
 "LunarEngineV2LongCycleTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1702,15 +1702,15 @@ Test Failed.
 58/86 Test: GabaryDualCalendarIntegrationTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/GabaryDualCalendarIntegrationTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"GabaryDualCalendarIntegrationTest" start time: Sep 03 21:30 CET
+"GabaryDualCalendarIntegrationTest" start time: Sep 04 14:39 CET
 Output:
 ----------------------------------------------------------
 /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/Gabary/tests/GabaryDualCalendarIntegrationTest.cpp:50: int main(): assertion "lunarEnd.day == 30" failed
 <end of output>
-Test time =   0.10 sec
+Test time =   0.08 sec
 ----------------------------------------------------------
 Test Failed.
-"GabaryDualCalendarIntegrationTest" end time: Sep 03 21:30 CET
+"GabaryDualCalendarIntegrationTest" end time: Sep 04 14:39 CET
 "GabaryDualCalendarIntegrationTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1718,7 +1718,7 @@ Test Failed.
 59/86 Test: GabaryNavigationEngineTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/GabaryNavigationEngineTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"GabaryNavigationEngineTest" start time: Sep 03 21:30 CET
+"GabaryNavigationEngineTest" start time: Sep 04 14:39 CET
 Output:
 ----------------------------------------------------------
 ============================================
@@ -1735,10 +1735,10 @@ Output:
  Gabary V2 Navigation Engine: PASSED
 ============================================
 <end of output>
-Test time =   0.03 sec
+Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"GabaryNavigationEngineTest" end time: Sep 03 21:30 CET
+"GabaryNavigationEngineTest" end time: Sep 04 14:39 CET
 "GabaryNavigationEngineTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1746,15 +1746,15 @@ Test Passed.
 60/86 Test: GabaryNavigationEngineBoundaryTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/GabaryNavigationEngineBoundaryTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"GabaryNavigationEngineBoundaryTest" start time: Sep 03 21:30 CET
+"GabaryNavigationEngineBoundaryTest" start time: Sep 04 14:39 CET
 Output:
 ----------------------------------------------------------
 /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/Gabary/tests/GabaryNavigationEngineBoundaryTest.cpp:127: int main(): assertion "date.dayId == GabaryNavigationEngine::MAX_GLOBAL_DAY" failed
 <end of output>
-Test time =   0.06 sec
+Test time =   0.11 sec
 ----------------------------------------------------------
 Test Failed.
-"GabaryNavigationEngineBoundaryTest" end time: Sep 03 21:30 CET
+"GabaryNavigationEngineBoundaryTest" end time: Sep 04 14:39 CET
 "GabaryNavigationEngineBoundaryTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1762,7 +1762,7 @@ Test Failed.
 61/86 Test: GabaryNavigationEngineLongRangeTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/GabaryNavigationEngineLongRangeTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"GabaryNavigationEngineLongRangeTest" start time: Sep 03 21:30 CET
+"GabaryNavigationEngineLongRangeTest" start time: Sep 04 14:39 CET
 Output:
 ----------------------------------------------------------
 /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/Gabary/tests/GabaryNavigationEngineLongRangeTest.cpp:113: int main(): assertion "current.dayId == MAX" failed
@@ -1770,7 +1770,7 @@ Output:
 Test time =   0.09 sec
 ----------------------------------------------------------
 Test Failed.
-"GabaryNavigationEngineLongRangeTest" end time: Sep 03 21:30 CET
+"GabaryNavigationEngineLongRangeTest" end time: Sep 04 14:39 CET
 "GabaryNavigationEngineLongRangeTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1778,7 +1778,7 @@ Test Failed.
 62/86 Test: GabaryNavigationEngineSolarRoundTripTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/GabaryNavigationEngineSolarRoundTripTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"GabaryNavigationEngineSolarRoundTripTest" start time: Sep 03 21:30 CET
+"GabaryNavigationEngineSolarRoundTripTest" start time: Sep 04 14:39 CET
 Output:
 ----------------------------------------------------------
 ============================================
@@ -1797,7 +1797,7 @@ Output:
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"GabaryNavigationEngineSolarRoundTripTest" end time: Sep 03 21:30 CET
+"GabaryNavigationEngineSolarRoundTripTest" end time: Sep 04 14:39 CET
 "GabaryNavigationEngineSolarRoundTripTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1805,7 +1805,7 @@ Test Passed.
 63/86 Test: GabaryQueryEngineTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/GabaryQueryEngineTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"GabaryQueryEngineTest" start time: Sep 03 21:30 CET
+"GabaryQueryEngineTest" start time: Sep 04 14:39 CET
 Output:
 ----------------------------------------------------------
 ============================================
@@ -1823,7 +1823,7 @@ Output:
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"GabaryQueryEngineTest" end time: Sep 03 21:30 CET
+"GabaryQueryEngineTest" end time: Sep 04 14:39 CET
 "GabaryQueryEngineTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1831,7 +1831,7 @@ Test Passed.
 64/86 Test: GabaryDualReportFormatterTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/GabaryDualReportFormatterTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"GabaryDualReportFormatterTest" start time: Sep 03 21:30 CET
+"GabaryDualReportFormatterTest" start time: Sep 04 14:39 CET
 Output:
 ----------------------------------------------------------
 ============================================
@@ -1847,7 +1847,7 @@ Output:
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"GabaryDualReportFormatterTest" end time: Sep 03 21:30 CET
+"GabaryDualReportFormatterTest" end time: Sep 04 14:39 CET
 "GabaryDualReportFormatterTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1855,7 +1855,7 @@ Test Passed.
 65/86 Test: GabaryDualCalendarBoundaryTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/GabaryDualCalendarBoundaryTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"GabaryDualCalendarBoundaryTest" start time: Sep 03 21:30 CET
+"GabaryDualCalendarBoundaryTest" start time: Sep 04 14:39 CET
 Output:
 ----------------------------------------------------------
 ============================================
@@ -1873,7 +1873,7 @@ Output:
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"GabaryDualCalendarBoundaryTest" end time: Sep 03 21:30 CET
+"GabaryDualCalendarBoundaryTest" end time: Sep 04 14:39 CET
 "GabaryDualCalendarBoundaryTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1881,15 +1881,15 @@ Test Passed.
 66/86 Test: GabaryDualCalendarEndBoundaryTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/GabaryDualCalendarEndBoundaryTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"GabaryDualCalendarEndBoundaryTest" start time: Sep 03 21:30 CET
+"GabaryDualCalendarEndBoundaryTest" start time: Sep 04 14:39 CET
 Output:
 ----------------------------------------------------------
 /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/Gabary/tests/GabaryDualCalendarEndBoundaryTest.cpp:42: int main(): assertion "result.lunar.year > 0" failed
 <end of output>
-Test time =   0.06 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Failed.
-"GabaryDualCalendarEndBoundaryTest" end time: Sep 03 21:30 CET
+"GabaryDualCalendarEndBoundaryTest" end time: Sep 04 14:39 CET
 "GabaryDualCalendarEndBoundaryTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1897,7 +1897,7 @@ Test Failed.
 67/86 Test: GabaryTemporalServiceTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/GabaryTemporalServiceTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"GabaryTemporalServiceTest" start time: Sep 03 21:30 CET
+"GabaryTemporalServiceTest" start time: Sep 04 14:39 CET
 Output:
 ----------------------------------------------------------
 ============================================
@@ -1914,10 +1914,10 @@ Output:
  Gabary V2 Temporal Service: PASSED
 ============================================
 <end of output>
-Test time =   0.03 sec
+Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"GabaryTemporalServiceTest" end time: Sep 03 21:30 CET
+"GabaryTemporalServiceTest" end time: Sep 04 14:39 CET
 "GabaryTemporalServiceTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1925,7 +1925,7 @@ Test Passed.
 68/86 Test: GabaryAPIAdapterTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/GabaryAPIAdapterTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"GabaryAPIAdapterTest" start time: Sep 03 21:30 CET
+"GabaryAPIAdapterTest" start time: Sep 04 14:39 CET
 Output:
 ----------------------------------------------------------
 ============================================
@@ -1940,10 +1940,10 @@ Output:
  Gabary V2 API Adapter: PASSED
 ============================================
 <end of output>
-Test time =   0.03 sec
+Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"GabaryAPIAdapterTest" end time: Sep 03 21:30 CET
+"GabaryAPIAdapterTest" end time: Sep 04 14:39 CET
 "GabaryAPIAdapterTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1951,7 +1951,7 @@ Test Passed.
 69/86 Test: GabaryAPIIntegrationTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/GabaryAPIIntegrationTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"GabaryAPIIntegrationTest" start time: Sep 03 21:30 CET
+"GabaryAPIIntegrationTest" start time: Sep 04 14:39 CET
 Output:
 ----------------------------------------------------------
 ============================================
@@ -1968,7 +1968,7 @@ Output:
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"GabaryAPIIntegrationTest" end time: Sep 03 21:30 CET
+"GabaryAPIIntegrationTest" end time: Sep 04 14:39 CET
 "GabaryAPIIntegrationTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -1976,7 +1976,7 @@ Test Passed.
 70/86 Test: GabaryAPIContractTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/GabaryAPIContractTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"GabaryAPIContractTest" start time: Sep 03 21:30 CET
+"GabaryAPIContractTest" start time: Sep 04 14:39 CET
 Output:
 ----------------------------------------------------------
 ========================================
@@ -1993,7 +1993,7 @@ Output:
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"GabaryAPIContractTest" end time: Sep 03 21:30 CET
+"GabaryAPIContractTest" end time: Sep 04 14:39 CET
 "GabaryAPIContractTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -2001,7 +2001,7 @@ Test Passed.
 71/86 Test: GabaryHTTPAPIContractTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/GabaryHTTPAPIContractTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"GabaryHTTPAPIContractTest" start time: Sep 03 21:30 CET
+"GabaryHTTPAPIContractTest" start time: Sep 04 14:39 CET
 Output:
 ----------------------------------------------------------
 ========================================
@@ -2012,7 +2012,7 @@ Output:
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Failed.
-"GabaryHTTPAPIContractTest" end time: Sep 03 21:30 CET
+"GabaryHTTPAPIContractTest" end time: Sep 04 14:39 CET
 "GabaryHTTPAPIContractTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -2020,7 +2020,7 @@ Test Failed.
 72/86 Test: GabaryAPIResponseSchemaTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/GabaryAPIResponseSchemaTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"GabaryAPIResponseSchemaTest" start time: Sep 03 21:30 CET
+"GabaryAPIResponseSchemaTest" start time: Sep 04 14:39 CET
 Output:
 ----------------------------------------------------------
 ========================================
@@ -2031,7 +2031,7 @@ Output:
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Failed.
-"GabaryAPIResponseSchemaTest" end time: Sep 03 21:30 CET
+"GabaryAPIResponseSchemaTest" end time: Sep 04 14:39 CET
 "GabaryAPIResponseSchemaTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -2039,7 +2039,7 @@ Test Failed.
 73/86 Test: GabaryAPIResponseBoundarySchemaTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/GabaryAPIResponseBoundarySchemaTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"GabaryAPIResponseBoundarySchemaTest" start time: Sep 03 21:30 CET
+"GabaryAPIResponseBoundarySchemaTest" start time: Sep 04 14:39 CET
 Output:
 ----------------------------------------------------------
 ========================================
@@ -2050,7 +2050,7 @@ Output:
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Failed.
-"GabaryAPIResponseBoundarySchemaTest" end time: Sep 03 21:30 CET
+"GabaryAPIResponseBoundarySchemaTest" end time: Sep 04 14:39 CET
 "GabaryAPIResponseBoundarySchemaTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -2058,15 +2058,15 @@ Test Failed.
 74/86 Test: GabaryNavigationEngineContractTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/GabaryNavigationEngineContractTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"GabaryNavigationEngineContractTest" start time: Sep 03 21:30 CET
+"GabaryNavigationEngineContractTest" start time: Sep 04 14:39 CET
 Output:
 ----------------------------------------------------------
 /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/Gabary/tests/GabaryNavigationEngineContractTest.cpp:60: int main(): assertion "date.dayId == MAX" failed
 <end of output>
-Test time =   0.06 sec
+Test time =   0.10 sec
 ----------------------------------------------------------
 Test Failed.
-"GabaryNavigationEngineContractTest" end time: Sep 03 21:30 CET
+"GabaryNavigationEngineContractTest" end time: Sep 04 14:39 CET
 "GabaryNavigationEngineContractTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -2074,7 +2074,7 @@ Test Failed.
 75/86 Test: GabaryNavigationEngineDateRoundTripTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/GabaryNavigationEngineDateRoundTripTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"GabaryNavigationEngineDateRoundTripTest" start time: Sep 03 21:30 CET
+"GabaryNavigationEngineDateRoundTripTest" start time: Sep 04 14:39 CET
 Output:
 ----------------------------------------------------------
 /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/Gabary/tests/GabaryNavigationEngineDateRoundTripTest.cpp:90: int main(): assertion "dayId >= GabaryNavigationEngine::MIN_GLOBAL_DAY" failed
@@ -2082,7 +2082,7 @@ Output:
 Test time =   0.06 sec
 ----------------------------------------------------------
 Test Failed.
-"GabaryNavigationEngineDateRoundTripTest" end time: Sep 03 21:30 CET
+"GabaryNavigationEngineDateRoundTripTest" end time: Sep 04 14:39 CET
 "GabaryNavigationEngineDateRoundTripTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -2090,7 +2090,7 @@ Test Failed.
 76/86 Test: GabaryNavigationEngineBoundaryDateTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/GabaryNavigationEngineBoundaryDateTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"GabaryNavigationEngineBoundaryDateTest" start time: Sep 03 21:30 CET
+"GabaryNavigationEngineBoundaryDateTest" start time: Sep 04 14:39 CET
 Output:
 ----------------------------------------------------------
 ============================================
@@ -2111,7 +2111,7 @@ Output:
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"GabaryNavigationEngineBoundaryDateTest" end time: Sep 03 21:30 CET
+"GabaryNavigationEngineBoundaryDateTest" end time: Sep 04 14:39 CET
 "GabaryNavigationEngineBoundaryDateTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -2119,7 +2119,7 @@ Test Passed.
 77/86 Test: GabaryQueryEngineContractTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/GabaryQueryEngineContractTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"GabaryQueryEngineContractTest" start time: Sep 03 21:30 CET
+"GabaryQueryEngineContractTest" start time: Sep 04 14:39 CET
 Output:
 ----------------------------------------------------------
 ============================================
@@ -2142,7 +2142,7 @@ Output:
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"GabaryQueryEngineContractTest" end time: Sep 03 21:30 CET
+"GabaryQueryEngineContractTest" end time: Sep 04 14:39 CET
 "GabaryQueryEngineContractTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -2150,15 +2150,15 @@ Test Passed.
 78/86 Test: GabaryQueryEngineLongRangeTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/GabaryQueryEngineLongRangeTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"GabaryQueryEngineLongRangeTest" start time: Sep 03 21:30 CET
+"GabaryQueryEngineLongRangeTest" start time: Sep 04 14:39 CET
 Output:
 ----------------------------------------------------------
 /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/Gabary/tests/GabaryQueryEngineLongRangeTest.cpp:51: int main(): assertion "result.lunar.year >= 1" failed
 <end of output>
-Test time =   0.07 sec
+Test time =   0.08 sec
 ----------------------------------------------------------
 Test Failed.
-"GabaryQueryEngineLongRangeTest" end time: Sep 03 21:30 CET
+"GabaryQueryEngineLongRangeTest" end time: Sep 04 14:39 CET
 "GabaryQueryEngineLongRangeTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -2166,7 +2166,7 @@ Test Failed.
 79/86 Test: GabaryTemporalServiceContractTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/GabaryTemporalServiceContractTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"GabaryTemporalServiceContractTest" start time: Sep 03 21:30 CET
+"GabaryTemporalServiceContractTest" start time: Sep 04 14:39 CET
 Output:
 ----------------------------------------------------------
 /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/Gabary/tests/GabaryTemporalServiceContractTest.cpp:48: int main(): assertion "result.lunar.year > 0" failed
@@ -2174,7 +2174,7 @@ Output:
 Test time =   0.08 sec
 ----------------------------------------------------------
 Test Failed.
-"GabaryTemporalServiceContractTest" end time: Sep 03 21:30 CET
+"GabaryTemporalServiceContractTest" end time: Sep 04 14:39 CET
 "GabaryTemporalServiceContractTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -2182,14 +2182,14 @@ Test Failed.
 80/86 Test: GabaryAPIAdapterContractTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/GabaryAPIAdapterContractTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"GabaryAPIAdapterContractTest" start time: Sep 03 21:30 CET
+"GabaryAPIAdapterContractTest" start time: Sep 04 14:39 CET
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.06 sec
+Test time =   0.07 sec
 ----------------------------------------------------------
 Test Failed.
-"GabaryAPIAdapterContractTest" end time: Sep 03 21:30 CET
+"GabaryAPIAdapterContractTest" end time: Sep 04 14:39 CET
 "GabaryAPIAdapterContractTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -2197,7 +2197,7 @@ Test Failed.
 81/86 Test: GabaryDualCalendarEngineContractTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/GabaryDualCalendarEngineContractTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"GabaryDualCalendarEngineContractTest" start time: Sep 03 21:30 CET
+"GabaryDualCalendarEngineContractTest" start time: Sep 04 14:39 CET
 Output:
 ----------------------------------------------------------
 /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/Gabary/tests/GabaryDualCalendarEngineContractTest.cpp:55: int main(): assertion "date.solar.solarYear == 50000" failed
@@ -2205,7 +2205,7 @@ Output:
 Test time =   0.07 sec
 ----------------------------------------------------------
 Test Failed.
-"GabaryDualCalendarEngineContractTest" end time: Sep 03 21:30 CET
+"GabaryDualCalendarEngineContractTest" end time: Sep 04 14:39 CET
 "GabaryDualCalendarEngineContractTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -2213,7 +2213,7 @@ Test Failed.
 82/86 Test: GabaryAPIAdapterDataIntegrityTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/GabaryAPIAdapterDataIntegrityTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"GabaryAPIAdapterDataIntegrityTest" start time: Sep 03 21:30 CET
+"GabaryAPIAdapterDataIntegrityTest" start time: Sep 04 14:39 CET
 Output:
 ----------------------------------------------------------
 ============================================
@@ -2230,7 +2230,7 @@ Output:
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"GabaryAPIAdapterDataIntegrityTest" end time: Sep 03 21:30 CET
+"GabaryAPIAdapterDataIntegrityTest" end time: Sep 04 14:39 CET
 "GabaryAPIAdapterDataIntegrityTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -2238,7 +2238,7 @@ Test Passed.
 83/86 Test: GabaryHTTPAPIDataIntegrityTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/GabaryHTTPAPIDataIntegrityTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"GabaryHTTPAPIDataIntegrityTest" start time: Sep 03 21:30 CET
+"GabaryHTTPAPIDataIntegrityTest" start time: Sep 04 14:39 CET
 Output:
 ----------------------------------------------------------
 ============================================
@@ -2249,7 +2249,7 @@ Output:
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Failed.
-"GabaryHTTPAPIDataIntegrityTest" end time: Sep 03 21:30 CET
+"GabaryHTTPAPIDataIntegrityTest" end time: Sep 04 14:39 CET
 "GabaryHTTPAPIDataIntegrityTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -2257,17 +2257,17 @@ Test Failed.
 84/86 Test: Solar50KFullYearCountTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/Solar50KFullYearCountTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"Solar50KFullYearCountTest" start time: Sep 03 21:30 CET
+"Solar50KFullYearCountTest" start time: Sep 04 14:39 CET
 Output:
 ----------------------------------------------------------
 Years verified: 50000
 Final Day ID: 18262125
 Solar50KFullYearCountTest PASSED
 <end of output>
-Test time =   0.55 sec
+Test time =   0.54 sec
 ----------------------------------------------------------
 Test Passed.
-"Solar50KFullYearCountTest" end time: Sep 03 21:30 CET
+"Solar50KFullYearCountTest" end time: Sep 04 14:39 CET
 "Solar50KFullYearCountTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -2275,15 +2275,65 @@ Test Passed.
 85/86 Test: GabaryDualCalendarLongRangeTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/GabaryDualCalendarLongRangeTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"GabaryDualCalendarLongRangeTest" start time: Sep 03 21:30 CET
+"GabaryDualCalendarLongRangeTest" start time: Sep 04 14:39 CET
 Output:
 ----------------------------------------------------------
-/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/Gabary/tests/GabaryDualCalendarLongRangeTest.cpp:72: int main(): assertion "result.lunar.dayId == dayId" failed
+============================================
+ Gabary V2 Dual Calendar Long-Range Test
+============================================
+
+[PASS] Global Day 1 -> valid dual-calendar coordinate
+[PASS] Global Day 354 -> valid dual-calendar coordinate
+[PASS] Global Day 355 -> valid dual-calendar coordinate
+[PASS] Global Day 11693 -> valid dual-calendar coordinate
+[PASS] Global Day 11694 -> valid dual-calendar coordinate
+[PASS] Global Day 739823 -> valid dual-calendar coordinate
+[PASS] Global Day 5000000 -> valid dual-calendar coordinate
+[PASS] Global Day 10000000 -> valid dual-calendar coordinate
+[PASS] Global Day 15000000 -> valid dual-calendar coordinate
+[PASS] Global Day 18261758 -> valid dual-calendar coordinate
+[PASS] Global Day 18261759 -> valid dual-calendar coordinate
+[PASS] Solar round-trip at Day 1
+[PASS] Solar round-trip at Day 354
+[PASS] Solar round-trip at Day 355
+[PASS] Solar round-trip at Day 11693
+[PASS] Solar round-trip at Day 11694
+[PASS] Solar round-trip at Day 739823
+[PASS] Solar round-trip at Day 5000000
+[PASS] Solar round-trip at Day 10000000
+[PASS] Solar round-trip at Day 15000000
+[PASS] Solar round-trip at Day 18261758
+[PASS] Solar round-trip at Day 18261759
+[PASS] Lunar round-trip at Day 1
+[PASS] Lunar round-trip at Day 354
+[PASS] Lunar round-trip at Day 355
+[PASS] Lunar round-trip at Day 11693
+[PASS] Lunar round-trip at Day 11694
+[PASS] Lunar round-trip at Day 739823
+[PASS] Lunar round-trip at Day 5000000
+[PASS] Lunar round-trip at Day 10000000
+[PASS] Lunar round-trip at Day 15000000
+[PASS] Lunar unsupported after Day 17716312 at Day 18261758
+[PASS] Lunar unsupported after Day 17716312 at Day 18261759
+[PASS] Navigation continuity at Day 354
+[PASS] Navigation continuity at Day 355
+[PASS] Navigation continuity at Day 11693
+[PASS] Navigation continuity at Day 11694
+[PASS] Navigation continuity at Day 739823
+[PASS] Navigation continuity at Day 5000000
+[PASS] Navigation continuity at Day 10000000
+[PASS] Navigation continuity at Day 15000000
+[PASS] Navigation continuity at Day 18261758
+[PASS] Global timeline boundaries
+
+============================================
+ Gabary V2 Dual Calendar Long-Range: PASSED
+============================================
 <end of output>
-Test time =   0.06 sec
+Test time =   0.02 sec
 ----------------------------------------------------------
-Test Failed.
-"GabaryDualCalendarLongRangeTest" end time: Sep 03 21:30 CET
+Test Passed.
+"GabaryDualCalendarLongRangeTest" end time: Sep 04 14:39 CET
 "GabaryDualCalendarLongRangeTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -2291,16 +2341,67 @@ Test Failed.
 86/86 Test: GabaryTemporalServiceLongRangeTest
 Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/GabaryTemporalServiceLongRangeTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"GabaryTemporalServiceLongRangeTest" start time: Sep 03 21:30 CET
+"GabaryTemporalServiceLongRangeTest" start time: Sep 04 14:39 CET
 Output:
 ----------------------------------------------------------
-/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/Gabary/tests/GabaryTemporalServiceLongRangeTest.cpp:52: int main(): assertion "result.lunar.year >= 1" failed
+============================================
+ Gabary V2 Temporal Service Long-Range Test
+============================================
+[PASS] Service query at Global Day 1
+[PASS] Service query at Global Day 354
+[PASS] Service query at Global Day 355
+[PASS] Service query at Global Day 11693
+[PASS] Service query at Global Day 11694
+[PASS] Service query at Global Day 739823
+[PASS] Service query at Global Day 5000000
+[PASS] Service query at Global Day 10000000
+[PASS] Service query at Global Day 15000000
+[PASS] Service query at Global Day 18261758
+[PASS] Service query at Global Day 18261759
+[PASS] Service Solar round-trip at Day 1
+[PASS] Service Solar round-trip at Day 354
+[PASS] Service Solar round-trip at Day 355
+[PASS] Service Solar round-trip at Day 11693
+[PASS] Service Solar round-trip at Day 11694
+[PASS] Service Solar round-trip at Day 739823
+[PASS] Service Solar round-trip at Day 5000000
+[PASS] Service Solar round-trip at Day 10000000
+[PASS] Service Solar round-trip at Day 15000000
+[PASS] Service Solar round-trip at Day 18261758
+[PASS] Service Solar round-trip at Day 18261759
+[PASS] Service Lunar round-trip at Day 1
+[PASS] Service Lunar round-trip at Day 354
+[PASS] Service Lunar round-trip at Day 355
+[PASS] Service Lunar round-trip at Day 11693
+[PASS] Service Lunar round-trip at Day 11694
+[PASS] Service Lunar round-trip at Day 739823
+[PASS] Service Lunar round-trip at Day 5000000
+[PASS] Service Lunar round-trip at Day 10000000
+[PASS] Service Lunar round-trip at Day 15000000
+[PASS] Service Lunar unsupported after Day 17716312 at Day 18261758
+[PASS] Service Lunar unsupported after Day 17716312 at Day 18261759
+[PASS] Shared Global Day integrity at Day 1
+[PASS] Shared Global Day integrity at Day 354
+[PASS] Shared Global Day integrity at Day 355
+[PASS] Shared Global Day integrity at Day 11693
+[PASS] Shared Global Day integrity at Day 11694
+[PASS] Shared Global Day integrity at Day 739823
+[PASS] Shared Global Day integrity at Day 5000000
+[PASS] Shared Global Day integrity at Day 10000000
+[PASS] Shared Global Day integrity at Day 15000000
+[PASS] Shared Global Day solar-only integrity at Day 18261758
+[PASS] Shared Global Day solar-only integrity at Day 18261759
+[PASS] Report integrity at Day 739823
+[PASS] Global timeline boundaries
+============================================
+ Gabary V2 Temporal Service Long-Range: PASSED
+============================================
 <end of output>
-Test time =   0.07 sec
+Test time =   0.02 sec
 ----------------------------------------------------------
-Test Failed.
-"GabaryTemporalServiceLongRangeTest" end time: Sep 03 21:30 CET
+Test Passed.
+"GabaryTemporalServiceLongRangeTest" end time: Sep 04 14:39 CET
 "GabaryTemporalServiceLongRangeTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Sep 03 21:30 CET
+End testing: Sep 04 14:39 CET

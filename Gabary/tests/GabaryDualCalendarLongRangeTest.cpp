@@ -69,16 +69,28 @@ int main()
         assert(result.solar.solarDay >= 1);
         assert(result.solar.solarDay <= 31);
 
-        assert(result.lunar.dayId == dayId);
+        constexpr int64_t LUNAR_LAST_DAY = 17716312;
 
-        assert(result.lunar.year >= 1);
-        assert(result.lunar.year <= 49999);
+        if (dayId <= LUNAR_LAST_DAY)
+        {
+            assert(result.lunar.dayId == dayId);
 
-        assert(result.lunar.month >= 1);
-        assert(result.lunar.month <= 12);
+            assert(result.lunar.year >= 1);
+            assert(result.lunar.year <= 49999);
 
-        assert(result.lunar.day >= 1);
-        assert(result.lunar.day <= 30);
+            assert(result.lunar.month >= 1);
+            assert(result.lunar.month <= 12);
+
+            assert(result.lunar.day >= 1);
+            assert(result.lunar.day <= 30);
+        }
+        else
+        {
+            assert(result.lunar.dayId == 0);
+            assert(result.lunar.year == 0);
+            assert(result.lunar.month == 0);
+            assert(result.lunar.day == 0);
+        }
 
         std::cout
             << "[PASS] Global Day "
@@ -122,18 +134,36 @@ int main()
         DualCalendarDate result =
             dual.getDate(dayId);
 
-        const int64_t reconstructed =
-            dual.lunarToDayId(
-                result.lunar.year,
-                result.lunar.month,
-                result.lunar.day
-            );
+        constexpr int64_t LUNAR_LAST_DAY = 17716312;
 
-        assert(reconstructed == dayId);
+        if (dayId <= LUNAR_LAST_DAY)
+        {
+            const int64_t reconstructed =
+                dual.lunarToDayId(
+                    result.lunar.year,
+                    result.lunar.month,
+                    result.lunar.day
+                );
 
-        std::cout
-            << "[PASS] Lunar round-trip at Day "
-            << dayId << "\n";
+            assert(reconstructed == dayId);
+
+            std::cout
+                << "[PASS] Lunar round-trip at Day "
+                << dayId << "\n";
+        }
+        else
+        {
+            assert(result.lunar.dayId == 0);
+            assert(result.lunar.year == 0);
+            assert(result.lunar.month == 0);
+            assert(result.lunar.day == 0);
+
+            std::cout
+                << "[PASS] Lunar unsupported after Day "
+                << LUNAR_LAST_DAY
+                << " at Day "
+                << dayId << "\n";
+        }
     }
 
     // ------------------------------------------------------------

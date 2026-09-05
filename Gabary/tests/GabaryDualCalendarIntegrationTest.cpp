@@ -47,7 +47,10 @@ int main()
 
     assert(lunarEnd.year == 33);
     assert(lunarEnd.month == 12);
-    assert(lunarEnd.day == 30);
+
+    // Year 33 is a normal lunar year, therefore
+    // Dhul-Hijjah has 29 days.
+    assert(lunarEnd.day == 29);
 
     assert(lunarNext.year == 34);
     assert(lunarNext.month == 1);
@@ -69,8 +72,8 @@ int main()
         ) == lunarCycleNext
     );
 
-    std::cout << "[PASS] Lunar cycle boundary alignment\n";
-
+    std::cout
+        << "[PASS] Lunar cycle boundary alignment\n";
     // --------------------------------------------------------
     // 3. Solar/Lunar shared Global Day round-trip
     // --------------------------------------------------------

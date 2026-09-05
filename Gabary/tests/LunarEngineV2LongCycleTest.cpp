@@ -87,18 +87,29 @@ int main()
         const int nextYear =
             lastYear + 1;
 
+        const int lastDayOfYear =
+            lunar.isLeap(lastYear) ? 30 : 29;
+
         const long long endDay =
-            lunar.getDayId(lastYear, 12, 30);
+            lunar.getDayId(
+                lastYear,
+                12,
+                lastDayOfYear
+            );
 
         const long long nextDay =
-            lunar.getDayId(nextYear, 1, 1);
+            lunar.getDayId(
+                nextYear,
+                1,
+                1
+            );
 
+        assert(endDay > 0);
         assert(endDay + 1 == nextDay);
     }
 
     std::cout
         << "[PASS] Cycle boundaries are contiguous\n";
-
     // --------------------------------------------------------
     // 5. Global Day -> Lunar Date -> Global Day
     // --------------------------------------------------------

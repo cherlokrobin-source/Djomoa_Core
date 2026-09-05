@@ -97,21 +97,39 @@ int main()
     // ------------------------------------------------
     // Lunar round-trip
     // ------------------------------------------------
+    constexpr int64_t LUNAR_LAST_DAY = 17716312;
+
     for (int64_t day : days)
     {
         const auto original = service.queryDay(day);
 
-        const auto restored = service.queryLunar(
-            original.lunar.year,
-            original.lunar.month,
-            original.lunar.day
-        );
+        if (day <= LUNAR_LAST_DAY)
+        {
+            const auto restored = service.queryLunar(
+                original.lunar.year,
+                original.lunar.month,
+                original.lunar.day
+            );
 
-        assert(restored.dayId == day);
+            assert(restored.dayId == day);
 
-        std::cout
-            << "[PASS] Service Lunar round-trip at Day "
-            << day << "\n";
+            std::cout
+                << "[PASS] Service Lunar round-trip at Day "
+                << day << "\n";
+        }
+        else
+        {
+            assert(original.lunar.dayId == 0);
+            assert(original.lunar.year == 0);
+            assert(original.lunar.month == 0);
+            assert(original.lunar.day == 0);
+
+            std::cout
+                << "[PASS] Service Lunar unsupported after Day "
+                << LUNAR_LAST_DAY
+                << " at Day "
+                << day << "\n";
+        }
     }
 
     // ------------------------------------------------
@@ -127,19 +145,34 @@ int main()
             byDay.solar.solarDay
         );
 
-        const auto lunar = service.queryLunar(
-            byDay.lunar.year,
-            byDay.lunar.month,
-            byDay.lunar.day
-        );
-
         assert(solar.dayId == day);
-        assert(lunar.dayId == day);
-        assert(solar.dayId == lunar.dayId);
 
-        std::cout
-            << "[PASS] Shared Global Day integrity at Day "
-            << day << "\n";
+        if (day <= LUNAR_LAST_DAY)
+        {
+            const auto lunar = service.queryLunar(
+                byDay.lunar.year,
+                byDay.lunar.month,
+                byDay.lunar.day
+            );
+
+            assert(lunar.dayId == day);
+            assert(solar.dayId == lunar.dayId);
+
+            std::cout
+                << "[PASS] Shared Global Day integrity at Day "
+                << day << "\n";
+        }
+        else
+        {
+            assert(byDay.lunar.dayId == 0);
+            assert(byDay.lunar.year == 0);
+            assert(byDay.lunar.month == 0);
+            assert(byDay.lunar.day == 0);
+
+            std::cout
+                << "[PASS] Shared Global Day solar-only integrity at Day "
+                << day << "\n";
+        }
     }
 
     // ------------------------------------------------

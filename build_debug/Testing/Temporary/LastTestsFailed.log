@@ -13,5 +13,3 @@
 80:GabaryAPIAdapterContractTest
 81:GabaryDualCalendarEngineContractTest
 83:GabaryHTTPAPIDataIntegrityTest
-85:GabaryDualCalendarLongRangeTest
-86:GabaryTemporalServiceLongRangeTest
