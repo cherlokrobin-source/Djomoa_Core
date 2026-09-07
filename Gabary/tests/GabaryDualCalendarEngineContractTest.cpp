@@ -155,7 +155,7 @@ int main()
     // ------------------------------------------------
     {
         assert(MIN_DAY == 1);
-        assert(MAX_DAY == 18261759);
+        assert(MAX_DAY == 18262125);
         assert(MAX_DAY > MIN_DAY);
 
         std::cout

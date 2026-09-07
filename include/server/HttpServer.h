@@ -1,46 +1,24 @@
 #ifndef HTTP_SERVER_H
 #define HTTP_SERVER_H
 
-#include "TemporalServer.h"
-#include "GabaryAPIAdapter.h"
+#include "GabaryTemporalService.h"
 #include <string>
 
-class HttpServer
-{
+class HttpServer {
 public:
+    HttpServer(int port, Gabary::GabaryTemporalService& service);
+    ~HttpServer();
 
-    HttpServer(int port);
-
-    void run();
+    void start();
+    void stop();
 
 private:
+    void handleClient(int clientSocket);
 
-    int port;
-    TemporalServer temporalServer;
-
-    Gabary::GabaryAPIAdapter gabaryAPI;
-
-    void handleClient(
-        int clientSocket
-    );
-
-    std::string parsePath(
-        const std::string& request
-    );
-
-    std::string buildResponse(
-        const std::string& body,
-        int statusCode = 200,
-        const std::string& statusText = "OK"
-    );
-
-    std::string serveStaticFile(
-        const std::string& path
-    );
-
-    std::string getContentType(
-        const std::string& path
-    );
+    int port_;
+    bool running_;
+    int serverSocket_;
+    Gabary::GabaryTemporalService& service_;
 };
 
-#endif
+#endif // HTTP_SERVER_H

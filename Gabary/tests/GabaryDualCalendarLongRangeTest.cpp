@@ -210,7 +210,7 @@ int main()
         assert(first.solar.solarMonth == 1);
         assert(first.solar.solarDay == 1);
 
-        assert(last.solar.solarYear == 49999);
+        assert(last.solar.solarYear == 50000);
         assert(last.solar.solarMonth == 12);
         assert(last.solar.solarDay == 31);
 

@@ -121,7 +121,7 @@ Date LunarEngineV2::getDate(long long globalSolarDay) const
     Date result{};
 
     if (globalSolarDay < MIN_GLOBAL_DAY ||
-        globalSolarDay > MAX_GLOBAL_DAY)
+        globalSolarDay > MAX_LUNAR_GLOBAL_DAY)
     {
         return result;
     }

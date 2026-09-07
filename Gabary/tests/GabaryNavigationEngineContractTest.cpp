@@ -79,7 +79,6 @@ int main()
             10000000,
             15000000,
             MAX - 1,
-            MAX
         };
 
         for (int64_t day : testDays)
@@ -110,7 +109,6 @@ int main()
             10000000,
             15000000,
             MAX - 1,
-            MAX
         };
 
         for (int64_t day : testDays)

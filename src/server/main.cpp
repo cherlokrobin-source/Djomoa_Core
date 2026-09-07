@@ -1,16 +1,10 @@
 #include "server/HttpServer.h"
-
+#include "GabaryTemporalService.h"
 #include <iostream>
 
-int main()
-{
-    std::cout
-        << "Starting Golden Calendar HTTP Layer..."
-        << std::endl;
-
-    HttpServer server(8080);
-
-    server.run();
-
+int main() {
+    Gabary::GabaryTemporalService service;
+    HttpServer server(8080, service);
+    server.start();
     return 0;
 }

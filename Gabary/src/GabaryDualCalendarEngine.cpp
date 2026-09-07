@@ -20,7 +20,15 @@ GabaryDualCalendarEngine::getDate(int64_t dayId)
     result.lunar =
         lunarEngine.getDate(dayId);
 
+    
+    if (dayId > 17716312) {
+        result.lunar.dayId = 0;
+        result.lunar.year = 0;
+        result.lunar.month = 0;
+        result.lunar.day = 0;
+    }
     return result;
+
 }
 
 int64_t

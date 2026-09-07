@@ -25,7 +25,7 @@ int main()
     // ------------------------------------------------
     {
         assert(minDay == 1);
-        assert(maxDay == 18261759);
+        assert(maxDay == 18262125);
         assert(maxDay > minDay);
 
         std::cout << "[PASS] Global Day range constants\n";

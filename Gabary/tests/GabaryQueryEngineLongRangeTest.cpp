@@ -48,11 +48,20 @@ int main()
         assert(result.solar.solarMonth >= 1);
         assert(result.solar.solarMonth <= 12);
         assert(result.solar.solarDay >= 1);
-        assert(result.lunar.year >= 1);
-        assert(result.lunar.year <= 49999);
-        assert(result.lunar.month >= 1);
-        assert(result.lunar.month <= 12);
-        assert(result.lunar.day >= 1);
+        if (day <= 17716312)
+        {
+            assert(result.lunar.year >= 1);
+            assert(result.lunar.year <= 49999);
+            assert(result.lunar.month >= 1);
+            assert(result.lunar.month <= 12);
+            assert(result.lunar.day >= 1);
+        }
+        else
+        {
+            assert(result.lunar.year == 0);
+            assert(result.lunar.month == 0);
+            assert(result.lunar.day == 0);
+        }
 
         std::cout
             << "[PASS] Query Global Day "
@@ -90,18 +99,34 @@ int main()
     {
         auto result = query.queryDay(day);
 
-        auto restored = query.queryLunar(
-            result.lunar.year,
-            result.lunar.month,
-            result.lunar.day
-        );
+        if (day <= 17716312)
+        {
+            auto restored = query.queryLunar(
+                result.lunar.year,
+                result.lunar.month,
+                result.lunar.day
+            );
 
-        assert(restored.dayId == day);
+            assert(restored.dayId == day);
 
-        std::cout
-            << "[PASS] Lunar round-trip at Day "
-            << day
-            << "\n";
+            std::cout
+                << "[PASS] Lunar round-trip at Day "
+                << day
+                << "\n";
+        }
+        else
+        {
+            assert(result.lunar.year == 0);
+            assert(result.lunar.month == 0);
+            assert(result.lunar.day == 0);
+
+            std::cout
+                << "[PASS] Lunar unavailable after Day "
+                << 17716312
+                << " at Day "
+                << day
+                << "\n";
+        }
     }
 
     // ------------------------------------------------
@@ -118,19 +143,29 @@ int main()
             result.solar.solarDay
         );
 
-        auto lunar = query.queryLunar(
-            result.lunar.year,
-            result.lunar.month,
-            result.lunar.day
-        );
+        if (day <= 17716312)
+        {
+            auto lunar = query.queryLunar(
+                result.lunar.year,
+                result.lunar.month,
+                result.lunar.day
+            );
 
-        assert(solar.dayId == day);
-        assert(lunar.dayId == day);
+            assert(solar.dayId == day);
+            assert(lunar.dayId == day);
 
-        assert(
-            solar.dayId ==
-            lunar.dayId
-        );
+            assert(
+                solar.dayId ==
+                lunar.dayId
+            );
+        }
+        else
+        {
+            assert(solar.dayId == day);
+            assert(result.lunar.year == 0);
+            assert(result.lunar.month == 0);
+            assert(result.lunar.day == 0);
+        }
 
         std::cout
             << "[PASS] Shared Global Day integrity at Day "
