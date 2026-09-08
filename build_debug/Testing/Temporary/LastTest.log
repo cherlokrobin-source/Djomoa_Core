@@ -1,70 +1,55 @@
-Start testing: Sep 07 17:07 CET
+Start testing: Sep 08 03:21 CET
 ----------------------------------------------------------
-86/86 Testing: GabaryTemporalServiceLongRangeTest
-86/86 Test: GabaryTemporalServiceLongRangeTest
-Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/GabaryTemporalServiceLongRangeTest"
+71/86 Testing: GabaryHTTPAPIContractTest
+71/86 Test: GabaryHTTPAPIContractTest
+Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/GabaryHTTPAPIContractTest"
 Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
-"GabaryTemporalServiceLongRangeTest" start time: Sep 07 17:07 CET
+"GabaryHTTPAPIContractTest" start time: Sep 08 03:21 CET
+Output:
+----------------------------------------------------------
+========================================
+ Gabary V2 HTTP API Contract Test
+========================================
+[PASS] GET /api/status -> HTTP 200
+[PASS] GET /api/json/day/1 -> HTTP 200
+[PASS] GET /api/json/day/18261759 -> HTTP 200
+[PASS] GET /api/json/day/0 -> HTTP 400
+[PASS] GET /api/json/day/18261760 -> HTTP 400
+========================================
+ Gabary V2 HTTP API Contract: PASSED
+========================================
+<end of output>
+Test time =   0.25 sec
+----------------------------------------------------------
+Test Passed.
+"GabaryHTTPAPIContractTest" end time: Sep 08 03:21 CET
+"GabaryHTTPAPIContractTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+83/86 Testing: GabaryHTTPAPIDataIntegrityTest
+83/86 Test: GabaryHTTPAPIDataIntegrityTest
+Command: "/data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug/GabaryHTTPAPIDataIntegrityTest"
+Directory: /data/data/com.termux/files/home/GoldenCalendar_Project/GoldenCalendar_50000_Chronology_Engine/build_debug
+"GabaryHTTPAPIDataIntegrityTest" start time: Sep 08 03:21 CET
 Output:
 ----------------------------------------------------------
 ============================================
- Gabary V2 Temporal Service Long-Range Test
+ Gabary V2 HTTP API Data Integrity Test
 ============================================
-[PASS] Service query at Global Day 1
-[PASS] Service query at Global Day 354
-[PASS] Service query at Global Day 355
-[PASS] Service query at Global Day 11693
-[PASS] Service query at Global Day 11694
-[PASS] Service query at Global Day 739823
-[PASS] Service query at Global Day 5000000
-[PASS] Service query at Global Day 10000000
-[PASS] Service query at Global Day 15000000
-[PASS] Service query at Global Day 18261758
-[PASS] Service query at Global Day 18261759
-[PASS] Service Solar round-trip at Day 1
-[PASS] Service Solar round-trip at Day 354
-[PASS] Service Solar round-trip at Day 355
-[PASS] Service Solar round-trip at Day 11693
-[PASS] Service Solar round-trip at Day 11694
-[PASS] Service Solar round-trip at Day 739823
-[PASS] Service Solar round-trip at Day 5000000
-[PASS] Service Solar round-trip at Day 10000000
-[PASS] Service Solar round-trip at Day 15000000
-[PASS] Service Solar round-trip at Day 18261758
-[PASS] Service Solar round-trip at Day 18261759
-[PASS] Service Lunar round-trip at Day 1
-[PASS] Service Lunar round-trip at Day 354
-[PASS] Service Lunar round-trip at Day 355
-[PASS] Service Lunar round-trip at Day 11693
-[PASS] Service Lunar round-trip at Day 11694
-[PASS] Service Lunar round-trip at Day 739823
-[PASS] Service Lunar round-trip at Day 5000000
-[PASS] Service Lunar round-trip at Day 10000000
-[PASS] Service Lunar round-trip at Day 15000000
-[PASS] Service Lunar unsupported after Day 17716312 at Day 18261758
-[PASS] Service Lunar unsupported after Day 17716312 at Day 18261759
-[PASS] Shared Global Day integrity at Day 1
-[PASS] Shared Global Day integrity at Day 354
-[PASS] Shared Global Day integrity at Day 355
-[PASS] Shared Global Day integrity at Day 11693
-[PASS] Shared Global Day integrity at Day 11694
-[PASS] Shared Global Day integrity at Day 739823
-[PASS] Shared Global Day integrity at Day 5000000
-[PASS] Shared Global Day integrity at Day 10000000
-[PASS] Shared Global Day integrity at Day 15000000
-[PASS] Shared Global Day solar-only integrity at Day 18261758
-[PASS] Shared Global Day solar-only integrity at Day 18261759
-[PASS] Report integrity at Day 739823
-[PASS] Global timeline boundaries
+[PASS] HTTP epoch JSON integrity
+[PASS] HTTP known Global Solar Day integrity
+[PASS] HTTP final boundary JSON integrity
+[PASS] HTTP shared Global Solar Day identity
 ============================================
- Gabary V2 Temporal Service Long-Range: PASSED
+ Checks: 4/4
+ Gabary V2 HTTP API Data Integrity: PASSED
 ============================================
 <end of output>
-Test time =   0.01 sec
+Test time =   0.17 sec
 ----------------------------------------------------------
 Test Passed.
-"GabaryTemporalServiceLongRangeTest" end time: Sep 07 17:07 CET
-"GabaryTemporalServiceLongRangeTest" time elapsed: 00:00:00
+"GabaryHTTPAPIDataIntegrityTest" end time: Sep 08 03:21 CET
+"GabaryHTTPAPIDataIntegrityTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Sep 07 17:07 CET
+End testing: Sep 08 03:21 CET

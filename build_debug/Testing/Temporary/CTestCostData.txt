@@ -1,6 +1,14 @@
-GabaryQueryEngineContractTest 2 0.00904838
-GabaryQueryEngineLongRangeTest 1 0.0178776
-GabaryHTTPAPIContractTest 0 0
-GabaryHTTPAPIDataIntegrityTest 0 0
+GabaryQueryEngineContractTest 3 0.00586864
+GabaryQueryEngineLongRangeTest 2 0.0209059
+GabaryHTTPAPIContractTest 2 0.126207
+GabaryHTTPAPIDataIntegrityTest 2 0.0829575
 GabaryTemporalServiceLongRangeTest 1 0.0135925
+GabaryNavigationEngineTest 1 0.0145872
+GabaryNavigationEngineBoundaryTest 1 0.0149857
+GabaryNavigationEngineLongRangeTest 1 0.03114
+GabaryNavigationEngineSolarRoundTripTest 1 0.0158652
+GabaryQueryEngineTest 1 0.015365
+GabaryNavigationEngineContractTest 1 0.0341124
+GabaryNavigationEngineDateRoundTripTest 1 0.016414
+GabaryNavigationEngineBoundaryDateTest 1 0.0157861
 ---
