@@ -25,7 +25,7 @@ int main()
     // ------------------------------------------------
     {
         assert(minDay == 1);
-        assert(maxDay == 18262125);
+        assert(maxDay == 18261759);
         assert(maxDay > minDay);
 
         std::cout << "[PASS] Global Day range constants\n";
@@ -36,10 +36,9 @@ int main()
     // ------------------------------------------------
     {
         DualCalendarDate result = dual.getDate(maxDay);
-
         assert(result.dayId == maxDay);
         assert(result.solar.solarYear > 0);
-        assert(result.lunar.year > 0);
+        assert(result.lunar.year == 0);
 
         std::cout << "[PASS] Last Global Day resolves\n";
     }

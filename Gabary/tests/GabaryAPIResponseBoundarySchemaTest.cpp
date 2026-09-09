@@ -251,7 +251,7 @@ int main()
     if(check(
         "Global Solar Day 18261759 -> weekday",
         maxBody,
-        "\"weekday\":\"Thursday\""
+        "\"weekday\":\"Tuesday\""
     ))
         passed++;
 

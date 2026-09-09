@@ -227,50 +227,47 @@ void HttpServer::handleClient(int clientSocket)
                 auto res =
                     service_.queryDay(dayId);
 
-                // ------------------------------------------------
-                // Full Gabary V2 temporal JSON contract
-                // ------------------------------------------------
+                  // ------------------------------------------------
+                  // Full Gabary V2 temporal JSON contract
+                  // ------------------------------------------------
 
-                std::stringstream ss;
+                  std::stringstream ss;
 
-                ss
-                    << "{"
-                    << "\"dayId\":" << dayId
+                  const std::string weekday =
+                      res.solar.weekName;
 
-                    << ",\"solar\":{"
-                    << "\"year\":" << res.solar.solarYear
-                    << ",\"month\":" << res.solar.solarMonth
-                    << ",\"day\":" << res.solar.solarDay
-                    << ",\"monthName\":\""
-                    << res.solar.monthName
-                    << "\""
-                    << ",\"weekday\":\""
-                    << ((res.dayId % 7 == 1) ? "Friday" : (res.dayId % 7 == 2) ? "Saturday" : (res.dayId % 7 == 3) ? "Sunday" : (res.dayId % 7 == 4) ? "Monday" : (res.dayId % 7 == 5) ? "Tuesday" : (res.dayId % 7 == 6) ? "Wednesday" : "Thursday")
-                    << "\""
-                    << ",\"dayOfYear\":"
-                    << res.solar.dayOfYear
-                    << ",\"leapYear\":"
-                    << (
-                        res.solar.leapYear
-                        ? "true"
-                        : "false"
-                    )
-                    << "}"
+                  ss
+                      << "{"
+                      << "\"dayId\":" << dayId
 
-                    << ",\"lunar\":{"
-                    << "\"year\":" << res.lunar.year
-                    << ",\"month\":" << res.lunar.month
-                    << ",\"day\":" << res.lunar.day
-                    << "}"
+                      << ",\"solar\":{"
+                      << "\"year\":" << res.solar.solarYear
+                      << ",\"month\":" << res.solar.solarMonth
+                      << ",\"day\":" << res.solar.solarDay
+                      << ",\"monthName\":\"" << res.solar.monthName << "\""
+                      << ",\"weekday\":\"" << weekday << "\""
+                      << ",\"dayOfYear\":" << res.solar.dayOfYear
+                      << ",\"leapYear\":"
+                      << (res.solar.leapYear ? "true" : "false")
+                      << ",\"weekIndex\":" << res.solar.weekIndex
+                      << "}"
 
-                    << ",\"architecture\":{"
-                    << "\"name\":\"Gabary V2\""
-                    << ",\"engine\":\"GabaryDualCalendarEngine\""
-                    << ",\"coordinate\":\"Global Solar Day\""
-                    << ",\"validation\":\"PASSED\""
-                    << "}"
+                      << ",\"lunar\":{"
+                      << "\"year\":" << res.lunar.year
+                      << ",\"month\":" << res.lunar.month
+                      << ",\"day\":" << res.lunar.day
+                      << "}"
 
-                    << "}";
+                      << ",\"architecture\":{"
+                      << "\"name\":\"Gabary V2\""
+                      << ",\"engine\":\"GabaryDualCalendarEngine\""
+                      << ",\"coordinate\":\"Global Solar Day\""
+                      << ",\"validation\":\"PASSED\""
+                      << "}"
+
+                      << "}";
+
+                  body = ss.str();
 
                 body = ss.str();
             }
