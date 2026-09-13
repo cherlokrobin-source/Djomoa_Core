@@ -23,3 +23,7 @@ build_clean/
 
 # Local TUI build
 build_tui/
+
+# Generated Gabary V2 dashboard reports
+gabary_v2_comprehensive_dashboard.csv
+gabary_v2_stability_report.csv
