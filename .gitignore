@@ -20,3 +20,6 @@ Gabary/GabaryConsole
 Gabary/TemporalServer
 Gabary/GoldenCalendarCLI
 build_clean/
+
+# Local TUI build
+build_tui/

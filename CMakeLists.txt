@@ -2220,3 +2220,27 @@ add_test(
     NAME GabaryTemporalServiceLongRangeTest
     COMMAND GabaryTemporalServiceLongRangeTest
 )
+
+# ============================================
+# Gabary V2 - FTXUI Terminal Dashboard
+# ============================================
+
+add_subdirectory(FTXUI EXCLUDE_FROM_ALL)
+
+add_executable(
+    GabaryTUI
+    tui_dashboard.cpp
+)
+
+target_include_directories(
+    GabaryTUI PRIVATE
+    Gabary/include
+    include
+)
+
+target_link_libraries(
+    GabaryTUI PRIVATE
+    ftxui::screen
+    ftxui::dom
+    ftxui::component
+)
