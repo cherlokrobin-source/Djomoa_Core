@@ -7,6 +7,8 @@
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <unistd.h>
+#include <cerrno>
+#include <cstring>
 
 HttpServer::HttpServer(
     int port,
@@ -29,7 +31,12 @@ void HttpServer::start()
     serverSocket_ = socket(AF_INET, SOCK_STREAM, 0);
 
     if (serverSocket_ < 0)
+    {
+        std::cerr << "[HTTP] socket() failed: "
+                  << std::strerror(errno)
+                  << std::endl;
         return;
+    }
 
     int opt = 1;
 
@@ -55,13 +62,22 @@ void HttpServer::start()
         ) < 0
     )
     {
+        std::cerr << "[HTTP] bind() failed on port "
+                  << port_ << ": "
+                  << std::strerror(errno)
+                  << std::endl;
         close(serverSocket_);
+        serverSocket_ = -1;
         return;
     }
 
     if (listen(serverSocket_, 10) < 0)
     {
+        std::cerr << "[HTTP] listen() failed: "
+                  << std::strerror(errno)
+                  << std::endl;
         close(serverSocket_);
+        serverSocket_ = -1;
         return;
     }
 
@@ -191,6 +207,158 @@ void HttpServer::handleClient(int clientSocket)
     {
         body =
             R"({"engine":"Gabary V2","architecture":"50,000 Year Solar Chronology","status":"stable","validation":"PASSED"})";
+    }
+
+    else if (
+        path.rfind("/api/json/solar/", 0) == 0
+    )
+    {
+        try
+        {
+            const std::string prefix =
+                "/api/json/solar/";
+
+            std::string values =
+                path.substr(prefix.size());
+
+            std::stringstream input(values);
+
+            int year = 0;
+            int month = 0;
+            int day = 0;
+            char sep1 = 0;
+            char sep2 = 0;
+
+            if (
+                !(input >> year >> sep1 >> month >> sep2 >> day) ||
+                sep1 != '/' ||
+                sep2 != '/'
+            )
+            {
+                throw std::runtime_error("Invalid solar date");
+            }
+
+            auto res =
+                service_.querySolar(
+                    year,
+                    month,
+                    day
+                );
+
+            std::stringstream ss;
+
+            ss
+                << "{"
+                << "\"dayId\":" << res.dayId
+                << ",\"solar\":{"
+                << "\"year\":" << res.solar.solarYear
+                << ",\"month\":" << res.solar.solarMonth
+                << ",\"day\":" << res.solar.solarDay
+                << ",\"monthName\":\"" << res.solar.monthName << "\""
+                << ",\"weekday\":\"" << res.solar.weekName << "\""
+                << ",\"dayOfYear\":" << res.solar.dayOfYear
+                << ",\"leapYear\":"
+                << (res.solar.leapYear ? "true" : "false")
+                << ",\"weekIndex\":" << res.solar.weekIndex
+                << "}"
+                << ",\"lunar\":{"
+                << "\"year\":" << res.lunar.year
+                << ",\"month\":" << res.lunar.month
+                << ",\"day\":" << res.lunar.day
+                << "}"
+                << ",\"architecture\":{"
+                << "\"name\":\"Gabary V2\""
+                << ",\"engine\":\"GabaryDualCalendarEngine\""
+                << ",\"coordinate\":\"Global Solar Day\""
+                << ",\"validation\":\"PASSED\""
+                << "}"
+                << "}";
+
+            body = ss.str();
+        }
+        catch (...)
+        {
+            status = "HTTP/1.1 400 Bad Request";
+
+            body =
+                R"({"error":"Invalid Solar Date"})";
+        }
+    }
+
+    else if (
+        path.rfind("/api/json/lunar/", 0) == 0
+    )
+    {
+        try
+        {
+            const std::string prefix =
+                "/api/json/lunar/";
+
+            std::string values =
+                path.substr(prefix.size());
+
+            std::stringstream input(values);
+
+            int year = 0;
+            int month = 0;
+            int day = 0;
+            char sep1 = 0;
+            char sep2 = 0;
+
+            if (
+                !(input >> year >> sep1 >> month >> sep2 >> day) ||
+                sep1 != '/' ||
+                sep2 != '/'
+            )
+            {
+                throw std::runtime_error("Invalid lunar date");
+            }
+
+            auto res =
+                service_.queryLunar(
+                    year,
+                    month,
+                    day
+                );
+
+            std::stringstream ss;
+
+            ss
+                << "{"
+                << "\"dayId\":" << res.dayId
+                << ",\"solar\":{"
+                << "\"year\":" << res.solar.solarYear
+                << ",\"month\":" << res.solar.solarMonth
+                << ",\"day\":" << res.solar.solarDay
+                << ",\"monthName\":\"" << res.solar.monthName << "\""
+                << ",\"weekday\":\"" << res.solar.weekName << "\""
+                << ",\"dayOfYear\":" << res.solar.dayOfYear
+                << ",\"leapYear\":"
+                << (res.solar.leapYear ? "true" : "false")
+                << ",\"weekIndex\":" << res.solar.weekIndex
+                << "}"
+                << ",\"lunar\":{"
+                << "\"year\":" << res.lunar.year
+                << ",\"month\":" << res.lunar.month
+                << ",\"day\":" << res.lunar.day
+                << "}"
+                << ",\"architecture\":{"
+                << "\"name\":\"Gabary V2\""
+                << ",\"engine\":\"GabaryDualCalendarEngine\""
+                << ",\"coordinate\":\"Global Solar Day\""
+                << ",\"validation\":\"PASSED\""
+                << "}"
+                << "}";
+
+            body = ss.str();
+        }
+        catch (...)
+        {
+            status = "HTTP/1.1 400 Bad Request";
+
+            body =
+                R"({"error":"Invalid Lunar Date"})";
+        }
     }
 
     else if (
