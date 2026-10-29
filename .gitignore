@@ -27,3 +27,15 @@ build_tui/
 # Generated Gabary V2 dashboard reports
 gabary_v2_comprehensive_dashboard.csv
 gabary_v2_stability_report.csv
+
+# Local recovery build and test artifacts
+build_recovery/
+test_engine
+gabary_server_recovery.log
+build_debug/Testing/Temporary/LastTest.log
+
+# Local recovery build and test artifacts
+build_recovery/
+test_engine
+gabary_server_recovery.log
+build_debug/Testing/Temporary/LastTest.log
